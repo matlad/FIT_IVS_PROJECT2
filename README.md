@@ -1,19 +1,19 @@
 # FIT_IVS_PROJECT2
 
-Prostredi
+Prostředí
 ---------
 
 Ubuntu 64bit
 Windows 64bit
 
-Autori
+Autoři
 ------
 
 tým 22
-- xcecha04 Čechák Jiří - GUI  
--	xmatla00 Mátl Adam - Testy
-- xmitur01 Mitura Jacek	- Dokumentace 
-- xslade21 Sládek Matyáš - Knihovna
+- xcecha04 Čechák Jiří @jirkacechak - GUI  
+-	xmatla00 Mátl Adam @matlad - Testy
+- xmitur01 Mitura Jacek	@Jb535 - Dokumentace 
+- xslade21 Sládek Matyáš @sladekm - Knihovna
 
 
 Licence
@@ -23,7 +23,7 @@ Tento program je poskytován pod licencí GNU GPLv3 vizte soubor LICENCE
 
 Komunikace
 ----------
-Primární fomunikační nástroj je fb cheat kontrolovat min 1x deně
+Primární komunikační nástroj je fb chat kontrolovat min 1x denně
 Při CR PM na FB
 
 Coding style
