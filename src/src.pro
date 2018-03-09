@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += qml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,11 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp
+        main.cpp
 
-HEADERS += \
-        mainwindow.h
+HEADERS +=
 
-FORMS += \
-        mainwindow.ui
+FORMS +=
+
+DISTFILES += \
+    main.qml \
+    constants.js \
+    Button.qml
+
+RESOURCES += \
+    qml.qrc
