@@ -6,8 +6,8 @@ import "constants.js" as C
 Window {
     visible: true
     id: window
-    minimumWidth: 480
-    minimumHeight: 640
+    minimumWidth: 420
+    minimumHeight: 420
     title: "Kalkulačka"
 
    ListModel {
