@@ -26,6 +26,7 @@ Rectangle {
         id: buttonMouseArea;
         anchors.fill: parent;
         hoverEnabled: true;
+        cursorShape: Qt.PointingHandCursor;
 
         onClicked: {
             button.clicked();
