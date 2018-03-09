@@ -75,6 +75,7 @@ Window {
 
                 Text {
                     anchors.fill: parent;
+                    anchors.margins: 5;
                     horizontalAlignment: TextInput.AlignRight;
                     verticalAlignment: TextInput.AlignVCenter;
                     font.pointSize: parent.height * 0.7;
@@ -89,6 +90,7 @@ Window {
 
                 Text {
                     anchors.fill: parent;
+                    anchors.margins: 5;
                     horizontalAlignment: TextInput.AlignRight;
                     verticalAlignment: TextInput.AlignVCenter;
                     font.pointSize: parent.height * 0.7;
