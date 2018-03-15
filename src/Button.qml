@@ -9,16 +9,14 @@ Rectangle {
     property double buttonHeight: 100;
     property color buttonColor: C.color_button;
     property color buttonHoverColor: C.color_button_hover;
-    property color buttonBorderColor: C.color_background;
     property double buttonFontSize: 22;
     property alias text: buttonText.text;
+    property string iconSource: "";
+    property string iconSourceHover: "";
 
     width: buttonWidth;
     height: buttonHeight;
     color: buttonMouseArea.containsMouse ? buttonHoverColor : buttonColor;
-    border.color: buttonBorderColor;
-    border.width: 3;
-    anchors.margins: 0;
 
     signal clicked();
 
@@ -31,6 +29,15 @@ Rectangle {
         onClicked: {
             button.clicked();
         }
+    }
+
+    Image {
+        anchors.fill: parent;
+        anchors.margins: button.buttonWidth < button.buttonHeight ? button.buttonWidth / 10 : button.buttonHeight / 10;
+        fillMode: Image.PreserveAspectFit;
+        horizontalAlignment: Image.AlignHCenter;
+        verticalAlignment: Image.AlignVCenter;
+        source: buttonMouseArea.containsMouse ? button.iconSourceHover : button.iconSource;
     }
 
     Text {

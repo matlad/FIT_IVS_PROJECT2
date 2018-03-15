@@ -34,7 +34,9 @@ FORMS +=
 DISTFILES += \
     main.qml \
     constants.js \
-    Button.qml
+    Button.qml \
+    backspace1.png \
+    backspace2.png
 
 RESOURCES += \
     qml.qrc
