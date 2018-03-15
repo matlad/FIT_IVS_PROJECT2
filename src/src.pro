@@ -4,8 +4,14 @@
 #
 #-------------------------------------------------
 
+QT_VERSION = 5
+
 QT       += core gui
 QT       += qml
+
+CONFIG += c++17
+
+#QMAKE_CXXFLAGS += -std=c++17
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
