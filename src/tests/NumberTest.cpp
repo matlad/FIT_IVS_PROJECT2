@@ -11,8 +11,11 @@
 #include "../math/UndefinedExeption.h"
 #include "gtest/gtest.h"
 
-using team22::Math::Number
+using team22::Math::Number;
+using team22::Math::UndefinedException;
 using std::numeric_limits<double>::infinity;
+using std::numeric_limits<double>::quiet_NaN;
+using std::numeric_limits<double>::signaling_NaN;
 
 struct Params{
     Number number1;
@@ -65,13 +68,13 @@ INSTANTIATE_TEST_CASE_P(def, Sub, testing::Values(
     Params{{-5.22,-6.22},{-.56,-6.52},{  2,   0}},
 
     Params{{infinity()}, {0}, {infinity()}},
-    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}},
-    Params{{std::numeric_limits<double>::infinity(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::infinity()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::infinity()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::infinity(), 5}, {0}},
-    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}}
+    Params{{infinity(), infinity()}, {0}, {infinity(), infinity()}},
+    Params{{infinity(), 5}, {0}, {infinity(), 5}},
+    Params{{5, infinity()}, {0}, {5, infinity()}},
+    Params{{0}, {infinity(), infinity()}, {-infinity(), -infinity()}},
+    Params{{0}, {5, infinity()}, {-5, -infinity()}},
+    Params{{0}, {infinity(), 5}, {-infinity(), -5}},
+    Params{{infinity(), infinity()}, {infinity(), infinity()}, {0}}
 ));
 
 INSTANTIATE_TEST_CASE_P(def, Add, testing::Values(
@@ -253,9 +256,9 @@ INSTANTIATE_TEST_CASE_P(def, Factorial, testing::Values(
     UnariParams{{5,  2},{5.9960313362367120, -0.30989965660362}},
     UnariParams{{-5,-2},{-5.9960313362367120, 0.30989965660362}},
     UnariParams{{-5, 2},{-4.0039686637632879, -0.30989965660362}},
-    UnariParams{{std::numeric_limits<double>::infinity()}, {std::numeric_limits<double>::infinity()}},
-//  UnariParams{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {?}},
-    UnariParams{{5, std::numeric_limits<double>::infinity()}, {0}}
+    UnariParams{{infinity()}, {infinity()}},
+//  UnariParams{{infinity(), infinity()}, {?}},
+    UnariParams{{5, infinity()}, {0}}
 ));
 
 
@@ -400,291 +403,291 @@ INSTANTIATE_TEST_CASE_P(zero, UndefRoot, testing::Values(
 
 //
 //INSTANTIATE_TEST_CASE_P(inf, UndefAdd, testing::Values(
-//    Params{{std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), 5}, {0}, {0}},
-//    Params{{5, std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {5, std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), 5}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}}
+//    Params{{infinity()}, {0}, {0}},
+//    Params{{infinity(), infinity()}, {0}, {0}},
+//    Params{{infinity(), 5}, {0}, {0}},
+//    Params{{5, infinity()}, {0}, {0}},
+//    Params{{0}, {infinity(), infinity()}, {0}},
+//    Params{{0}, {5, infinity()}, {0}},
+//    Params{{0}, {infinity(), 5}, {0}},
+//    Params{{infinity(), infinity()}, {infinity(), infinity()}, {0}}
 //
 //));
 //
 //INSTANTIATE_TEST_CASE_P(inf, UndefMul, testing::Values(
-//    Params{{std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), 5}, {0}, {0}},
-//    Params{{5, std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {5, std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), 5}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}}
+//    Params{{infinity()}, {0}, {0}},
+//    Params{{infinity(), infinity()}, {0}, {0}},
+//    Params{{infinity(), 5}, {0}, {0}},
+//    Params{{5, infinity()}, {0}, {0}},
+//    Params{{0}, {infinity(), infinity()}, {0}},
+//    Params{{0}, {5, infinity()}, {0}},
+//    Params{{0}, {infinity(), 5}, {0}},
+//    Params{{infinity(), infinity()}, {infinity(), infinity()}, {0}}
 //
 //));
 //
 //INSTANTIATE_TEST_CASE_P(inf, UndefExp, testing::Values(
-//    Params{{std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), 5}, {0}, {0}},
-//    Params{{5, std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {5, std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), 5}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}}
+//    Params{{infinity()}, {0}, {0}},
+//    Params{{infinity(), infinity()}, {0}, {0}},
+//    Params{{infinity(), 5}, {0}, {0}},
+//    Params{{5, infinity()}, {0}, {0}},
+//    Params{{0}, {infinity(), infinity()}, {0}},
+//    Params{{0}, {5, infinity()}, {0}},
+//    Params{{0}, {infinity(), 5}, {0}},
+//    Params{{infinity(), infinity()}, {infinity(), infinity()}, {0}}
 //
 //));
 //
 //INSTANTIATE_TEST_CASE_P(inf, UndefRoot, testing::Values(
-//    Params{{std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), 5}, {0}, {0}},
-//    Params{{5, std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {5, std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), 5}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}}
+//    Params{{infinity()}, {0}, {0}},
+//    Params{{infinity(), infinity()}, {0}, {0}},
+//    Params{{infinity(), 5}, {0}, {0}},
+//    Params{{5, infinity()}, {0}, {0}},
+//    Params{{0}, {infinity(), infinity()}, {0}},
+//    Params{{0}, {5, infinity()}, {0}},
+//    Params{{0}, {infinity(), 5}, {0}},
+//    Params{{infinity(), infinity()}, {infinity(), infinity()}, {0}}
 //
 //));
 //
 //INSTANTIATE_TEST_CASE_P(inf, UndefMode, testing::Values(
-//    Params{{std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), 5}, {0}, {0}},
-//    Params{{5, std::numeric_limits<double>::infinity()}, {0}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {5, std::numeric_limits<double>::infinity()}, {0}},
-//    Params{{0}, {std::numeric_limits<double>::infinity(), 5}, {0}},
-//    Params{{std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()}, {0}}
+//    Params{{infinity()}, {0}, {0}},
+//    Params{{infinity(), infinity()}, {0}, {0}},
+//    Params{{infinity(), 5}, {0}, {0}},
+//    Params{{5, infinity()}, {0}, {0}},
+//    Params{{0}, {infinity(), infinity()}, {0}},
+//    Params{{0}, {5, infinity()}, {0}},
+//    Params{{0}, {infinity(), 5}, {0}},
+//    Params{{infinity(), infinity()}, {infinity(), infinity()}, {0}}
 //
 //));
 
 
 INSTANTIATE_TEST_CASE_P(quietNan, UndefSub, testing::Values(
-    Params{{std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}}
+    Params{{quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), 5}, {0}, {0}},
+    Params{{5, quiet_NaN()}, {0}, {0}},
+    Params{{0}, {quiet_NaN(), quiet_NaN()}, {0}},
+    Params{{0}, {5, quiet_NaN()}, {0}},
+    Params{{0}, {quiet_NaN(), 5}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {quiet_NaN(), quiet_NaN()}, {0}}
 ));
 
 INSTANTIATE_TEST_CASE_P(quietNan, UndefAdd, testing::Values(
-    Params{{std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}}
+    Params{{quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), 5}, {0}, {0}},
+    Params{{5, quiet_NaN()}, {0}, {0}},
+    Params{{0}, {quiet_NaN(), quiet_NaN()}, {0}},
+    Params{{0}, {5, quiet_NaN()}, {0}},
+    Params{{0}, {quiet_NaN(), 5}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {quiet_NaN(), quiet_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(quietNan, UndefMul, testing::Values(
-    Params{{std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}}
+    Params{{quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), 5}, {0}, {0}},
+    Params{{5, quiet_NaN()}, {0}, {0}},
+    Params{{0}, {quiet_NaN(), quiet_NaN()}, {0}},
+    Params{{0}, {5, quiet_NaN()}, {0}},
+    Params{{0}, {quiet_NaN(), 5}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {quiet_NaN(), quiet_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(quietNan, UndefExp, testing::Values(
-    Params{{std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}}
+    Params{{quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), 5}, {0}, {0}},
+    Params{{5, quiet_NaN()}, {0}, {0}},
+    Params{{0}, {quiet_NaN(), quiet_NaN()}, {0}},
+    Params{{0}, {5, quiet_NaN()}, {0}},
+    Params{{0}, {quiet_NaN(), 5}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {quiet_NaN(), quiet_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(quietNan, UndefRoot, testing::Values(
-    Params{{std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}}
+    Params{{quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), 5}, {0}, {0}},
+    Params{{5, quiet_NaN()}, {0}, {0}},
+    Params{{0}, {quiet_NaN(), quiet_NaN()}, {0}},
+    Params{{0}, {5, quiet_NaN()}, {0}},
+    Params{{0}, {quiet_NaN(), 5}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {quiet_NaN(), quiet_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(quietNan, UndefMode, testing::Values(
-    Params{{std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::quiet_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::quiet_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::quiet_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}}
+    Params{{quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {0}, {0}},
+    Params{{quiet_NaN(), 5}, {0}, {0}},
+    Params{{5, quiet_NaN()}, {0}, {0}},
+    Params{{0}, {quiet_NaN(), quiet_NaN()}, {0}},
+    Params{{0}, {5, quiet_NaN()}, {0}},
+    Params{{0}, {quiet_NaN(), 5}, {0}},
+    Params{{quiet_NaN(), quiet_NaN()}, {quiet_NaN(), quiet_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(quietNan, UndefFactorial, testing::Values(
-    UnariParams{{std::numeric_limits<double>::quiet_NaN()}, {0}},
-    UnariParams{{std::numeric_limits<double>::quiet_NaN(), std::numeric_limits<double>::quiet_NaN()}, {0}},
-    UnariParams{{5, std::numeric_limits<double>::quiet_NaN()}, {0}}
+    UnariParams{{quiet_NaN()}, {0}},
+    UnariParams{{quiet_NaN(), quiet_NaN()}, {0}},
+    UnariParams{{5, quiet_NaN()}, {0}}
 ));
 
 INSTANTIATE_TEST_CASE_P(signalingNan, UndefSub, testing::Values(
-    Params{{std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}}
+    Params{{signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), 5}, {0}, {0}},
+    Params{{5, signaling_NaN()}, {0}, {0}},
+    Params{{0}, {signaling_NaN(), signaling_NaN()}, {0}},
+    Params{{0}, {5, signaling_NaN()}, {0}},
+    Params{{0}, {signaling_NaN(), 5}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {signaling_NaN(), signaling_NaN()}, {0}}
 ));
 
 INSTANTIATE_TEST_CASE_P(signalingNan, UndefAdd, testing::Values(
-    Params{{std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}}
+    Params{{signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), 5}, {0}, {0}},
+    Params{{5, signaling_NaN()}, {0}, {0}},
+    Params{{0}, {signaling_NaN(), signaling_NaN()}, {0}},
+    Params{{0}, {5, signaling_NaN()}, {0}},
+    Params{{0}, {signaling_NaN(), 5}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {signaling_NaN(), signaling_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(signalingNan, UndefMul, testing::Values(
-    Params{{std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}}
+    Params{{signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), 5}, {0}, {0}},
+    Params{{5, signaling_NaN()}, {0}, {0}},
+    Params{{0}, {signaling_NaN(), signaling_NaN()}, {0}},
+    Params{{0}, {5, signaling_NaN()}, {0}},
+    Params{{0}, {signaling_NaN(), 5}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {signaling_NaN(), signaling_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(signalingNan, UndefExp, testing::Values(
-    Params{{std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}}
+    Params{{signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), 5}, {0}, {0}},
+    Params{{5, signaling_NaN()}, {0}, {0}},
+    Params{{0}, {signaling_NaN(), signaling_NaN()}, {0}},
+    Params{{0}, {5, signaling_NaN()}, {0}},
+    Params{{0}, {signaling_NaN(), 5}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {signaling_NaN(), signaling_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(signalingNan, UndefRoot, testing::Values(
-    Params{{std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}}
+    Params{{signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), 5}, {0}, {0}},
+    Params{{5, signaling_NaN()}, {0}, {0}},
+    Params{{0}, {signaling_NaN(), signaling_NaN()}, {0}},
+    Params{{0}, {5, signaling_NaN()}, {0}},
+    Params{{0}, {signaling_NaN(), 5}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {signaling_NaN(), signaling_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(signalingNan, UndefMode, testing::Values(
-    Params{{std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), 5}, {0}, {0}},
-    Params{{5, std::numeric_limits<double>::signaling_NaN()}, {0}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {5, std::numeric_limits<double>::signaling_NaN()}, {0}},
-    Params{{0}, {std::numeric_limits<double>::signaling_NaN(), 5}, {0}},
-    Params{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}}
+    Params{{signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {0}, {0}},
+    Params{{signaling_NaN(), 5}, {0}, {0}},
+    Params{{5, signaling_NaN()}, {0}, {0}},
+    Params{{0}, {signaling_NaN(), signaling_NaN()}, {0}},
+    Params{{0}, {5, signaling_NaN()}, {0}},
+    Params{{0}, {signaling_NaN(), 5}, {0}},
+    Params{{signaling_NaN(), signaling_NaN()}, {signaling_NaN(), signaling_NaN()}, {0}}
 
 ));
 
 INSTANTIATE_TEST_CASE_P(signalingNan, UndefFactorial, testing::Values(
-    UnariParams{{std::numeric_limits<double>::signaling_NaN()}, {0}},
-    UnariParams{{std::numeric_limits<double>::signaling_NaN(), std::numeric_limits<double>::signaling_NaN()}, {0}},
-    UnariParams{{5, std::numeric_limits<double>::signaling_NaN()}, {0}}
+    UnariParams{{signaling_NaN()}, {0}},
+    UnariParams{{signaling_NaN(), signaling_NaN()}, {0}},
+    UnariParams{{5, signaling_NaN()}, {0}}
 ));
 
 TEST_P(UndefAdd, oper)
 {
-    EXPECT_THROW(GetParam().number1 + GetParam().number2, team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1 + GetParam().number2, UndefinedException);
 }
 
 TEST_P(UndefSub, oper)
 {
-    EXPECT_THROW(GetParam().number1 - GetParam().number2, team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1 - GetParam().number2, UndefinedException);
 }
 
 TEST_P(UndefMul, oper)
 {
-    EXPECT_THROW(GetParam().number1 * GetParam().number2, team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1 * GetParam().number2, UndefinedException);
 }
 
 TEST_P(UndefDiv, oper)
 {
-    EXPECT_THROW(GetParam().number1 / GetParam().number2, team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1 / GetParam().number2, UndefinedException);
 }
 
 TEST_P(UndefExp, oper)
 {
-    EXPECT_THROW(GetParam().number1 ^GetParam().number2, team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1 ^GetParam().number2, UndefinedException);
 }
 
 TEST_P(UndefMode, oper)
 {
-    EXPECT_THROW(GetParam().number1 % GetParam().number2, team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1 % GetParam().number2, UndefinedException);
 }
 
 TEST_P(UndefFactorial, oper)
 {
-    EXPECT_THROW(!GetParam().number, team22::Math::UndefinedException);
+    EXPECT_THROW(!GetParam().number, UndefinedException);
 }
 
 TEST_P(UndefAdd, fce)
 {
-    EXPECT_THROW(GetParam().number1.add(GetParam().number2), team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1.add(GetParam().number2), UndefinedException);
 }
 
 TEST_P(UndefSub, fce)
 {
-    EXPECT_THROW(GetParam().number1.sub(GetParam().number2), team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1.sub(GetParam().number2), UndefinedException);
 }
 
 TEST_P(UndefMul, fce)
 {
-    EXPECT_THROW(GetParam().number1.mul(GetParam().number2), team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1.mul(GetParam().number2), UndefinedException);
 }
 
 TEST_P(UndefDiv, fce)
 {
-    EXPECT_THROW(GetParam().number1.div(GetParam().number2), team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1.div(GetParam().number2), UndefinedException);
 }
 
 TEST_P(UndefExp, fce)
 {
-    EXPECT_THROW(GetParam().number1.pow(GetParam().number2), team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1.pow(GetParam().number2), UndefinedException);
 }
 
 TEST_P(UndefMode, fce)
 {
-    EXPECT_THROW(GetParam().number1.mod(GetParam().number2), team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1.mod(GetParam().number2), UndefinedException);
 }
 
 TEST_P(UndefRoot, fce)
 {
-    EXPECT_THROW(GetParam().number1.root(GetParam().number2), team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number1.root(GetParam().number2), UndefinedException);
 }
 
 TEST_P(UndefFactorial, fce)
 {
-    EXPECT_THROW(GetParam().number.fact(), team22::Math::UndefinedException);
+    EXPECT_THROW(GetParam().number.fact(), UndefinedException);
 }
