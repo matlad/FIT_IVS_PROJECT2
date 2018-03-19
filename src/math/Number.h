@@ -34,7 +34,7 @@ public:
      * @param real
      * @param imagine
      */
-    Number Number(double real, double imagine = 0);
+    Number(double real, double imagine = 0);
 
     /**
      *
@@ -105,7 +105,7 @@ public:
      * 7i // realná část je 0
      * 0 // obě části jsou 0
      */
-    std::ostream &operator<<(std::ostream &stream, Number &number);
+    friend std::ostream &operator<<(std::ostream &os, const Number &number);
 
 };
 
