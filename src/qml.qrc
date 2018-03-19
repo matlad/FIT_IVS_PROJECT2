@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>constants.js</file>
+        <file>Button.qml</file>
+        <file>backspace1.png</file>
+        <file>backspace2.png</file>
+        <file>help1.png</file>
+        <file>help2.png</file>
+    </qresource>
+</RCC>
