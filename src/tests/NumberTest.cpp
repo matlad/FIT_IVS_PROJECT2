@@ -26,6 +26,13 @@ using team22::Math::UndefinedException;
 
 #define sNaN  std::numeric_limits<double>::signaling_NaN()
 
+#define MY_SUPER_EXPECT_NEAR(actual, expect, delta)\
+    if((expect) == inf || (expect) == -inf){\
+        EXPECT_EQ((actual),(expect));\
+    } else { \
+        EXPECT_NEAR((actual),(expect),(delta));\
+    }
+
 // uvažujeme přesnost na 10 des míst
 #define DELTA 0.00000000005
 
@@ -195,20 +202,9 @@ INSTANTIATE_TEST_CASE_P(def, Mul, testing::Values(
     Params{{       -5.2200000000,        -6.2200000000},{       -0.5600000000,        -6.5200000000},{      -37.6312000000,        37.5176000000}}
 ));
 
-INSTANTIATE_TEST_CASE_P(Inf, Mul, testing::Values(
-    Params{{    inf,    inf}, {      0,      0}, {    inf,     inf}},
-    Params{{    inf,      5}, {      0,      0}, {    inf,     inf}},
-    Params{{      5,    inf}, {      0,      0}, {    inf,     inf}},
-    Params{{      0,      0}, {    inf,    inf}, {      0,       0}},
-    Params{{      0,      0}, {      5,    inf}, {      0,       0}},
-    Params{{      0,      0}, {    inf,      5}, {      0,       0}},
-    Params{{   -inf,   -inf}, {      0,      0}, {   -inf,    -inf}},
-    Params{{   -inf,      5}, {      0,      0}, {   -inf,     inf}},
-    Params{{      5,   -inf}, {      0,      0}, {    inf,    -inf}},
-    Params{{      0,      0}, {   -inf,   -inf}, {     -0,       0}},
-    Params{{      0,      0}, {      5,   -inf}, {     -0,       0}},
-    Params{{      0,      0}, {   -inf,      5}, {     -0,      -0}}
-));
+//INSTANTIATE_TEST_CASE_P(Inf, Mul, testing::Values(
+//
+//));
 
 INSTANTIATE_TEST_CASE_P(def, Div, testing::Values(
     Params{{       -5.0000000000,         0.0000000000},{       -7.0000000000,         0.0000000000},{        0.7142857143,        -0.0000000000}},
@@ -235,6 +231,20 @@ INSTANTIATE_TEST_CASE_P(def, Div, testing::Values(
     Params{{       -5.3540000000,        -6.3300000000},{       -0.6354000000,        -0.6500000000},{        9.0972281965,         0.6559673785}},
     Params{{       -5.2200000000,        -6.2200000000},{       -0.5600000000,        -6.5200000000},{        1.0152624696,        -0.7134130394}}
 
+));
+INSTANTIATE_TEST_CASE_P(Inf, Div, testing::Values(
+Params{{    inf,    inf}, {      0,      0}, {    inf,     inf}},
+Params{{    inf,      5}, {      0,      0}, {    inf,     inf}},
+Params{{      5,    inf}, {      0,      0}, {    inf,     inf}},
+Params{{      0,      0}, {    inf,    inf}, {      0,       0}},
+Params{{      0,      0}, {      5,    inf}, {      0,       0}},
+Params{{      0,      0}, {    inf,      5}, {      0,       0}},
+Params{{   -inf,   -inf}, {      0,      0}, {   -inf,    -inf}},
+Params{{   -inf,      5}, {      0,      0}, {   -inf,     inf}},
+Params{{      5,   -inf}, {      0,      0}, {    inf,    -inf}},
+Params{{      0,      0}, {   -inf,   -inf}, {     -0,       0}},
+Params{{      0,      0}, {      5,   -inf}, {     -0,       0}},
+Params{{      0,      0}, {   -inf,      5}, {     -0,      -0}}
 ));
 
 INSTANTIATE_TEST_CASE_P(def, Exp, testing::Values(
@@ -368,36 +378,36 @@ INSTANTIATE_TEST_CASE_P(inf, Factorial, testing::Values(
 
 TEST_P(Add, oper){
     auto result = p.number1 + p.number2;
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Sub, oper){
     auto result = p.number1 - p.number2;
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Mul, oper){
     auto result = p.number1 * p.number2;
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Div, oper){
     auto result = p.number1 / p.number2;
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Exp, oper){
     auto result = p.number1 ^ p.number2;
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
@@ -405,51 +415,51 @@ TEST_P(Exp, oper){
 TEST_P(Mode, oper){
   
     auto result = p.number1 % p.number2;
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Factorial, oper){
     auto result = !p.number;
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Add, fce){
     auto result = p.number1.add(p.number2);
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Sub, fce){
     auto result = p.number1.sub(p.number2);
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Mul, fce){
     auto result = p.number1.mul(p.number2);
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Div, fce){
     auto result = p.number1.div(p.number2);
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Exp, fce){
   
     auto result = p.number1.pow(p.number2);
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
@@ -457,23 +467,23 @@ TEST_P(Exp, fce){
 TEST_P(Mode, fce){
   
     auto result = p.number1.mod(p.number2);
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Root, fce){
   
     auto result = p.number1.root(p.number2);
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Factorial, fce){
     auto result = p.number.fact();
-    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
@@ -542,40 +552,40 @@ INSTANTIATE_TEST_CASE_P(Inf, UndefAdd, testing::Values(
 ));
 
 INSTANTIATE_TEST_CASE_P(Inf, UndefMul, testing::Values(
-    Params{{    inf,    inf}, {    inf,    inf}, {   -doNotCare,    -doNotCare}},
-    Params{{    inf,    inf}, {    inf,   -inf}, {   -doNotCare,    -doNotCare}},
-    Params{{    inf,    inf}, {   -inf,    inf}, {   -doNotCare,    -doNotCare}},
-    Params{{    inf,    inf}, {   -inf,   -inf}, {   -doNotCare,    -doNotCare}},
-    Params{{    inf,   -inf}, {    inf,    inf}, {   -doNotCare,    -doNotCare}},
-    Params{{    inf,   -inf}, {    inf,   -inf}, {   -doNotCare,    -doNotCare}},
-    Params{{    inf,   -inf}, {   -inf,    inf}, {   -doNotCare,    -doNotCare}},
-    Params{{    inf,   -inf}, {   -inf,   -inf}, {   -doNotCare,    -doNotCare}},
-    Params{{   -inf,    inf}, {    inf,    inf}, {   -doNotCare,    -doNotCare}},
-    Params{{   -inf,    inf}, {    inf,   -inf}, {   -doNotCare,    -doNotCare}},
-    Params{{   -inf,    inf}, {   -inf,    inf}, {   -doNotCare,    -doNotCare}},
-    Params{{   -inf,    inf}, {   -inf,   -inf}, {   -doNotCare,    -doNotCare}},
-    Params{{   -inf,   -inf}, {    inf,    inf}, {   -doNotCare,    -doNotCare}},
-    Params{{   -inf,   -inf}, {    inf,   -inf}, {   -doNotCare,    -doNotCare}},
-    Params{{   -inf,   -inf}, {   -inf,    inf}, {   -doNotCare,    -doNotCare}},
-    Params{{   -inf,   -inf}, {   -inf,   -inf}, {   -doNotCare,    -doNotCare}},
-    Params{{    inf,      0}, {      0,      0}, {    inf,    -doNotCare}},
-    Params{{    inf,    inf}, {    inf,    inf}, {   -doNotCare,    -doNotCare}},
-    Params{{   -inf,      0}, {      0,      0}, {   -inf,    -doNotCare}}
+    Params{{                 inf,                  inf},{        0.0000000000,         0.0000000000},{           doNotCare,            doNotCare}},
+    Params{{                 inf,         5.0000000000},{        0.0000000000,         0.0000000000},{           doNotCare,            doNotCare}},
+    Params{{        5.0000000000,                  inf},{        0.0000000000,         0.0000000000},{           doNotCare,            doNotCare}},
+    Params{{        0.0000000000,         0.0000000000},{                 inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{        0.0000000000,         0.0000000000},{        5.0000000000,                  inf},{           doNotCare,            doNotCare}},
+    Params{{        0.0000000000,         0.0000000000},{                 inf,         5.0000000000},{           doNotCare,            doNotCare}},
+    Params{{                -inf,                 -inf},{        0.0000000000,         0.0000000000},{           doNotCare,            doNotCare}},
+    Params{{                -inf,         5.0000000000},{        0.0000000000,         0.0000000000},{           doNotCare,            doNotCare}},
+    Params{{        5.0000000000,                 -inf},{        0.0000000000,         0.0000000000},{           doNotCare,            doNotCare}},
+    Params{{        0.0000000000,         0.0000000000},{                -inf,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{        0.0000000000,         0.0000000000},{        5.0000000000,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{        0.0000000000,         0.0000000000},{                -inf,         5.0000000000},{           doNotCare,            doNotCare}},
+    Params{{                 inf,                  inf},{                 inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{                 inf,                  inf},{                 inf,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{                 inf,                  inf},{                -inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{                 inf,                  inf},{                -inf,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{                 inf,                 -inf},{                 inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{                 inf,                 -inf},{                 inf,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{                 inf,                 -inf},{                -inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{                 inf,                 -inf},{                -inf,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{                -inf,                  inf},{                 inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{                -inf,                  inf},{                 inf,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{                -inf,                  inf},{                -inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{                -inf,                  inf},{                -inf,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{                -inf,                 -inf},{                 inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{                -inf,                 -inf},{                 inf,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{                -inf,                 -inf},{                -inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{                -inf,                 -inf},{                -inf,                 -inf},{           doNotCare,            doNotCare}},
+    Params{{                 inf,         0.0000000000},{        0.0000000000,         0.0000000000},{           doNotCare,            doNotCare}},
+    Params{{                 inf,                  inf},{                 inf,                  inf},{           doNotCare,            doNotCare}},
+    Params{{                -inf,         0.0000000000},{        0.0000000000,         0.0000000000},{           doNotCare,            doNotCare}}
 ));
 
 INSTANTIATE_TEST_CASE_P(Inf, UndefDiv, testing::Values(
-    Params{{    inf,    inf}, {      0,      0}, {    inf,     inf}},
-    Params{{    inf,      5}, {      0,      0}, {    inf,     inf}},
-    Params{{      5,    inf}, {      0,      0}, {    inf,     inf}},
-    Params{{      0,      0}, {    inf,    inf}, {      0,       0}},
-    Params{{      0,      0}, {      5,    inf}, {      0,       0}},
-    Params{{      0,      0}, {    inf,      5}, {      0,       0}},
-    Params{{   -inf,   -inf}, {      0,      0}, {   -inf,    -inf}},
-    Params{{   -inf,      5}, {      0,      0}, {   -inf,     inf}},
-    Params{{      5,   -inf}, {      0,      0}, {    inf,    -inf}},
-    Params{{      0,      0}, {   -inf,   -inf}, {     -0,       0}},
-    Params{{      0,      0}, {      5,   -inf}, {     -0,       0}},
-    Params{{      0,      0}, {   -inf,      5}, {     -0,      -0}},
     Params{{    inf,    inf}, {    inf,    inf}, {   -doNotCare,    -doNotCare}},
     Params{{    inf,    inf}, {    inf,   -inf}, {   -doNotCare,    -doNotCare}},
     Params{{    inf,    inf}, {   -inf,    inf}, {   -doNotCare,    -doNotCare}},
