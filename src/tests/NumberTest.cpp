@@ -29,10 +29,6 @@ using team22::Math::UndefinedException;
 // uvažujeme přesnost na 10 des míst
 #define DELTA 0.00000000005
 
-bool myDoubleComparison(double a, double b, double delta = DELTA){
-    return fabs(a - b) < delta;
-}
-
 struct Params{
     Number number1;
     Number number2;
@@ -372,36 +368,36 @@ INSTANTIATE_TEST_CASE_P(inf, Factorial, testing::Values(
 
 TEST_P(Add, oper){
     auto result = p.number1 + p.number2;
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Sub, oper){
     auto result = p.number1 - p.number2;
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Mul, oper){
     auto result = p.number1 * p.number2;
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Div, oper){
     auto result = p.number1 / p.number2;
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Exp, oper){
     auto result = p.number1 ^ p.number2;
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
@@ -409,51 +405,51 @@ TEST_P(Exp, oper){
 TEST_P(Mode, oper){
   
     auto result = p.number1 % p.number2;
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Factorial, oper){
     auto result = !p.number;
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Add, fce){
     auto result = p.number1.add(p.number2);
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Sub, fce){
     auto result = p.number1.sub(p.number2);
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Mul, fce){
     auto result = p.number1.mul(p.number2);
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Div, fce){
     auto result = p.number1.div(p.number2);
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Exp, fce){
   
     auto result = p.number1.pow(p.number2);
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
@@ -461,23 +457,23 @@ TEST_P(Exp, fce){
 TEST_P(Mode, fce){
   
     auto result = p.number1.mod(p.number2);
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Root, fce){
   
     auto result = p.number1.root(p.number2);
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
 TEST_P(Factorial, fce){
     auto result = p.number.fact();
-    myDoubleComparison(p.expecting.getReal(), result.getReal());
-    myDoubleComparison(p.expecting.getImaginary(), result.getImaginary());
+    EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
+    EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
 }
 
