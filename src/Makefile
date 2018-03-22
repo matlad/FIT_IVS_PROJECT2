@@ -3,6 +3,6 @@
 #clean (smaže všechny soubory, co nemají být odevzdány)
 #test (spustí testy matematické knihovny)
 test:
-	make -f NumberTest; ls;./NumberTest
+	make -f MakeTests NumberTest;./NumberTest
 #doc (spustí generování dokumentace)
 #run (spustí program)
