@@ -8,7 +8,7 @@
 
 #include <cmath>
 #include "../math/Number.h"
-#include "../math/UndefinedExeption.h"
+#include "../math/UndefinedException.h"
 #include "gtest/gtest.h"
 #include <limits>
 #include <stack>
