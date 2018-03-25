@@ -74,7 +74,7 @@ struct Mul: ParamTest {};
 struct Div: ParamTest {};
 struct Exp: ParamTest {};
 struct Root: ParamTest{};
-struct Mode: ParamTest {};
+struct Mod: ParamTest {};
 struct Factorial: UParamTest {};
 
 
@@ -309,7 +309,7 @@ INSTANTIATE_TEST_CASE_P(def, Root, testing::Values(
     Params{{       -5.2200000000,        -6.2200000000},{       -0.5600000000,        -6.5200000000},{        1.2918307317,         0.4694159215}}
 ));
 
-INSTANTIATE_TEST_CASE_P(def, Mode, testing::Values(
+INSTANTIATE_TEST_CASE_P(def, Mod, testing::Values(
     Params{{      -16.0000000000,         0.0000000000},{       -2.0000000000,         0.0000000000},{        0.0000000000,         0.0000000000}},
     Params{{       16.0000000000,         0.0000000000},{       -2.0000000000,         0.0000000000},{        0.0000000000,         0.0000000000}},
     Params{{      -16.0000000000,         0.0000000000},{        2.0000000000,         0.0000000000},{        0.0000000000,         0.0000000000}},
@@ -342,21 +342,6 @@ INSTANTIATE_TEST_CASE_P(def, Mode, testing::Values(
     Params{{       -5.3540000000,        -6.3300000000},{       -0.6354000000,        -0.6500000000},{        0.3646000000,        -0.4800000000}},
     Params{{       -5.2200000000,        -6.2200000000},{       -0.5600000000,        -6.5200000000},{       -4.6600000000,         0.3000000000}}
 ));
-
-INSTANTIATE_TEST_CASE_P(Inf, Mode, testing::Values(
-    Params{{    inf,      5}, {      0,      0}, {    inf,     inf}},
-    Params{{      5,    inf}, {      0,      0}, {    inf,     inf}},
-    Params{{      0,      0}, {    inf,    inf}, {      0,       0}},
-    Params{{      0,      0}, {      5,    inf}, {      0,       0}},
-    Params{{      0,      0}, {    inf,      5}, {      0,       0}},
-    Params{{   -inf,   -inf}, {      0,      0}, {   -inf,    -inf}},
-    Params{{   -inf,      5}, {      0,      0}, {   -inf,     inf}},
-    Params{{      5,   -inf}, {      0,      0}, {    inf,    -inf}},
-    Params{{      0,      0}, {   -inf,   -inf}, {     -0,       0}},
-    Params{{      0,      0}, {      5,   -inf}, {     -0,       0}},
-    Params{{      0,      0}, {   -inf,      5}, {     -0,      -0}}
-));
-
 
 
 INSTANTIATE_TEST_CASE_P(def, Factorial, testing::Values(
@@ -412,7 +397,7 @@ TEST_P(Exp, oper){
 }
 
 
-TEST_P(Mode, oper){
+TEST_P(Mod, oper){
   
     auto result = p.number1 % p.number2;
     MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
@@ -464,7 +449,7 @@ TEST_P(Exp, fce){
 }
 
 
-TEST_P(Mode, fce){
+TEST_P(Mod, fce){
   
     auto result = p.number1.mod(p.number2);
     MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
@@ -498,14 +483,14 @@ struct UndefMul: ParamTest {};
 struct UndefDiv: ParamTest {};
 struct UndefExp: ParamTest {};
 struct UndefRoot: ParamTest {};
-struct UndefMode: ParamTest {};
+struct UndefMod: ParamTest {};
 struct UndefFactorial: UParamTest {};
 
 INSTANTIATE_TEST_CASE_P(divWithZero, UndefDiv, testing::Values(
     Params{{5}, {0}, {0}}
 ));
 
-INSTANTIATE_TEST_CASE_P(divWithZero, UndefMode, testing::Values(
+INSTANTIATE_TEST_CASE_P(divWithZero, UndefMod, testing::Values(
     Params{{5}, {0}, {0}}
 ));
 
@@ -670,7 +655,7 @@ INSTANTIATE_TEST_CASE_P(Inf, UndefRoot, testing::Values(
     Params{{   -inf,   -inf}, {   -inf,   -inf}, {    doNotCare,     doNotCare}}
 ));
 
-INSTANTIATE_TEST_CASE_P(Inf, UndefMode, testing::Values(
+INSTANTIATE_TEST_CASE_P(Inf, UndefMod, testing::Values(
     Params{{    inf,    inf}, {      0,      0}, {    inf,     inf}},
     Params{{    inf,      5}, {      0,      0}, {    inf,     inf}},
     Params{{      5,    inf}, {      0,      0}, {    inf,     inf}},
@@ -769,7 +754,7 @@ INSTANTIATE_TEST_CASE_P(quietNan, UndefRoot, testing::Values(
 
 ));
 
-INSTANTIATE_TEST_CASE_P(quietNan, UndefMode, testing::Values(
+INSTANTIATE_TEST_CASE_P(quietNan, UndefMod, testing::Values(
     Params{{qNaN}, {0}, {0}},
     Params{{qNaN, qNaN}, {0}, {0}},
     Params{{qNaN, 5}, {0}, {0}},
@@ -846,7 +831,7 @@ INSTANTIATE_TEST_CASE_P(signalingNan, UndefRoot, testing::Values(
 
 ));
 
-INSTANTIATE_TEST_CASE_P(signalingNan, UndefMode, testing::Values(
+INSTANTIATE_TEST_CASE_P(signalingNan, UndefMod, testing::Values(
     Params{{sNaN}, {0}, {0}},
     Params{{sNaN, sNaN}, {0}, {0}},
     Params{{sNaN, 5}, {0}, {0}},
@@ -889,7 +874,7 @@ TEST_P(UndefExp, oper)
     EXPECT_THROW(p.number1 ^p.number2, UndefinedException);
 }
 
-TEST_P(UndefMode, oper)
+TEST_P(UndefMod, oper)
 {
     EXPECT_THROW(p.number1 % p.number2, UndefinedException);
 }
@@ -924,7 +909,7 @@ TEST_P(UndefExp, fce)
     EXPECT_THROW(p.number1.pow(p.number2), UndefinedException);
 }
 
-TEST_P(UndefMode, fce)
+TEST_P(UndefMod, fce)
 {
     EXPECT_THROW(p.number1.mod(p.number2), UndefinedException);
 }
