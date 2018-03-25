@@ -42,9 +42,11 @@ public:
         MOD,
         NEG,
         EVAL,
+        CLEAR,
+        BS
     };
 
-    const char * OperatorNames[10] {
+    const char * OperatorNames[12] {
         "ADD",
         "SUB",
         "DIV",
@@ -55,6 +57,8 @@ public:
         "MOD",
         "NEG",
         "EVAL",
+        "CLEAR",
+        "BS",
     };
 
     /**
