@@ -101,9 +101,9 @@ INSTANTIATE_TEST_CASE_P(operators, LexicalAnalyzerTest, testing::Values(
     LexicalAnalyzerTestParam{"*",{Lex::MUL}},
     LexicalAnalyzerTestParam{"NEG",{Lex::NEG}},
     LexicalAnalyzerTestParam{"ROOT",{Lex::ROOT}},
-    LexicalAnalyzerTestParam{"-",{Lex::SUB}}
-    LexicalAnalyzerTestParam{"=",{Lex::EVAL}}
-    LexicalAnalyzerTestParam{"C",{Lex::CLEAR}}
+    LexicalAnalyzerTestParam{"-",{Lex::SUB}},
+    LexicalAnalyzerTestParam{"=",{Lex::EVAL}},
+    LexicalAnalyzerTestParam{"C",{Lex::CLEAR}},
     LexicalAnalyzerTestParam{"BS",{Lex::BS}}
 ));
 
