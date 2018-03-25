@@ -106,7 +106,8 @@ public:
 
     Number operator!();
 
-
+    bool operator==(const Number &rhs) const;
+    bool operator!=(const Number &rhs) const;
 
     /**
      * vypíše číslo jako realná část + imaginarní část i

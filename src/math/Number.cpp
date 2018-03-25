@@ -205,3 +205,13 @@ std::ostream &team22::Math::operator<<(std::ostream &os, const team22::Math::Num
     }
     return os;
 }
+
+bool team22::Math::Number::operator==(const team22::Math::Number &rhs) const
+{
+    return num == rhs.num;
+}
+
+bool team22::Math::Number::operator!=(const team22::Math::Number &rhs) const
+{
+    return !(rhs == *this);
+}
