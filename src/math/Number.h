@@ -5,6 +5,9 @@
  * @brief
  */
 
+#ifndef FIT_IVS_PROJECT2_NUMBER_H
+#define FIT_IVS_PROJECT2_NUMBER_H
+
 #include <iostream>
 
 namespace team22::Math
@@ -96,6 +99,8 @@ public:
 
     Number operator!();
 
+
+
     /**
      * vypíše číslo jako realná část + imaginarní část i
      * pokud je některá část 0 nevypisuje
@@ -110,3 +115,5 @@ public:
 };
 
 };
+
+#endif //FIT_IVS_PROJECT2_NUMBER_H

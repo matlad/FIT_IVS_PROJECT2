@@ -17,12 +17,12 @@ team22::Calc::Lex::Types team22::Calc::Lex::getType() const
     return type;
 }
 
-bool team22::Calc::Lex::isNumber()
+bool team22::Calc::Lex::isNumber() const
 {
     return type == team22::Calc::Lex::Types::NUMBER;
 }
 
-bool team22::Calc::Lex::isOperator()
+bool team22::Calc::Lex::isOperator() const
 {
     return type == team22::Calc::Lex::Types::OPERATOR;
 }
@@ -54,5 +54,17 @@ team22::Calc::Lex::Operator team22::Calc::Lex::getAsOperator()
     }
 
     return value.oper;
+}
+
+bool team22::Calc::Lex::operator==(const team22::Calc::Lex &rhs) const
+{
+    return type == rhs.type &&
+        ((isNumber() && value.number == rhs.value.number)||
+            (isOperator() && value.oper == rhs.value.oper));
+}
+
+bool team22::Calc::Lex::operator!=(const team22::Calc::Lex &rhs) const
+{
+    return !(rhs == *this);
 }
 

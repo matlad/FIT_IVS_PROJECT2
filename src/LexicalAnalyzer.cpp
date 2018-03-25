@@ -6,14 +6,16 @@
  */
 #include "LexicalAnalyzer.h"
 
-team22::Calc::LexicalAnalyzer::LexicalAnalyzer(Interpret &interpret)
-    : interpret(interpret)
-{}
 void team22::Calc::LexicalAnalyzer::pushSymbol(char symbol)
 {
 
 }
-void team22::Calc::LexicalAnalyzer::registLexemCalback(void *object, void *(*method)(Lex))
+
+void team22::Calc::LexicalAnalyzer::registLexemCalback(team22::Calc::LexIdentificationObserver *lexCallbackObject)
+{
+
+}
+team22::Calc::LexicalAnalyzer::LexicalAnalyzer()
 {
 
 }

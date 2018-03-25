@@ -7,8 +7,10 @@
 #ifndef FIT_IVS_PROJECT2_LEXICALANALYZER_H
 #define FIT_IVS_PROJECT2_LEXICALANALYZER_H
 
+#include <set>
 #include "Lex.h"
 #include "Interpret.h"
+#include "LexIdentificationObserver.h"
 
 namespace team22::Calc
 {
@@ -20,19 +22,10 @@ namespace team22::Calc
 class LexicalAnalyzer
 {
     /**
-     * Interpret jemuž jsou předávaný identifikované lexémy
+     * Množina Objektů na nichž bude volán callback při rozeznání lexemů
      */
-    Interpret interpret;
+    std::set<LexIdentificationObserver *> lexCallbackObject;
 
-    /**
-     * object callbacku
-     */
-    void * object = nullptr;
-
-    /**
-     * callback metoda
-     */
-    void (*method)(Lex) = nullptr;
 
 public:
     /**
@@ -43,17 +36,18 @@ public:
 
 
     /**
-     * Registrace metody jako callbacku volaného při identifikaci lexemu
-     * @param object
-     * @param method
+     * Registruje objekt k odběru rozeznaných lexémů
+     * vícenásobná registrace stejné instance odběratele neprovede nic
+     *
+     * @param lexCallbackObject objekt na němž
      */
-    void registLexemCalback(void * object, void * method(Lex));
+    void registLexemCalback(LexIdentificationObserver * lexCallbackObject);
 
     /**
      *
      * @param interpret
      */
-    explicit LexicalAnalyzer(Interpret &interpret);
+    explicit LexicalAnalyzer();
 
 };
 }

@@ -60,13 +60,13 @@ public:
      * @brief Konstrukce lexému typu operátor
      * @param oper
      */
-    explicit Lex(Operator oper);
+    Lex(Operator oper);
 
     /**
      * @brief Konstrukce lexému typu číslo
      * @param number
      */
-    explicit Lex(Math::Number number);
+    Lex(Math::Number number);
 
     /**
      * @brief vrací hodnotu lexému
@@ -83,13 +83,13 @@ public:
      * @brief Testuje zda je lexém číslo
      * @return true pokud je číslo
      */
-    bool isNumber();
+    bool isNumber() const;
 
     /**
      * @brief Testuje zda je lexém operátor
      * @return true pokud je operátor
      */
-    bool isOperator();
+    bool isOperator() const;
 
     /**
      * @throw LexException tento lexém pokud není číslo
@@ -102,6 +102,9 @@ public:
      * @return operator
      */
     Operator getAsOperator();
+
+    bool operator==(const Lex &rhs) const;
+    bool operator!=(const Lex &rhs) const;
 };
 }
 
