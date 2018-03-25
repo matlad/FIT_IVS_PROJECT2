@@ -8,13 +8,17 @@
 
 void team22::Calc::LexicalAnalyzer::pushSymbol(char symbol)
 {
-
+    for (auto callBack:this->lexCallbackObjects)
+    {
+        callBack->sendIdentifiedLex(Lex(2));
+    }
 }
 
 void team22::Calc::LexicalAnalyzer::registLexemCalback(team22::Calc::LexIdentificationObserver *lexCallbackObject)
 {
-
+    lexCallbackObjects.emplace(lexCallbackObject);
 }
+
 team22::Calc::LexicalAnalyzer::LexicalAnalyzer()
 {
 

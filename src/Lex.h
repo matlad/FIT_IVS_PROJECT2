@@ -6,6 +6,7 @@
  */
 #ifndef FIT_IVS_PROJECT2_LEX_H
 #define FIT_IVS_PROJECT2_LEX_H
+#include <ostream>
 #include "math/Number.h"
 
 namespace team22::Calc
@@ -40,6 +41,20 @@ public:
         FACTORIAL,
         MOD,
         NEG,
+        EVAL,
+    };
+
+    const char * OperatorNames[10] {
+        "ADD",
+        "SUB",
+        "DIV",
+        "MUL",
+        "EXP",
+        "ROOT",
+        "FACTORIAL",
+        "MOD",
+        "NEG",
+        "EVAL",
     };
 
     /**
@@ -47,7 +62,7 @@ public:
      */
     union Value
     {
-        Math::Number number;
+        Math::Number number {0};
         Operator oper;
     };
 
@@ -95,16 +110,18 @@ public:
      * @throw LexException tento lexém pokud není číslo
      * @return number
      */
-    Math::Number getAsNumber();
+    Math::Number getAsNumber() const;
 
     /**
      * @throw LexException tento lexém pokud není Operator
      * @return operator
      */
-    Operator getAsOperator();
+    Operator getAsOperator() const;
 
     bool operator==(const Lex &rhs) const;
     bool operator!=(const Lex &rhs) const;
+
+    friend std::ostream &operator<<(std::ostream &os, const Lex &lex);
 };
 }
 

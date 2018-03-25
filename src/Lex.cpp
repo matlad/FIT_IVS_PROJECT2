@@ -27,29 +27,29 @@ bool team22::Calc::Lex::isOperator() const
     return type == team22::Calc::Lex::Types::OPERATOR;
 }
 
-team22::Calc::Lex::Lex(team22::Calc::Lex::Operator oper):type(OPERATOR)
+team22::Calc::Lex::Lex(team22::Calc::Lex::Operator oper)
+    : type(OPERATOR)
 {
     value.oper = oper;
 }
 
-team22::Calc::Lex::Lex(team22::Math::Number number):type(NUMBER)
+team22::Calc::Lex::Lex(team22::Math::Number number)
+    : type(NUMBER)
 {
     value.number = number;
 }
 
-team22::Math::Number team22::Calc::Lex::getAsNumber()
+team22::Math::Number team22::Calc::Lex::getAsNumber() const
 {
-    if(!isNumber())
-    {
+    if (!isNumber()) {
         throw LexException();
     }
     return value.number;
 }
 
-team22::Calc::Lex::Operator team22::Calc::Lex::getAsOperator()
+team22::Calc::Lex::Operator team22::Calc::Lex::getAsOperator() const
 {
-    if(!isOperator())
-    {
+    if (!isOperator()) {
         throw LexException();
     }
 
@@ -58,13 +58,27 @@ team22::Calc::Lex::Operator team22::Calc::Lex::getAsOperator()
 
 bool team22::Calc::Lex::operator==(const team22::Calc::Lex &rhs) const
 {
-    return type == rhs.type &&
-        ((isNumber() && value.number == rhs.value.number)||
-            (isOperator() && value.oper == rhs.value.oper));
+    return
+        type == rhs.type &&
+            (
+                (isNumber() && getAsNumber() == rhs.getAsNumber()) ||
+                    (isOperator() && getAsOperator() == rhs.getAsOperator())
+            );
 }
 
 bool team22::Calc::Lex::operator!=(const team22::Calc::Lex &rhs) const
 {
     return !(rhs == *this);
+}
+std::ostream &team22::Calc::operator<<(std::ostream &os, const team22::Calc::Lex &lex)
+{
+    if (lex.isNumber()) {
+        os << "N(" << lex.getAsNumber() << ")";
+    }
+    else {
+        os << "O(" << lex.OperatorNames[lex.getAsOperator()] << ")";
+    }
+
+    return os;
 }
 

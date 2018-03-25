@@ -24,7 +24,7 @@ class LexicalAnalyzer
     /**
      * Množina Objektů na nichž bude volán callback při rozeznání lexemů
      */
-    std::set<LexIdentificationObserver *> lexCallbackObject;
+    std::set<LexIdentificationObserver *> lexCallbackObjects;
 
 
 public:

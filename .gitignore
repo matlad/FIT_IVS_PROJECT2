@@ -3,5 +3,5 @@
 /cmake-build-debug
 *.o
 *.a
-NumberTest
+*Test
 CMakeLists.txt
