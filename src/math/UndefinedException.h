@@ -1,11 +1,11 @@
 /**
- * @file     UndefinedExeption.h
+ * @file     UndefinedException.h
  * @encoding UTF-8
  * @date     18.3.18
  * @author   Adam Mátl <xmatla00@stud.fit.vutbr.cz> <matla@matla.cz>
  */
-#ifndef FIT_IVS_PROJECT2_UNDEFINEDEXEPTION_H
-#define FIT_IVS_PROJECT2_UNDEFINEDEXEPTION_H
+#ifndef FIT_IVS_PROJECT2_UNDEFINEDEXCEPTION_H
+#define FIT_IVS_PROJECT2_UNDEFINEDEXCEPTION_H
 
 #include <exception>
 namespace team22::Math
@@ -16,10 +16,15 @@ namespace team22::Math
  */
 class UndefinedException: public std::exception
 {
+public:
+
+	const char* what() {
+		return "UE";
+	}
 };
 
 }
 
 
 
-#endif //FIT_IVS_PROJECT2_UNDEFINEDEXEPTION_H
+#endif //FIT_IVS_PROJECT2_UNDEFINEDEXCEPTION_H

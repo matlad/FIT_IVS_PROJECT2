@@ -8,6 +8,8 @@
 #ifndef FIT_IVS_PROJECT2_NUMBER_H
 #define FIT_IVS_PROJECT2_NUMBER_H
 
+#include <cmath>    //Used for isnan()
+#include <complex>
 #include <iostream>
 
 namespace team22::Math
@@ -18,19 +20,24 @@ namespace team22::Math
  */
 class Number
 {
+private:
+
+    std::complex<double> num;
+    std::complex<double> res;
+
 public:
 
     /**
      * Realná část
      * @return
      */
-    double getReal();
+    double getReal() const;
 
     /**
      * Imaginární část
      * @return
      */
-    double getImaginary();
+    double getImaginary() const;
 
     /**
      *
