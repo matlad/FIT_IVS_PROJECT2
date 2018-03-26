@@ -1,9 +1,11 @@
 /**
- * @file Number.h
- * @author Adam Mátl <xmatla00@stud.fit.vutbr.cz>
- * @author Matyáš Sládek <xslade21@stud.fit.vutbr.cz>
- *
- * @brief
+ * @file     Number.h
+ * @encoding UTF-8
+ * @date     26.3.18
+ * @author   Adam Mátl <xmatla00@stud.fit.vutbr.cz>
+ * @author   Matyáš Sládek <xslade21@stud.fit.vutbr.cz>
+ * 
+ * @brief    Hlavičkový soubor pro Number z matematické knihovny
  */
 
 #include <cmath>
@@ -23,35 +25,17 @@ private:
     std::complex<double> value;
 
     /**
-     * @brief Checks if any of the given parameters is Nan.
-     * 
-     * @param param1 First parameter.
-     * @param param2 Second parameter.
-     * @param param3 Third parameter.
-     * @param param4 Fourth parameter.
-     * @return True if any of the given parameters is Nan, False otherwise.
+     * @return True pokud je některý z parametrů Nan, jiank False
      */
 	bool anyParamNan(double param1, double param2, double param3, double param4);
 
     /**
-     * @brief Checks if any of the given parameters is infinity.
-     * 
-     * @param param1 First parameter.
-     * @param param2 Second parameter.
-     * @param param3 Third parameter.
-     * @param param4 Fourth parameter.
-     * @return True if any of the given parameters is infinity, False otherwise.
+     * @return True pokud je některý z parametrů nekonečno, jiank False
      */
 	bool anyParamInf(double param1, double param2, double param3, double param4);
 
     /**
-     * @brief Checks if all given parameters are infinity.
-     * 
-     * @param param1 First parameter.
-     * @param param2 Second parameter.
-     * @param param3 Third parameter.
-     * @param param4 Fourth parameter.
-     * @return True if all given parameters are infinity, False otherwise.
+     * @return True pokud jsou všechny parametry nekonečno, jiank False
      */
 	bool allParamsInf(double param1, double param2, double param3, double param4);
 
@@ -70,80 +54,100 @@ public:
     double getImaginary() const;
 
     /**
-     *
-     * @param real
-     * @param imagine
+     * @param real Reálná část
+     * @param imaginary Imaginární část
      */
-    Number(double real, double imagine = 0);
+    Number(double real, double imaginary = 0);
 
     /**
-     *
-     * @param adder1
-     * @param adder2
-     * @return
+     * @brief Sčítání
+     * 
+     * @param addend sčítanec
+     * @return součet
      */
-    Number add(Number adder);
+    Number add(Number addend);
 
     Number operator+(Number &number);
 
     /**
-     *
-     * @param minuend
-     * @param subtrahend
-     * @return
+     * @brief Odečítání
+     * 
+     * @param subtrahend menšitel
+     * @return rozdíl
      */
     Number sub(Number subtrahend);
 
     Number operator-(Number &number);
 
     /**
-     * násobení
+     * @brief Násobení
+     * 
+     * @param multiplier činitel
+     * @return součin
      */
     Number mul(Number multiplier);
 
     Number operator*(Number &number);
 
     /**
-     * dělení
+     * @brief Dělení
+     * 
+     * @param divisor dělitel
+     * @return rozdíl
      */
     Number div(Number divisor);
 
     Number operator/(Number &number);
 
     /**
-     * mocnina
+     * @brief Umocňování
+     * 
+     * @param exponent mocnitel
+     * @return mocnina
      */
     Number pow(Number exponent);
 
     Number operator^(Number &number);
 
     /**
-     * odmocnina
+     * @brief Odmocňování
+     * 
+     * @param degree odmocnitel
+     * @return odmocnina
      */
     Number root(Number degree);
 
     /**
-     * Vrací zbytek po dělení
+     * @brief Zbytek po dělení
+     * 
+     * @param divisor dělitel
+     * @return zbytek
      */
-    Number mod(Number total);
+    Number mod(Number divisor);
 
     Number operator%(Number &number);
 
     /**
-     * faktorial
+     * @brief Faktoriál
+     * 
+     * @return faktoriál
      */
     Number fact();
 
     Number operator!();
 
     /**
-     * vypíše číslo jako realná část + imaginarní část i
+     * vypíše číslo jako realná část +/- imaginarní část i
      * pokud je některá část 0 nevypisuje
      * př.
      * 2 + 6i
      * 6 // imaginární část je 0
      * 7i // realná část je 0
      * 0 // obě části jsou 0
+     */
+    /**
+     * @brief Vypíše komplexní číslo
+     * @details Vypíše komplexní číslo ve tvaru: reálná_část +/- imaginární_část. Pokud je některá z částí 0, není vypsána, pokud jsou 0 části obě, vypíše 0.
      */
     friend std::ostream &operator<<(std::ostream &os, const Number &number);
 

@@ -3,6 +3,7 @@
  * @encoding UTF-8
  * @date     26.3.18
  * @author   Matyáš Sládek <xslade21@stud.fit.vutbr.cz>
+ * 
  * @brief    Number z matematické knihovny
  */
 
@@ -37,22 +38,22 @@ double Number::getImaginary() const
 {
     return value.imag();
 }
-Number::Number(double real, double imagine)
+Number::Number(double real, double imaginary)
 {
-    value = std::complex(real, imagine);
+    value = std::complex(real, imaginary);
 }
-Number Number::add(Number adder)
+Number Number::add(Number addend)
 {
     UndefinedException exception;
-    if (anyParamNan(value.real(), value.imag(), adder.getReal(), adder.getImaginary())) {
+    if (anyParamNan(value.real(), value.imag(), addend.getReal(), addend.getImaginary())) {
         throw exception;
     }
-    if (allParamsInf(value.real(), value.imag(), adder.getReal(), adder.getImaginary())) {
-        if ((value.real() != adder.getReal()) || (value.imag() != adder.getImaginary())) {
+    if (allParamsInf(value.real(), value.imag(), addend.getReal(), addend.getImaginary())) {
+        if ((value.real() != addend.getReal()) || (value.imag() != addend.getImaginary())) {
             throw exception;
         }
     }
-    value += std::complex(adder.getReal(), adder.getImaginary());
+    value += std::complex(addend.getReal(), addend.getImaginary());
     return Number(value.real(), value.imag());
 }
 Number Number::operator+(Number &number)
@@ -114,26 +115,26 @@ Number Number::operator/(Number &number)
 {
     return Number(div(number));
 }
-Number Number::pow(Number number)
+Number Number::pow(Number exponent)
 {
     UndefinedException exception;
-    if (anyParamNan(value.real(), value.imag(), number.getReal(), number.getImaginary())) {
+    if (anyParamNan(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary())) {
         throw exception;
     }
-    if (anyParamInf(value.real(), value.imag(), number.getReal(), number.getImaginary())) {
-        if (!((value.real() == 0) && (value.imag() == 0) && (std::isinf(number.getReal())) && (number.getReal() > 0))
-            && !((allParamsInf(value.real(), value.imag(), number.getReal(), number.getImaginary()))
-                && (((value.real() < 0) && (value.imag() < 0) && (number.getReal() < 0) && (number.getImaginary() < 0))
-                    || ((value.real() > 0) && (value.imag() > 0) && (number.getReal() < 0) && (number.getImaginary() > 0))
-                    || ((value.real() > 0) && (value.imag() < 0) && (number.getReal() < 0) && (number.getImaginary() < 0))
-                    || ((value.real() < 0) && (value.imag() > 0) && (number.getReal() < 0) && (number.getImaginary() > 0))))) {
+    if (anyParamInf(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary())) {
+        if (!((value.real() == 0) && (value.imag() == 0) && (std::isinf(exponent.getReal())) && (exponent.getReal() > 0))
+            && !((allParamsInf(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary()))
+                && (((value.real() < 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))
+                    || ((value.real() > 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))
+                    || ((value.real() > 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))
+                    || ((value.real() < 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))))) {
             throw exception;
         }
     }
-    if ((value.real() == 0) && (value.imag() == 0) && (number.getReal() == 0) && (number.getImaginary() == 0)) {
+    if ((value.real() == 0) && (value.imag() == 0) && (exponent.getReal() == 0) && (exponent.getImaginary() == 0)) {
         throw exception;
     }
-    value = std::pow(value, (std::complex(number.getReal(), number.getImaginary())));
+    value = std::pow(value, (std::complex(exponent.getReal(), exponent.getImaginary())));
     return Number(value.real(), value.imag());
 }
 Number Number::operator^(Number &number)
@@ -160,22 +161,22 @@ Number Number::root(Number degree)
     value = std::pow(value, temporary);
     return Number(value.real(), value.imag());
 }
-Number Number::mod(Number total)
+Number Number::mod(Number divisor)
 {
     UndefinedException exception;
-    if (anyParamNan(value.real(), value.imag(), total.getReal(), total.getImaginary())) {
+    if (anyParamNan(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
         throw exception;
     }
-    if (anyParamInf(value.real(), value.imag(), total.getReal(), total.getImaginary())) {
+    if (anyParamInf(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
         throw exception;
     }
-    if ((total.getReal() == 0) && (total.getImaginary() == 0)) {
+    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {
         throw exception;
     }
-    std::complex<double> temporary = std::complex(total.getReal(), total.getImaginary());
+    std::complex<double> temporary = std::complex(divisor.getReal(), divisor.getImaginary());
     temporary = value / temporary;
     temporary = std::complex(std::trunc(temporary.real()), std::trunc(temporary.imag()));
-    temporary *= std::complex(total.getReal(), total.getImaginary());
+    temporary *= std::complex(divisor.getReal(), divisor.getImaginary());
     value -= temporary;
     return Number(value.real(), value.imag());
 }
@@ -199,8 +200,8 @@ std::ostream &team22::Math::operator<<(std::ostream &os, const Number &number)
     if (number.getReal() != 0) {
         os << number.getReal();
         if (number.getImaginary() != 0) {
-            os << " + ";
-            os << number.getImaginary();
+        	(number.getImaginary() < 0) ? (os << " - ") : (os << " + ");
+            os << std::abs(number.getImaginary());
             os << "i";
         }
     } else {
