@@ -1,11 +1,12 @@
 /**
  * @file Number.h
- * @author Adam Mátl xmatla00@stud.fit.vutbr.cz
+ * @author Adam Mátl <xmatla00@stud.fit.vutbr.cz>
+ * @author Matyáš Sládek <xslade21@stud.fit.vutbr.cz>
  *
  * @brief
  */
 
-#include <cmath>    //Used for isnan()
+#include <cmath>
 #include <complex>
 #include <iostream>
 
@@ -19,8 +20,40 @@ class Number
 {
 private:
 
-    std::complex<double> num;
-    std::complex<double> res;
+    std::complex<double> value;
+
+    /**
+     * @brief Checks if any of the given parameters is Nan.
+     * 
+     * @param param1 First parameter.
+     * @param param2 Second parameter.
+     * @param param3 Third parameter.
+     * @param param4 Fourth parameter.
+     * @return True if any of the given parameters is Nan, False otherwise.
+     */
+	bool anyParamNan(double param1, double param2, double param3, double param4);
+
+    /**
+     * @brief Checks if any of the given parameters is infinity.
+     * 
+     * @param param1 First parameter.
+     * @param param2 Second parameter.
+     * @param param3 Third parameter.
+     * @param param4 Fourth parameter.
+     * @return True if any of the given parameters is infinity, False otherwise.
+     */
+	bool anyParamInf(double param1, double param2, double param3, double param4);
+
+    /**
+     * @brief Checks if all given parameters are infinity.
+     * 
+     * @param param1 First parameter.
+     * @param param2 Second parameter.
+     * @param param3 Third parameter.
+     * @param param4 Fourth parameter.
+     * @return True if all given parameters are infinity, False otherwise.
+     */
+	bool allParamsInf(double param1, double param2, double param3, double param4);
 
 public:
 

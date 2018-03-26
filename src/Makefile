@@ -4,5 +4,7 @@
 #test (spustí testy matematické knihovny)
 test:
 	make -f MakeTests NumberTest;./NumberTest
+clean:
+	rm -f NumberTest *.o *.a
 #doc (spustí generování dokumentace)
 #run (spustí program)

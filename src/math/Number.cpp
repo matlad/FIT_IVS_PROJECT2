@@ -1,192 +1,200 @@
+/**
+ * @file     Number.cpp
+ * @encoding UTF-8
+ * @date     26.3.18
+ * @author   Matyáš Sládek <xslade21@stud.fit.vutbr.cz>
+ * @brief    Number z matematické knihovny
+ */
+
 #include "Number.h"
 #include "UndefinedException.h"
 
-bool paramsNan(double param1, double param2, double param3, double param4)
+using namespace team22::Math;
+
+bool Number::anyParamNan(double param1, double param2, double param3, double param4)
 {
     if (std::isnan(param1) || std::isnan(param2) || std::isnan(param3) || std::isnan(param4))
         return true;
     return false;
 }
-double team22::Math::Number::getReal() const
+bool Number::anyParamInf(double param1, double param2, double param3, double param4)
 {
-    return num.real();
+    if (std::isinf(param1) || std::isinf(param2) || std::isinf(param3) || std::isinf(param4))
+        return true;
+    return false;
 }
-double team22::Math::Number::getImaginary() const
+bool Number::allParamsInf(double param1, double param2, double param3, double param4)
 {
-    return num.imag();
+    if (std::isinf(param1) && std::isinf(param2) && std::isinf(param3) && std::isinf(param4))
+        return true;
+    return false;
 }
-team22::Math::Number::Number(double real, double imagine)
+double Number::getReal() const
 {
-    num = std::complex(real, imagine);
+    return value.real();
 }
-team22::Math::Number team22::Math::Number::add(team22::Math::Number adder)
+double Number::getImaginary() const
 {
-    if (paramsNan(num.real(), num.imag(), adder.getReal(), adder.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    return value.imag();
+}
+Number::Number(double real, double imagine)
+{
+    value = std::complex(real, imagine);
+}
+Number Number::add(Number adder)
+{
+    UndefinedException exception;
+    if (anyParamNan(value.real(), value.imag(), adder.getReal(), adder.getImaginary())) {
+        throw exception;
     }
-    if (std::isinf(num.real()) && std::isinf(num.imag()) && std::isinf(adder.getReal()) && std::isinf(adder.getImaginary())) {
-        if ((num.real() != adder.getReal()) || (num.imag() != adder.getImaginary())) {
-            UndefinedException e;
-            throw e;
+    if (allParamsInf(value.real(), value.imag(), adder.getReal(), adder.getImaginary())) {
+        if ((value.real() != adder.getReal()) || (value.imag() != adder.getImaginary())) {
+            throw exception;
         }
     }
-    res = std::complex(adder.getReal(), adder.getImaginary());
-    res = num + res;
-    return team22::Math::Number(res.real(), res.imag());
+    value += std::complex(adder.getReal(), adder.getImaginary());
+    return Number(value.real(), value.imag());
 }
-team22::Math::Number team22::Math::Number::operator+(team22::Math::Number &number)
+Number Number::operator+(Number &number)
 {
-    return team22::Math::Number(add(number));
+    return Number(add(number));
 }
-team22::Math::Number team22::Math::Number::sub(team22::Math::Number subtrahend)
+Number Number::sub(Number subtrahend)
 {
-    if (paramsNan(num.real(), num.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    UndefinedException exception;
+    if (anyParamNan(value.real(), value.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
+        throw exception;
     }
-    if (std::isinf(num.real()) && std::isinf(num.imag()) && std::isinf(subtrahend.getReal()) && std::isinf(subtrahend.getImaginary())) {
-        if ((num.real() != (-subtrahend.getReal())) || (num.imag() != (-subtrahend.getImaginary()))) {
-            UndefinedException e;
-            throw e;
+    if (allParamsInf(value.real(), value.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
+        if ((value.real() != (-subtrahend.getReal())) || (value.imag() != (-subtrahend.getImaginary()))) {
+            throw exception;
         }
     }
-    res = std::complex(subtrahend.getReal(), subtrahend.getImaginary());
-    res = num - res;
-    return team22::Math::Number(res.real(), res.imag());
+    value -= std::complex(subtrahend.getReal(), subtrahend.getImaginary());
+    return Number(value.real(), value.imag());
 }
-team22::Math::Number team22::Math::Number::operator-(team22::Math::Number &number)
+Number Number::operator-(Number &number)
 {
-    return team22::Math::Number(sub(number));
+    return Number(sub(number));
 }
-team22::Math::Number team22::Math::Number::mul(team22::Math::Number multiplier)
+Number Number::mul(Number multiplier)
 {
-    if (paramsNan(num.real(), num.imag(), multiplier.getReal(), multiplier.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    UndefinedException exception;
+    if (anyParamNan(value.real(), value.imag(), multiplier.getReal(), multiplier.getImaginary())) {
+        throw exception;
     }
-    if (std::isinf(num.real()) || std::isinf(num.imag()) || std::isinf(multiplier.getReal()) || std::isinf(multiplier.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamInf(value.real(), value.imag(), multiplier.getReal(), multiplier.getImaginary())) {
+        throw exception;
     }
-    res = std::complex(multiplier.getReal(), multiplier.getImaginary());
-    res = num * res;
-    return team22::Math::Number(res.real(), res.imag());
+    value *= std::complex(multiplier.getReal(), multiplier.getImaginary());
+    return Number(value.real(), value.imag());
 }
-team22::Math::Number team22::Math::Number::operator*(team22::Math::Number &number)
+Number Number::operator*(Number &number)
 {
-    return team22::Math::Number(mul(number));
+    return Number(mul(number));
 }
-team22::Math::Number team22::Math::Number::div(team22::Math::Number divisor)
+Number Number::div(Number divisor)
 {
-    if (paramsNan(num.real(), num.imag(), divisor.getReal(), divisor.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    UndefinedException exception;
+    if (anyParamNan(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw exception;
     }
-    if (std::isinf(num.real()) && std::isinf(num.imag()) && std::isinf(divisor.getReal()) && std::isinf(divisor.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (allParamsInf(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw exception;
     }
     if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {
-        if (!(std::isinf(num.real()) && std::isinf(num.imag())) && !(std::isinf(num.real()) && ((num.imag())) > 0) && !std::isinf(num.imag())) {
-            UndefinedException e;
-            throw e;
+        if (!(std::isinf(value.real()) && std::isinf(value.imag())) && !(std::isinf(value.real()) && ((value.imag())) > 0) && !std::isinf(value.imag())) {
+            throw exception;
         }
     }
-    res = std::complex(divisor.getReal(), divisor.getImaginary());
-    res = num / res;
-    return team22::Math::Number(res.real(), res.imag());
+    value /= std::complex(divisor.getReal(), divisor.getImaginary());
+    return Number(value.real(), value.imag());
 }
-team22::Math::Number team22::Math::Number::operator/(team22::Math::Number &number)
+Number Number::operator/(Number &number)
 {
-    return team22::Math::Number(div(number));
+    return Number(div(number));
 }
-team22::Math::Number team22::Math::Number::pow(team22::Math::Number number)
+Number Number::pow(Number number)
 {
-    if (paramsNan(num.real(), num.imag(), number.getReal(), number.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    UndefinedException exception;
+    if (anyParamNan(value.real(), value.imag(), number.getReal(), number.getImaginary())) {
+        throw exception;
     }
-    if (std::isinf(num.real()) || std::isinf(num.imag()) || std::isinf(number.getReal()) || std::isinf(number.getImaginary())) {
-        if (!((num.real() == 0) && (num.imag() == 0) && (std::isinf(number.getReal())) && (number.getReal() > 0))
-            && !((std::isinf(num.real()) && std::isinf(num.imag()) && std::isinf(number.getReal()) && std::isinf(number.getImaginary()))
-                && (((num.real() < 0) && (num.imag() < 0) && (number.getReal() < 0) && (number.getImaginary() < 0))
-                    || ((num.real() > 0) && (num.imag() > 0) && (number.getReal() < 0) && (number.getImaginary() > 0))
-                    || ((num.real() > 0) && (num.imag() < 0) && (number.getReal() < 0) && (number.getImaginary() < 0))
-                    || ((num.real() < 0) && (num.imag() > 0) && (number.getReal() < 0) && (number.getImaginary() > 0))))) {
-            UndefinedException e;
-            throw e;
+    if (anyParamInf(value.real(), value.imag(), number.getReal(), number.getImaginary())) {
+        if (!((value.real() == 0) && (value.imag() == 0) && (std::isinf(number.getReal())) && (number.getReal() > 0))
+            && !((allParamsInf(value.real(), value.imag(), number.getReal(), number.getImaginary()))
+                && (((value.real() < 0) && (value.imag() < 0) && (number.getReal() < 0) && (number.getImaginary() < 0))
+                    || ((value.real() > 0) && (value.imag() > 0) && (number.getReal() < 0) && (number.getImaginary() > 0))
+                    || ((value.real() > 0) && (value.imag() < 0) && (number.getReal() < 0) && (number.getImaginary() < 0))
+                    || ((value.real() < 0) && (value.imag() > 0) && (number.getReal() < 0) && (number.getImaginary() > 0))))) {
+            throw exception;
         }
     }
-    if ((num.real() == 0) && (num.imag() == 0) && (number.getReal() == 0) && (number.getImaginary() == 0)) {
-        UndefinedException e;
-        throw e;
+    if ((value.real() == 0) && (value.imag() == 0) && (number.getReal() == 0) && (number.getImaginary() == 0)) {
+        throw exception;
     }
-    res = std::complex(number.getReal(), number.getImaginary());
-    res = std::pow(num, res);
-    return team22::Math::Number(res.real(), res.imag());
+    value = std::pow(value, (std::complex(number.getReal(), number.getImaginary())));
+    return Number(value.real(), value.imag());
 }
-team22::Math::Number team22::Math::Number::operator^(team22::Math::Number &number)
+Number Number::operator^(Number &number)
 {
-    return team22::Math::Number(pow(number));
+    return Number(pow(number));
 }
-team22::Math::Number team22::Math::Number::root(team22::Math::Number degree)
+Number Number::root(Number degree)
 {
-    if (paramsNan(num.real(), num.imag(), degree.getReal(), degree.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    UndefinedException exception;
+    if (anyParamNan(value.real(), value.imag(), degree.getReal(), degree.getImaginary())) {
+        throw exception;
     }
-    if (std::isinf(num.real()) || std::isinf(num.imag()) || std::isinf(degree.getReal()) || std::isinf(degree.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamInf(value.real(), value.imag(), degree.getReal(), degree.getImaginary())) {
+        throw exception;
     }
-    if (((num.real() != 0) || (num.imag() != 0)) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {
-        UndefinedException e;
-        throw e;
+    if (((value.real() != 0) || (value.imag() != 0)) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {
+        throw exception;
     }
-    if ((num.real() == 0) && (num.imag() == 0) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {
-        return team22::Math::Number(0, 0);
+    if ((value.real() == 0) && (value.imag() == 0) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {
+        return Number(0, 0);
     }
-    res = std::complex(degree.getReal(), (degree.getImaginary() * (-1)));
-    res = res/(std::complex(degree.getReal(), degree.getImaginary()) * res);
-    res = std::pow(num, res);
-    return team22::Math::Number(res.real(), res.imag());
+    std::complex<double> temporary = std::complex(degree.getReal(), (degree.getImaginary() * (-1)));
+    temporary /= (std::complex(degree.getReal(), degree.getImaginary()) * temporary);
+    value = std::pow(value, temporary);
+    return Number(value.real(), value.imag());
 }
-team22::Math::Number team22::Math::Number::mod(team22::Math::Number total)
+Number Number::mod(Number total)
 {
-    if (paramsNan(num.real(), num.imag(), total.getReal(), total.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    UndefinedException exception;
+    if (anyParamNan(value.real(), value.imag(), total.getReal(), total.getImaginary())) {
+        throw exception;
     }
-    if (!std::isinf(num.real()) && !std::isinf(num.imag()) && (total.getReal() == 0) && (total.getImaginary() == 0)) {
-        UndefinedException e;
-        throw e;
+    if (anyParamInf(value.real(), value.imag(), total.getReal(), total.getImaginary())) {
+        throw exception;
     }
-    if (std::isinf(num.real()) || std::isinf(num.imag()) || std::isinf(total.getReal()) || std::isinf(total.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if ((total.getReal() == 0) && (total.getImaginary() == 0)) {
+        throw exception;
     }
-    res = std::complex(total.getReal(), total.getImaginary());
-    res = num / res;
-    res = std::complex(std::trunc(res.real()), std::trunc(res.imag()));
-    res = res*std::complex(total.getReal(), total.getImaginary());
-    res = num-res;
-    return team22::Math::Number(res.real(), res.imag());
+    std::complex<double> temporary = std::complex(total.getReal(), total.getImaginary());
+    temporary = value / temporary;
+    temporary = std::complex(std::trunc(temporary.real()), std::trunc(temporary.imag()));
+    temporary *= std::complex(total.getReal(), total.getImaginary());
+    value -= temporary;
+    return Number(value.real(), value.imag());
 }
-team22::Math::Number team22::Math::Number::operator%(team22::Math::Number &number)
+Number Number::operator%(Number &number)
 {
-    return team22::Math::Number(mod(number));
+    return Number(mod(number));
 }
-team22::Math::Number team22::Math::Number::fact()
+Number Number::fact()
 {
-    return team22::Math::Number(0);
+    //TODO Implementace faktoriálu
+    return Number(0);
 }
-team22::Math::Number team22::Math::Number::operator!()
+Number Number::operator!()
 {
-    return team22::Math::Number(0);
+    //TODO Implementace faktoriálu
+    return Number(0);
 }
 
-std::ostream &team22::Math::operator<<(std::ostream &os, const team22::Math::Number &number)
+std::ostream &team22::Math::operator<<(std::ostream &os, const Number &number)
 {
     if (number.getReal() != 0) {
         os << number.getReal();
