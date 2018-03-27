@@ -61,7 +61,7 @@ Number Number::add(Number addend) const
 }
 Number Number::operator+(const Number &number) const
 {
-    return Number(add(number));
+    return add(number);
 }
 Number Number::sub(Number subtrahend) const
 {
@@ -77,7 +77,7 @@ Number Number::sub(Number subtrahend) const
 }
 Number Number::operator-(const Number &number) const
 {
-    return Number(sub(number));
+    return sub(number);
 }
 Number Number::mul(Number multiplier) const
 {
@@ -91,7 +91,7 @@ Number Number::mul(Number multiplier) const
 }
 Number Number::operator*(const Number &number) const
 {
-    return Number(mul(number));
+    return mul(number);
 }
 Number Number::div(Number divisor) const
 {
@@ -112,7 +112,7 @@ Number Number::div(Number divisor) const
 }
 Number Number::operator/(const Number &number) const
 {
-    return Number(div(number));
+    return div(number);
 }
 Number Number::pow(Number exponent) const
 {
@@ -132,11 +132,11 @@ Number Number::pow(Number exponent) const
     if ((value.real() == 0) && (value.imag() == 0) && (exponent.getReal() == 0) && (exponent.getImaginary() == 0)) {
         throw UndefinedException();
     }
-    return Number(std::pow(value, static_cast<complex<double>>(exponent)));
+    return std::pow(value, static_cast<complex<double>>(exponent));
 }
 Number Number::operator^(const Number &number) const
 {
-    return Number(pow(number));
+    return pow(number);
 }
 Number Number::root(Number degree) const
 {
@@ -155,7 +155,7 @@ Number Number::root(Number degree) const
     complex<double> temporary;
     temporary = complex(degree.getReal(), (degree.getImaginary() * (-1)));
     temporary /= (static_cast<complex<double>>(degree) * temporary);
-    return Number(std::pow(value, temporary));
+    return std::pow(value, temporary);
 }
 Number Number::mod(Number divisor) const
 {
@@ -172,11 +172,11 @@ Number Number::mod(Number divisor) const
     temporary = value / static_cast<complex<double>>(divisor);
     temporary = complex(trunc(temporary.real()), trunc(temporary.imag()));
     temporary *= static_cast<complex<double>>(divisor);
-    return Number(value - temporary);
+    return (value - temporary);
 }
 Number Number::operator%(const Number &number) const
 {
-    return Number(mod(number));
+    return mod(number);
 }
 Number Number::fact() const
 {
