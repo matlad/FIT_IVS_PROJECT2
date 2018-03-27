@@ -24,20 +24,22 @@ private:
 
     std::complex<double> value;
 
+	explicit operator std::complex<double>() const {return value;}
+
     /**
      * @return True pokud je některý z parametrů Nan, jiank False
      */
-	bool anyParamNan(double param1, double param2, double param3, double param4);
+	bool anyParamNan(double param1, double param2, double param3, double param4) const;
 
     /**
      * @return True pokud je některý z parametrů nekonečno, jiank False
      */
-	bool anyParamInf(double param1, double param2, double param3, double param4);
+	bool anyParamInf(double param1, double param2, double param3, double param4) const;
 
     /**
      * @return True pokud jsou všechny parametry nekonečno, jiank False
      */
-	bool allParamsInf(double param1, double param2, double param3, double param4);
+	bool allParamsInf(double param1, double param2, double param3, double param4) const;
 
 public:
 
@@ -54,99 +56,123 @@ public:
     double getImaginary() const;
 
     /**
+     * @brief Konstruktor
+     * 
      * @param real Reálná část
      * @param imaginary Imaginární část
      */
     Number(double real, double imaginary = 0);
 
     /**
+     * @brief Konstruktor
+     * 
+     * @param other Komplexní číslo
+     */
+    Number(const std::complex<double>& other);
+
+    /**
      * @brief Sčítání
      * 
      * @param addend sčítanec
      * @return součet
+     * @throws UndefinedException pokud je některá z částí operandů nan nebo pokud jsou obě části operandů nekonečno a zároveň operandy nejsou ze stejných kvadrantů komplexní roviny
      */
-    Number add(Number addend);
+    Number add(Number addend) const;
 
-    Number operator+(Number &number);
+    /**
+	 * @see add
+	 */
+    Number operator+(const Number &number) const;
 
     /**
      * @brief Odečítání
      * 
      * @param subtrahend menšitel
      * @return rozdíl
+     * @throws UndefinedException pokud je některá z částí operandů nan nebo pokud jsou obě části operandů nekonečno a zároveň operandy nejsou z opačných kvadrantů komplexní roviny
      */
-    Number sub(Number subtrahend);
+    Number sub(Number subtrahend) const;
 
-    Number operator-(Number &number);
+    /**
+	 * @see sub
+	 */
+    Number operator-(const Number &number) const;
 
     /**
      * @brief Násobení
      * 
      * @param multiplier činitel
      * @return součin
+     * @throws UndefinedException pokud je některá z částí operandů nan nebo nekonečno
      */
-    Number mul(Number multiplier);
+    Number mul(Number multiplier) const;
 
-    Number operator*(Number &number);
+    /**
+	 * @see mul
+	 */
+    Number operator*(const Number &number) const;
 
     /**
      * @brief Dělení
      * 
      * @param divisor dělitel
      * @return rozdíl
+     * @throws UndefinedException TODO
      */
-    Number div(Number divisor);
+    Number div(Number divisor) const;
 
-    Number operator/(Number &number);
+    /**
+	 * @see div
+	 */
+    Number operator/(const Number &number) const;
 
     /**
      * @brief Umocňování
      * 
      * @param exponent mocnitel
      * @return mocnina
+     * @throws UndefinedException TODO
      */
-    Number pow(Number exponent);
+    Number pow(Number exponent) const;
 
-    Number operator^(Number &number);
+    /**
+	 * @see pow
+	 */
+    Number operator^(const Number &number) const;
 
     /**
      * @brief Odmocňování
      * 
      * @param degree odmocnitel
      * @return odmocnina
+     * @throws UndefinedException pokud je některá z částí operandů nan nebo nekonečno nebo pokud je některá z částí odmocněnce nenulová a odmocnitel je nulový
      */
-    Number root(Number degree);
+    Number root(Number degree) const;
 
     /**
      * @brief Zbytek po dělení
      * 
      * @param divisor dělitel
      * @return zbytek
+     * @throws UndefinedException pokud je některá z částí operandů nan nebo nekonečno nebo pokud je dělitel nulový
      */
-    Number mod(Number divisor);
+    Number mod(Number divisor) const;
 
-    Number operator%(Number &number);
+    /**
+	 * @see mod
+	 */
+    Number operator%(const Number &number) const;
 
     /**
      * @brief Faktoriál
      * 
      * @return faktoriál
      */
-    Number fact();
+    Number fact() const;
 
-    Number operator!();
+    Number operator!() const;
 
     /**
-     * vypíše číslo jako realná část +/- imaginarní část i
-     * pokud je některá část 0 nevypisuje
-     * př.
-     * 2 + 6i
-     * 6 // imaginární část je 0
-     * 7i // realná část je 0
-     * 0 // obě části jsou 0
-     */
-    /**
-     * @brief Vypíše komplexní číslo
      * @details Vypíše komplexní číslo ve tvaru: reálná_část +/- imaginární_část. Pokud je některá z částí 0, není vypsána, pokud jsou 0 části obě, vypíše 0.
      */
     friend std::ostream &operator<<(std::ostream &os, const Number &number);

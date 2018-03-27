@@ -11,22 +11,23 @@
 #include "UndefinedException.h"
 
 using namespace team22::Math;
+using namespace std;
 
-bool Number::anyParamNan(double param1, double param2, double param3, double param4)
+bool Number::anyParamNan(double param1, double param2, double param3, double param4) const
 {
-    if (std::isnan(param1) || std::isnan(param2) || std::isnan(param3) || std::isnan(param4))
+    if (isnan(param1) || isnan(param2) || isnan(param3) || isnan(param4))
         return true;
     return false;
 }
-bool Number::anyParamInf(double param1, double param2, double param3, double param4)
+bool Number::anyParamInf(double param1, double param2, double param3, double param4) const
 {
-    if (std::isinf(param1) || std::isinf(param2) || std::isinf(param3) || std::isinf(param4))
+    if (isinf(param1) || isinf(param2) || isinf(param3) || isinf(param4))
         return true;
     return false;
 }
-bool Number::allParamsInf(double param1, double param2, double param3, double param4)
+bool Number::allParamsInf(double param1, double param2, double param3, double param4) const
 {
-    if (std::isinf(param1) && std::isinf(param2) && std::isinf(param3) && std::isinf(param4))
+    if (isinf(param1) && isinf(param2) && isinf(param3) && isinf(param4))
         return true;
     return false;
 }
@@ -40,168 +41,161 @@ double Number::getImaginary() const
 }
 Number::Number(double real, double imaginary)
 {
-    value = std::complex(real, imaginary);
+    value = complex(real, imaginary);
 }
-Number Number::add(Number addend)
+Number::Number(const complex<double> &other)
 {
-    UndefinedException exception;
+    value = other;
+}
+Number Number::add(Number addend) const
+{
     if (anyParamNan(value.real(), value.imag(), addend.getReal(), addend.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
     if (allParamsInf(value.real(), value.imag(), addend.getReal(), addend.getImaginary())) {
-        if ((value.real() != addend.getReal()) || (value.imag() != addend.getImaginary())) {
-            throw exception;
+        if ((value.real() != addend.getReal()) || (value.imag() != addend.getImaginary())) {	//Pokud se reálné nebo imaginární části sčítanců nerovnají
+            throw UndefinedException();
         }
     }
-    value += std::complex(addend.getReal(), addend.getImaginary());
-    return Number(value.real(), value.imag());
+    return (value + static_cast<complex<double>>(addend));
 }
-Number Number::operator+(Number &number)
+Number Number::operator+(const Number &number) const
 {
     return Number(add(number));
 }
-Number Number::sub(Number subtrahend)
+Number Number::sub(Number subtrahend) const
 {
-    UndefinedException exception;
     if (anyParamNan(value.real(), value.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
     if (allParamsInf(value.real(), value.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
-        if ((value.real() != (-subtrahend.getReal())) || (value.imag() != (-subtrahend.getImaginary()))) {
-            throw exception;
+        if ((value.real() != (-subtrahend.getReal())) || (value.imag() != (-subtrahend.getImaginary()))) {	//Pokud reálná/imaginární část menšence není opačná k reálné/imaginární části menšitele
+            throw UndefinedException();
         }
     }
-    value -= std::complex(subtrahend.getReal(), subtrahend.getImaginary());
-    return Number(value.real(), value.imag());
+    return (value - static_cast<complex<double>>(subtrahend));
 }
-Number Number::operator-(Number &number)
+Number Number::operator-(const Number &number) const
 {
     return Number(sub(number));
 }
-Number Number::mul(Number multiplier)
+Number Number::mul(Number multiplier) const
 {
-    UndefinedException exception;
     if (anyParamNan(value.real(), value.imag(), multiplier.getReal(), multiplier.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
     if (anyParamInf(value.real(), value.imag(), multiplier.getReal(), multiplier.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
-    value *= std::complex(multiplier.getReal(), multiplier.getImaginary());
-    return Number(value.real(), value.imag());
+    return (value * static_cast<complex<double>>(multiplier));
 }
-Number Number::operator*(Number &number)
+Number Number::operator*(const Number &number) const
 {
     return Number(mul(number));
 }
-Number Number::div(Number divisor)
+Number Number::div(Number divisor) const
 {
-    UndefinedException exception;
     if (anyParamNan(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
     if (allParamsInf(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
-    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {
-        if (!(std::isinf(value.real()) && std::isinf(value.imag())) && !(std::isinf(value.real()) && ((value.imag())) > 0) && !std::isinf(value.imag())) {
-            throw exception;
+    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {	//Pokud je dělitel roven nule
+        if (!(isinf(value.real()) && isinf(value.imag()))				//Pokud obě šásti dělence nejsou nekonečno
+        	&& !(isinf(value.real()) && (value.imag() > 0))				//a reálná část dělence není pozitivní nekonečno
+        	&& !isinf(value.imag())) {									//a imaginární část dělence není nekonečno
+            throw UndefinedException();
         }
     }
-    value /= std::complex(divisor.getReal(), divisor.getImaginary());
-    return Number(value.real(), value.imag());
+    return (value / static_cast<complex<double>>(divisor));
 }
-Number Number::operator/(Number &number)
+Number Number::operator/(const Number &number) const
 {
     return Number(div(number));
 }
-Number Number::pow(Number exponent)
+Number Number::pow(Number exponent) const
 {
-    UndefinedException exception;
     if (anyParamNan(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
     if (anyParamInf(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary())) {
-        if (!((value.real() == 0) && (value.imag() == 0) && (std::isinf(exponent.getReal())) && (exponent.getReal() > 0))
+        if (!((value.real() == 0) && (value.imag() == 0) && (isinf(exponent.getReal())) && (exponent.getReal() > 0))					//Pokud obě části mocněnce nejsou rovny nule a mocnitel není pozitivní nekonečno
             && !((allParamsInf(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary()))
-                && (((value.real() < 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))
-                    || ((value.real() > 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))
-                    || ((value.real() > 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))
-                    || ((value.real() < 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))))) {
-            throw exception;
+                && (((value.real() > 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))				//Pokud je mocněnec v prvním kvadrantu a mocnitel v druhém kvadrantu
+                    || ((value.real() < 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))			//nebo je mocněnec v druhém kvadrantu a mocnitel v druhém kvadrantu
+                    || ((value.real() < 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))			//nebo je mocněnec v třetím kvadrantu a mocnitel v třetím kvadrantu
+                    || ((value.real() > 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))))) {		//nebo je mocněnec ve čtvrtém kvadrantu a mocnitel v třetím kvadrantu
+            throw UndefinedException();
         }
     }
     if ((value.real() == 0) && (value.imag() == 0) && (exponent.getReal() == 0) && (exponent.getImaginary() == 0)) {
-        throw exception;
+        throw UndefinedException();
     }
-    value = std::pow(value, (std::complex(exponent.getReal(), exponent.getImaginary())));
-    return Number(value.real(), value.imag());
+    return Number(std::pow(value, static_cast<complex<double>>(exponent)));
 }
-Number Number::operator^(Number &number)
+Number Number::operator^(const Number &number) const
 {
     return Number(pow(number));
 }
-Number Number::root(Number degree)
+Number Number::root(Number degree) const
 {
-    UndefinedException exception;
     if (anyParamNan(value.real(), value.imag(), degree.getReal(), degree.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
     if (anyParamInf(value.real(), value.imag(), degree.getReal(), degree.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
-    if (((value.real() != 0) || (value.imag() != 0)) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {
-        throw exception;
+    if (((value.real() != 0) || (value.imag() != 0)) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {		//Pokud je některá z částí odmocněnce nenulová a odmocnitel je nulový
+        throw UndefinedException();
     }
-    if ((value.real() == 0) && (value.imag() == 0) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {
+    if ((value.real() == 0) && (value.imag() == 0) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {		//Pokud je odmocněnec i odmocnitel nulový
         return Number(0, 0);
     }
-    std::complex<double> temporary = std::complex(degree.getReal(), (degree.getImaginary() * (-1)));
-    temporary /= (std::complex(degree.getReal(), degree.getImaginary()) * temporary);
-    value = std::pow(value, temporary);
-    return Number(value.real(), value.imag());
+    complex<double> temporary;
+    temporary = complex(degree.getReal(), (degree.getImaginary() * (-1)));
+    temporary /= (static_cast<complex<double>>(degree) * temporary);
+    return Number(std::pow(value, temporary));
 }
-Number Number::mod(Number divisor)
+Number Number::mod(Number divisor) const
 {
-    UndefinedException exception;
     if (anyParamNan(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
     if (anyParamInf(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
-        throw exception;
+        throw UndefinedException();
     }
-    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {
-        throw exception;
+    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {		//Pokud je dělitel nulový
+        throw UndefinedException();
     }
-    std::complex<double> temporary = std::complex(divisor.getReal(), divisor.getImaginary());
-    temporary = value / temporary;
-    temporary = std::complex(std::trunc(temporary.real()), std::trunc(temporary.imag()));
-    temporary *= std::complex(divisor.getReal(), divisor.getImaginary());
-    value -= temporary;
-    return Number(value.real(), value.imag());
+    complex<double> temporary;
+    temporary = value / static_cast<complex<double>>(divisor);
+    temporary = complex(trunc(temporary.real()), trunc(temporary.imag()));
+    temporary *= static_cast<complex<double>>(divisor);
+    return Number(value - temporary);
 }
-Number Number::operator%(Number &number)
+Number Number::operator%(const Number &number) const
 {
     return Number(mod(number));
 }
-Number Number::fact()
+Number Number::fact() const
 {
     //TODO Implementace faktoriálu
     return Number(0);
 }
-Number Number::operator!()
+Number Number::operator!() const
 {
     //TODO Implementace faktoriálu
     return Number(0);
 }
 
-std::ostream &team22::Math::operator<<(std::ostream &os, const Number &number)
+ostream &team22::Math::operator<<(ostream &os, const Number &number)
 {
     if (number.getReal() != 0) {
         os << number.getReal();
         if (number.getImaginary() != 0) {
         	(number.getImaginary() < 0) ? (os << " - ") : (os << " + ");
-            os << std::abs(number.getImaginary());
+            os << abs(number.getImaginary());
             os << "i";
         }
     } else {
