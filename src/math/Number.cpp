@@ -211,7 +211,7 @@ ostream &team22::Math::operator<<(ostream &os, const Number &number)
 
 bool team22::Math::Number::operator==(const team22::Math::Number &rhs) const
 {
-    return num == rhs.num;
+    return value == rhs.value;
 }
 
 bool team22::Math::Number::operator!=(const team22::Math::Number &rhs) const
