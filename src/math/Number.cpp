@@ -1,79 +1,210 @@
+/**
+ * @file     Number.cpp
+ * @encoding UTF-8
+ * @date     26.3.18
+ * @author   Matyáš Sládek <xslade21@stud.fit.vutbr.cz>
+ * 
+ * @brief    Number z matematické knihovny
+ */
 
 #include "Number.h"
-team22::Math::Number team22::Math::Number::pow(Number exponent)
-{
-    return team22::Math::Number(0);
-}
-double team22::Math::Number::getReal()
-{
-    return 0;
-}
-double team22::Math::Number::getImaginary()
-{
-    return 0;
-}
-team22::Math::Number::Number(double real, double imagine)
-{
+#include "UndefinedException.h"
 
-}
-team22::Math::Number team22::Math::Number::add(team22::Math::Number adder)
+using namespace team22::Math;
+using namespace std;
+
+bool Number::anyParamNan(double param1, double param2, double param3, double param4) const
 {
-    return team22::Math::Number(0);
+    if (isnan(param1) || isnan(param2) || isnan(param3) || isnan(param4))
+        return true;
+    return false;
 }
-team22::Math::Number team22::Math::Number::operator+(team22::Math::Number &number)
+bool Number::anyParamInf(double param1, double param2, double param3, double param4) const
 {
-    return team22::Math::Number(0);
+    if (isinf(param1) || isinf(param2) || isinf(param3) || isinf(param4))
+        return true;
+    return false;
 }
-team22::Math::Number team22::Math::Number::sub(team22::Math::Number subtrahend)
+bool Number::allParamsInf(double param1, double param2, double param3, double param4) const
 {
-    return team22::Math::Number(0);
+    if (isinf(param1) && isinf(param2) && isinf(param3) && isinf(param4))
+        return true;
+    return false;
 }
-team22::Math::Number team22::Math::Number::operator-(team22::Math::Number &number)
+double Number::getReal() const
 {
-    return team22::Math::Number(0);
+    return value.real();
 }
-team22::Math::Number team22::Math::Number::mul(team22::Math::Number multiplier)
+double Number::getImaginary() const
 {
-    return team22::Math::Number(0);
+    return value.imag();
 }
-team22::Math::Number team22::Math::Number::operator*(team22::Math::Number &number)
+Number::Number(double real, double imaginary)
 {
-    return team22::Math::Number(0);
+    value = complex(real, imaginary);
 }
-team22::Math::Number team22::Math::Number::div(team22::Math::Number divisor)
+Number::Number(const complex<double> &other)
 {
-    return team22::Math::Number(0);
+    value = other;
 }
-team22::Math::Number team22::Math::Number::operator/(team22::Math::Number &number)
+Number Number::add(Number addend) const
 {
-    return team22::Math::Number(0);
+    if (anyParamNan(value.real(), value.imag(), addend.getReal(), addend.getImaginary())) {
+        throw UndefinedException();
+    }
+    if (allParamsInf(value.real(), value.imag(), addend.getReal(), addend.getImaginary())) {
+        if ((value.real() != addend.getReal()) || (value.imag() != addend.getImaginary())) {	//Pokud se reálné nebo imaginární části sčítanců nerovnají
+            throw UndefinedException();
+        }
+    }
+    return (value + static_cast<complex<double>>(addend));
 }
-team22::Math::Number team22::Math::Number::operator^(team22::Math::Number &number)
+Number Number::operator+(const Number &number) const
 {
-    return team22::Math::Number(0);
+    return add(number);
 }
-team22::Math::Number team22::Math::Number::root(team22::Math::Number degree)
+Number Number::sub(Number subtrahend) const
 {
-    return team22::Math::Number(0);
+    if (anyParamNan(value.real(), value.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
+        throw UndefinedException();
+    }
+    if (allParamsInf(value.real(), value.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
+        if ((value.real() != (-subtrahend.getReal())) || (value.imag() != (-subtrahend.getImaginary()))) {	//Pokud reálná/imaginární část menšence není opačná k reálné/imaginární části menšitele
+            throw UndefinedException();
+        }
+    }
+    return (value - static_cast<complex<double>>(subtrahend));
 }
-team22::Math::Number team22::Math::Number::mod(team22::Math::Number total)
+Number Number::operator-(const Number &number) const
 {
-    return team22::Math::Number(0);
+    return sub(number);
 }
-team22::Math::Number team22::Math::Number::operator%(team22::Math::Number &number)
+Number Number::mul(Number multiplier) const
 {
-    return team22::Math::Number(0);
+    if (anyParamNan(value.real(), value.imag(), multiplier.getReal(), multiplier.getImaginary())) {
+        throw UndefinedException();
+    }
+    if (anyParamInf(value.real(), value.imag(), multiplier.getReal(), multiplier.getImaginary())) {
+        throw UndefinedException();
+    }
+    return (value * static_cast<complex<double>>(multiplier));
 }
-team22::Math::Number team22::Math::Number::fact()
+Number Number::operator*(const Number &number) const
 {
-    return team22::Math::Number(0);
+    return mul(number);
 }
-team22::Math::Number team22::Math::Number::operator!()
+Number Number::div(Number divisor) const
 {
-    return team22::Math::Number(0);
+    if (anyParamNan(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw UndefinedException();
+    }
+    if (allParamsInf(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw UndefinedException();
+    }
+    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {	//Pokud je dělitel roven nule
+        if (!(isinf(value.real()) && isinf(value.imag()))				//Pokud obě šásti dělence nejsou nekonečno
+        	&& !(isinf(value.real()) && (value.imag() > 0))				//a reálná část dělence není pozitivní nekonečno
+        	&& !isinf(value.imag())) {									//a imaginární část dělence není nekonečno
+            throw UndefinedException();
+        }
+    }
+    return (value / static_cast<complex<double>>(divisor));
+}
+Number Number::operator/(const Number &number) const
+{
+    return div(number);
+}
+Number Number::pow(Number exponent) const
+{
+    if (anyParamNan(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary())) {
+        throw UndefinedException();
+    }
+    if (anyParamInf(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary())) {
+        if (!((value.real() == 0) && (value.imag() == 0) && (isinf(exponent.getReal())) && (exponent.getReal() > 0))					//Pokud obě části mocněnce nejsou rovny nule a mocnitel není pozitivní nekonečno
+            && !((allParamsInf(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary()))
+                && (((value.real() > 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))				//Pokud je mocněnec v prvním kvadrantu a mocnitel v druhém kvadrantu
+                    || ((value.real() < 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))			//nebo je mocněnec v druhém kvadrantu a mocnitel v druhém kvadrantu
+                    || ((value.real() < 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))			//nebo je mocněnec v třetím kvadrantu a mocnitel v třetím kvadrantu
+                    || ((value.real() > 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))))) {		//nebo je mocněnec ve čtvrtém kvadrantu a mocnitel v třetím kvadrantu
+            throw UndefinedException();
+        }
+    }
+    if ((value.real() == 0) && (value.imag() == 0) && (exponent.getReal() == 0) && (exponent.getImaginary() == 0)) {
+        throw UndefinedException();
+    }
+    return std::pow(value, static_cast<complex<double>>(exponent));
+}
+Number Number::operator^(const Number &number) const
+{
+    return pow(number);
+}
+Number Number::root(Number degree) const
+{
+    if (anyParamNan(value.real(), value.imag(), degree.getReal(), degree.getImaginary())) {
+        throw UndefinedException();
+    }
+    if (anyParamInf(value.real(), value.imag(), degree.getReal(), degree.getImaginary())) {
+        throw UndefinedException();
+    }
+    if (((value.real() != 0) || (value.imag() != 0)) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {		//Pokud je některá z částí odmocněnce nenulová a odmocnitel je nulový
+        throw UndefinedException();
+    }
+    if ((value.real() == 0) && (value.imag() == 0) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {		//Pokud je odmocněnec i odmocnitel nulový
+        return Number(0, 0);
+    }
+    complex<double> temporary;
+    temporary = complex(degree.getReal(), (degree.getImaginary() * (-1)));
+    temporary /= (static_cast<complex<double>>(degree) * temporary);
+    return std::pow(value, temporary);
+}
+Number Number::mod(Number divisor) const
+{
+    if (anyParamNan(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw UndefinedException();
+    }
+    if (anyParamInf(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw UndefinedException();
+    }
+    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {		//Pokud je dělitel nulový
+        throw UndefinedException();
+    }
+    complex<double> temporary;
+    temporary = value / static_cast<complex<double>>(divisor);
+    temporary = complex(trunc(temporary.real()), trunc(temporary.imag()));
+    temporary *= static_cast<complex<double>>(divisor);
+    return (value - temporary);
+}
+Number Number::operator%(const Number &number) const
+{
+    return mod(number);
+}
+Number Number::fact() const
+{
+    //TODO Implementace faktoriálu
+    return Number(0);
+}
+Number Number::operator!() const
+{
+    //TODO Implementace faktoriálu
+    return Number(0);
 }
 
-std::ostream &team22::Math::operator<<(std::ostream &os, const team22::Math::Number &number)
+ostream &team22::Math::operator<<(ostream &os, const Number &number)
 {
+    if (number.getReal() != 0) {
+        os << number.getReal();
+        if (number.getImaginary() != 0) {
+        	(number.getImaginary() < 0) ? (os << " - ") : (os << " + ");
+            os << abs(number.getImaginary());
+            os << "i";
+        }
+    } else {
+        if (number.getImaginary() != 0) {
+            os << number.getImaginary();
+            os << "i";
+        } else {
+            os << 0;
+        }
+    }
     return os;
 }
