@@ -19,7 +19,7 @@ class UndefinedException: public std::exception
 public:
 
 	const char* what() {
-		return "UE";
+		return "Result of this operation is not defined for given values.";
 	}
 };
 
