@@ -119,7 +119,7 @@ INSTANTIATE_TEST_CASE_P(Numbers, LexicalAnalyzerTest, testing::Values(
 INSTANTIATE_TEST_CASE_P(Seqention, LexicalAnalyzerTest, testing::Values(
     LexicalAnalyzerTestParam{"1+2*6i+3-9=", {Number(1), Lex::ADD, Number(2), Lex::MUL, Number(0,6), Lex::ADD, Number(3), Lex::SUB, Number(9), Lex::EVAL}},
     LexicalAnalyzerTestParam{"+654-6", {Lex::ADD, Number(654), Lex::SUB, Number(6)}},
-    LexicalAnalyzerTestParam{"*--/=", {Lex::MUL, Lex::SUB, Lex::DIV, Lex::EVAL}},
+    LexicalAnalyzerTestParam{"*--/=", {Lex::MUL, Lex::SUB, Lex::SUB, Lex::DIV, Lex::EVAL}},
     LexicalAnalyzerTestParam{"CCBS==**", {Lex::CLEAR, Lex::CLEAR, Lex::BS, Lex::EVAL, Lex::EVAL, Lex::MUL, Lex::MUL}}
 ));
 
