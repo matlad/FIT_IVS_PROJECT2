@@ -1,198 +1,201 @@
+/**
+ * @file     Number.cpp
+ * @encoding UTF-8
+ * @date     26.3.18
+ * @author   Matyáš Sládek <xslade21@stud.fit.vutbr.cz>
+ * 
+ * @brief    Number z matematické knihovny
+ */
+
 #include "Number.h"
 #include "UndefinedException.h"
 
-bool paramsNan(double param1, double param2, double param3, double param4)
+using namespace team22::Math;
+using namespace std;
+
+bool Number::anyParamNan(double param1, double param2, double param3, double param4) const
 {
-    if (std::isnan(param1) || std::isnan(param2) || std::isnan(param3) || std::isnan(param4))
+    if (isnan(param1) || isnan(param2) || isnan(param3) || isnan(param4))
         return true;
     return false;
 }
-double team22::Math::Number::getReal() const
+bool Number::anyParamInf(double param1, double param2, double param3, double param4) const
 {
-    return num.real();
+    if (isinf(param1) || isinf(param2) || isinf(param3) || isinf(param4))
+        return true;
+    return false;
 }
-double team22::Math::Number::getImaginary() const
+bool Number::allParamsInf(double param1, double param2, double param3, double param4) const
 {
-    return num.imag();
+    if (isinf(param1) && isinf(param2) && isinf(param3) && isinf(param4))
+        return true;
+    return false;
 }
-team22::Math::Number::Number(double real, double imagine)
+double Number::getReal() const
 {
-    num = std::complex(real, imagine);
+    return value.real();
 }
-team22::Math::Number team22::Math::Number::add(team22::Math::Number adder)
+double Number::getImaginary() const
 {
-    if (paramsNan(num.real(), num.imag(), adder.getReal(), adder.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    return value.imag();
+}
+Number::Number(double real, double imaginary)
+{
+    value = complex(real, imaginary);
+}
+Number::Number(const complex<double> &other)
+{
+    value = other;
+}
+Number Number::add(Number addend) const
+{
+    if (anyParamNan(value.real(), value.imag(), addend.getReal(), addend.getImaginary())) {
+        throw UndefinedException();
     }
-    if (std::isinf(num.real()) && std::isinf(num.imag()) && std::isinf(adder.getReal()) && std::isinf(adder.getImaginary())) {
-        if ((num.real() != adder.getReal()) || (num.imag() != adder.getImaginary())) {
-            UndefinedException e;
-            throw e;
+    if (allParamsInf(value.real(), value.imag(), addend.getReal(), addend.getImaginary())) {
+        if ((value.real() != addend.getReal()) || (value.imag() != addend.getImaginary())) {	//Pokud se reálné nebo imaginární části sčítanců nerovnají
+            throw UndefinedException();
         }
     }
-    res = std::complex(adder.getReal(), adder.getImaginary());
-    res = num + res;
-    return team22::Math::Number(res.real(), res.imag());
+    return (value + static_cast<complex<double>>(addend));
 }
-team22::Math::Number team22::Math::Number::operator+(team22::Math::Number &number)
+Number Number::operator+(const Number &number) const
 {
-    return team22::Math::Number(add(number));
+    return add(number);
 }
-team22::Math::Number team22::Math::Number::sub(team22::Math::Number subtrahend)
+Number Number::sub(Number subtrahend) const
 {
-    if (paramsNan(num.real(), num.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamNan(value.real(), value.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
+        throw UndefinedException();
     }
-    if (std::isinf(num.real()) && std::isinf(num.imag()) && std::isinf(subtrahend.getReal()) && std::isinf(subtrahend.getImaginary())) {
-        if ((num.real() != (-subtrahend.getReal())) || (num.imag() != (-subtrahend.getImaginary()))) {
-            UndefinedException e;
-            throw e;
+    if (allParamsInf(value.real(), value.imag(), subtrahend.getReal(), subtrahend.getImaginary())) {
+        if ((value.real() != (-subtrahend.getReal())) || (value.imag() != (-subtrahend.getImaginary()))) {	//Pokud reálná/imaginární část menšence není opačná k reálné/imaginární části menšitele
+            throw UndefinedException();
         }
     }
-    res = std::complex(subtrahend.getReal(), subtrahend.getImaginary());
-    res = num - res;
-    return team22::Math::Number(res.real(), res.imag());
+    return (value - static_cast<complex<double>>(subtrahend));
 }
-team22::Math::Number team22::Math::Number::operator-(team22::Math::Number &number)
+Number Number::operator-(const Number &number) const
 {
-    return team22::Math::Number(sub(number));
+    return sub(number);
 }
-team22::Math::Number team22::Math::Number::mul(team22::Math::Number multiplier)
+Number Number::mul(Number multiplier) const
 {
-    if (paramsNan(num.real(), num.imag(), multiplier.getReal(), multiplier.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamNan(value.real(), value.imag(), multiplier.getReal(), multiplier.getImaginary())) {
+        throw UndefinedException();
     }
-    if (std::isinf(num.real()) || std::isinf(num.imag()) || std::isinf(multiplier.getReal()) || std::isinf(multiplier.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamInf(value.real(), value.imag(), multiplier.getReal(), multiplier.getImaginary())) {
+        throw UndefinedException();
     }
-    res = std::complex(multiplier.getReal(), multiplier.getImaginary());
-    res = num * res;
-    return team22::Math::Number(res.real(), res.imag());
+    return (value * static_cast<complex<double>>(multiplier));
 }
-team22::Math::Number team22::Math::Number::operator*(team22::Math::Number &number)
+Number Number::operator*(const Number &number) const
 {
-    return team22::Math::Number(mul(number));
+    return mul(number);
 }
-team22::Math::Number team22::Math::Number::div(team22::Math::Number divisor)
+Number Number::div(Number divisor) const
 {
-    if (paramsNan(num.real(), num.imag(), divisor.getReal(), divisor.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamNan(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw UndefinedException();
     }
-    if (std::isinf(num.real()) && std::isinf(num.imag()) && std::isinf(divisor.getReal()) && std::isinf(divisor.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (allParamsInf(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw UndefinedException();
     }
-    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {
-        if (!(std::isinf(num.real()) && std::isinf(num.imag())) && !(std::isinf(num.real()) && ((num.imag())) > 0) && !std::isinf(num.imag())) {
-            UndefinedException e;
-            throw e;
+    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {	//Pokud je dělitel roven nule
+        if (!(isinf(value.real()) && isinf(value.imag()))				//Pokud obě šásti dělence nejsou nekonečno
+        	&& !(isinf(value.real()) && (value.imag() > 0))				//a reálná část dělence není pozitivní nekonečno
+        	&& !isinf(value.imag())) {									//a imaginární část dělence není nekonečno
+            throw UndefinedException();
         }
     }
-    res = std::complex(divisor.getReal(), divisor.getImaginary());
-    res = num / res;
-    return team22::Math::Number(res.real(), res.imag());
+    return (value / static_cast<complex<double>>(divisor));
 }
-team22::Math::Number team22::Math::Number::operator/(team22::Math::Number &number)
+Number Number::operator/(const Number &number) const
 {
-    return team22::Math::Number(div(number));
+    return div(number);
 }
-team22::Math::Number team22::Math::Number::pow(team22::Math::Number number)
+Number Number::pow(Number exponent) const
 {
-    if (paramsNan(num.real(), num.imag(), number.getReal(), number.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamNan(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary())) {
+        throw UndefinedException();
     }
-    if (std::isinf(num.real()) || std::isinf(num.imag()) || std::isinf(number.getReal()) || std::isinf(number.getImaginary())) {
-        if (!((num.real() == 0) && (num.imag() == 0) && (std::isinf(number.getReal())) && (number.getReal() > 0))
-            && !((std::isinf(num.real()) && std::isinf(num.imag()) && std::isinf(number.getReal()) && std::isinf(number.getImaginary()))
-                && (((num.real() < 0) && (num.imag() < 0) && (number.getReal() < 0) && (number.getImaginary() < 0))
-                    || ((num.real() > 0) && (num.imag() > 0) && (number.getReal() < 0) && (number.getImaginary() > 0))
-                    || ((num.real() > 0) && (num.imag() < 0) && (number.getReal() < 0) && (number.getImaginary() < 0))
-                    || ((num.real() < 0) && (num.imag() > 0) && (number.getReal() < 0) && (number.getImaginary() > 0))))) {
-            UndefinedException e;
-            throw e;
+    if (anyParamInf(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary())) {
+        if (!((value.real() == 0) && (value.imag() == 0) && (isinf(exponent.getReal())) && (exponent.getReal() > 0))					//Pokud obě části mocněnce nejsou rovny nule a mocnitel není pozitivní nekonečno
+            && !((allParamsInf(value.real(), value.imag(), exponent.getReal(), exponent.getImaginary()))
+                && (((value.real() > 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))				//Pokud je mocněnec v prvním kvadrantu a mocnitel v druhém kvadrantu
+                    || ((value.real() < 0) && (value.imag() > 0) && (exponent.getReal() < 0) && (exponent.getImaginary() > 0))			//nebo je mocněnec v druhém kvadrantu a mocnitel v druhém kvadrantu
+                    || ((value.real() < 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))			//nebo je mocněnec v třetím kvadrantu a mocnitel v třetím kvadrantu
+                    || ((value.real() > 0) && (value.imag() < 0) && (exponent.getReal() < 0) && (exponent.getImaginary() < 0))))) {		//nebo je mocněnec ve čtvrtém kvadrantu a mocnitel v třetím kvadrantu
+            throw UndefinedException();
         }
     }
-    if ((num.real() == 0) && (num.imag() == 0) && (number.getReal() == 0) && (number.getImaginary() == 0)) {
-        UndefinedException e;
-        throw e;
+    if ((value.real() == 0) && (value.imag() == 0) && (exponent.getReal() == 0) && (exponent.getImaginary() == 0)) {
+        throw UndefinedException();
     }
-    res = std::complex(number.getReal(), number.getImaginary());
-    res = std::pow(num, res);
-    return team22::Math::Number(res.real(), res.imag());
+    return std::pow(value, static_cast<complex<double>>(exponent));
 }
-team22::Math::Number team22::Math::Number::operator^(team22::Math::Number &number)
+Number Number::operator^(const Number &number) const
 {
-    return team22::Math::Number(pow(number));
+    return pow(number);
 }
-team22::Math::Number team22::Math::Number::root(team22::Math::Number degree)
+Number Number::root(Number degree) const
 {
-    if (paramsNan(num.real(), num.imag(), degree.getReal(), degree.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamNan(value.real(), value.imag(), degree.getReal(), degree.getImaginary())) {
+        throw UndefinedException();
     }
-    if (std::isinf(num.real()) || std::isinf(num.imag()) || std::isinf(degree.getReal()) || std::isinf(degree.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamInf(value.real(), value.imag(), degree.getReal(), degree.getImaginary())) {
+        throw UndefinedException();
     }
-    if (((num.real() != 0) || (num.imag() != 0)) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {
-        UndefinedException e;
-        throw e;
+    if (((value.real() != 0) || (value.imag() != 0)) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {		//Pokud je některá z částí odmocněnce nenulová a odmocnitel je nulový
+        throw UndefinedException();
     }
-    if ((num.real() == 0) && (num.imag() == 0) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {
-        return team22::Math::Number(0, 0);
+    if ((value.real() == 0) && (value.imag() == 0) && (degree.getReal() == 0) && (degree.getImaginary() == 0)) {		//Pokud je odmocněnec i odmocnitel nulový
+        return Number(0, 0);
     }
-    res = std::complex(degree.getReal(), (degree.getImaginary() * (-1)));
-    res = res/(std::complex(degree.getReal(), degree.getImaginary()) * res);
-    res = std::pow(num, res);
-    return team22::Math::Number(res.real(), res.imag());
+    complex<double> temporary;
+    temporary = complex(degree.getReal(), (degree.getImaginary() * (-1)));
+    temporary /= (static_cast<complex<double>>(degree) * temporary);
+    return std::pow(value, temporary);
 }
-team22::Math::Number team22::Math::Number::mod(team22::Math::Number total)
+Number Number::mod(Number divisor) const
 {
-    if (paramsNan(num.real(), num.imag(), total.getReal(), total.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if (anyParamNan(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw UndefinedException();
     }
-    if (!std::isinf(num.real()) && !std::isinf(num.imag()) && (total.getReal() == 0) && (total.getImaginary() == 0)) {
-        UndefinedException e;
-        throw e;
+    if (anyParamInf(value.real(), value.imag(), divisor.getReal(), divisor.getImaginary())) {
+        throw UndefinedException();
     }
-    if (std::isinf(num.real()) || std::isinf(num.imag()) || std::isinf(total.getReal()) || std::isinf(total.getImaginary())) {
-        UndefinedException e;
-        throw e;
+    if ((divisor.getReal() == 0) && (divisor.getImaginary() == 0)) {		//Pokud je dělitel nulový
+        throw UndefinedException();
     }
-    res = std::complex(total.getReal(), total.getImaginary());
-    res = num / res;
-    res = std::complex(std::trunc(res.real()), std::trunc(res.imag()));
-    res = res*std::complex(total.getReal(), total.getImaginary());
-    res = num-res;
-    return team22::Math::Number(res.real(), res.imag());
+    complex<double> temporary;
+    temporary = value / static_cast<complex<double>>(divisor);
+    temporary = complex(trunc(temporary.real()), trunc(temporary.imag()));
+    temporary *= static_cast<complex<double>>(divisor);
+    return (value - temporary);
 }
-team22::Math::Number team22::Math::Number::operator%(team22::Math::Number &number)
+Number Number::operator%(const Number &number) const
 {
-    return team22::Math::Number(mod(number));
+    return mod(number);
 }
-team22::Math::Number team22::Math::Number::fact()
+Number Number::fact() const
 {
-    return team22::Math::Number(0);
+    //TODO Implementace faktoriálu
+    return Number(0);
 }
-team22::Math::Number team22::Math::Number::operator!()
+Number Number::operator!() const
 {
-    return team22::Math::Number(0);
+    //TODO Implementace faktoriálu
+    return Number(0);
 }
 
-std::ostream &team22::Math::operator<<(std::ostream &os, const team22::Math::Number &number)
+ostream &team22::Math::operator<<(ostream &os, const Number &number)
 {
     if (number.getReal() != 0) {
         os << number.getReal();
         if (number.getImaginary() != 0) {
-            os << " + ";
-            os << number.getImaginary();
+        	(number.getImaginary() < 0) ? (os << " - ") : (os << " + ");
+            os << abs(number.getImaginary());
             os << "i";
         }
     } else {
@@ -208,7 +211,7 @@ std::ostream &team22::Math::operator<<(std::ostream &os, const team22::Math::Num
 
 bool team22::Math::Number::operator==(const team22::Math::Number &rhs) const
 {
-    return num == rhs.num;
+    return value == rhs.value;
 }
 
 bool team22::Math::Number::operator!=(const team22::Math::Number &rhs) const
