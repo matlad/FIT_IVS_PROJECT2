@@ -4,11 +4,14 @@
  * @date     26.3.18
  * @author   Adam Mátl <xmatla00@stud.fit.vutbr.cz>
  * @author   Matyáš Sládek <xslade21@stud.fit.vutbr.cz>
- * 
+ *
  * @brief    Hlavičkový soubor pro Number z matematické knihovny
  */
 
-#include <cmath>
+#ifndef FIT_IVS_PROJECT2_NUMBER_H
+#define FIT_IVS_PROJECT2_NUMBER_H
+
+#include <cmath>    //Used for isnan()
 #include <complex>
 #include <iostream>
 
@@ -57,7 +60,7 @@ public:
 
     /**
      * @brief Konstruktor
-     * 
+     *
      * @param real Reálná část
      * @param imaginary Imaginární část
      */
@@ -65,14 +68,14 @@ public:
 
     /**
      * @brief Konstruktor
-     * 
+     *
      * @param other Komplexní číslo
      */
     Number(const std::complex<double>& other);
 
     /**
      * @brief Sčítání
-     * 
+     *
      * @param addend sčítanec
      * @return součet
      * @throws UndefinedException pokud je některá z částí operandů nan nebo pokud jsou obě části operandů nekonečno a zároveň operandy nejsou ze stejných kvadrantů komplexní roviny
@@ -86,7 +89,7 @@ public:
 
     /**
      * @brief Odečítání
-     * 
+     *
      * @param subtrahend menšitel
      * @return rozdíl
      * @throws UndefinedException pokud je některá z částí operandů nan nebo pokud jsou obě části operandů nekonečno a zároveň operandy nejsou z opačných kvadrantů komplexní roviny
@@ -100,7 +103,7 @@ public:
 
     /**
      * @brief Násobení
-     * 
+     *
      * @param multiplier činitel
      * @return součin
      * @throws UndefinedException pokud je některá z částí operandů nan nebo nekonečno
@@ -114,7 +117,7 @@ public:
 
     /**
      * @brief Dělení
-     * 
+     *
      * @param divisor dělitel
      * @return rozdíl
      * @throws UndefinedException TODO
@@ -128,7 +131,7 @@ public:
 
     /**
      * @brief Umocňování
-     * 
+     *
      * @param exponent mocnitel
      * @return mocnina
      * @throws UndefinedException TODO
@@ -142,7 +145,7 @@ public:
 
     /**
      * @brief Odmocňování
-     * 
+     *
      * @param degree odmocnitel
      * @return odmocnina
      * @throws UndefinedException pokud je některá z částí operandů nan nebo nekonečno nebo pokud je některá z částí odmocněnce nenulová a odmocnitel je nulový
@@ -151,7 +154,7 @@ public:
 
     /**
      * @brief Zbytek po dělení
-     * 
+     *
      * @param divisor dělitel
      * @return zbytek
      * @throws UndefinedException pokud je některá z částí operandů nan nebo nekonečno nebo pokud je dělitel nulový
@@ -165,12 +168,15 @@ public:
 
     /**
      * @brief Faktoriál
-     * 
+     *
      * @return faktoriál
      */
     Number fact() const;
 
     Number operator!() const;
+
+    bool operator==(const Number &rhs) const;
+    bool operator!=(const Number &rhs) const;
 
     /**
      * @details Vypíše komplexní číslo ve tvaru: reálná_část +/- imaginární_část. Pokud je některá z částí 0, není vypsána, pokud jsou 0 části obě, vypíše 0.
@@ -180,3 +186,5 @@ public:
 };
 
 };
+
+#endif //FIT_IVS_PROJECT2_NUMBER_H

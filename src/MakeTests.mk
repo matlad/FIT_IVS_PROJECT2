@@ -16,7 +16,7 @@
 # Remember to tweak this if you move this file.
 GTEST_DIR = ../../../googletest/googletest
 
-# Where to find user code.
+# Where to find user code. # bez / na konci
 USER_DIR = .
 
 CXX = g++-7
@@ -31,7 +31,7 @@ CXXFLAGS += -g -Wall -Wextra -pthread -std=c++17
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = NumberTest
+TESTS = NumberTest LexicalAnalyzerTest
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -76,9 +76,20 @@ gtest_main.a : gtest-all.o gtest_main.o
 Number.o : $(USER_DIR)/math/Number.cpp $(USER_DIR)/math/Number.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/math/Number.cpp
 
-NumberTest.o : $(USER_DIR)/tests/NumberTest.cpp \
-					 $(USER_DIR)/math/Number.h $(GTEST_HEADERS)
+LexicalAnalyzer.o : $(USER_DIR)/LexicalAnalyzer.cpp $(USER_DIR)/LexicalAnalyzer.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/LexicalAnalyzer.cpp
+
+Lex.o : $(USER_DIR)/Lex.cpp $(USER_DIR)/Lex.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/Lex.cpp
+
+NumberTest.o : $(USER_DIR)/tests/NumberTest.cpp $(USER_DIR)/math/Number.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/tests/NumberTest.cpp
 
 NumberTest : Number.o NumberTest.o gtest_main.a
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
+
+LexicalAnalyzerTest.o : $(USER_DIR)/tests/LexicalAnalyzerTest.cpp $(USER_DIR)/LexicalAnalyzer.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/tests/LexicalAnalyzerTest.cpp
+
+LexicalAnalyzerTest : Number.o Lex.o LexicalAnalyzer.o LexicalAnalyzerTest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
