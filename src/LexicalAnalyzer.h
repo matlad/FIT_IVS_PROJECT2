@@ -47,12 +47,6 @@ class LexicalAnalyzer
 	bool isNumber(std::string s);
 
 	/*
-	 * Vrací true, pokud řetězec obsahuje pouze číslice a tečku na konci
-	 * @param s textový řetězec k analýze
-     	 */
-	bool isNumberWithDotEnd(std::string s);
-
-	/*
 	 * Vrací true, pokud řetězec obsahuje pouze číslice nebo tečku
 	 * @param s textový řetězec k analýze
      	 */

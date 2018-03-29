@@ -21,30 +21,6 @@ bool team22::Calc::LexicalAnalyzer::isNumber(std::string s)
 	return true;
 }
 
-bool team22::Calc::LexicalAnalyzer::isNumberWithDotEnd(std::string s)
-{
-	bool flag = true;
-
-	if (s.length() < 2 || s[s.length() - 1] != '.') {
-		return false;
-	}
-
-	unsigned int i = 0;
-	for (const char c : s) {
-		if (i >= s.length() - 1) {
-			break;
-		}
-
-		if (!isdigit(c)) {
-			return false;
-		}
-
-		i++;
-	}
-
-	return true;
-}
-
 bool team22::Calc::LexicalAnalyzer::isNumberWithDot(std::string s)
 {
 	bool flag = true;
@@ -55,7 +31,7 @@ bool team22::Calc::LexicalAnalyzer::isNumberWithDot(std::string s)
 
 	unsigned int i = 0;
 	for (const char c : s) {
-		if (!isdigit(c) && (((!flag || i == 0 || i == s.length() - 1) && c == '.') || c != '.')) {
+		if (!isdigit(c) && (((!flag || i == 0) && c == '.') || c != '.')) {
 			return false;
 		}
 
@@ -119,88 +95,82 @@ double team22::Calc::LexicalAnalyzer::stringToDouble(std::string s) {
 
 void team22::Calc::LexicalAnalyzer::pushSymbol(char symbol)
 {
-	if (saved == "") {
-		switch(symbol) {
-			case '+':
-			case '-':
-			case '/':
-			case '*':
-			case '=':
-			case '^':
-			case '!':
-			case '%':
-			case 'C':
-				if (last != symbol) {
-					sendLex(getCharLex(symbol));
-					last = symbol;
+	switch(symbol) {
+		case '+':
+		case '-':
+		case '/':
+		case '*':
+		case '=':
+		case '^':
+		case '!':
+		case '%':
+		case 'C':
+		case 'T':
+		case 'G':
+		case 'S':
+		case 'i':
+			if ((saved == "ROO" && symbol == 'T') ||
+			(saved == "NE" && symbol == 'G') ||
+			(saved == "B" && symbol == 'S') ||
+			(isNumberWithDot(saved) && saved[saved.length() - 1] != '.' && symbol == 'i')) {
+				switch (symbol) {
+					case 'T':
+						sendLex(Lex(Lex::ROOT));
+						break;
+					case 'G':
+						sendLex(Lex(Lex::NEG));
+						break;
+					case 'S':
+						sendLex(Lex(Lex::BS));
+						break;
+					default:
+						sendLex(Lex(team22::Math::Number(0, stringToDouble(saved))));
+						break;
 				}
-				return;
-			case 'R':
-			case 'N':
-			case 'B':
+			} else {
+				if (saved == "") {
+					sendLex(getCharLex(symbol));
+				} else if (isNumberWithDot(saved) && saved[saved.length() - 1] != '.') {
+					sendLex(Lex(team22::Math::Number(stringToDouble(saved))));
+					sendLex(getCharLex(symbol));
+				}
+			}
+
+			saved = "";
+			last = symbol;
+			return;
+		case 'R':
+		case 'N':
+		case 'B':
+		case 'O':
+		case 'E':
+			if ((saved == "" && symbol == 'R') ||
+			(saved == "" && symbol == 'N') ||
+			(saved == "" && symbol == 'B') ||
+			((saved == "R" || saved == "RO") && symbol == 'O') ||
+			(saved == "N" && symbol == 'E')) {
 				saved += symbol;
 				last = symbol;
 				return;
-			default:
-				if (isdigit(symbol)) {
-					if (last == 'i') {
-						throw LexicalAnalyzerException();
-					}
+			}
+			break;
+		default:
+			if (saved == "" && isdigit(symbol)) {
+				if (last == 'i') {
+					throw LexicalAnalyzerException();
+				}
+				saved += symbol;
+				last = symbol;
+				return;
+			} else if (saved != "") {
+				if ((isNumber(saved) && (isdigit(symbol) || symbol == '.')) ||
+				(isNumberWithDot(saved) && isdigit(symbol))) {
 					saved += symbol;
 					last = symbol;
 					return;
 				}
-				break;
-		}
-	} else {
-		if ((saved == "R" && symbol == 'O') || 
-		(saved == "RO" && symbol == 'O') || 
-		(saved == "N" && symbol == 'E') || 
-		(isNumber(saved) && (isdigit(symbol) || symbol == '.')) ||
-		((isNumberWithDotEnd(saved) || isNumberWithDot(saved)) && isdigit(symbol))) {
-			saved += symbol;
-			last = symbol;
-			return;
-		} else if (saved == "ROO" && symbol == 'T') {
-			sendLex(Lex(Lex::ROOT));
-			saved = "";
-			last = symbol;
-			return;
-		} else if (saved == "NE" && symbol == 'G') {
-			sendLex(Lex(Lex::NEG));
-			saved = "";
-			last = symbol;
-			return;
-		} else if (saved == "B" && symbol == 'S') {
-			sendLex(Lex(Lex::BS));
-			saved = "";
-			last = symbol;
-			return;
-		} else if (isNumber(saved) || isNumberWithDot(saved)) {
-			switch(symbol) {
-				case '+':
-				case '-':
-				case '/':
-				case '*':
-				case '=':
-				case '^':
-				case '!':
-				case '%':
-				case 'C':
-					sendLex(Lex(team22::Math::Number(stringToDouble(saved))));
-					sendLex(getCharLex(symbol));
-					saved = "";
-					last = symbol;
-					return;
-				case 'i':
-					sendLex(Lex(team22::Math::Number(0, stringToDouble(saved))));
-					saved = "";
-					last = symbol;
-					return;
-				default:
-					break;
 			}
-		}
+			break;
 	}
 
 	throw LexicalAnalyzerException();
