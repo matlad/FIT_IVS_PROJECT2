@@ -33,7 +33,7 @@ class LexicalAnalyzer
 	/*
 	 * Řetězec, který obsahuje znaky, které ještě nebyly rozeznány jako lexém
 	 */
-	std::string saved;
+	std::string saved = "";
 
 	/*
 	 * Poslední získaný znak
@@ -45,6 +45,12 @@ class LexicalAnalyzer
 	 * @param s textový řetězec k analýze
      	 */
 	bool isNumber(std::string s);
+
+	/*
+	 * Vrací true, pokud řetězec obsahuje pouze číslice a tečku na konci
+	 * @param s textový řetězec k analýze
+     	 */
+	bool isNumberWithDotEnd(std::string s);
 
 	/*
 	 * Vrací true, pokud řetězec obsahuje pouze číslice nebo tečku
