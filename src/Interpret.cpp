@@ -21,14 +21,12 @@ void Interpret::registrResultCallback(ResultObserver *resultCallbackObject)
 
 void Interpret::notifyResultChanged()
 {
-    for (auto callBack: this->resultCallbackObjects) {
+    for (auto callBack: this->resultCallbackObjects)
         callBack->onResultChange(Number(0));
-    }
 }
 
 void Interpret::notifyAboutError(InterpretException exception)
 {
-    for (auto callBack: this->resultCallbackObjects) {
+    for (auto callBack: this->resultCallbackObjects)
         callBack->onError(exception);
-    }
 }
