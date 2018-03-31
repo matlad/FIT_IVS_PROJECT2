@@ -14,7 +14,7 @@ void Interpret::sendIdentifiedLex(Lex lex)
 
 }
 
-void Interpret::registResultCalback(ResultObserver *resultCallbackObject)
+void Interpret::registrResultCallback(ResultObserver *resultCallbackObject)
 {
     resultCallbackObjects.emplace(resultCallbackObject);
 }

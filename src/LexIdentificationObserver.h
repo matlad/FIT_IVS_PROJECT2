@@ -7,6 +7,8 @@
 #ifndef FIT_IVS_PROJECT2_LEXCALLBACKINTERFACE_H
 #define FIT_IVS_PROJECT2_LEXCALLBACKINTERFACE_H
 
+#include "Lex.h"
+
 namespace team22::Calc
 {
 
