@@ -91,7 +91,7 @@ public:
     Number add(Number addend) const;
 
     /**
-	 * @see add
+	 * @see ::add
 	 */
     Number operator+(const Number &number) const;
 
@@ -105,7 +105,7 @@ public:
     Number sub(Number subtrahend) const;
 
     /**
-	 * @see sub
+	 * @see ::sub
 	 */
     Number operator-(const Number &number) const;
 
@@ -119,7 +119,7 @@ public:
     Number mul(Number multiplier) const;
 
     /**
-	 * @see mul
+	 * @see ::mul
 	 */
     Number operator*(const Number &number) const;
 
@@ -133,7 +133,7 @@ public:
     Number div(Number divisor) const;
 
     /**
-	 * @see div
+	 * @see ::div
 	 */
     Number operator/(const Number &number) const;
 
@@ -147,7 +147,7 @@ public:
     Number pow(Number exponent) const;
 
     /**
-	 * @see pow
+	 * @see ::pow
 	 */
     Number operator^(const Number &number) const;
 
@@ -170,7 +170,7 @@ public:
     Number mod(Number divisor) const;
 
     /**
-	 * @see mod
+	 * @see ::mod
 	 */
     Number operator%(const Number &number) const;
 
