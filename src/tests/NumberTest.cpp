@@ -35,6 +35,8 @@ using team22::Math::UndefinedException;
 
 // uvažujeme přesnost na 10 des míst
 #define DELTA 0.00000000005
+// pro faktoriál komplexních čísel přesnost na 7 des míst
+#define DELTA_CF 0.00000005
 
 struct Params{
     Number number1;
@@ -347,12 +349,13 @@ INSTANTIATE_TEST_CASE_P(def, Mod, testing::Values(
 INSTANTIATE_TEST_CASE_P(def, Factorial, testing::Values(
     UnariParams{{0},{1}},
     UnariParams{{5},{120}},
-    UnariParams{{5.1},{142.451944065678}},
+    UnariParams{{5.1},{142.4519440656787551}},
+    UnariParams{{-5.1},{-0.3639731138924320}},
     UnariParams{{-5},{-120}},
-    UnariParams{{5, -2},{4.0039686637632879, 0.30989965660362}},
-    UnariParams{{5,  2},{5.9960313362367120, -0.30989965660362}},
-    UnariParams{{-5,-2},{-5.9960313362367120, 0.30989965660362}},
-    UnariParams{{-5, 2},{-4.0039686637632879, -0.30989965660362}}
+    UnariParams{{5, -2},{-80.0476734256340160, 25.8850355544053040}},
+    UnariParams{{5,  2},{-80.0476734256340160, -25.8850355544053040}},
+    UnariParams{{-5,-2},{0.0000508457710199, -0.0007493508591461}},
+    UnariParams{{-5, 2},{0.0000508457710199, 0.0007493508591461}}
 ));
 
 INSTANTIATE_TEST_CASE_P(inf, Factorial, testing::Values(
@@ -407,8 +410,8 @@ TEST_P(Mod, oper){
 
 TEST_P(Factorial, oper){
     auto result = !p.number;
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA_CF);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA_CF);
 
 }
 
@@ -467,8 +470,8 @@ TEST_P(Root, fce){
 
 TEST_P(Factorial, fce){
     auto result = p.number.fact();
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA_CF);
+    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA_CF);
 
 }
 

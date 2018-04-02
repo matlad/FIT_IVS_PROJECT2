@@ -178,15 +178,61 @@ Number Number::operator%(const Number &number) const
 {
     return mod(number);
 }
-Number Number::fact() const
+Number Number::fact()
 {
-    //TODO Implementace faktoriálu
-    return Number(0);
+	if (isnan(value.real()) || isnan(value.imag())) {
+		throw UndefinedException();
+	}
+	if ((isinf(value.real()) && isinf(value.imag())) || (isinf(value.real()) && (value.real() < 0))) {		//Pokud jsou obě části operandu nekonečno nebo reálná část operandu je záporné nekonečno
+		throw UndefinedException();
+	}
+	if (isinf(value.real())) {																				//Pokud je reálná část operandu rovna nekonečnu
+		return std::numeric_limits<double>::infinity();
+	}
+	if (isinf(value.imag())) {																				//Pokud je imaginární část operandu rovna nule
+		return 0;
+	}
+	if ((value.real() < 0) && (value.real() == floor(value.real())) && (value.imag() == 0)) {				//Pokud je operand záporné celé číslo, nelze použít gamma funkci
+		int res = abs(value.real());
+		for (unsigned i = (abs(value.real()) - 1); i > 1; i--) {
+			res *= i;
+		}
+		return (-res);
+	}
+    return Number(gamma(value + 1.0));
 }
-Number Number::operator!() const
+Number Number::operator!()
 {
-    //TODO Implementace faktoriálu
-    return Number(0);
+    return fact();
+}
+
+//Koeficienty pro Lanczosovu řadu
+const double c[] = {
+    1.000001502363886407565018998866435140371322631835938,
+    0.464895966191246401422176859341561794281005859375000,
+    -0.04956300218599807294594938866794109344482421875000,
+    0.387353748287360133417678298428654670715332031250000,
+    -2.32544894194688822608441114425659179687500000000000,
+    8.977536034497006767196580767631530761718750000000000,
+    -21.8474347546784883888904005289077758789062500000000,
+    33.28472248815523926168680191040039062500000000000000,
+    -30.7328214590961579233407974243164062500000000000000,
+    15.70077904063509777188301086425781250000000000000000,
+    -3.40185381879564374685287475585937500000000000000000
+};
+
+complex<double> Number::gamma(complex<double> z)
+{
+    if (z.real() < 1) {												//Reflection formula
+    	return (M_PI / (sin(M_PI * z) * gamma(1.0 - z)));
+    }
+    z -= 1.0;
+    complex<double> series = c[0];
+    for(unsigned i = 1; i < (sizeof(c)/sizeof(double)); i++) {
+        series += (c[i] / (z + static_cast<double>(i)));
+    }
+    complex<double> t = (z + 1.5);
+    return (sqrt(2 * M_PI) * std::pow(t, (z + 0.5)) * exp(-t) * series);
 }
 
 ostream &team22::Math::operator<<(ostream &os, const Number &number)
