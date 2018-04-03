@@ -96,6 +96,120 @@ TEST_P(InterpretTest, def)
     EXPECT_EQ(GetParam().result, result);
 }
 
+TEST_F(InterpretTest, clear_1)
+{
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(5));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::CLEAR);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(4));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(3));
+    EXPECT_EQ(Number(7), result);
+    EXPECT_EQ(nullptr,error);
+}
+
+TEST_F(InterpretTest, clear_2)
+{
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(5));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::CLEAR);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::CLEAR);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::CLEAR);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(4));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(3));
+    EXPECT_EQ(Number(7), result);
+    EXPECT_EQ(nullptr,error);
+}
+
+TEST_F(InterpretTest, clear_3)
+{
+    interpret.sendIdentifiedLex(Lex::CLEAR);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::CLEAR);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::CLEAR);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(4));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(3));
+    EXPECT_EQ(Number(7), result);
+    EXPECT_EQ(nullptr,error);
+}
+
+TEST_F(InterpretTest, bs_1)
+{
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(5));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::BS);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(4));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(3));
+    EXPECT_EQ(Number(7), result);
+    EXPECT_EQ(nullptr,error);
+}
+
+TEST_F(InterpretTest, bs_2)
+{
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(5));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::BS);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::BS);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::BS);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(4));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(3));
+    EXPECT_EQ(Number(7), result);
+    EXPECT_EQ(nullptr,error);
+}
+
+TEST_F(InterpretTest, bs_3)
+{
+    interpret.sendIdentifiedLex(Lex::BS);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::BS);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::BS);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(4));
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Lex::ADD);
+    EXPECT_EQ(Number(0), result);
+    interpret.sendIdentifiedLex(Number(3));
+    EXPECT_EQ(Number(7), result);
+    EXPECT_EQ(nullptr,error);
+}
+
 TEST_F(InterpretTest, AddStartWithNumber)
 {
     EXPECT_EQ(Number(0), result);
