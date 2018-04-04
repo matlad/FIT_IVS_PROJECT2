@@ -30,45 +30,51 @@ class LexicalAnalyzer
      */
     std::set<LexIdentificationObserver *> lexCallbackObjects;
 
-	/*
-	 * Řetězec, který obsahuje znaky, které ještě nebyly rozeznány jako lexém
-	 */
-	std::string saved = "";
+    /**
+     * Řetězec, který obsahuje znaky, které ještě nebyly rozeznány jako lexém
+     */
+    std::string saved = "";
 
-	/*
-	 * Poslední získaný znak
-	 */
-	char last = '\0';
+    /**
+     * Poslední získaný znak
+     */
+    char last = '\0';
 
-	/*
-	 * Vrací true, pokud řetězec obsahuje pouze číslice
-	 * @param s textový řetězec k analýze
-     	 */
-	bool isNumber(std::string s);
+    /**
+     * Vrací true, pokud řetězec obsahuje pouze číslice
+     * @param s textový řetězec k analýze
+     */
+    bool isNumber(std::string s);
 
-	/*
-	 * Vrací true, pokud řetězec obsahuje pouze číslice nebo tečku
-	 * @param s textový řetězec k analýze
-     	 */
-	bool isNumberWithDot(std::string s);
+    /**
+     * Vrací true, pokud řetězec obsahuje pouze číslice nebo tečku
+     * @param s textový řetězec k analýze
+     */
+    bool isNumberWithDot(std::string s);
 
-	/*
-	 * Předá lexém všem registrovaným objektům
-	 * @param lex lexém k předání
-     	 */
-	void sendLex(Lex lex);
+    /**
+     * Předá lexém všem registrovaným objektům
+     * @param lex lexém k předání
+     */
+    void sendLex(Lex lex);
 
-	/*
-	 * Vrací lexém daného znaku
-	 * @param c znak k převodu na lexém
-     	 */
-	Lex getCharLex(char c);
+    /**
+     * Vrací lexém daného znaku
+     * @param c znak nebo číslice k převodu na lexém
+     */
+    Lex getCharLex(char c);
 
-	/*
-	 * Vrací číslo typu double převedené z textového řetězce
-	 * @param s textový řetězec pro převod
-     	 */
-	double stringToDouble(std::string s);
+    /**
+     * Vrací číslo typu double převedené z textového řetězce
+     * @param s textový řetězec pro převod
+     */
+    double stringToDouble(std::string s);
+
+    /**
+     * Uloží posledně získaný znak a přidá ho do řetězce tvořícího budoucí lexém
+     * @param c znak k uložení
+     */
+    void saveSymbol(char c);
 
 public:
     /**
