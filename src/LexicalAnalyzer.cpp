@@ -6,7 +6,9 @@
  */
 #include "LexicalAnalyzer.h"
 
-bool team22::Calc::LexicalAnalyzer::isNumber(std::string s)
+namespace team22::Calc
+{
+bool LexicalAnalyzer::isNumber(std::string s)
 {
     if (s.empty())
         return false;
@@ -19,7 +21,7 @@ bool team22::Calc::LexicalAnalyzer::isNumber(std::string s)
     return true;
 }
 
-bool team22::Calc::LexicalAnalyzer::isNumberWithDot(std::string s)
+bool LexicalAnalyzer::isNumberWithDot(std::string s)
 {
     bool flag = true;
 
@@ -40,12 +42,12 @@ bool team22::Calc::LexicalAnalyzer::isNumberWithDot(std::string s)
     return true;
 }
 
-void team22::Calc::LexicalAnalyzer::sendLex(Lex lex) {
+void LexicalAnalyzer::sendLex(Lex lex) {
     for (auto callBack:this->lexCallbackObjects)
         callBack->sendIdentifiedLex(lex);
 }
 
-team22::Calc::Lex team22::Calc::LexicalAnalyzer::getCharLex(char c) {
+Lex LexicalAnalyzer::getCharLex(char c) {
     switch(c) {
     case '+':
         return Lex(Lex::ADD);
@@ -76,7 +78,7 @@ team22::Calc::Lex team22::Calc::LexicalAnalyzer::getCharLex(char c) {
     }
 }
 
-double team22::Calc::LexicalAnalyzer::stringToDouble(std::string s) {
+double LexicalAnalyzer::stringToDouble(std::string s) {
     std::stringstream stringStream;
     double number;
 
@@ -86,12 +88,12 @@ double team22::Calc::LexicalAnalyzer::stringToDouble(std::string s) {
     return number;
 }
 
-void team22::Calc::LexicalAnalyzer::saveSymbol(char c) {
+void LexicalAnalyzer::saveSymbol(char c) {
     saved += c;
     last = c;
 }
 
-void team22::Calc::LexicalAnalyzer::pushSymbol(char symbol)
+void LexicalAnalyzer::pushSymbol(char symbol)
 {
     switch(symbol) {
     case '+':
@@ -168,12 +170,13 @@ void team22::Calc::LexicalAnalyzer::pushSymbol(char symbol)
     throw LexicalAnalyzerException();
 }
 
-void team22::Calc::LexicalAnalyzer::registLexemCalback(team22::Calc::LexIdentificationObserver *lexCallbackObject)
+void LexicalAnalyzer::registLexemCalback(LexIdentificationObserver *lexCallbackObject)
 {
     lexCallbackObjects.emplace(lexCallbackObject);
 }
 
-team22::Calc::LexicalAnalyzer::LexicalAnalyzer()
+LexicalAnalyzer::LexicalAnalyzer()
 {
 
+}
 }
