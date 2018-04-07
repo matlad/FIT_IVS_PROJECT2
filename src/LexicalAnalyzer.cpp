@@ -8,14 +8,12 @@
 
 bool team22::Calc::LexicalAnalyzer::isNumber(std::string s)
 {
-    if (s.empty()) {
+    if (s.empty())
         return false;
-    }
 
     for (const char c : s) {
-        if (!isdigit(c)) {
+        if (!isdigit(c))
             return false;
-        }
     }
 
     return true;
@@ -25,19 +23,16 @@ bool team22::Calc::LexicalAnalyzer::isNumberWithDot(std::string s)
 {
     bool flag = true;
 
-    if (s.empty()) {
+    if (s.empty())
         return false;
-    }
 
     unsigned int i = 0;
     for (const char c : s) {
-        if (!isdigit(c) && (((!flag || i == 0) && c == '.') || c != '.')) {
+        if (!isdigit(c) && (((!flag || i == 0) && c == '.') || c != '.'))
             return false;
-        }
 
-        if (c == '.') {
+        if (c == '.')
             flag = false;
-        }
 
         i++;
     }
@@ -47,9 +42,7 @@ bool team22::Calc::LexicalAnalyzer::isNumberWithDot(std::string s)
 
 void team22::Calc::LexicalAnalyzer::sendLex(Lex lex) {
     for (auto callBack:this->lexCallbackObjects)
-    {
         callBack->sendIdentifiedLex(lex);
-    }
 }
 
 team22::Calc::Lex team22::Calc::LexicalAnalyzer::getCharLex(char c) {
@@ -133,9 +126,9 @@ void team22::Calc::LexicalAnalyzer::pushSymbol(char symbol)
                 break;
             }
         } else {
-            if (saved.empty()) {
+            if (saved.empty())
                 sendLex(getCharLex(symbol));
-            } else if (isNumberWithDot(saved) && saved[saved.length() - 1] != '.') {
+            else if (isNumberWithDot(saved) && saved[saved.length() - 1] != '.') {
                 sendLex(Lex(team22::Math::Number(stringToDouble(saved))));
                 sendLex(getCharLex(symbol));
             }
@@ -158,9 +151,8 @@ void team22::Calc::LexicalAnalyzer::pushSymbol(char symbol)
         break;
     default:
         if (saved.empty() && isdigit(symbol)) {
-            if (last == 'i') {
+            if (last == 'i')
                 throw LexicalAnalyzerException();
-            }
             saveSymbol(symbol);
             return;
         } else if (!saved.empty()) {
