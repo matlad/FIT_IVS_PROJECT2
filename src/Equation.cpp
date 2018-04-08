@@ -19,6 +19,7 @@ void Equation::sendIdentifiedLex(Lex lex)
             case Lex::CLEAR:
                 data.clear();
                 lastResult = Math::Number(0);
+                notifyEquationObserver();
                 break;
             case Lex::BS:
                 backSpace();
@@ -37,7 +38,7 @@ void Equation::sendIdentifiedLex(Lex lex)
         numberBuffer.clear();
         pushLex(new Lex(lex));
     }
-
+    notifyEquationObserver();
     interpret.sendIdentifiedLex(lex);
 }
 
@@ -57,6 +58,8 @@ void Equation::backSpace()
     // Vycházíme s toho, že aby mohl bý identifikovaný lexem BS
     // veškerá rozpracovaná čísla už jsou identifikována a tudíž nas nemusí zajímat numberBuffer.
 
+    if(data.empty())
+        return;
 
     auto last = data.back();
     data.pop_back();
@@ -68,10 +71,10 @@ void Equation::backSpace()
         auto lastNumber = last->getAsNumber();
         stringstream ssLastNumber;
         ssLastNumber << "" << lastNumber;
-        auto strLastNumber = ssLastNumber.str();
-        strLastNumber.back();
+        numberBuffer = ssLastNumber.str();
+        numberBuffer.pop_back();
 
-        for (auto symbol:strLastNumber)
+        for (auto symbol:numberBuffer)
             lexicalAnalyzer.pushSymbol(symbol);
     }
 
@@ -109,7 +112,6 @@ Equation::Equation(LexicalAnalyzer &lexicalAnalyzer, Interpret &interpret):
 void Equation::pushLex(Lex *lex)
 {
     data.push_back(lex);
-    notifyEquationObserver();
 }
 
 void Equation::onResultChange(Math::Number result)
