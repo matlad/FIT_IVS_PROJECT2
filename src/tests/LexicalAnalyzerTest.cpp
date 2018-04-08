@@ -121,7 +121,7 @@ INSTANTIATE_TEST_CASE_P(Seqention, LexicalAnalyzerTest, testing::Values(
     LexicalAnalyzerTestParam{"+654-6", {Lex::ADD, Number(654), Lex::SUB, Number(6)}},
     LexicalAnalyzerTestParam{"*--/=", {Lex::MUL, Lex::SUB, Lex::SUB, Lex::DIV, Lex::EVAL}},
     LexicalAnalyzerTestParam{"CCBS==**", {Lex::CLEAR, Lex::CLEAR, Lex::BS, Lex::EVAL, Lex::EVAL, Lex::MUL, Lex::MUL}},
-    LexicalAnalyzerTestParam{"2BS21C2ROOT6", {Number(2), Lex::BS, Number(21), Lex::CLEAR, Number(21), Lex::ROOT,Number(6)}}
+    LexicalAnalyzerTestParam{"2BS21C2ROOT6", {Number(2), Lex::BS, Number(21), Lex::CLEAR, Number(2), Lex::ROOT,Number(6)}}
 ));
 
 INSTANTIATE_TEST_CASE_P(Default, LexicalAnalyzerErrorsTest, testing::Values(
