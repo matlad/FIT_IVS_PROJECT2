@@ -80,6 +80,7 @@ public:
     /**
      * Předá znak k analýze
      * @param symbol symbol abecedy přijímané lexikálním analyzátorem
+     * @throw LexicalAnalyserException
      */
     void pushSymbol(char symbol);
 
@@ -90,13 +91,8 @@ public:
      *
      * @param lexCallbackObject objekt na němž
      */
-    void registLexemCalback(LexIdentificationObserver * lexCallbackObject);
+    void registrLexCallback(LexIdentificationObserver *lexCallbackObject);
 
-    /**
-     *
-     * @param interpret
-     */
-    explicit LexicalAnalyzer();
 
 };
 }

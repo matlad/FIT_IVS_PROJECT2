@@ -23,9 +23,9 @@ public:
     virtual void onError(InterpretException exception) = 0;
 
     /**
-        * Callback volaný při změně výsledku
-        * @param result
-        */
+     * Callback volaný při změně výsledku
+     * @param result
+     */
     virtual void onResultChange(Math::Number result) = 0;
 };
 }

@@ -56,7 +56,7 @@ struct LexicalAnalyzerTestBase:
 
     LexicalAnalyzerTestBase()
     {
-        analyzer.registLexemCalback(this);
+        analyzer.registrLexCallback(this);
     }
 
 };

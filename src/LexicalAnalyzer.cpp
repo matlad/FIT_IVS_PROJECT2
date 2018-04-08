@@ -170,13 +170,9 @@ void LexicalAnalyzer::pushSymbol(char symbol)
     throw LexicalAnalyzerException();
 }
 
-void LexicalAnalyzer::registLexemCalback(LexIdentificationObserver *lexCallbackObject)
+void LexicalAnalyzer::registrLexCallback(LexIdentificationObserver *lexCallbackObject)
 {
     lexCallbackObjects.emplace(lexCallbackObject);
 }
 
-LexicalAnalyzer::LexicalAnalyzer()
-{
-
-}
 }

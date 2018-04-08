@@ -82,3 +82,13 @@ std::ostream &team22::Calc::operator<<(std::ostream &os, const team22::Calc::Lex
     return os;
 }
 
+std::stringstream &team22::Calc::operator<<(std::stringstream &os, const team22::Calc::Lex &lex)
+{
+    if (lex.isNumber()) {
+        os << "" << lex.getAsNumber();
+    } else {
+        os << lex.OperatorNames[lex.getAsOperator()];
+    }
+
+    return os;
+}
