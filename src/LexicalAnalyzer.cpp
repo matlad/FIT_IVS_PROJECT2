@@ -144,6 +144,10 @@ void LexicalAnalyzer::pushSymbol(char symbol)
     case 'B':
     case 'O':
     case 'E':
+        if (!saved.empty() && isNumberWithDot(saved) && saved[saved.length() - 1] != '.') {
+            sendLex(Lex(team22::Math::Number(stringToDouble(saved))));
+            saved.clear();
+        }
         if ((saved.empty() && (symbol == 'R' || symbol == 'N' || symbol == 'B')) ||
                 ((saved == "R" || saved == "RO") && symbol == 'O') ||
                 (saved == "N" && symbol == 'E')) {
