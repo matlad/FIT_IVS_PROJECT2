@@ -34,6 +34,7 @@ namespace team22::Calc
  * @example
  *  Auto i = Interpret;
  *  i.sendIdentifiedLex(Number(5));
+ *  // Informování o změně výsledků na 5 pomocí callbacků
  *  i.sendIdentifiedLex(Lex(Lex::ADD));
  *  i.sendIdentifiedLex(Number(4));
  *  // Provedení operace => 5+4 výsledek 9
