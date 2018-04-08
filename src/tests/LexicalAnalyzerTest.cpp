@@ -113,6 +113,10 @@ INSTANTIATE_TEST_CASE_P(Numbers, LexicalAnalyzerTest, testing::Values(
     LexicalAnalyzerTestParam{"121.321=", {Number(121.321), Lex::EVAL}},
     LexicalAnalyzerTestParam{"121.321i=", {Number(0,121.321), Lex::EVAL}},
     LexicalAnalyzerTestParam{"0=", {Number(0), Lex::EVAL}},
+    LexicalAnalyzerTestParam{"123.=", {Number(123.), Lex::EVAL}},
+    LexicalAnalyzerTestParam{"654.i=", {Number(0,654.), Lex::EVAL}},
+    LexicalAnalyzerTestParam{".654i=", {Number(0,.654), Lex::EVAL}},
+    LexicalAnalyzerTestParam{".654=", {Number(.654), Lex::EVAL}},
     LexicalAnalyzerTestParam{"1654646464654654.6546546546546546=", {Number(1654646464654654.6546546546546546), Lex::EVAL}}
 ));
 
@@ -121,13 +125,15 @@ INSTANTIATE_TEST_CASE_P(Seqention, LexicalAnalyzerTest, testing::Values(
     LexicalAnalyzerTestParam{"+654-6", {Lex::ADD, Number(654), Lex::SUB, Number(6)}},
     LexicalAnalyzerTestParam{"*--/=", {Lex::MUL, Lex::SUB, Lex::SUB, Lex::DIV, Lex::EVAL}},
     LexicalAnalyzerTestParam{"CCBS==**", {Lex::CLEAR, Lex::CLEAR, Lex::BS, Lex::EVAL, Lex::EVAL, Lex::MUL, Lex::MUL}},
-    LexicalAnalyzerTestParam{"2BS21C2ROOT6", {Number(2), Lex::BS, Number(21), Lex::CLEAR, Number(2), Lex::ROOT,Number(6)}}
+    LexicalAnalyzerTestParam{"416465i5=",{Number(0,416465),Number(5),Lex::EVAL}},
+    LexicalAnalyzerTestParam{"0i3=",{Number(0),Number(3),Lex::EVAL}},
+    LexicalAnalyzerTestParam{"4165465.321i1=",{Number(0,4165465.321), Number(1),Lex::EVAL}},
+    LexicalAnalyzerTestParam{"2BS21C2ROOT6", {Number(2), Lex::BS, Number(21), Lex::CLEAR, Number(2), Lex::ROOT,Number(6)}},
+    LexicalAnalyzerTestParam{"12+34BS=BS5-BS*6", {Number(12),Lex::ADD,Number(34),Lex::BS,Lex::EVAL,Lex::BS, Number(5), Lex::SUB, Lex::BS, Lex::MUL, Number(6)}},
+    LexicalAnalyzerTestParam{"12+34BS3=BS5-BS*6", {Number(12),Lex::ADD,Number(34),Lex::BS,Number(3),Lex::EVAL,Lex::BS, Number(5), Lex::SUB, Lex::BS, Lex::MUL, Number(6)}}
 ));
 
 INSTANTIATE_TEST_CASE_P(Default, LexicalAnalyzerErrorsTest, testing::Values(
-    LexicalAnalyzerErrorTestParam{"416465i", '5'},
-    LexicalAnalyzerErrorTestParam{"0i", '3'},
-    LexicalAnalyzerErrorTestParam{"4165465.321i", '1'},
     LexicalAnalyzerErrorTestParam{"", 'f'},
     LexicalAnalyzerErrorTestParam{"", 'g'},
     //Case sensitive
@@ -146,7 +152,8 @@ INSTANTIATE_TEST_CASE_P(Default, LexicalAnalyzerErrorsTest, testing::Values(
 
 TEST_P(LexicalAnalyzerTest, symbol)
 {
-    for(auto symbol:param.input)
+    auto input = param.input;
+    for(auto symbol:input)
     {
         analyzer.pushSymbol(symbol);
     }
