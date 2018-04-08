@@ -11,7 +11,7 @@
 #ifndef FIT_IVS_PROJECT2_NUMBER_H
 #define FIT_IVS_PROJECT2_NUMBER_H
 
-#include <cmath>    //Used for isnan()
+#include <cmath>
 #include <complex>
 #include <iostream>
 
@@ -28,6 +28,14 @@ private:
     std::complex<double> value;
 
 	explicit operator std::complex<double>() const {return value;}
+    
+    /**
+     * @details Gamma funkce implementovaná pomocí Lanczosovy aproximace
+     * 
+     * @param z vstupní operand
+     * @return gamma čísla z
+     */
+    std::complex<double> gamma(std::complex<double> z);
 
     /**
      * @return True pokud je některý z parametrů Nan, jiank False
@@ -83,7 +91,7 @@ public:
     Number add(Number addend) const;
 
     /**
-	 * @see add
+	 * @see ::add
 	 */
     Number operator+(const Number &number) const;
 
@@ -97,7 +105,7 @@ public:
     Number sub(Number subtrahend) const;
 
     /**
-	 * @see sub
+	 * @see ::sub
 	 */
     Number operator-(const Number &number) const;
 
@@ -111,7 +119,7 @@ public:
     Number mul(Number multiplier) const;
 
     /**
-	 * @see mul
+	 * @see ::mul
 	 */
     Number operator*(const Number &number) const;
 
@@ -120,12 +128,12 @@ public:
      *
      * @param divisor dělitel
      * @return rozdíl
-     * @throws UndefinedException TODO
+     * @throws UndefinedException Pokud je některá část operandů nan nebo obě části obou operandů jsou nekonečno nebo je dělitel nulový a obě části dělence nejsou nekonečno a reálná část dělence není pozitivní nekonečno a imaginární část dělence není nekonečno
      */
     Number div(Number divisor) const;
 
     /**
-	 * @see div
+	 * @see ::div
 	 */
     Number operator/(const Number &number) const;
 
@@ -139,7 +147,7 @@ public:
     Number pow(Number exponent) const;
 
     /**
-	 * @see pow
+	 * @see ::pow
 	 */
     Number operator^(const Number &number) const;
 
@@ -162,18 +170,22 @@ public:
     Number mod(Number divisor) const;
 
     /**
-	 * @see mod
+	 * @see ::mod
 	 */
     Number operator%(const Number &number) const;
 
     /**
      * @brief Faktoriál
-     *
+     * 
      * @return faktoriál
+     * @throws UndefinedException pokud je některá z částí operandů nan nebo jsou obě části operandů nekonečno nebo je reálná část operandu záporné nekonečno
      */
-    Number fact() const;
+    Number fact();
 
-    Number operator!() const;
+    /**
+     * @see ::fact
+     */
+    Number operator!();
 
     bool operator==(const Number &rhs) const;
     bool operator!=(const Number &rhs) const;
