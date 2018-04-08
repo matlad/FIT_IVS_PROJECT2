@@ -38,7 +38,7 @@ struct LexicalAnalyzerTestParam
 struct LexicalAnalyzerErrorTestParam
 {
     string input;
-    char error;
+    char error = '0';
 
     friend std::ostream &operator<<(std::ostream &os, const LexicalAnalyzerErrorTestParam &param)
     {
@@ -120,7 +120,8 @@ INSTANTIATE_TEST_CASE_P(Seqention, LexicalAnalyzerTest, testing::Values(
     LexicalAnalyzerTestParam{"1+2*6i+3-9=", {Number(1), Lex::ADD, Number(2), Lex::MUL, Number(0,6), Lex::ADD, Number(3), Lex::SUB, Number(9), Lex::EVAL}},
     LexicalAnalyzerTestParam{"+654-6", {Lex::ADD, Number(654), Lex::SUB, Number(6)}},
     LexicalAnalyzerTestParam{"*--/=", {Lex::MUL, Lex::SUB, Lex::SUB, Lex::DIV, Lex::EVAL}},
-    LexicalAnalyzerTestParam{"CCBS==**", {Lex::CLEAR, Lex::CLEAR, Lex::BS, Lex::EVAL, Lex::EVAL, Lex::MUL, Lex::MUL}}
+    LexicalAnalyzerTestParam{"CCBS==**", {Lex::CLEAR, Lex::CLEAR, Lex::BS, Lex::EVAL, Lex::EVAL, Lex::MUL, Lex::MUL}},
+    LexicalAnalyzerTestParam{"2BS21C2ROOT6", {Number(2), Lex::BS, Number(21), Lex::CLEAR, Number(2), Lex::ROOT,Number(6)}}
 ));
 
 INSTANTIATE_TEST_CASE_P(Default, LexicalAnalyzerErrorsTest, testing::Values(
