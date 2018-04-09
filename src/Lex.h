@@ -47,18 +47,18 @@ public:
     };
 
     const char * OperatorNames[12] {
-        "ADD",
-        "SUB",
-        "DIV",
-        "MUL",
-        "EXP",
-        "ROOT",
-        "FACTORIAL",
-        "MOD",
-        "NEG",
-        "EVAL",
-        "CLEAR",
-        "BS",
+        "+",     ///< ADD,
+        "-",     ///< SUB,
+        "/",     ///< DIV,
+        "*",     ///< MUL,
+        "^",     ///< EXP,
+        "√",     ///< ROOT,
+        "!",     ///< FACTORIAL,
+        "%",     ///< MOD,
+        "*-1",   ///< NEG,
+        "=",     ///< EVAL,
+        "CLEAR", ///< CLEAR,
+        "BS",    ///< BS
     };
 
     /**
@@ -126,6 +126,7 @@ public:
     bool operator!=(const Lex &rhs) const;
 
     friend std::ostream &operator<<(std::ostream &os, const Lex &lex);
+    friend std::stringstream &operator<<(std::stringstream &os, const Lex &lex);
 };
 }
 

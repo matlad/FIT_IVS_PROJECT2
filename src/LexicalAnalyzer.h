@@ -25,6 +25,14 @@ namespace team22::Calc
  */
 class LexicalAnalyzer
 {
+    enum State {
+        Number,
+        Operator,
+        Init
+    };
+
+    State state = Init;
+
     /**
      * Množina Objektů na nichž bude volán callback při rozeznání lexemů
      */
@@ -34,23 +42,6 @@ class LexicalAnalyzer
      * Řetězec, který obsahuje znaky, které ještě nebyly rozeznány jako lexém
      */
     std::string saved = "";
-
-    /**
-     * Poslední získaný znak
-     */
-    char last = '\0';
-
-    /**
-     * Vrací true, pokud řetězec obsahuje pouze číslice
-     * @param s textový řetězec k analýze
-     */
-    bool isNumber(std::string s);
-
-    /**
-     * Vrací true, pokud řetězec obsahuje pouze číslice nebo tečku
-     * @param s textový řetězec k analýze
-     */
-    bool isNumberWithDot(std::string s);
 
     /**
      * Předá lexém všem registrovaným objektům
@@ -68,18 +59,13 @@ class LexicalAnalyzer
      * Vrací číslo typu double převedené z textového řetězce
      * @param s textový řetězec pro převod
      */
-    double stringToDouble(std::string s);
-
-    /**
-     * Uloží posledně získaný znak a přidá ho do řetězce tvořícího budoucí lexém
-     * @param c znak k uložení
-     */
-    void saveSymbol(char c);
+    Math::Number savedToNumber();
 
 public:
     /**
      * Předá znak k analýze
      * @param symbol symbol abecedy přijímané lexikálním analyzátorem
+     * @throw LexicalAnalyserException
      */
     void pushSymbol(char symbol);
 
@@ -90,14 +76,31 @@ public:
      *
      * @param lexCallbackObject objekt na němž
      */
-    void registLexemCalback(LexIdentificationObserver * lexCallbackObject);
+    void registrLexCallback(LexIdentificationObserver *lexCallbackObject);
 
     /**
-     *
-     * @param interpret
+     * Zpracuje uložený řetězec saved a vrátí jej jako číslo
+     * @param symbol
      */
-    explicit LexicalAnalyzer();
+    void processNumberSymbol(char symbol);
 
+    /**
+     * Jedná se o symbol tvořící číslo tedy číslice, . nebo i
+     * @param symbol
+     * @return
+     */
+    bool isNumberSymbol(char symbol) const;
+
+    /**
+     * Vyresetuje lexikální analyzátor
+     */
+    void clear();
+
+    /**
+     * Zpracuje výceznakový operátor
+     * @param symbol
+     */
+    void processOperator(char symbol);
 };
 }
 

@@ -31,7 +31,7 @@ CXXFLAGS += -g -Wall -Wextra -pthread -std=c++17
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = NumberTest LexicalAnalyzerTest
+TESTS = NumberTest LexicalAnalyzerTest InterpretTest
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -43,7 +43,7 @@ GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
 all : $(TESTS)
 
 clean :
-	rm -f $(TESTS) gtest.a gtest_main.a *.o
+	rm -f -r $(TESTS) gtest.a gtest_main.a tests/*.o math/*.o *.o
 
 # Builds gtest.a and gtest_main.a.
 
@@ -93,3 +93,10 @@ LexicalAnalyzerTest.o : $(USER_DIR)/tests/LexicalAnalyzerTest.cpp $(USER_DIR)/Le
 
 LexicalAnalyzerTest : Number.o Lex.o LexicalAnalyzer.o LexicalAnalyzerTest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
+	
+InterpretTest.o : $(USER_DIR)/tests/InterpretTests.cpp $(USER_DIR)/Interpret.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/tests/InterpretTests.cpp
+
+InterpretTest : Number.o Lex.o Interpret.o LexicalAnalyzer.o tests/InterpretTests.o gtest_main.a
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
+
