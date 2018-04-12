@@ -1,3 +1,5 @@
 <map id="team22::Calc::ResultObserver" name="team22::Calc::ResultObserver">
-<area shape="rect" id="node2" href="$classteam22_1_1_calc_1_1_equation.html" title="Třída reprezentující rovnici. " alt="" coords="13,145,196,443"/>
+<area shape="rect" id="node2" href="$class_backend_tester.html" title="{BackendTester\n|+ interpret\l+ lexicalAnalyzer\l+ equation\l+ strEquation\l+ error\l+ result\l|+ BackendTester()\l+ onEquationChange()\l+ onError()\l+ onResultChange()\l+ ~BackendTester()\l}" alt="" coords="5,189,157,399"/>
+<area shape="rect" id="node3" href="$struct_interpret_test.html" title="{InterpretTest\n|+ interpret\l+ result\l+ error\l|+ InterpretTest()\l+ onError()\l+ onResultChange()\l+ ~InterpretTest()\l}" alt="" coords="181,219,320,369"/>
+<area shape="rect" id="node4" href="$classteam22_1_1_calc_1_1_equation.html" title="Třída reprezentující rovnici. " alt="" coords="345,145,527,443"/>
 </map>

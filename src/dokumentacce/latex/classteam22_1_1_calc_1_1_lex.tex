@@ -16,7 +16,7 @@ Collaboration diagram for team22\+:\+:Calc\+:\+:Lex\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=183pt]{classteam22_1_1_calc_1_1_lex__coll__graph}
+\includegraphics[height=550pt]{classteam22_1_1_calc_1_1_lex__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Classes}
@@ -53,7 +53,7 @@ enum \hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}{
 \item 
 \hyperlink{classteam22_1_1_calc_1_1_lex_a12b6acfadebf09ce47319315f8a2e684}{Lex} (\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}{Operator} oper)
 \begin{DoxyCompactList}\small\item\em Konstrukce lexému typu operátor. \end{DoxyCompactList}\item 
-\hyperlink{classteam22_1_1_calc_1_1_lex_a95deefe4c4e987fef602fbd621bac095}{Lex} (Math\+::\+Number number)
+\hyperlink{classteam22_1_1_calc_1_1_lex_a95deefe4c4e987fef602fbd621bac095}{Lex} (\hyperlink{classteam22_1_1_math_1_1_number}{Math\+::\+Number} number)
 \begin{DoxyCompactList}\small\item\em Konstrukce lexému typu číslo. \end{DoxyCompactList}\item 
 const \hyperlink{unionteam22_1_1_calc_1_1_lex_1_1_value}{Value} \& \hyperlink{classteam22_1_1_calc_1_1_lex_a8a68cd13a68d32d50d3b014ca4478fab}{get\+Value} () const
 \begin{DoxyCompactList}\small\item\em vrací hodnotu lexému \end{DoxyCompactList}\item 
@@ -63,7 +63,7 @@ bool \hyperlink{classteam22_1_1_calc_1_1_lex_a21f9fe1956185bfb6d80d094846a44f1}{
 \begin{DoxyCompactList}\small\item\em Testuje zda je lexém číslo. \end{DoxyCompactList}\item 
 bool \hyperlink{classteam22_1_1_calc_1_1_lex_a965eff3f3264440279ea9a1f1d3a3cfe}{is\+Operator} () const
 \begin{DoxyCompactList}\small\item\em Testuje zda je lexém operátor. \end{DoxyCompactList}\item 
-Math\+::\+Number \hyperlink{classteam22_1_1_calc_1_1_lex_a794e75373451a906a2cfc60e5d6b1996}{get\+As\+Number} () const
+\hyperlink{classteam22_1_1_math_1_1_number}{Math\+::\+Number} \hyperlink{classteam22_1_1_calc_1_1_lex_a794e75373451a906a2cfc60e5d6b1996}{get\+As\+Number} () const
 \item 
 \hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}{Operator} \hyperlink{classteam22_1_1_calc_1_1_lex_afdeee7e9b13fcb9826d4d8fd7d5f141f}{get\+As\+Operator} () const
 \item 
@@ -212,13 +212,13 @@ Definition at line 30 of file Lex.\+cpp.
 
 
 
-References N\+U\+M\+B\+ER, team22\+::\+Calc\+::\+Lex\+::\+Value\+::number, team22\+::\+Calc\+::\+Lex\+::\+Value\+::oper, type, and value.
+References team22\+::\+Calc\+::\+Lex\+::\+Value\+::oper, and value.
 
 \mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a95deefe4c4e987fef602fbd621bac095}\label{classteam22_1_1_calc_1_1_lex_a95deefe4c4e987fef602fbd621bac095}} 
 \index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!Lex@{Lex}}
 \index{Lex@{Lex}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
 \subsubsection{\texorpdfstring{Lex()}{Lex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily team22\+::\+Calc\+::\+Lex\+::\+Lex (\begin{DoxyParamCaption}\item[{Math\+::\+Number}]{number }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily team22\+::\+Calc\+::\+Lex\+::\+Lex (\begin{DoxyParamCaption}\item[{\hyperlink{classteam22_1_1_math_1_1_number}{Math\+::\+Number}}]{number }\end{DoxyParamCaption})}
 
 
 
@@ -231,12 +231,20 @@ Konstrukce lexému typu číslo.
 \end{DoxyParams}
 
 
+Definition at line 36 of file Lex.\+cpp.
+
+
+
+References team22\+::\+Calc\+::\+Lex\+::\+Value\+::number, and value.
+
+
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a794e75373451a906a2cfc60e5d6b1996}\label{classteam22_1_1_calc_1_1_lex_a794e75373451a906a2cfc60e5d6b1996}} 
 \index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!get\+As\+Number@{get\+As\+Number}}
 \index{get\+As\+Number@{get\+As\+Number}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
 \subsubsection{\texorpdfstring{get\+As\+Number()}{getAsNumber()}}
-{\footnotesize\ttfamily team22\+::\+Math\+::\+Number team22\+::\+Calc\+::\+Lex\+::get\+As\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{classteam22_1_1_math_1_1_number}{team22\+::\+Math\+::\+Number} team22\+::\+Calc\+::\+Lex\+::get\+As\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -466,7 +474,7 @@ Definition at line 75 of file Lex.\+h.
 
 
 
-Referenced by get\+Type(), is\+Number(), is\+Operator(), Lex(), and operator==().
+Referenced by get\+Type(), is\+Number(), is\+Operator(), and operator==().
 
 \mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a8a78a736b719931cada0905ac13fedc8}\label{classteam22_1_1_calc_1_1_lex_a8a78a736b719931cada0905ac13fedc8}} 
 \index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!value@{value}}

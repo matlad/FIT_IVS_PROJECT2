@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['equation',['Equation',['../classteam22_1_1_calc_1_1_equation.html#a085dc8be6e009511735b8c317d951610',1,'team22::Calc::Equation']]]
+  ['clear',['clear',['../classteam22_1_1_calc_1_1_lexical_analyzer.html#adf38772b29f998549aa532e8f380b4b2',1,'team22::Calc::LexicalAnalyzer']]]
 ];

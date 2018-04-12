@@ -38,7 +38,7 @@ void \hyperlink{classteam22_1_1_calc_1_1_equation_a324bf6372508c1b931c5ad8f39ccf
 \item 
 void \hyperlink{classteam22_1_1_calc_1_1_equation_ad5768951865500ec7fc514f676de2851}{send\+Identified\+Lex} (\hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} lex) override
 \item 
-void \hyperlink{classteam22_1_1_calc_1_1_equation_a302c295e099f589897a1bad4b02d3de8}{on\+Result\+Change} (Math\+::\+Number result) override
+void \hyperlink{classteam22_1_1_calc_1_1_equation_a302c295e099f589897a1bad4b02d3de8}{on\+Result\+Change} (\hyperlink{classteam22_1_1_math_1_1_number}{Math\+::\+Number} result) override
 \item 
 void \hyperlink{classteam22_1_1_calc_1_1_equation_a4e7a0614867931bcc714440441cdd894}{on\+Error} (\hyperlink{class_interpret_exception}{Interpret\+Exception} exception) override
 \item 
@@ -70,7 +70,7 @@ std\+::vector$<$ \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} $\ast$ $>$ \hyper
 \item 
 std\+::set$<$ \hyperlink{classteam22_1_1_calc_1_1_equation_observer}{Equation\+Observer} $\ast$ $>$ \hyperlink{classteam22_1_1_calc_1_1_equation_a76439666b11701dd1c42507397c5a316}{equation\+Observers}
 \item 
-Math\+::\+Number \hyperlink{classteam22_1_1_calc_1_1_equation_a7c62440412a33b3b3300e63ff65ffafb}{last\+Result} = \{0\}
+\hyperlink{classteam22_1_1_math_1_1_number}{Math\+::\+Number} \hyperlink{classteam22_1_1_calc_1_1_equation_a7c62440412a33b3b3300e63ff65ffafb}{last\+Result} = \{0\}
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -196,7 +196,7 @@ References data, and number\+Buffer.
 \index{team22\+::\+Calc\+::\+Equation@{team22\+::\+Calc\+::\+Equation}!on\+Result\+Change@{on\+Result\+Change}}
 \index{on\+Result\+Change@{on\+Result\+Change}!team22\+::\+Calc\+::\+Equation@{team22\+::\+Calc\+::\+Equation}}
 \subsubsection{\texorpdfstring{on\+Result\+Change()}{onResultChange()}}
-{\footnotesize\ttfamily void Equation\+::on\+Result\+Change (\begin{DoxyParamCaption}\item[{Math\+::\+Number}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Equation\+::on\+Result\+Change (\begin{DoxyParamCaption}\item[{\hyperlink{classteam22_1_1_math_1_1_number}{Math\+::\+Number}}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -257,6 +257,10 @@ Definition at line 45 of file Equation.\+cpp.
 
 References is\+Number\+Symbol(), lexical\+Analyzer, notify\+Equation\+Observer(), number\+Buffer, and team22\+::\+Calc\+::\+Lexical\+Analyzer\+::push\+Symbol().
 
+
+
+Referenced by T\+E\+S\+T().
+
 \mbox{\Hypertarget{classteam22_1_1_calc_1_1_equation_aba44b10dfb0ece96f3e0279d34cec868}\label{classteam22_1_1_calc_1_1_equation_aba44b10dfb0ece96f3e0279d34cec868}} 
 \index{team22\+::\+Calc\+::\+Equation@{team22\+::\+Calc\+::\+Equation}!re\+Compute\+Result@{re\+Compute\+Result}}
 \index{re\+Compute\+Result@{re\+Compute\+Result}!team22\+::\+Calc\+::\+Equation@{team22\+::\+Calc\+::\+Equation}}
@@ -293,6 +297,10 @@ Definition at line 84 of file Equation.\+cpp.
 
 
 References equation\+Observers.
+
+
+
+Referenced by Backend\+Tester\+::\+Backend\+Tester().
 
 \mbox{\Hypertarget{classteam22_1_1_calc_1_1_equation_ad5768951865500ec7fc514f676de2851}\label{classteam22_1_1_calc_1_1_equation_ad5768951865500ec7fc514f676de2851}} 
 \index{team22\+::\+Calc\+::\+Equation@{team22\+::\+Calc\+::\+Equation}!send\+Identified\+Lex@{send\+Identified\+Lex}}
@@ -381,7 +389,7 @@ Referenced by re\+Compute\+Result(), and send\+Identified\+Lex().
 \index{team22\+::\+Calc\+::\+Equation@{team22\+::\+Calc\+::\+Equation}!last\+Result@{last\+Result}}
 \index{last\+Result@{last\+Result}!team22\+::\+Calc\+::\+Equation@{team22\+::\+Calc\+::\+Equation}}
 \subsubsection{\texorpdfstring{last\+Result}{lastResult}}
-{\footnotesize\ttfamily Math\+::\+Number team22\+::\+Calc\+::\+Equation\+::last\+Result = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{classteam22_1_1_math_1_1_number}{Math\+::\+Number} team22\+::\+Calc\+::\+Equation\+::last\+Result = \{0\}\hspace{0.3cm}{\ttfamily [private]}}
 
 Poslední výsledek rovnice 
 

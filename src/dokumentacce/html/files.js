@@ -1,5 +1,7 @@
 var files =
 [
+    [ "math", "dir_296d53ceaeaa7e099814a6def439fe8a.html", "dir_296d53ceaeaa7e099814a6def439fe8a" ],
+    [ "tests", "dir_59425e443f801f1f2fd8bbe4959a3ccf.html", "dir_59425e443f801f1f2fd8bbe4959a3ccf" ],
     [ "Equation.cpp", "_equation_8cpp.html", null ],
     [ "Equation.h", "_equation_8h.html", [
       [ "Equation", "classteam22_1_1_calc_1_1_equation.html", "classteam22_1_1_calc_1_1_equation" ]

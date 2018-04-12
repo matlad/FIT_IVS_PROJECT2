@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['saved',['saved',['../classteam22_1_1_calc_1_1_lexical_analyzer.html#afd063de2c3d792b5688c863eb5135968',1,'team22::Calc::LexicalAnalyzer']]],
-  ['savedtonumber',['savedToNumber',['../classteam22_1_1_calc_1_1_lexical_analyzer.html#a689b52c49cd7c9e87dd468987472af83',1,'team22::Calc::LexicalAnalyzer']]],
-  ['sendidentifiedlex',['sendIdentifiedLex',['../classteam22_1_1_calc_1_1_equation.html#ad5768951865500ec7fc514f676de2851',1,'team22::Calc::Equation::sendIdentifiedLex()'],['../classteam22_1_1_calc_1_1_interpret.html#a479c65c010f4ef1060049b684e5f7eb6',1,'team22::Calc::Interpret::sendIdentifiedLex()'],['../classteam22_1_1_calc_1_1_lex_identification_observer.html#ac139f75c560625ec6fdb2e34cf0d4884',1,'team22::Calc::LexIdentificationObserver::sendIdentifiedLex()']]],
-  ['sendlex',['sendLex',['../classteam22_1_1_calc_1_1_lexical_analyzer.html#afd6bb48e5de7f8490addc9b326bfeb49',1,'team22::Calc::LexicalAnalyzer']]],
-  ['state',['state',['../classteam22_1_1_calc_1_1_lexical_analyzer.html#ad0f4710b09bf91a00d11846a7ef036ab',1,'team22::Calc::LexicalAnalyzer::state()'],['../classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3',1,'team22::Calc::LexicalAnalyzer::State()']]],
-  ['sub',['SUB',['../classteam22_1_1_calc_1_1_lex.html#a61d29fc4878a3b36d2de2f13c56ed932a8fef3694ea5e14ff416907e90fb736c4',1,'team22::Calc::Lex']]]
+  ['recomputeresult',['reComputeResult',['../classteam22_1_1_calc_1_1_equation.html#aba44b10dfb0ece96f3e0279d34cec868',1,'team22::Calc::Equation']]],
+  ['registrequationobserver',['registrEquationObserver',['../classteam22_1_1_calc_1_1_equation.html#a705c26d64f67f673e4919494d7e22d4a',1,'team22::Calc::Equation']]],
+  ['registrlexcallback',['registrLexCallback',['../classteam22_1_1_calc_1_1_lexical_analyzer.html#ae7fb3f4ce9e6020215352c0c9e2b8245',1,'team22::Calc::LexicalAnalyzer']]],
+  ['registrresultcallback',['registrResultCallback',['../classteam22_1_1_calc_1_1_interpret.html#a23e1e307b4f7ffd42f8eb31d33314c41',1,'team22::Calc::Interpret']]],
+  ['result',['result',['../class_backend_tester.html#a4c0eeb2e7a5f1ef876b6e61fdb1701fc',1,'BackendTester::result()'],['../struct_interpret_test_params.html#a47453b7066c4a8ffa209157af91e7ae7',1,'InterpretTestParams::result()'],['../struct_interpret_test.html#a8a1290387dfa72192d3ea06873ff8e73',1,'InterpretTest::result()']]],
+  ['resultcallbackobjects',['resultCallbackObjects',['../classteam22_1_1_calc_1_1_interpret.html#a7db1e80a4733124ed425e62a90f9eadb',1,'team22::Calc::Interpret']]],
+  ['resultobserver',['ResultObserver',['../classteam22_1_1_calc_1_1_result_observer.html',1,'team22::Calc']]],
+  ['resultobserver_2eh',['ResultObserver.h',['../_result_observer_8h.html',1,'']]],
+  ['root',['Root',['../struct_root.html',1,'Root'],['../classteam22_1_1_math_1_1_number.html#ae2bbbafad08a50625b8070db1fc3ba98',1,'team22::Math::Number::root()'],['../classteam22_1_1_calc_1_1_lex.html#a61d29fc4878a3b36d2de2f13c56ed932ad9dc68a37981eff61741cbc660839f6f',1,'team22::Calc::Lex::ROOT()']]]
 ];
