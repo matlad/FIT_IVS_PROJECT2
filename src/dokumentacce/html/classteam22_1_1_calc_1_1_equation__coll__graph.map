@@ -1,0 +1,13 @@
+<map id="team22::Calc::Equation" name="team22::Calc::Equation">
+<area shape="rect" id="node2" href="$classteam22_1_1_calc_1_1_lex_identification_observer.html" title="{team22::Calc::LexIdentification\lObserver\n||+ sendIdentifiedLex()\l}" alt="" coords="379,153,582,245"/>
+<area shape="rect" id="node15" href="$classteam22_1_1_calc_1_1_interpret.html" title="{team22::Calc::Interpret\n||+ registrResultCallback()\l+ sendIdentifiedLex()\l&#45; notifyResultChanged()\l&#45; notifyAboutError()\l}" alt="" coords="577,653,744,774"/>
+<area shape="rect" id="node3" href="$classteam22_1_1_calc_1_1_result_observer.html" title="{team22::Calc::ResultObserver\n||+ onError()\l+ onResultChange()\l}" alt="" coords="156,153,355,245"/>
+<area shape="rect" id="node5" href="$classteam22_1_1_calc_1_1_lex.html" title="Reprezentace lexému kalkulačky tedy čísla nebo operace. " alt="" coords="1327,329,1456,553"/>
+<area shape="rect" id="node6" href="$unionteam22_1_1_calc_1_1_lex_1_1_value.html" title="reprezentace hodnoty lexému " alt="" coords="1340,145,1477,252"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="1480,403,1596,480"/>
+<area shape="rect" id="node9" href="$classteam22_1_1_calc_1_1_lexical_analyzer.html" title="{team22::Calc::LexicalAnalyzer\n|&#45; state\l|+ pushSymbol()\l+ registrLexCallback()\l+ processNumberSymbol()\l+ isNumberSymbol()\l+ clear()\l+ processOperator()\l&#45; sendLex()\l&#45; getCharLex()\l&#45; savedToNumber()\l}" alt="" coords="354,616,554,811"/>
+<area shape="rect" id="node11" title="STL class. " alt="" coords="735,160,834,237"/>
+<area shape="rect" id="node13" title="STL class. " alt="" coords="169,403,249,480"/>
+<area shape="rect" id="node14" title="STL class. " alt="" coords="5,153,132,245"/>
+<area shape="rect" id="node18" href="$classteam22_1_1_calc_1_1_equation_observer.html" title="{team22::Calc::EquationObserver\n||+ onEquationChange()\l}" alt="" coords="1104,160,1316,237"/>
+</map>

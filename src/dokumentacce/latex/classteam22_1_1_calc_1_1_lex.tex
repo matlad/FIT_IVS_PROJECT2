@@ -1,0 +1,490 @@
+\hypertarget{classteam22_1_1_calc_1_1_lex}{}\section{team22\+:\+:Calc\+:\+:Lex Class Reference}
+\label{classteam22_1_1_calc_1_1_lex}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+
+
+Reprezentace lexému kalkulačky tedy čísla nebo operace.  
+
+
+
+
+{\ttfamily \#include $<$Lex.\+h$>$}
+
+
+
+Collaboration diagram for team22\+:\+:Calc\+:\+:Lex\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{classteam22_1_1_calc_1_1_lex__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionteam22_1_1_calc_1_1_lex_1_1_value}{Value}
+\begin{DoxyCompactList}\small\item\em reprezentace hodnoty lexému \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2}{Types} \{ \hyperlink{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2aa5609722e27933f9074b148e98c70a3b}{O\+P\+E\+R\+A\+T\+OR}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2a016603184e8463620cf841dec9b33783}{N\+U\+M\+B\+ER}
+ \}\begin{DoxyCompactList}\small\item\em Typy lexémů \end{DoxyCompactList}
+\item 
+enum \hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}{Operator} \{ \newline
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a8ea23c5d5cafb66151f94ce0fc7e3677}{A\+DD}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a8fef3694ea5e14ff416907e90fb736c4}{S\+UB}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932adb91fbbc380e598b3d09bc424f799516}{D\+IV}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a61a3bc185249f37b2a196b55f3b5a427}{M\+UL}, 
+\newline
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932ab68440fd94bc855e96432f0734dd6388}{E\+XP}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932ad9dc68a37981eff61741cbc660839f6f}{R\+O\+OT}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a88420075287a73244fcaa4f2f851fc65}{F\+A\+C\+T\+O\+R\+I\+AL}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a70d91e1bc184de6388bd44d6fd83e0da}{M\+OD}, 
+\newline
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932af8b2b375f8262ba1269fe245d7f19853}{N\+EG}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a3c1443c79523cadf6582f238c04a015f}{E\+V\+AL}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a4281d7ef6ac8dbf79c87603ca20c351c}{C\+L\+E\+AR}, 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932ac62fe9cff8a15f20fb1416612309ae80}{BS}
+ \}\begin{DoxyCompactList}\small\item\em Jednotlivé operace. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a12b6acfadebf09ce47319315f8a2e684}{Lex} (\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}{Operator} oper)
+\begin{DoxyCompactList}\small\item\em Konstrukce lexému typu operátor. \end{DoxyCompactList}\item 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a95deefe4c4e987fef602fbd621bac095}{Lex} (Math\+::\+Number number)
+\begin{DoxyCompactList}\small\item\em Konstrukce lexému typu číslo. \end{DoxyCompactList}\item 
+const \hyperlink{unionteam22_1_1_calc_1_1_lex_1_1_value}{Value} \& \hyperlink{classteam22_1_1_calc_1_1_lex_a8a68cd13a68d32d50d3b014ca4478fab}{get\+Value} () const
+\begin{DoxyCompactList}\small\item\em vrací hodnotu lexému \end{DoxyCompactList}\item 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2}{Types} \hyperlink{classteam22_1_1_calc_1_1_lex_ae82ccde78beed14c45df1e747ed21bcb}{get\+Type} () const
+\begin{DoxyCompactList}\small\item\em vrací typ lexému \end{DoxyCompactList}\item 
+bool \hyperlink{classteam22_1_1_calc_1_1_lex_a21f9fe1956185bfb6d80d094846a44f1}{is\+Number} () const
+\begin{DoxyCompactList}\small\item\em Testuje zda je lexém číslo. \end{DoxyCompactList}\item 
+bool \hyperlink{classteam22_1_1_calc_1_1_lex_a965eff3f3264440279ea9a1f1d3a3cfe}{is\+Operator} () const
+\begin{DoxyCompactList}\small\item\em Testuje zda je lexém operátor. \end{DoxyCompactList}\item 
+Math\+::\+Number \hyperlink{classteam22_1_1_calc_1_1_lex_a794e75373451a906a2cfc60e5d6b1996}{get\+As\+Number} () const
+\item 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}{Operator} \hyperlink{classteam22_1_1_calc_1_1_lex_afdeee7e9b13fcb9826d4d8fd7d5f141f}{get\+As\+Operator} () const
+\item 
+bool \hyperlink{classteam22_1_1_calc_1_1_lex_a55858e2719cb121fccff59eed42dd692}{operator==} (const \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} \&rhs) const
+\item 
+bool \hyperlink{classteam22_1_1_calc_1_1_lex_a25b4f3b98b68c4d967eb3695efc78667}{operator!=} (const \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} \&rhs) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{classteam22_1_1_calc_1_1_lex_a9d280854466641dfb02159cc4afeec1f}{Operator\+Names} \mbox{[}12\mbox{]}
+\begin{DoxyCompactList}\small\item\em A\+DD,. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{unionteam22_1_1_calc_1_1_lex_1_1_value}{Value} \hyperlink{classteam22_1_1_calc_1_1_lex_a8a78a736b719931cada0905ac13fedc8}{value}
+\item 
+\hyperlink{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2}{Types} \hyperlink{classteam22_1_1_calc_1_1_lex_a733fda9ebfa5ed6f588457d0870e81bc}{type}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classteam22_1_1_calc_1_1_lex_aca03505bafd6049109d56fd123d2dae6}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} \&lex)
+\item 
+std\+::stringstream \& \hyperlink{classteam22_1_1_calc_1_1_lex_a75f9b47ca9b4289a569608f62336b3dd}{operator$<$$<$} (std\+::stringstream \&os, const \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} \&lex)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reprezentace lexému kalkulačky tedy čísla nebo operace. 
+
+Definition at line 18 of file Lex.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!Operator@{Operator}}
+\index{Operator@{Operator}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{Operator}{Operator}}
+{\footnotesize\ttfamily enum \hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}{team22\+::\+Calc\+::\+Lex\+::\+Operator}}
+
+
+
+Jednotlivé operace. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+DD@{A\+DD}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!A\+DD@{A\+DD}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a8ea23c5d5cafb66151f94ce0fc7e3677}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a8ea23c5d5cafb66151f94ce0fc7e3677}} 
+A\+DD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+UB@{S\+UB}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!S\+UB@{S\+UB}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a8fef3694ea5e14ff416907e90fb736c4}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a8fef3694ea5e14ff416907e90fb736c4}} 
+S\+UB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+IV@{D\+IV}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!D\+IV@{D\+IV}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932adb91fbbc380e598b3d09bc424f799516}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932adb91fbbc380e598b3d09bc424f799516}} 
+D\+IV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+UL@{M\+UL}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!M\+UL@{M\+UL}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a61a3bc185249f37b2a196b55f3b5a427}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a61a3bc185249f37b2a196b55f3b5a427}} 
+M\+UL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+XP@{E\+XP}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!E\+XP@{E\+XP}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932ab68440fd94bc855e96432f0734dd6388}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932ab68440fd94bc855e96432f0734dd6388}} 
+E\+XP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+O\+OT@{R\+O\+OT}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!R\+O\+OT@{R\+O\+OT}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932ad9dc68a37981eff61741cbc660839f6f}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932ad9dc68a37981eff61741cbc660839f6f}} 
+R\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+A\+C\+T\+O\+R\+I\+AL@{F\+A\+C\+T\+O\+R\+I\+AL}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!F\+A\+C\+T\+O\+R\+I\+AL@{F\+A\+C\+T\+O\+R\+I\+AL}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a88420075287a73244fcaa4f2f851fc65}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a88420075287a73244fcaa4f2f851fc65}} 
+F\+A\+C\+T\+O\+R\+I\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+OD@{M\+OD}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!M\+OD@{M\+OD}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a70d91e1bc184de6388bd44d6fd83e0da}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a70d91e1bc184de6388bd44d6fd83e0da}} 
+M\+OD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+EG@{N\+EG}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!N\+EG@{N\+EG}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932af8b2b375f8262ba1269fe245d7f19853}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932af8b2b375f8262ba1269fe245d7f19853}} 
+N\+EG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+AL@{E\+V\+AL}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!E\+V\+AL@{E\+V\+AL}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a3c1443c79523cadf6582f238c04a015f}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a3c1443c79523cadf6582f238c04a015f}} 
+E\+V\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+L\+E\+AR@{C\+L\+E\+AR}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!C\+L\+E\+AR@{C\+L\+E\+AR}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a4281d7ef6ac8dbf79c87603ca20c351c}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932a4281d7ef6ac8dbf79c87603ca20c351c}} 
+C\+L\+E\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BS@{BS}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!BS@{BS}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932ac62fe9cff8a15f20fb1416612309ae80}\label{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932ac62fe9cff8a15f20fb1416612309ae80}} 
+BS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 33 of file Lex.\+h.
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2}\label{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!Types@{Types}}
+\index{Types@{Types}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{Types}{Types}}
+{\footnotesize\ttfamily enum \hyperlink{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2}{team22\+::\+Calc\+::\+Lex\+::\+Types}}
+
+
+
+Typy lexémů 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+P\+E\+R\+A\+T\+OR@{O\+P\+E\+R\+A\+T\+OR}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!O\+P\+E\+R\+A\+T\+OR@{O\+P\+E\+R\+A\+T\+OR}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2aa5609722e27933f9074b148e98c70a3b}\label{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2aa5609722e27933f9074b148e98c70a3b}} 
+O\+P\+E\+R\+A\+T\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+U\+M\+B\+ER@{N\+U\+M\+B\+ER}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!N\+U\+M\+B\+ER@{N\+U\+M\+B\+ER}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2a016603184e8463620cf841dec9b33783}\label{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2a016603184e8463620cf841dec9b33783}} 
+N\+U\+M\+B\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 24 of file Lex.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a12b6acfadebf09ce47319315f8a2e684}\label{classteam22_1_1_calc_1_1_lex_a12b6acfadebf09ce47319315f8a2e684}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!Lex@{Lex}}
+\index{Lex@{Lex}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{Lex()}{Lex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily team22\+::\+Calc\+::\+Lex\+::\+Lex (\begin{DoxyParamCaption}\item[{\hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}{Operator}}]{oper }\end{DoxyParamCaption})}
+
+
+
+Konstrukce lexému typu operátor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em oper} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file Lex.\+cpp.
+
+
+
+References N\+U\+M\+B\+ER, team22\+::\+Calc\+::\+Lex\+::\+Value\+::number, team22\+::\+Calc\+::\+Lex\+::\+Value\+::oper, type, and value.
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a95deefe4c4e987fef602fbd621bac095}\label{classteam22_1_1_calc_1_1_lex_a95deefe4c4e987fef602fbd621bac095}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!Lex@{Lex}}
+\index{Lex@{Lex}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{Lex()}{Lex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily team22\+::\+Calc\+::\+Lex\+::\+Lex (\begin{DoxyParamCaption}\item[{Math\+::\+Number}]{number }\end{DoxyParamCaption})}
+
+
+
+Konstrukce lexému typu číslo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a794e75373451a906a2cfc60e5d6b1996}\label{classteam22_1_1_calc_1_1_lex_a794e75373451a906a2cfc60e5d6b1996}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!get\+As\+Number@{get\+As\+Number}}
+\index{get\+As\+Number@{get\+As\+Number}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{get\+As\+Number()}{getAsNumber()}}
+{\footnotesize\ttfamily team22\+::\+Math\+::\+Number team22\+::\+Calc\+::\+Lex\+::get\+As\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classteam22_1_1_calc_1_1_lex_exception}{Lex\+Exception}} & tento lexém pokud není číslo \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+number 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file Lex.\+cpp.
+
+
+
+References is\+Number(), team22\+::\+Calc\+::\+Lex\+::\+Value\+::number, and value.
+
+
+
+Referenced by operator!=(), and operator==().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_afdeee7e9b13fcb9826d4d8fd7d5f141f}\label{classteam22_1_1_calc_1_1_lex_afdeee7e9b13fcb9826d4d8fd7d5f141f}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!get\+As\+Operator@{get\+As\+Operator}}
+\index{get\+As\+Operator@{get\+As\+Operator}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{get\+As\+Operator()}{getAsOperator()}}
+{\footnotesize\ttfamily \hyperlink{classteam22_1_1_calc_1_1_lex_a61d29fc4878a3b36d2de2f13c56ed932}{team22\+::\+Calc\+::\+Lex\+::\+Operator} team22\+::\+Calc\+::\+Lex\+::get\+As\+Operator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classteam22_1_1_calc_1_1_lex_exception}{Lex\+Exception}} & tento lexém pokud není Operator \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+operator 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file Lex.\+cpp.
+
+
+
+References is\+Operator(), team22\+::\+Calc\+::\+Lex\+::\+Value\+::oper, and value.
+
+
+
+Referenced by operator!=(), operator==(), and team22\+::\+Calc\+::\+Equation\+::send\+Identified\+Lex().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_ae82ccde78beed14c45df1e747ed21bcb}\label{classteam22_1_1_calc_1_1_lex_ae82ccde78beed14c45df1e747ed21bcb}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily \hyperlink{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2}{team22\+::\+Calc\+::\+Lex\+::\+Types} team22\+::\+Calc\+::\+Lex\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+vrací typ lexému 
+
+\begin{DoxyReturn}{Returns}
+type 
+\end{DoxyReturn}
+
+
+Definition at line 15 of file Lex.\+cpp.
+
+
+
+References type.
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a8a68cd13a68d32d50d3b014ca4478fab}\label{classteam22_1_1_calc_1_1_lex_a8a68cd13a68d32d50d3b014ca4478fab}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily const \hyperlink{unionteam22_1_1_calc_1_1_lex_1_1_value}{team22\+::\+Calc\+::\+Lex\+::\+Value} \& team22\+::\+Calc\+::\+Lex\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+vrací hodnotu lexému 
+
+
+
+Definition at line 10 of file Lex.\+cpp.
+
+
+
+References value.
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a21f9fe1956185bfb6d80d094846a44f1}\label{classteam22_1_1_calc_1_1_lex_a21f9fe1956185bfb6d80d094846a44f1}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!is\+Number@{is\+Number}}
+\index{is\+Number@{is\+Number}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{is\+Number()}{isNumber()}}
+{\footnotesize\ttfamily bool team22\+::\+Calc\+::\+Lex\+::is\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Testuje zda je lexém číslo. 
+
+\begin{DoxyReturn}{Returns}
+true pokud je číslo 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Lex.\+cpp.
+
+
+
+References type.
+
+
+
+Referenced by get\+As\+Number(), operator!=(), and operator==().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a965eff3f3264440279ea9a1f1d3a3cfe}\label{classteam22_1_1_calc_1_1_lex_a965eff3f3264440279ea9a1f1d3a3cfe}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!is\+Operator@{is\+Operator}}
+\index{is\+Operator@{is\+Operator}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{is\+Operator()}{isOperator()}}
+{\footnotesize\ttfamily bool team22\+::\+Calc\+::\+Lex\+::is\+Operator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Testuje zda je lexém operátor. 
+
+\begin{DoxyReturn}{Returns}
+true pokud je operátor 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Lex.\+cpp.
+
+
+
+References type.
+
+
+
+Referenced by get\+As\+Operator(), operator==(), and team22\+::\+Calc\+::\+Equation\+::send\+Identified\+Lex().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a25b4f3b98b68c4d967eb3695efc78667}\label{classteam22_1_1_calc_1_1_lex_a25b4f3b98b68c4d967eb3695efc78667}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool team22\+::\+Calc\+::\+Lex\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 69 of file Lex.\+cpp.
+
+
+
+References get\+As\+Number(), get\+As\+Operator(), is\+Number(), and Operator\+Names.
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a55858e2719cb121fccff59eed42dd692}\label{classteam22_1_1_calc_1_1_lex_a55858e2719cb121fccff59eed42dd692}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!operator==@{operator==}}
+\index{operator==@{operator==}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool team22\+::\+Calc\+::\+Lex\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 59 of file Lex.\+cpp.
+
+
+
+References get\+As\+Number(), get\+As\+Operator(), is\+Number(), is\+Operator(), and type.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_aca03505bafd6049109d56fd123d2dae6}\label{classteam22_1_1_calc_1_1_lex_aca03505bafd6049109d56fd123d2dae6}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} \&}]{lex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a75f9b47ca9b4289a569608f62336b3dd}\label{classteam22_1_1_calc_1_1_lex_a75f9b47ca9b4289a569608f62336b3dd}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::stringstream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::stringstream \&}]{os,  }\item[{const \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} \&}]{lex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a9d280854466641dfb02159cc4afeec1f}\label{classteam22_1_1_calc_1_1_lex_a9d280854466641dfb02159cc4afeec1f}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!Operator\+Names@{Operator\+Names}}
+\index{Operator\+Names@{Operator\+Names}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{Operator\+Names}{OperatorNames}}
+{\footnotesize\ttfamily const char$\ast$ team22\+::\+Calc\+::\+Lex\+::\+Operator\+Names\mbox{[}12\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \textcolor{stringliteral}{"+"},
+        \textcolor{stringliteral}{"-"},
+        \textcolor{stringliteral}{"/"},
+        \textcolor{stringliteral}{"*"},
+        \textcolor{stringliteral}{"^"},
+        \textcolor{stringliteral}{"√"},
+        \textcolor{stringliteral}{"!"},
+        \textcolor{stringliteral}{"%"},
+        \textcolor{stringliteral}{"*-1"},
+        \textcolor{stringliteral}{"="},
+        \textcolor{stringliteral}{"CLEAR"},
+        \textcolor{stringliteral}{"BS"},
+    \}
+\end{DoxyCode}
+
+
+A\+DD,. 
+
+S\+UB, D\+IV, M\+UL, E\+XP, R\+O\+OT, F\+A\+C\+T\+O\+R\+I\+AL, M\+OD, N\+EG, E\+V\+AL, C\+L\+E\+AR, BS 
+
+Definition at line 49 of file Lex.\+h.
+
+
+
+Referenced by operator!=().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a733fda9ebfa5ed6f588457d0870e81bc}\label{classteam22_1_1_calc_1_1_lex_a733fda9ebfa5ed6f588457d0870e81bc}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!type@{type}}
+\index{type@{type}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \hyperlink{classteam22_1_1_calc_1_1_lex_a295984577c98a23ddd20ee36d33145a2}{Types} team22\+::\+Calc\+::\+Lex\+::type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 75 of file Lex.\+h.
+
+
+
+Referenced by get\+Type(), is\+Number(), is\+Operator(), Lex(), and operator==().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lex_a8a78a736b719931cada0905ac13fedc8}\label{classteam22_1_1_calc_1_1_lex_a8a78a736b719931cada0905ac13fedc8}} 
+\index{team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}!value@{value}}
+\index{value@{value}!team22\+::\+Calc\+::\+Lex@{team22\+::\+Calc\+::\+Lex}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \hyperlink{unionteam22_1_1_calc_1_1_lex_1_1_value}{Value} team22\+::\+Calc\+::\+Lex\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 74 of file Lex.\+h.
+
+
+
+Referenced by get\+As\+Number(), get\+As\+Operator(), get\+Value(), and Lex().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_lex_8h}{Lex.\+h}\item 
+\hyperlink{_lex_8cpp}{Lex.\+cpp}\end{DoxyCompactItemize}

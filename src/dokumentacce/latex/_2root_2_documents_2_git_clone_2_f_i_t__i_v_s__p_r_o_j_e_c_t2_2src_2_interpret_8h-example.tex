@@ -1,0 +1,47 @@
+\hypertarget{_2root_2_documents_2_git_clone_2_f_i_t__i_v_s__p_r_o_j_e_c_t2_2src_2_interpret_8h-example}{}\section{/root/\+Documents/\+Git\+Clone/\+F\+I\+T\+\_\+\+I\+V\+S\+\_\+\+P\+R\+O\+J\+E\+C\+T2/src/\+Interpret.\+h}
+Po přijetí min počtu lexemů pro interpretaci je interpretace provedena a výsledek předá pomocí callbacku {\ttfamily Result\+Observer\+::on\+Result\+Change}. Objekty na kterých bude callback volán lze registrovat pomocí {\ttfamily Interpret\+::registr\+Result\+Callback}
+
+Lexem {\ttfamily Lex\+::\+E\+V\+AL} po eval pokud příjde číslo přepíše výsledek číslem, pokud operator stejné chování jako eval nepřišlo
+
+Lexemi {\ttfamily Lex\+::\+BS} a {\ttfamily Lex\+::\+C\+L\+E\+AR} provedou vynulování výsledku (a notifikaci o změně)
+
+Ostatní lexémy budou vyhodnoceny jako matematické operace
+
+Pořadí provázení operací je totožné s pořadím jejich předání. Pokud sekvence začíná operátorem předpokládá se první operátor 0
+
+Pokud je předaná chybná sekvence lexému je oznámena chyba callback {\ttfamily Result\+Observer\+::on\+Error}.
+
+Auto i = Interpret; i.\+send\+Identified\+Lex(\+Number(5)); // Informování o změně výsledků na 5 pomocí callbacků i.\+send\+Identified\+Lex(\+Lex(\+Lex\+::\+A\+D\+D)); i.\+send\+Identified\+Lex(\+Number(4)); // Provedení operace =$>$ 5+4 výsledek 9 // Informování o změně výsledků na 9 pomocí callbacků i.\+send\+Identified\+Lex(\+Lex(\+Lex\+::\+A\+D\+D)); i.\+send\+Identified\+Lex(\+Number(4)); // Provedení operace =$>$ (předchozí výsledek)9+4 výsledek 13 // Informování o změně výsledků na 13 pomocí callbacků
+
+
+\begin{DoxyCodeInclude}
+
+\textcolor{preprocessor}{#ifndef FIT\_IVS\_PROJECT2\_INTERPRET\_H}
+\textcolor{preprocessor}{#define FIT\_IVS\_PROJECT2\_INTERPRET\_H}
+
+\textcolor{preprocessor}{#include <set>}
+\textcolor{preprocessor}{#include "\hyperlink{_lex_identification_observer_8h}{LexIdentificationObserver.h}"}
+\textcolor{preprocessor}{#include "\hyperlink{_lex_8h}{Lex.h}"}
+\textcolor{preprocessor}{#include "\hyperlink{_result_observer_8h}{ResultObserver.h}"}
+\textcolor{preprocessor}{#include "math/Number.h"}
+\textcolor{keyword}{namespace }\hyperlink{namespaceteam22_1_1_calc}{team22::Calc}
+\{
+\textcolor{keyword}{class }Interpret: \textcolor{keyword}{public} LexIdentificationObserver
+\{
+    \textcolor{keywordtype}{void} \hyperlink{classteam22_1_1_calc_1_1_interpret_af38e3b867c32f50c921027249fc1185a}{notifyResultChanged}();
+
+    \textcolor{keywordtype}{void} \hyperlink{classteam22_1_1_calc_1_1_interpret_ab9db5790b1aab8a3f315296853c8e9c6}{notifyAboutError}(\hyperlink{class_interpret_exception}{InterpretException} exception);
+
+\textcolor{keyword}{public}:
+    std::set<ResultObserver *> \hyperlink{classteam22_1_1_calc_1_1_interpret_a7db1e80a4733124ed425e62a90f9eadb}{resultCallbackObjects};
+
+    \textcolor{keywordtype}{void} \hyperlink{classteam22_1_1_calc_1_1_interpret_a23e1e307b4f7ffd42f8eb31d33314c41}{registrResultCallback}(ResultObserver *resultCallbackObject);
+
+    \textcolor{keywordtype}{void} \hyperlink{classteam22_1_1_calc_1_1_interpret_a479c65c010f4ef1060049b684e5f7eb6}{sendIdentifiedLex}(Lex lex) \textcolor{keyword}{override};
+\};
+\}
+
+
+\textcolor{preprocessor}{#endif //FIT\_IVS\_PROJECT2\_INTERPRET\_H}
+\end{DoxyCodeInclude}
+ 
