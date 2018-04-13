@@ -177,7 +177,7 @@ TEST_F(InterpretTest, bs_2)
     interpret.sendIdentifiedLex(Number(5));
     EXPECT_EQ(Number(5), result);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(0), result);
+    EXPECT_EQ(Number(5), result);
     interpret.sendIdentifiedLex(Lex::BS);
     EXPECT_EQ(Number(0), result);
     interpret.sendIdentifiedLex(Lex::BS);
@@ -222,7 +222,7 @@ TEST_F(InterpretTest, AddStartWithNumber)
     interpret.sendIdentifiedLex(Lex::ADD);
     EXPECT_EQ(Number(9), result);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(13), result);
+    EXPECT_EQ(Number(12), result);
     EXPECT_EQ(nullptr,error);
 }
 

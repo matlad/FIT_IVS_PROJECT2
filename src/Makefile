@@ -3,8 +3,8 @@
 #clean (smaže všechny soubory, co nemají být odevzdány)
 #test (spustí testy matematické knihovny)
 test:
-	make -f MakeTests.mk NumberTest;./NumberTest
+	make -f MakeTests.mk InterpretTest;./InterpretTest
 clean:
-	rm -f NumberTest *.o *.a
+	rm -f InterpretTest *.o *.a tests/*.o
 #doc (spustí generování dokumentace)
 #run (spustí program)

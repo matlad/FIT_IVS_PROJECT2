@@ -12,6 +12,7 @@
 #include "Lex.h"
 #include "ResultObserver.h"
 #include "math/Number.h"
+using namespace team22::Math;
 namespace team22::Calc
 {
 /**
@@ -55,7 +56,7 @@ class Interpret: public LexIdentificationObserver
     /**
      * Předá informaci o změně výsledků pozorovatelům
      */
-    void notifyAboutError(InterpretException exception);
+    void notifyAboutError();
 
 public:
     /**
@@ -77,6 +78,11 @@ public:
      * @param lex
      */
     void sendIdentifiedLex(Lex lex) override;
+
+private:
+    Number result = Number(0);
+    Lex::Operator oper;
+    bool unprocessedOperator = false;
 };
 }
 
