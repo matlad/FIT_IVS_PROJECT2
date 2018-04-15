@@ -13,30 +13,11 @@
 #include <limits>
 #include <stack>
 #include <ostream>
+#include "TestContants.h"
 
 
 using team22::Math::Number;
 using team22::Math::UndefinedException;
-
-#define inf  std::numeric_limits<double>::infinity()
-
-#define qNaN  std::numeric_limits<double>::quiet_NaN()
-
-#define doNotCare  std::numeric_limits<double>::quiet_NaN()
-
-#define sNaN  std::numeric_limits<double>::signaling_NaN()
-
-#define MY_SUPER_EXPECT_NEAR(actual, expect, delta)\
-    if((expect) == inf || (expect) == -inf){\
-        EXPECT_EQ((actual),(expect));\
-    } else { \
-        EXPECT_NEAR((actual),(expect),(delta));\
-    }
-
-// uvažujeme přesnost na 10 des míst
-#define DELTA 0.00000000005
-// pro faktoriál komplexních čísel přesnost na 7 des míst
-#define DELTA_CF 0.00000005
 
 struct Params{
     Number number1;
@@ -366,112 +347,86 @@ INSTANTIATE_TEST_CASE_P(inf, Factorial, testing::Values(
 
 TEST_P(Add, oper){
     auto result = p.number1 + p.number2;
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
-
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Sub, oper){
     auto result = p.number1 - p.number2;
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
-
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Mul, oper){
     auto result = p.number1 * p.number2;
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
-
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Div, oper){
     auto result = p.number1 / p.number2;
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
-
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Exp, oper){
     auto result = p.number1 ^ p.number2;
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
-
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 
 TEST_P(Mod, oper){
-  
-    auto result = p.number1 % p.number2;
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
+    auto result = p.number1 % p.number2;
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Factorial, oper){
     auto result = !p.number;
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA_CF);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA_CF);
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA_CF);
+
 
 }
 
 TEST_P(Add, fce){
     auto result = p.number1.add(p.number2);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
-
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Sub, fce){
     auto result = p.number1.sub(p.number2);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
-
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Mul, fce){
     auto result = p.number1.mul(p.number2);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
-
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Div, fce){
     auto result = p.number1.div(p.number2);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
-
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Exp, fce){
-  
-    auto result = p.number1.pow(p.number2);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
+    auto result = p.number1.pow(p.number2);
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 
 TEST_P(Mod, fce){
-  
-    auto result = p.number1.mod(p.number2);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
+    auto result = p.number1.mod(p.number2);
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Root, fce){
-  
-    auto result = p.number1.root(p.number2);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA);
 
+    auto result = p.number1.root(p.number2);
+    T22_NUMBER_EXPECT_NEAR(p.expecting, result, DELTA);
 }
 
 TEST_P(Factorial, fce){
     auto result = p.number.fact();
-    MY_SUPER_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA_CF);
-    MY_SUPER_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA_CF);
+    T22_EXPECT_NEAR(p.expecting.getReal(), result.getReal(),DELTA_CF);
+    T22_EXPECT_NEAR(p.expecting.getImaginary(), result.getImaginary(),DELTA_CF);
 
 }
 
