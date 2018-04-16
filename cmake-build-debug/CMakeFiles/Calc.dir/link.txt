@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Calc.dir/src/Interpret.cpp.o CMakeFiles/Calc.dir/src/tests/InterpretTests.cpp.o CMakeFiles/Calc.dir/src/math/Number.cpp.o CMakeFiles/Calc.dir/src/Lex.cpp.o CMakeFiles/Calc.dir/src/LexicalAnalyzer.cpp.o CMakeFiles/Calc.dir/src/Equation.cpp.o CMakeFiles/Calc.dir/src/tests/backendTest.cpp.o  -o Calc 
