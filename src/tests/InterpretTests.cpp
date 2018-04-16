@@ -10,6 +10,7 @@
 #include "../math/Number.h"
 #include "../Lex.h"
 #include "../Interpret.h"
+#include "TestContants.h"
 
 using std::vector;
 using std::string;
@@ -93,178 +94,178 @@ TEST_P(InterpretTest, def)
         EXPECT_EQ(nullptr,error);
     }
 
-    EXPECT_EQ(GetParam().result, result);
+    T22_NUMBER_EXPECT_NEAR(GetParam().result, result, DELTA_CF);
 }
 
 TEST_F(InterpretTest, clear_1)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(5));
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::CLEAR);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(7), result);
+    T22_NUMBER_EXPECT_NEAR(Number(7), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
 TEST_F(InterpretTest, clear_2)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(5));
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::CLEAR);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::CLEAR);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::CLEAR);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(7), result);
+    T22_NUMBER_EXPECT_NEAR(Number(7), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
 TEST_F(InterpretTest, clear_3)
 {
     interpret.sendIdentifiedLex(Lex::CLEAR);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::CLEAR);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::CLEAR);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(7), result);
+    T22_NUMBER_EXPECT_NEAR(Number(7), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
 TEST_F(InterpretTest, bs_1)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(5));
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(7), result);
+    T22_NUMBER_EXPECT_NEAR(Number(7), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
 TEST_F(InterpretTest, bs_2)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(5));
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(7), result);
+    T22_NUMBER_EXPECT_NEAR(Number(7), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
 TEST_F(InterpretTest, bs_3)
 {
     interpret.sendIdentifiedLex(Lex::BS);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(7), result);
+    T22_NUMBER_EXPECT_NEAR(Number(7), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
 TEST_F(InterpretTest, AddStartWithNumber)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(5));
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(5), result);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(9), result);
+    T22_NUMBER_EXPECT_NEAR(Number(9), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(9), result);
+    T22_NUMBER_EXPECT_NEAR(Number(9), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(12), result);
+    T22_NUMBER_EXPECT_NEAR(Number(12), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
 TEST_F(InterpretTest, AddStartWithOperator)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(7), result);
+    T22_NUMBER_EXPECT_NEAR(Number(7), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
 TEST_F(InterpretTest, Mix)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(7), result);
+    T22_NUMBER_EXPECT_NEAR(Number(7), result, DELTA);
     EXPECT_EQ(nullptr,error);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_NE(nullptr,error);
+    EXPECT_NE(nullptr, error);
     error = nullptr;
     interpret.sendIdentifiedLex(Lex::BS);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    EXPECT_EQ(Number(7), result);
+    T22_NUMBER_EXPECT_NEAR(Number(7), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
@@ -274,29 +275,29 @@ TEST_F(InterpretTest, Mix)
 
 TEST_F(InterpretTest, DivByZero)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Lex::DIV);
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(0));
     EXPECT_NE(nullptr, error);
 }
 
 TEST_F(InterpretTest, UnexpectedLexem_2xNumber)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
-    EXPECT_EQ(Number(4), result);
+    T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
     EXPECT_NE(nullptr, error);
 }
 
 TEST_F(InterpretTest, UnexpectedLexem_2xOperator)
 {
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    EXPECT_EQ(Number(0), result);
+    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::DIV);
     EXPECT_NE(nullptr, error);
 }
