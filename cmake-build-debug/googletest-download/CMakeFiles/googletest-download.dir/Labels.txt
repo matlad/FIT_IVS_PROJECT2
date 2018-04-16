@@ -1,0 +1,14 @@
+# Target labels
+ googletest-download
+# Source files and their labels
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/CMakeFiles/googletest-download
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/CMakeFiles/googletest-download.rule
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/CMakeFiles/googletest-download-complete.rule
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-install.rule
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-mkdir.rule
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-download.rule
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-patch.rule
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-configure.rule
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-build.rule
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-test.rule
+/media/Linux_Data/Code/school/FIT_IVS_PROJECT2/cmake-build-debug/googletest-download/googletest-download-prefix/src/googletest-download-stamp/googletest-download-skip-update.rule

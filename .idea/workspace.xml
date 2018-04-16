@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="FIT_IVS_PROJECT2" targetName="gtest_main" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ContinuousStart" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ExperimentalSubmit" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="NightlyConfigure" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ContinuousConfigure" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="NightlyUpdate" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="MathTest" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ExperimentalBuild" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="gtest" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ExperimentalUpdate" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ExperimentalMemCheck" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="gmock" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ContinuousMemCheck" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="NightlyCoverage" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="Continuous" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ContinuousSubmit" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="NightlyStart" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="InterpretTest" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ContinuousTest" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="NightlyMemoryCheck" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="NightlyBuild" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ExperimentalTest" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="gmock_main" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ExperimentalCoverage" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ExperimentalConfigure" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="Experimental" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ExperimentalStart" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ContinuousUpdate" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="BackendTest" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="NightlyTest" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ContinuousBuild" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="NightlyMemCheck" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="ContinuousCoverage" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="LexAnalyserTest" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="NightlySubmit" />
+      <config projectName="FIT_IVS_PROJECT2" targetName="Nightly" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list id="6218f9e8-966e-437a-a2b2-9e0ee1f7662d" name="Default" comment="init" />
+    <list default="true" id="67c98060-873a-4e09-8b11-6d6ab84d6a89" name="interpretTests" comment="Oprava porovnávání double a Number v testech">
+      <change beforePath="$PROJECT_DIR$/src/Interpret.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interpret.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interpret.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interpret.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src.pro" beforeDir="false" afterPath="$PROJECT_DIR$/src/src.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/InterpretTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/InterpretTests.cpp" afterDir="false" />
+    </list>
+    <list id="011bdf39-e5ac-4e92-91a2-088dfac16992" name="Ignore" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="212">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backendTest.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/backendTest.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basic_string.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/c++/7/bits/basic_string.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22049">
+              <caret line="1297" column="6" selection-start-line="1297" selection-start-column="6" selection-end-line="1297" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1258">
+              <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Equation.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Equation.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1955">
+              <caret line="115" selection-start-line="115" selection-end-line="115" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Equation.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Equation.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2108">
+              <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gtest.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmake-build-debug/googletest-src/googletest/src/gtest.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42449">
+              <caret line="2497" selection-start-line="2497" selection-end-line="2497" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gtest.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmake-build-debug/googletest-src/googletest/include/gtest/gtest.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="2063" column="8" selection-start-line="2063" selection-start-column="8" selection-end-line="2063" selection-end-column="8" />
+              <folding>
+                <element signature="e#63604#63622#0" expanded="true" />
+                <element signature="e#67520#67532#0" expanded="true" />
+                <element signature="e#68648#68665#0" expanded="true" />
+                <element signature="e#68728#68740#0" expanded="true" />
+                <element signature="e#68942#68954#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interpret.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Interpret.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1343">
+              <caret line="79" column="4" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterpretTests.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tests/InterpretTests.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="157" column="1" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lex.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lex.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lex.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lex.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LexicalAnalyzer.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2703">
+              <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LexicalAnalyzer.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LexicalAnalyzerTest.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/LexicalAnalyzerTest.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="146" column="47" selection-start-line="146" selection-start-column="47" selection-end-line="146" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LexIdentificationObserver.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LexIdentificationObserver.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MakeTests.mk" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MakeTests.mk">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new_allocator.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/c++/7/ext/new_allocator.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2108">
+              <caret line="124" selection-start-line="124" selection-end-line="124" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Number.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/math/Number.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4522">
+              <caret line="266" selection-start-line="266" selection-end-line="266" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Number.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/math/Number.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1394">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NumberTest.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/NumberTest.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="261" column="69" selection-start-line="261" selection-start-column="69" selection-end-line="261" selection-end-column="69" />
+              <folding>
+                <element signature="e#197#213#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qml.qrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/qml.qrc">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="ResultObserver.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ResultObserver.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="src.pro" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/src.pro">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stl_function.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/c++/7/bits/stl_function.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6545">
+              <caret line="385" selection-start-line="385" selection-end-line="385" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stl_set.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/c++/7/bits/stl_set.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7684">
+              <caret line="452" selection-start-line="452" selection-end-line="452" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stl_tree.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/c++/7/bits/stl_tree.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34629">
+              <caret line="2037" selection-start-line="2037" selection-end-line="2037" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stl_vector.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/c++/7/bits/stl_vector.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21182">
+              <caret line="1246" column="6" selection-start-line="1246" selection-start-column="6" selection-end-line="1246" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestContants.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/TestContants.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Params p = p;</find>
+      <find>EXPECT_DOUBLE_EQ</find>
+      <find>\} \{</find>
+      <find>}},</find>
+      <find>con</find>
+      <find>myDoubleComparison</find>
+      <find>myDoubleComparison\((.*)\)</find>
+      <find>EXPECT_TRUE\(myDoubleComparison\((.*)\)</find>
+      <find>EXPECT_TRUE\(myDoubleComparison\((.*)\)\)</find>
+      <find>EXPECT_NEAR</find>
+      <find>mul</find>
+      <find>Lex</find>
+      <find>MODe</find>
+      <find>Mode</find>
+      <find>USER_DIR</find>
+      <find>MATH</find>
+      <find>Number</find>
+      <find>LexicalAnalyzer</find>
+      <find>val2</find>
+      <find>exa</find>
+      <find>CLEAR</find>
+      <find>i</find>
+      <find>data</find>
+      <find>saveSymbol(symbol);</find>
+      <find>MY_SUPER_EXPECT_NEAR(testr.result,0);</find>
+      <find>MY_SUPER_EXPECT_NEAR\(testr.result,(\d*)\);</find>
+      <find>22_SUPER_EXPECT_NEAR</find>
+      <find>EXPECT_EQ\(Number\(.*\);</find>
+      <find>EXPECT_EQ\(Number\((.*)\);</find>
+      <find>EXPECT_EQ\(Number(.*)\);</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>fce</replace>
+      <replace>Mode</replace>
+      <replace>team22::Math::UndefinedException</replace>
+      <replace>infinity()</replace>
+      <replace>infinity</replace>
+      <replace>UndefinedException</replace>
+      <replace>.cpp</replace>
+      <replace>qNaN</replace>
+      <replace>ParamTest</replace>
+      <replace>\}\},\n Params\{\{</replace>
+      <replace>},{0,0}},</replace>
+      <replace>Test</replace>
+      <replace />
+      <replace>EXPECT_TRUE($0)</replace>
+      <replace>EXPECT_NEAR\($1,DELTA)</replace>
+      <replace>MY_SUPER_EXPECT_NEAR</replace>
+      <replace>LexicalAnalyzer</replace>
+      <replace>NUMBER</replace>
+      <replace>Mod</replace>
+      <replace>Lex</replace>
+      <replace>actual</replace>
+      <replace>Interpret</replace>
+      <replace>BS</replace>
+      <replace>rawInput</replace>
+      <replace>saved.push_back(symbol);</replace>
+      <replace>MY_SUPER_EXPECT_NEAR(testr.result, $1, DELTA);</replace>
+      <replace>MY_SUPER_EXPECT_NEAR(testr.result, Number($1), DELTA);</replace>
+      <replace>T22_NUMBER_EXPECT_NEAR(Number$1, DELTA);</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Equtions" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="/Doxygen Fragment (Number.h:687).doxygen" />
+        <option value="$PROJECT_DIR$/plan/xmatla00_xlogin02_xlogin03_xlogin04_plan.txt" />
+        <option value="$PROJECT_DIR$/plan/xcecha04_xmatla00_xmitur01_xslade21_plan.txt" />
+        <option value="$PROJECT_DIR$/plan/xcecha04_xmatla00_xmitur01_xslade21_plan.md" />
+        <option value="$PROJECT_DIR$/src/math/UndefinedExeption.h" />
+        <option value="$PROJECT_DIR$/src/tests/LexTest.cpp" />
+        <option value="$PROJECT_DIR$/src/LexException.h" />
+        <option value="$PROJECT_DIR$/src/LexCallBack.h" />
+        <option value="$PROJECT_DIR$/src/LexCallBackInterface.cpp" />
+        <option value="$PROJECT_DIR$/src/LexCallBackInterface.h" />
+        <option value="$PROJECT_DIR$/src/MakeTests" />
+        <option value="$PROJECT_DIR$/src/Makefile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/LexicalAnalyzerException.h" />
+        <option value="$PROJECT_DIR$/src/math/Number.h" />
+        <option value="$PROJECT_DIR$/src/math/Number.cpp" />
+        <option value="$PROJECT_DIR$/src/InterpretException.h" />
+        <option value="$PROJECT_DIR$/src/tests/InterpretTests.cpp.orig" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/googletest-src/googletest/include/gtest/gtest.h" />
+        <option value="$PROJECT_DIR$/src/LexIdentificationObserver.h" />
+        <option value="$PROJECT_DIR$/src/Interpret.cpp" />
+        <option value="$PROJECT_DIR$/src/MakeTests.mk" />
+        <option value="$PROJECT_DIR$/src/Interpret.h" />
+        <option value="$PROJECT_DIR$/src/EquationObserver.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/Lex.cpp" />
+        <option value="$PROJECT_DIR$/src/Lex.h" />
+        <option value="$PROJECT_DIR$/src/ResultObserver.h" />
+        <option value="$PROJECT_DIR$/src/Equation.h" />
+        <option value="$PROJECT_DIR$/src/Equation.cpp" />
+        <option value="$PROJECT_DIR$/src/tests/LexicalAnalyzerTest.cpp" />
+        <option value="$PROJECT_DIR$/src/LexicalAnalyzer.h" />
+        <option value="$PROJECT_DIR$/src/LexicalAnalyzer.cpp" />
+        <option value="$PROJECT_DIR$/src/tests/backendTest.cpp" />
+        <option value="$PROJECT_DIR$/src/tests/TestContants.h" />
+        <option value="$PROJECT_DIR$/src/tests/NumberTest.cpp" />
+        <option value="$PROJECT_DIR$/src/tests/InterpretTests.cpp" />
+        <option value="$PROJECT_DIR$/src/src.pro" />
+      </list>
+    </option>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2097" />
+    <option name="y" value="47" />
+    <option name="width" value="1914" />
+    <option name="height" value="1032" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>C/C++</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FIT_IVS_PROJECT2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FIT_IVS_PROJECT2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FIT_IVS_PROJECT2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FIT_IVS_PROJECT2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FIT_IVS_PROJECT2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FIT_IVS_PROJECT2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="tasks.open.task.update.state.enabled" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Google Test.InterpretTest">
+    <configuration name="InterpretTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FIT_IVS_PROJECT2" TARGET_NAME="InterpretTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FIT_IVS_PROJECT2" RUN_TARGET_NAME="InterpretTest" TEST_MODE="SUITE_TEST" />
+    <configuration name="MathTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FIT_IVS_PROJECT2" TARGET_NAME="MathTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FIT_IVS_PROJECT2" RUN_TARGET_NAME="MathTest" TEST_MODE="SUITE_TEST" />
+    <configuration name="Numbers-LexicalAnalyzerTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FIT_IVS_PROJECT2" TARGET_NAME="LexAnalyserTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FIT_IVS_PROJECT2" RUN_TARGET_NAME="LexAnalyserTest" TEST_PATTERN="Numbers/LexicalAnalyzerTest.*/*:Numbers/LexicalAnalyzerTest/*.*" TEST_MODE="PATTERN" />
+    <configuration name="Numbers-LexicalAnalyzerTest.symbol" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FIT_IVS_PROJECT2" TARGET_NAME="LexAnalyserTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FIT_IVS_PROJECT2" RUN_TARGET_NAME="LexAnalyserTest" TEST_PATTERN="Numbers/LexicalAnalyzerTest.symbol/0:Numbers/LexicalAnalyzerTest/0.symbol" TEST_MODE="PATTERN" />
+    <configuration name="Seqention-LexicalAnalyzerTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FIT_IVS_PROJECT2" TARGET_NAME="LexAnalyserTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FIT_IVS_PROJECT2" RUN_TARGET_NAME="LexAnalyserTest" TEST_PATTERN="Seqention/LexicalAnalyzerTest.*/*:Seqention/LexicalAnalyzerTest/*.*" TEST_MODE="PATTERN" />
+    <configuration name="backendTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FIT_IVS_PROJECT2" TARGET_NAME="BackendTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FIT_IVS_PROJECT2" RUN_TARGET_NAME="BackendTest" TEST_MODE="SUITE_TEST" />
+    <configuration name="lexikalTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FIT_IVS_PROJECT2" TARGET_NAME="LexAnalyserTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FIT_IVS_PROJECT2" RUN_TARGET_NAME="LexAnalyserTest" TEST_MODE="SUITE_TEST" />
+    <configuration name="test.test1" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FIT_IVS_PROJECT2" TARGET_NAME="BackendTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FIT_IVS_PROJECT2" RUN_TARGET_NAME="BackendTest" TEST_CLASS="test" TEST_METHOD="test1" TEST_MODE="SUITE_TEST" />
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="clean" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/src/MakeTests.mk" target="clean" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Google Test.InterpretTest" />
+      <item itemvalue="Google Test.MathTest" />
+      <item itemvalue="Google Test.lexikalTest" />
+      <item itemvalue="Google Test.backendTest" />
+      <item itemvalue="Google Test.Seqention-LexicalAnalyzerTest" />
+      <item itemvalue="Google Test.Numbers-LexicalAnalyzerTest" />
+      <item itemvalue="Google Test.Numbers-LexicalAnalyzerTest.symbol" />
+      <item itemvalue="Google Test.test.test1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.test.test1" />
+        <item itemvalue="Google Test.Seqention-LexicalAnalyzerTest" />
+        <item itemvalue="Google Test.Numbers-LexicalAnalyzerTest.symbol" />
+        <item itemvalue="Google Test.Numbers-LexicalAnalyzerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="3" Folder0="$USER_HOME$/Dokumenty/dic" Folder1="$USER_HOME$/Dokumenty/dic" Folder2="$USER_HOME$/Dokumenty/dic" CustomDictionaries="3" CustomDictionary0="$USER_HOME$/Dokumenty/dic/Czech.3-2-4_utf_unix.dic" CustomDictionary1="$USER_HOME$/Dokumenty/dic/cz.dic" CustomDictionary2="$USER_HOME$/Dokumenty/dic/Czech.3-2-4.dic" Dictionaries="2" Dictionary0="$USER_HOME$/Dokumenty/dic/cz.dic" Dictionary1="$USER_HOME$/Dokumenty/dic/Czech.3-2-4.dic" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
+  <component name="TaskManager">
+    <task id="Default" summary="Default task">
+      <branch name="master" repository="$PROJECT_DIR$" />
+      <changelist id="6218f9e8-966e-437a-a2b2-9e0ee1f7662d" name="Default" comment="" />
+      <created>1520350314270</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521409187889</updated>
+      <workItem from="1520350316327" duration="17086000" />
+      <workItem from="1521401761284" duration="6020000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1521407548482</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1521407548483</updated>
+    </task>
+    <task id="LOCAL-00002" summary="přidání using">
+      <created>1521408927911</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1521408927911</updated>
+    </task>
+    <task active="true" id="FIT_IVS_PROJECT2-16" summary="Testy mat knihovny">
+      <branch name="master" repository="$PROJECT_DIR$" original="true" />
+      <branch name="FIT_IVS_PROJECT2-16" repository="$PROJECT_DIR$" />
+      <changelist id="011bdf39-e5ac-4e92-91a2-088dfac16992" name="Ignore" comment="" />
+      <changelist id="67c98060-873a-4e09-8b11-6d6ab84d6a89" name="interpretTests" comment="" />
+      <option name="closed" value="true" />
+      <created>1520786514000</created>
+      <option name="issue" value="true" />
+      <url>https://github.com/matlad/FIT_IVS_PROJECT2/issues/16</url>
+      <option name="number" value="16" />
+      <option name="presentableId" value="FIT_IVS_PROJECT2-16" />
+      <option name="project" value="FIT_IVS_PROJECT2" />
+      <option name="type" value="BUG" />
+      <updated>1521921473000</updated>
+      <workItem from="1521409188180" duration="28301000" />
+      <workItem from="1521731335542" duration="35788000" />
+      <workItem from="1521982237010" duration="13397000" />
+      <workItem from="1522257832598" duration="23034000" />
+      <workItem from="1522746078624" duration="1244000" />
+      <workItem from="1523175900304" duration="29389000" />
+      <workItem from="1523212179996" duration="12789000" />
+      <workItem from="1523338722548" duration="1199000" />
+      <workItem from="1523364990383" duration="34000" />
+      <workItem from="1523797282348" duration="7655000" />
+    </task>
+    <task id="LOCAL-00003" summary="plan">
+      <created>1521504827314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1521504827314</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Oprava porovnávání doubleu&#10;formát&#10;oprava hodnot testů (def)">
+      <created>1521727872885</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1521727872885</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Nahrazení vlastní porovnávací fce za gtestovou;">
+      <created>1521736091887</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1521736091887</updated>
+    </task>
+    <task id="LOCAL-00006" summary="příprava pro testy lexikálního analyzátoru&#10;deklarace interpretu,&#10;deklarace Lexikálního analyzátoru&#10;deklarace víjimky lexemu&#10;delkarace a definice Lexemu&#10;úprava makefile">
+      <created>1521756749935</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1521756749935</updated>
+    </task>
+    <task id="LOCAL-00007" summary="úprava rozhraní lexAnalyzátoru, kostra testů">
+      <created>1521981112169</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1521981112169</updated>
+    </task>
+    <task id="LOCAL-00008" summary="marge s implementací math">
+      <created>1521981360281</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1521981360281</updated>
+    </task>
+    <task id="LOCAL-00009" summary="přidání operátoru porovnání">
+      <created>1521981443101</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1521981443101</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Dotažení testů lexikálního analyzátoru.">
+      <created>1521993441290</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1521993441290</updated>
+    </task>
+    <task id="LOCAL-00011" summary="přídání operátorů =, C a BS">
+      <created>1521994782197</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1521994782197</updated>
+    </task>
+    <task id="LOCAL-00012" summary="zapomenuté čárky">
+      <created>1521994875206</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1521994875206</updated>
+    </task>
+    <task id="LOCAL-00013" summary="merge s math knihovnou">
+      <created>1522258230513</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1522258230513</updated>
+    </task>
+    <task id="LOCAL-00014" summary="oprava chyb">
+      <created>1522258326965</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1522258326965</updated>
+    </task>
+    <task id="LOCAL-00015" summary="chybička po merge">
+      <created>1522258652686</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1522258652686</updated>
+    </task>
+    <task id="LOCAL-00016" summary="oprava Seqvention.0&#10;přídání pár testů">
+      <created>1522330438013</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1522330438013</updated>
+    </task>
+    <task id="LOCAL-00017" summary="oprava Seqvention.0&#10;přídání pár testů&#10;&#10;(cherry picked from commit 6589d51)">
+      <created>1522331662346</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1522331662346</updated>
+    </task>
+    <task id="LOCAL-00018" summary="základní struktura testů Interpretu">
+      <created>1522336507294</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1522336507294</updated>
+    </task>
+    <task id="LOCAL-00019" summary="oprava chybějícího Lexemů pro -">
+      <created>1522336632109</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1522336632109</updated>
+    </task>
+    <task id="LOCAL-00020" summary="naplnění testů">
+      <created>1522489909318</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1522489909318</updated>
+    </task>
+    <task id="LOCAL-00021" summary="oprava coding style">
+      <created>1522490012853</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1522490012853</updated>
+    </task>
+    <task id="LOCAL-00022" summary="oprava makefile">
+      <created>1522490554908</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1522490554908</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Přídání pár testů pro BS a CLEAR">
+      <created>1522746611125</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1522746611125</updated>
+    </task>
+    <task id="LOCAL-00024" summary="pokud je předáno jako první číslo je vypsáno hned jako výsledek.">
+      <created>1523176679213</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1523176679213</updated>
+    </task>
+    <task id="LOCAL-00025" summary="BackendTest + equation začátek">
+      <created>1523204527105</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1523204527105</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Přidán test víceznakového operátoru po čísle.">
+      <created>1523204674241</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1523204674241</updated>
+    </task>
+    <task id="LOCAL-00027" summary="překlep">
+      <created>1523205881480</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1523205881480</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Opravy backend testu">
+      <created>1523223106643</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1523223106643</updated>
+    </task>
+    <task id="LOCAL-00029" summary="oprava testů lekikálního analyzátoru + oprava a refaktorizace lexikálního analyzátoru">
+      <created>1523223200549</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1523223200549</updated>
+    </task>
+    <task id="LOCAL-00030" summary="odkomentování testů výsledků">
+      <created>1523294317709</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1523294317709</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Oprava porovnávání double a Number v testech">
+      <created>1523800442629</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1523800442629</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
+    <option name="clearContext" value="false" />
+    <option name="branchNameFormat" value="{id} {summary}" />
+    <servers>
+      <GitHub url="https://github.com">
+        <token>dfccdf9cdf92dfcbdf9adfcedf9ddf9fdf98df98df9edf9adf9edfccdfcfdf99df9bdf93df92df9edfcedf99dfcedf9cdf93df98df9fdf9fdf92df9ddf99df9adfc8df98dfccdf99dfc9dfcfdfcedf9a</token>
+        <option name="preferredOpenTaskState">
+          <CustomTaskState id="OPEN" predefined="true" name="Open" />
+        </option>
+        <option name="repoAuthor" value="matlad" />
+        <option name="repoName" value="FIT_IVS_PROJECT2" />
+        <option name="shouldFormatCommitMessage" value="true" />
+      </GitHub>
+    </servers>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="backendTest - 2018.04.08 at 23h 14m 58s.xml">
+      <configuration name="backendTest" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="lexikalTest - 2018.04.08 at 23h 23m 37s.xml">
+      <configuration name="lexikalTest" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="lexikalTest - 2018.04.08 at 23h 26m 56s.xml">
+      <configuration name="lexikalTest" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="lexikalTest - 2018.04.08 at 23h 27m 40s.xml">
+      <configuration name="lexikalTest" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_test1 - 2018.04.15 at 15h 42m 00s.xml">
+      <configuration name="test.test1" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="MathTest - 2018.04.15 at 15h 43m 10s.xml">
+      <configuration name="MathTest" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="MathTest - 2018.04.15 at 15h 54m 14s.xml">
+      <configuration name="MathTest" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="MathTest - 2018.04.15 at 16h 03m 54s.xml">
+      <configuration name="MathTest" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="backendTest - 2018.04.15 at 16h 04m 08s.xml">
+      <configuration name="backendTest" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="InterpretTest - 2018.04.15 at 16h 04m 34s.xml">
+      <configuration name="InterpretTest" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="175936000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24749868" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32912722" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32879582" />
+      <window_info anchor="bottom" id="CMake" order="8" sideWeight="0.49815497" weight="0.30890054" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.501845" side_tool="true" weight="0.661409" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32879582" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36125654" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49815497" weight="0.32670158" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.24934107" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49815497" visible="true" weight="0.36544502" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39790577" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="úprava rozhraní lexAnalyzátoru, kostra testů" />
+    <MESSAGE value="marge s implementací math" />
+    <MESSAGE value="přidání operátoru porovnání" />
+    <MESSAGE value="Dotažení testů lexikálního analyzátoru." />
+    <MESSAGE value="přídání operátorů =, C a BS" />
+    <MESSAGE value="zapomenuté čárky" />
+    <MESSAGE value="merge s math knihovnou" />
+    <MESSAGE value="oprava chyb" />
+    <MESSAGE value="chybička po merge" />
+    <MESSAGE value="oprava Seqvention.0&#10;přídání pár testů" />
+    <MESSAGE value="oprava Seqvention.0&#10;přídání pár testů&#10;&#10;(cherry picked from commit 6589d51)" />
+    <MESSAGE value="základní struktura testů Interpretu" />
+    <MESSAGE value="oprava chybějícího Lexemů pro -" />
+    <MESSAGE value="naplnění testů" />
+    <MESSAGE value="oprava coding style" />
+    <MESSAGE value="oprava makefile" />
+    <MESSAGE value="Přídání pár testů pro BS a CLEAR" />
+    <MESSAGE value="pokud je předáno jako první číslo je vypsáno hned jako výsledek." />
+    <MESSAGE value="BackendTest + equation začátek" />
+    <MESSAGE value="Přidán test víceznakového operátoru po čísle." />
+    <MESSAGE value="překlep" />
+    <MESSAGE value="Opravy backend testu" />
+    <MESSAGE value="oprava testů lekikálního analyzátoru + oprava a refaktorizace lexikálního analyzátoru" />
+    <MESSAGE value="odkomentování testů výsledků" />
+    <MESSAGE value="Oprava porovnávání double a Number v testech" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oprava porovnávání double a Number v testech" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/LexicalAnalyzer.h</url>
+          <line>38</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/LexIdentificationObserver.h</url>
+          <line>17</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/Equation.cpp</url>
+          <line>129</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/Equation.cpp</url>
+          <line>16</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="CidrExceptionBreakpoint">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="50" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeGoogleTestRunConfigurationType">
+        <watch expression="stringStream.str()" language="ObjectiveC" />
+        <watch expression="lex.type" />
+        <watch expression="lex.value.oper" />
+        <watch expression="lex.value.number" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>stringStream.str()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/math/Number.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1476">
+          <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/NumberTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6912">
+          <caret line="384" column="16" lean-forward="true" selection-start-line="384" selection-start-column="16" selection-end-line="384" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/UndefinedExeption.h" />
+    <entry file="file://$PROJECT_DIR$/src/profiling.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/mainwindow.cpp" />
+    <entry file="file://$PROJECT_DIR$/../FIT_IVS_1/ivs_project_1/assignment/black_box_tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plan/xcecha04_xmatla00_xmitur01_xslade21_plan.txt" />
+    <entry file="file:///usr/include/gtest/gtest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="2085" column="8" selection-start-line="2085" selection-start-column="8" selection-end-line="2085" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plan/xcecha04_xmatla00_xmitur01_xslade21_plan.md" />
+    <entry file="file://$PROJECT_DIR$/src/LexCallBackInterface.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/math/UndefinedExeption.h" />
+    <entry file="file://$PROJECT_DIR$/src/InterpretErrorObservor.h" />
+    <entry file="file://$PROJECT_DIR$/src/LexException.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzerException.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/math.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4947">
+          <caret line="291" column="10" selection-start-line="291" selection-start-column="10" selection-end-line="291" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/InterpretTests.cpp.orig" />
+    <entry file="file://$PROJECT_DIR$/src/tests/backendTest.h" />
+    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13889">
+          <caret line="866" column="6" selection-start-line="866" selection-start-column="6" selection-end-line="866" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/bits/alloc_traits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7837">
+          <caret line="461" selection-start-line="461" selection-end-line="461" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EquationObserver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interpret.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interpret.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="4" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lex.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LexIdentificationObserver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/ext/new_allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/Number.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4522">
+          <caret line="266" selection-start-line="266" selection-end-line="266" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/bits/stl_function.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6545">
+          <caret line="385" selection-start-line="385" selection-end-line="385" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/bits/stl_set.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7684">
+          <caret line="452" selection-start-line="452" selection-end-line="452" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/bits/stl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34629">
+          <caret line="2037" selection-start-line="2037" selection-end-line="2037" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/bits/basic_string.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22049">
+          <caret line="1297" column="6" selection-start-line="1297" selection-start-column="6" selection-end-line="1297" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/Number.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/googletest-src/googletest/src/gtest.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42449">
+          <caret line="2497" selection-start-line="2497" selection-end-line="2497" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lex.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21182">
+          <caret line="1246" column="6" selection-start-line="1246" selection-start-column="6" selection-end-line="1246" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Equation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Equation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2703">
+          <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LexicalAnalyzer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ResultObserver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/googletest-src/googletest/include/gtest/gtest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="2063" column="8" selection-start-line="2063" selection-start-column="8" selection-end-line="2063" selection-end-column="8" />
+          <folding>
+            <element signature="e#63604#63622#0" expanded="true" />
+            <element signature="e#67520#67532#0" expanded="true" />
+            <element signature="e#68648#68665#0" expanded="true" />
+            <element signature="e#68728#68740#0" expanded="true" />
+            <element signature="e#68942#68954#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/TestContants.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/NumberTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="261" column="69" selection-start-line="261" selection-start-column="69" selection-end-line="261" selection-end-column="69" />
+          <folding>
+            <element signature="e#197#213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/backendTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/LexicalAnalyzerTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="146" column="47" selection-start-line="146" selection-start-column="47" selection-end-line="146" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MakeTests.mk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/qml.qrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/InterpretTests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="157" column="1" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
