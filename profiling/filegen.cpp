@@ -12,11 +12,11 @@ int main(int argc, char* argv[]) {
 
     std::ofstream outfile (argv[2]);
 
-    outfile << std::stoi(argv[1]) << std::endl;
+    //outfile << std::stoi(argv[1]) << std::endl;
 
     /**
-     * @brief Gnerate random number from interval (1;x) where x = value of argv[1]
-     * and write it to file(name of file = value of argv[2])
+     * @brief Generuje nahodne cislo z intervalu (1;x) kde x = hodnota argv[1]
+     * a zapise je do souboru(nazev souboru = hodnota argv[2])
      */
     for (int i = 1; i <= std::stoi(argv[1]) ; i++) {
 

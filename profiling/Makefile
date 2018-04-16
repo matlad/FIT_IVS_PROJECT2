@@ -1,5 +1,5 @@
-CXX=g++
-CXXFLAGS= -pg -g
+CXX=g++-7
+CXXFLAGS= -pg -g -Wall -Wextra -pthread -std=c++17
 
 all:
 	$(CXX) $(CXXFLAGS) ../src/math/Number.cpp profiling.cpp -o profiling -lm
