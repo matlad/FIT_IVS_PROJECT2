@@ -9,26 +9,22 @@ using namespace team22::Math;
 
 int main(int argc, char** argv){
 	
-	//double in; //vstupni hodnota
-	std::string in;
-	Number mean = {0}; //prumer
-	std::vector<Number> inValues;
+	std::string in;										//vstupni hodnota
+	Number mean = {0};									//prumer
+	std::vector<Number> inValues;						//pole vstupnich hodnot
 	
-	std::ifstream insert( argv[1] );
+	std::ifstream insert( argv[1] );					//otevreni souboru
 	
-	if(insert.is_open()){
-	//ifs.open(argv[1]);
-		//nacitani hodnot ze vstupu
-		//while(std::cin >> in){
-		while(std::getline(insert,in)){
-			//if(in == EOF){break;}
-			inValues.push_back(std::stod(in)); //nacteni hodnot ze vstupu
+	if(insert.is_open()){								//kontrola zdali je soubor otevren
+			while(std::getline(insert,in)){				//nacteni hodnot ze vstupu
+				inValues.push_back(std::stod(in));		//presun hodnoty na misto v poli
 		}
-		insert.close();
+		insert.close();									//zavreni souboru
 	}
 
-	Number sum = {0}; 
+	Number sum = {0};
 	Number average = {0};
+
 	//vypocet prumeru
 	for(auto value : inValues){
 		sum = sum + Number(value);
@@ -43,25 +39,10 @@ int main(int argc, char** argv){
     	sampleSD = sampleSD + Number((value - mean)^sq);
 	}
 	sampleSD = sampleSD/Number(inValues.size() - 1);
-	sampleSD = sampleSD^Number(2);
+	sampleSD = sampleSD^Number(0.5);
 
 
 	std::cout << std::flush << "Smerodatna odchylka = " << sampleSD << std::endl;
 	
 	return 0;}
-
-/**
- * @brief funkce pro vypocet prumeru
- * @param inValues pole hodnot
- * @param size pocet hodnot
- * @return average prumer
- */
-
-/**
- * @brief funkce pro vypocet vyberove smerodatne odchylky
- * @param inValues pole hodnot
- * @param mean prumer
- * @param size pocet hodnot
- * @return sampleSD vyberova smerodatna odchylka
- */
 
