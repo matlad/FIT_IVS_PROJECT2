@@ -1,20 +1,30 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <cstdio>
 #include <vector>
 #include "../src/math/Number.h"
 
 using namespace team22::Math;
 
-int main(){
+int main(int argc, char** argv){
 	
-	double in; //vstupni hodnota
+	//double in; //vstupni hodnota
+	std::string in;
 	Number mean = {0}; //prumer
 	std::vector<Number> inValues;
-
-	//nacitani hodnot ze vstupu
-	while(std::cin >> in){
-		if(in == EOF){break;}
-		inValues.push_back(in); //nacteni hodnot ze vstupu
+	
+	std::ifstream insert( argv[1] );
+	
+	if(insert.is_open()){
+	//ifs.open(argv[1]);
+		//nacitani hodnot ze vstupu
+		//while(std::cin >> in){
+		while(std::getline(insert,in)){
+			//if(in == EOF){break;}
+			inValues.push_back(std::stod(in)); //nacteni hodnot ze vstupu
+		}
+		insert.close();
 	}
 
 	Number sum = {0}; 
@@ -36,7 +46,7 @@ int main(){
 	sampleSD = sampleSD^Number(2);
 
 
-	std::cout << std::flush << "Smerodatna odchylka = " << sampleSD;
+	std::cout << std::flush << "Smerodatna odchylka = " << sampleSD << std::endl;
 	
 	return 0;}
 
