@@ -73,7 +73,7 @@ INSTANTIATE_TEST_CASE_P(def_p, InterpretTest, testing::Values(
     InterpretTestParams{{Number(8), Lex::DIV, Number(4)}, Number(2)},
     InterpretTestParams{{Number(2), Lex::MUL, Number(4)}, Number(8)},
     InterpretTestParams{{Number(16),Lex::ROOT, Number(2)}, Number(4)},
-    InterpretTestParams{{Number(2), Lex::EXP, Number(4)}, Number(16)},
+    InterpretTestParams{{Number(4), Lex::EXP, Number(3)}, Number(64)},
     InterpretTestParams{{Number(2), Lex::MUL, Number(4)}, Number(8)},
     InterpretTestParams{{Number(5), Lex::FACTORIAL}, Number(120)},
     InterpretTestParams{{Number(5), Lex::MOD, Number(4)}, Number(1)},
