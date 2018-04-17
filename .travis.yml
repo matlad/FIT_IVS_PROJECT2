@@ -1,18 +1,22 @@
 language: cpp
-install:
-  - cd src
-  - make test
-matrix:
-  include:
-  - os: linux
-        addons:
-          apt:
-            sources:
-              - ubuntu-toolchain-r-test
-            packages:
-              - g++-7
-        env:
-          - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+os: linux
+group: stable
+dist: trusty
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-7
+env:
+  - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
 
-before_install:
-    - eval "${MATRIX_EVAL}"
+script:
+  - git clone git@github.com:google/googletest.git
+  - cd src
+  - make -f MakeTests.mk GTEST_DIR=../googletest/googletest
+  - ./NumberTest
+  - ./LexicalAnalyzerTest
+
+
+
