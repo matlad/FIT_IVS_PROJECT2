@@ -11,8 +11,8 @@ using namespace team22::Math;
 
 void Interpret::sendIdentifiedLex(Lex lex)
 {
-	if (lex.getType() == Lex::Types::NUMBER) {
-		if (this->unprocessedOperator) {	//If binary operator is waiting for second operand
+	if (lex.isNumber()) {
+		if (this->unprocessedOperator) {	//Pokud binární operátor čeká na druhý operand
 			switch (this->oper) {
 				case Lex::Operator::ADD:
 					try {
@@ -54,9 +54,9 @@ void Interpret::sendIdentifiedLex(Lex lex)
 						notifyAboutError();
 					}
 					break;
-				case Lex::Operator::ROOT:											//Check this
+				case Lex::Operator::ROOT:
 					try {
-						this->result = lex.getAsNumber().root(this->result);
+						this->result = this->result.root(lex.getAsNumber());
 					}
 					catch (std::exception& e) {
 						notifyAboutError();
@@ -70,16 +70,15 @@ void Interpret::sendIdentifiedLex(Lex lex)
 						notifyAboutError();
 					}
 					break;
-				case Lex::Operator::EVAL:
-					this->result = lex.getAsNumber();
-					break;
+				default:
+					throw InterpretException();
 			}
 			this->unprocessedNumber = true;
 			this->unprocessedOperator = false;
 			notifyResultChanged();
 		}
 		else {
-			if (this->unprocessedNumber) {		//Cannot insert another number without operator
+			if (this->unprocessedNumber) {		//Nelze vložit druhé číslo bez operátoru
 				notifyAboutError();
 			}
 			this->result = lex.getAsNumber();
@@ -94,7 +93,12 @@ void Interpret::sendIdentifiedLex(Lex lex)
 			this->unprocessedNumber = false;
 			notifyResultChanged();
 		}
-		else if (this->unprocessedOperator && (this->oper != Lex::Operator::EVAL)) {	//Cannot insert another operator without number (except BS, CLEAR, EVAL)
+		else if (lex.getAsOperator() == Lex::Operator::EVAL) {
+			this->unprocessedOperator = false;
+			this->unprocessedNumber = false;
+			notifyResultChanged();
+		}
+		else if (this->unprocessedOperator && (this->oper != Lex::Operator::EVAL)) {	//Nelze vložit druhý operátor bez čísla (Vyjma Lex::BS, Lex::CLEAR, Lex::EVAL)
 			notifyAboutError();
 		}
 		else if (lex.getAsOperator() == Lex::Operator::FACTORIAL) {

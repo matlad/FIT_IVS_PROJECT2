@@ -12,7 +12,6 @@
 #include "Lex.h"
 #include "ResultObserver.h"
 #include "math/Number.h"
-using namespace team22::Math;
 namespace team22::Calc
 {
 /**
@@ -80,7 +79,7 @@ public:
     void sendIdentifiedLex(Lex lex) override;
 
 private:
-    Number result = Number(0);			//Stores result
+    Math::Number result = Math::Number(0);			//Stores result
     Lex::Operator oper;					//Stores operation
     bool unprocessedOperator = false;	//True if binary operator waits for second operand (if another math operand received -> error)
     bool unprocessedNumber = false;		//True if number waits for operator (if another number received -> error)
