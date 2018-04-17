@@ -1,0 +1,889 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  us/call  us/call  name    
+100.02      0.01     0.01     4003     2.50     2.50  team22::Math::Number::Number(std::complex<double> const&)
+  0.00      0.01     0.00    20019     0.00     0.00  std::complex<double>::real[abi:cxx11]() const
+  0.00      0.01     0.00    19015     0.00     0.00  std::complex<double>::imag[abi:cxx11]() const
+  0.00      0.01     0.00    16012     0.00     0.00  std::isnan(double)
+  0.00      0.01     0.00     8010     0.00     0.00  team22::Math::Number::getReal() const
+  0.00      0.01     0.00     8007     0.00     0.00  team22::Math::Number::getImaginary() const
+  0.00      0.01     0.00     7006     0.00     0.00  std::isinf(double)
+  0.00      0.01     0.00     6019     0.00     0.00  std::complex<double>::complex(double, double)
+  0.00      0.01     0.00     4048     0.00     0.00  __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::base() const
+  0.00      0.01     0.00     4034     0.00     0.00  team22::Math::Number&& std::forward<team22::Math::Number>(std::remove_reference<team22::Math::Number>::type&)
+  0.00      0.01     0.00     4003     0.00     0.00  team22::Math::Number::anyParamNan(double, double, double, double) const
+  0.00      0.01     0.00     4003     0.00     0.00  team22::Math::Number::operator std::complex<double>() const
+  0.00      0.01     0.00     3002     0.00     0.00  team22::Math::Number::allParamsInf(double, double, double, double) const
+  0.00      0.01     0.00     3000     0.00     0.00  __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator*() const
+  0.00      0.01     0.00     2090     0.00     0.00  std::move_iterator<team22::Math::Number*>::base() const
+  0.00      0.01     0.00     2026     0.00     0.00  __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::__normal_iterator(team22::Math::Number* const&)
+  0.00      0.01     0.00     2023     0.00     0.00  operator new(unsigned long, void*)
+  0.00      0.01     0.00     2002     0.00     0.00  bool __gnu_cxx::operator!=<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&)
+  0.00      0.01     0.00     2002     0.00     0.00  std::complex<double>::__rep() const
+  0.00      0.01     0.00     2000     0.00     0.00  __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator++()
+  0.00      0.01     0.00     2000     0.00     2.50  team22::Math::Number::add(team22::Math::Number) const
+  0.00      0.01     0.00     2000     0.00     2.50  team22::Math::Number::operator+(team22::Math::Number const&) const
+  0.00      0.01     0.00     2000     0.00     0.00  std::complex<double>& std::complex<double>::operator+=<double>(std::complex<double> const&)
+  0.00      0.01     0.00     2000     0.00     0.00  std::complex<double> std::operator+<double>(std::complex<double> const&, std::complex<double> const&)
+  0.00      0.01     0.00     1045     0.00     0.00  bool std::operator==<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&)
+  0.00      0.01     0.00     1045     0.00     0.00  bool std::operator!=<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&)
+  0.00      0.01     0.00     1023     0.00     0.00  std::move_iterator<team22::Math::Number*>::operator*() const
+  0.00      0.01     0.00     1023     0.00     0.00  std::move_iterator<team22::Math::Number*>::operator++()
+  0.00      0.01     0.00     1023     0.00     0.00  void std::_Construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&)
+  0.00      0.01     0.00     1023     0.00     0.00  team22::Math::Number* std::__addressof<team22::Math::Number>(team22::Math::Number&)
+  0.00      0.01     0.00     1013     0.00     0.00  std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::end()
+  0.00      0.01     0.00     1008     0.00     0.00  team22::Math::Number::Number(double, double)
+  0.00      0.01     0.00     1002     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const
+  0.00      0.01     0.00     1001     0.00     0.00  team22::Math::Number::anyParamInf(double, double, double, double) const
+  0.00      0.01     0.00     1001     0.00     2.50  team22::Math::Number::pow(team22::Math::Number) const
+  0.00      0.01     0.00     1001     0.00     2.50  team22::Math::Number::operator^(team22::Math::Number const&) const
+  0.00      0.01     0.00     1001     0.00     0.00  std::complex<double>::complex(doublecomplex )
+  0.00      0.01     0.00     1001     0.00     0.00  std::__complex_pow(doublecomplex , doublecomplex )
+  0.00      0.01     0.00     1001     0.00     0.00  std::complex<double> std::pow<double>(std::complex<double> const&, std::complex<double> const&)
+  0.00      0.01     0.00     1001     0.00     0.00  std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)
+  0.00      0.01     0.00     1000     0.00     0.00  void __gnu_cxx::new_allocator<team22::Math::Number>::construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&)
+  0.00      0.01     0.00     1000     0.00     0.00  double __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)
+  0.00      0.01     0.00     1000     0.00     2.50  team22::Math::Number::sub(team22::Math::Number) const
+  0.00      0.01     0.00     1000     0.00     2.50  team22::Math::Number::operator-(team22::Math::Number const&) const
+  0.00      0.01     0.00     1000     0.00     0.00  __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator-(long) const
+  0.00      0.01     0.00     1000     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const
+  0.00      0.01     0.00     1000     0.00     0.00  void std::allocator_traits<std::allocator<team22::Math::Number> >::construct<team22::Math::Number, team22::Math::Number>(std::allocator<team22::Math::Number>&, team22::Math::Number*, team22::Math::Number&&)
+  0.00      0.01     0.00     1000     0.00     0.00  team22::Math::Number& std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::emplace_back<team22::Math::Number>(team22::Math::Number&&)
+  0.00      0.01     0.00     1000     0.00     0.00  std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::back()
+  0.00      0.01     0.00     1000     0.00     0.00  std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::push_back(team22::Math::Number&&)
+  0.00      0.01     0.00     1000     0.00     0.00  std::__cxx11::stod(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*)
+  0.00      0.01     0.00     1000     0.00     0.00  std::complex<double>& std::complex<double>::operator-=<double>(std::complex<double> const&)
+  0.00      0.01     0.00     1000     0.00     0.00  std::remove_reference<team22::Math::Number&>::type&& std::move<team22::Math::Number&>(team22::Math::Number&)
+  0.00      0.01     0.00     1000     0.00     0.00  std::complex<double> std::operator-<double>(std::complex<double> const&, std::complex<double> const&)
+  0.00      0.01     0.00     1000     0.00     0.00  __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Range_chk::_S_chk(double, std::integral_constant<bool, false>)
+  0.00      0.01     0.00     1000     0.00     0.00  __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Save_errno::_Save_errno()
+  0.00      0.01     0.00     1000     0.00     0.00  __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Save_errno::~_Save_errno()
+  0.00      0.01     0.00       46     0.00     0.00  std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::size() const
+  0.00      0.01     0.00       44     0.00     0.00  std::move_iterator<team22::Math::Number*>::move_iterator(team22::Math::Number*)
+  0.00      0.01     0.00       44     0.00     0.00  std::move_iterator<team22::Math::Number*> std::__make_move_if_noexcept_iterator<team22::Math::Number, std::move_iterator<team22::Math::Number*> >(team22::Math::Number*)
+  0.00      0.01     0.00       34     0.00     0.00  std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_get_Tp_allocator()
+  0.00      0.01     0.00       33     0.00     0.00  __gnu_cxx::new_allocator<team22::Math::Number>::max_size() const
+  0.00      0.01     0.00       22     0.00     0.00  std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_get_Tp_allocator() const
+  0.00      0.01     0.00       22     0.00     0.00  std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::max_size() const
+  0.00      0.01     0.00       22     0.00     0.00  std::allocator_traits<std::allocator<team22::Math::Number> >::max_size(std::allocator<team22::Math::Number> const&)
+  0.00      0.01     0.00       22     0.00     0.00  team22::Math::Number* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*)
+  0.00      0.01     0.00       22     0.00     0.00  team22::Math::Number* std::uninitialized_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*)
+  0.00      0.01     0.00       22     0.00     0.00  team22::Math::Number* std::__uninitialized_copy_a<std::move_iterator<team22::Math::Number*>, team22::Math::Number*, team22::Math::Number>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*, std::allocator<team22::Math::Number>&)
+  0.00      0.01     0.00       22     0.00     0.00  team22::Math::Number* std::__uninitialized_move_if_noexcept_a<team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number> >(team22::Math::Number*, team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&)
+  0.00      0.01     0.00       13     0.00     0.00  std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::begin()
+  0.00      0.01     0.00       12     0.00     0.00  void std::_Destroy_aux<true>::__destroy<team22::Math::Number*>(team22::Math::Number*, team22::Math::Number*)
+  0.00      0.01     0.00       12     0.00     0.00  std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_deallocate(team22::Math::Number*, unsigned long)
+  0.00      0.01     0.00       12     0.00     0.00  void std::_Destroy<team22::Math::Number*>(team22::Math::Number*, team22::Math::Number*)
+  0.00      0.01     0.00       12     0.00     0.00  void std::_Destroy<team22::Math::Number*, team22::Math::Number>(team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&)
+  0.00      0.01     0.00       11     0.00     0.00  __gnu_cxx::new_allocator<team22::Math::Number>::deallocate(team22::Math::Number*, unsigned long)
+  0.00      0.01     0.00       11     0.00     0.00  __gnu_cxx::new_allocator<team22::Math::Number>::allocate(unsigned long, void const*)
+  0.00      0.01     0.00       11     0.00     0.00  __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::difference_type __gnu_cxx::operator-<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&)
+  0.00      0.01     0.00       11     0.00     0.00  std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_check_len(unsigned long, char const*) const
+  0.00      0.01     0.00       11     0.00     0.00  std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_allocate(unsigned long)
+  0.00      0.01     0.00       11     0.00     0.00  std::allocator_traits<std::allocator<team22::Math::Number> >::deallocate(std::allocator<team22::Math::Number>&, team22::Math::Number*, unsigned long)
+  0.00      0.01     0.00       11     0.00     0.00  std::allocator_traits<std::allocator<team22::Math::Number> >::allocate(std::allocator<team22::Math::Number>&, unsigned long)
+  0.00      0.01     0.00       11     0.00     0.00  void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&)
+  0.00      0.01     0.00       11     0.00     0.00  unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00      0.01     0.00        2     0.00     2.50  team22::Math::Number::div(team22::Math::Number) const
+  0.00      0.01     0.00        2     0.00     2.50  team22::Math::Number::operator/(team22::Math::Number const&) const
+  0.00      0.01     0.00        2     0.00     0.00  std::complex<double>& std::complex<double>::operator/=<double>(std::complex<double> const&)
+  0.00      0.01     0.00        2     0.00     0.00  std::complex<double> std::operator/<double>(std::complex<double> const&, std::complex<double> const&)
+  0.00      0.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZNK6team224Math6Number11anyParamNanEdddd
+  0.00      0.01     0.00        1     0.00     0.00  _GLOBAL__sub_I_main
+  0.00      0.01     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.01     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.01     0.00        1     0.00     0.00  team22::Math::operator<<(std::ostream&, team22::Math::Number const&)
+  0.00      0.01     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<team22::Math::Number>::new_allocator()
+  0.00      0.01     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<team22::Math::Number>::~new_allocator()
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const
+  0.00      0.01     0.00        1     0.00     0.00  std::allocator<team22::Math::Number>::allocator()
+  0.00      0.01     0.00        1     0.00     0.00  std::allocator<team22::Math::Number>::~allocator()
+  0.00      0.01     0.00        1     0.00     0.00  std::char_traits<char>::assign(char&, char const&)
+  0.00      0.01     0.00        1     0.00     0.00  std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::_Vector_impl()
+  0.00      0.01     0.00        1     0.00     0.00  std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::~_Vector_impl()
+  0.00      0.01     0.00        1     0.00     0.00  std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_base()
+  0.00      0.01     0.00        1     0.00     0.00  std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::~_Vector_base()
+  0.00      0.01     0.00        1     0.00     0.00  std::pointer_traits<char const*>::pointer_to(char const&)
+  0.00      0.01     0.00        1     0.00     0.00  std::pointer_traits<char*>::pointer_to(char&)
+  0.00      0.01     0.00        1     0.00     0.00  std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::vector()
+  0.00      0.01     0.00        1     0.00     0.00  std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::~vector()
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&)
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider()
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data()
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long)
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long)
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()
+  0.00      0.01     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+  0.00      0.01     0.00        1     0.00     0.00  char const* std::__addressof<char const>(char const&)
+  0.00      0.01     0.00        1     0.00     0.00  char* std::__addressof<char>(char&)
+  0.00      0.01     0.00        1     0.00     0.00  std::remove_reference<std::allocator<char>&>::type&& std::move<std::allocator<char>&>(std::allocator<char>&)
+  0.00      0.01     0.00        1     0.00     0.00  char const* std::addressof<char const>(char const&)
+  0.00      0.01     0.00        1     0.00     0.00  char* std::addressof<char>(char&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 99.98% of 0.01 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    0.01                 main [1]
+                0.00    0.00    2000/2000        team22::Math::Number::operator+(team22::Math::Number const&) const [4]
+                0.00    0.00    1001/1001        team22::Math::Number::operator^(team22::Math::Number const&) const [6]
+                0.00    0.00    1000/1000        team22::Math::Number::operator-(team22::Math::Number const&) const [8]
+                0.00    0.00       2/2           team22::Math::Number::operator/(team22::Math::Number const&) const [10]
+                0.00    0.00    2002/2002        bool __gnu_cxx::operator!=<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&) [33]
+                0.00    0.00    2000/3000        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator*() const [29]
+                0.00    0.00    2000/2000        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator++() [35]
+                0.00    0.00    1008/1008        team22::Math::Number::Number(double, double) [45]
+                0.00    0.00    1001/1001        std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) [51]
+                0.00    0.00    1000/1000        std::__cxx11::stod(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [60]
+                0.00    0.00    1000/1000        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::push_back(team22::Math::Number&&) [59]
+                0.00    0.00       2/13          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::begin() [79]
+                0.00    0.00       2/1013        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::end() [44]
+                0.00    0.00       2/46          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::size() const [67]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string() [121]
+                0.00    0.00       1/1           std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::vector() [113]
+                0.00    0.00       1/1           team22::Math::operator<<(std::ostream&, team22::Math::Number const&) [99]
+                0.00    0.00       1/1           std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::~vector() [114]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [122]
+-----------------------------------------------
+                0.00    0.00       2/4003        team22::Math::Number::div(team22::Math::Number) const [9]
+                0.00    0.00    1000/4003        team22::Math::Number::sub(team22::Math::Number) const [7]
+                0.00    0.00    1001/4003        team22::Math::Number::pow(team22::Math::Number) const [5]
+                0.00    0.00    2000/4003        team22::Math::Number::add(team22::Math::Number) const [3]
+[2]    100.0    0.01    0.00    4003         team22::Math::Number::Number(std::complex<double> const&) [2]
+                0.00    0.00    4003/6019        std::complex<double>::complex(double, double) [23]
+-----------------------------------------------
+                0.00    0.00    2000/2000        team22::Math::Number::operator+(team22::Math::Number const&) const [4]
+[3]     50.0    0.00    0.00    2000         team22::Math::Number::add(team22::Math::Number) const [3]
+                0.00    0.00    2000/4003        team22::Math::Number::Number(std::complex<double> const&) [2]
+                0.00    0.00    4000/8007        team22::Math::Number::getImaginary() const [21]
+                0.00    0.00    4000/8010        team22::Math::Number::getReal() const [20]
+                0.00    0.00    4000/19015       std::complex<double>::imag[abi:cxx11]() const [18]
+                0.00    0.00    4000/20019       std::complex<double>::real[abi:cxx11]() const [17]
+                0.00    0.00    2000/4003        team22::Math::Number::anyParamNan(double, double, double, double) const [26]
+                0.00    0.00    2000/3002        team22::Math::Number::allParamsInf(double, double, double, double) const [28]
+                0.00    0.00    2000/4003        team22::Math::Number::operator std::complex<double>() const [27]
+                0.00    0.00    2000/2000        std::complex<double> std::operator+<double>(std::complex<double> const&, std::complex<double> const&) [37]
+-----------------------------------------------
+                0.00    0.00    2000/2000        main [1]
+[4]     50.0    0.00    0.00    2000         team22::Math::Number::operator+(team22::Math::Number const&) const [4]
+                0.00    0.00    2000/2000        team22::Math::Number::add(team22::Math::Number) const [3]
+-----------------------------------------------
+                0.00    0.00    1001/1001        team22::Math::Number::operator^(team22::Math::Number const&) const [6]
+[5]     25.0    0.00    0.00    1001         team22::Math::Number::pow(team22::Math::Number) const [5]
+                0.00    0.00    1001/4003        team22::Math::Number::Number(std::complex<double> const&) [2]
+                0.00    0.00    3003/20019       std::complex<double>::real[abi:cxx11]() const [17]
+                0.00    0.00    2002/8007        team22::Math::Number::getImaginary() const [21]
+                0.00    0.00    2002/8010        team22::Math::Number::getReal() const [20]
+                0.00    0.00    2002/19015       std::complex<double>::imag[abi:cxx11]() const [18]
+                0.00    0.00    1001/4003        team22::Math::Number::anyParamNan(double, double, double, double) const [26]
+                0.00    0.00    1001/1001        team22::Math::Number::anyParamInf(double, double, double, double) const [47]
+                0.00    0.00    1001/4003        team22::Math::Number::operator std::complex<double>() const [27]
+                0.00    0.00    1001/1001        std::complex<double> std::pow<double>(std::complex<double> const&, std::complex<double> const&) [50]
+-----------------------------------------------
+                0.00    0.00    1001/1001        main [1]
+[6]     25.0    0.00    0.00    1001         team22::Math::Number::operator^(team22::Math::Number const&) const [6]
+                0.00    0.00    1001/1001        team22::Math::Number::pow(team22::Math::Number) const [5]
+-----------------------------------------------
+                0.00    0.00    1000/1000        team22::Math::Number::operator-(team22::Math::Number const&) const [8]
+[7]     25.0    0.00    0.00    1000         team22::Math::Number::sub(team22::Math::Number) const [7]
+                0.00    0.00    1000/4003        team22::Math::Number::Number(std::complex<double> const&) [2]
+                0.00    0.00    2000/8007        team22::Math::Number::getImaginary() const [21]
+                0.00    0.00    2000/8010        team22::Math::Number::getReal() const [20]
+                0.00    0.00    2000/19015       std::complex<double>::imag[abi:cxx11]() const [18]
+                0.00    0.00    2000/20019       std::complex<double>::real[abi:cxx11]() const [17]
+                0.00    0.00    1000/4003        team22::Math::Number::anyParamNan(double, double, double, double) const [26]
+                0.00    0.00    1000/3002        team22::Math::Number::allParamsInf(double, double, double, double) const [28]
+                0.00    0.00    1000/4003        team22::Math::Number::operator std::complex<double>() const [27]
+                0.00    0.00    1000/1000        std::complex<double> std::operator-<double>(std::complex<double> const&, std::complex<double> const&) [63]
+-----------------------------------------------
+                0.00    0.00    1000/1000        main [1]
+[8]     25.0    0.00    0.00    1000         team22::Math::Number::operator-(team22::Math::Number const&) const [8]
+                0.00    0.00    1000/1000        team22::Math::Number::sub(team22::Math::Number) const [7]
+-----------------------------------------------
+                0.00    0.00       2/2           team22::Math::Number::operator/(team22::Math::Number const&) const [10]
+[9]      0.0    0.00    0.00       2         team22::Math::Number::div(team22::Math::Number) const [9]
+                0.00    0.00       2/4003        team22::Math::Number::Number(std::complex<double> const&) [2]
+                0.00    0.00       6/8010        team22::Math::Number::getReal() const [20]
+                0.00    0.00       4/8007        team22::Math::Number::getImaginary() const [21]
+                0.00    0.00       4/19015       std::complex<double>::imag[abi:cxx11]() const [18]
+                0.00    0.00       4/20019       std::complex<double>::real[abi:cxx11]() const [17]
+                0.00    0.00       2/4003        team22::Math::Number::anyParamNan(double, double, double, double) const [26]
+                0.00    0.00       2/3002        team22::Math::Number::allParamsInf(double, double, double, double) const [28]
+                0.00    0.00       2/4003        team22::Math::Number::operator std::complex<double>() const [27]
+                0.00    0.00       2/2           std::complex<double> std::operator/<double>(std::complex<double> const&, std::complex<double> const&) [94]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[10]     0.0    0.00    0.00       2         team22::Math::Number::operator/(team22::Math::Number const&) const [10]
+                0.00    0.00       2/2           team22::Math::Number::div(team22::Math::Number) const [9]
+-----------------------------------------------
+                0.00    0.00       2/20019       std::complex<double>& std::complex<double>::operator/=<double>(std::complex<double> const&) [93]
+                0.00    0.00       4/20019       team22::Math::Number::div(team22::Math::Number) const [9]
+                0.00    0.00    1000/20019       std::complex<double>& std::complex<double>::operator-=<double>(std::complex<double> const&) [61]
+                0.00    0.00    2000/20019       team22::Math::Number::sub(team22::Math::Number) const [7]
+                0.00    0.00    2000/20019       std::complex<double>& std::complex<double>::operator+=<double>(std::complex<double> const&) [36]
+                0.00    0.00    3003/20019       team22::Math::Number::pow(team22::Math::Number) const [5]
+                0.00    0.00    4000/20019       team22::Math::Number::add(team22::Math::Number) const [3]
+                0.00    0.00    8010/20019       team22::Math::Number::getReal() const [20]
+[17]     0.0    0.00    0.00   20019         std::complex<double>::real[abi:cxx11]() const [17]
+-----------------------------------------------
+                0.00    0.00       2/19015       std::complex<double>& std::complex<double>::operator/=<double>(std::complex<double> const&) [93]
+                0.00    0.00       4/19015       team22::Math::Number::div(team22::Math::Number) const [9]
+                0.00    0.00    1000/19015       std::complex<double>& std::complex<double>::operator-=<double>(std::complex<double> const&) [61]
+                0.00    0.00    2000/19015       team22::Math::Number::sub(team22::Math::Number) const [7]
+                0.00    0.00    2000/19015       std::complex<double>& std::complex<double>::operator+=<double>(std::complex<double> const&) [36]
+                0.00    0.00    2002/19015       team22::Math::Number::pow(team22::Math::Number) const [5]
+                0.00    0.00    4000/19015       team22::Math::Number::add(team22::Math::Number) const [3]
+                0.00    0.00    8007/19015       team22::Math::Number::getImaginary() const [21]
+[18]     0.0    0.00    0.00   19015         std::complex<double>::imag[abi:cxx11]() const [18]
+-----------------------------------------------
+                0.00    0.00   16012/16012       team22::Math::Number::anyParamNan(double, double, double, double) const [26]
+[19]     0.0    0.00    0.00   16012         std::isnan(double) [19]
+-----------------------------------------------
+                0.00    0.00       2/8010        team22::Math::operator<<(std::ostream&, team22::Math::Number const&) [99]
+                0.00    0.00       6/8010        team22::Math::Number::div(team22::Math::Number) const [9]
+                0.00    0.00    2000/8010        team22::Math::Number::sub(team22::Math::Number) const [7]
+                0.00    0.00    2002/8010        team22::Math::Number::pow(team22::Math::Number) const [5]
+                0.00    0.00    4000/8010        team22::Math::Number::add(team22::Math::Number) const [3]
+[20]     0.0    0.00    0.00    8010         team22::Math::Number::getReal() const [20]
+                0.00    0.00    8010/20019       std::complex<double>::real[abi:cxx11]() const [17]
+-----------------------------------------------
+                0.00    0.00       1/8007        team22::Math::operator<<(std::ostream&, team22::Math::Number const&) [99]
+                0.00    0.00       4/8007        team22::Math::Number::div(team22::Math::Number) const [9]
+                0.00    0.00    2000/8007        team22::Math::Number::sub(team22::Math::Number) const [7]
+                0.00    0.00    2002/8007        team22::Math::Number::pow(team22::Math::Number) const [5]
+                0.00    0.00    4000/8007        team22::Math::Number::add(team22::Math::Number) const [3]
+[21]     0.0    0.00    0.00    8007         team22::Math::Number::getImaginary() const [21]
+                0.00    0.00    8007/19015       std::complex<double>::imag[abi:cxx11]() const [18]
+-----------------------------------------------
+                0.00    0.00    3002/7006        team22::Math::Number::allParamsInf(double, double, double, double) const [28]
+                0.00    0.00    4004/7006        team22::Math::Number::anyParamInf(double, double, double, double) const [47]
+[22]     0.0    0.00    0.00    7006         std::isinf(double) [22]
+-----------------------------------------------
+                0.00    0.00    2016/6019        team22::Math::Number::Number(double, double) [45]
+                0.00    0.00    4003/6019        team22::Math::Number::Number(std::complex<double> const&) [2]
+[23]     0.0    0.00    0.00    6019         std::complex<double>::complex(double, double) [23]
+-----------------------------------------------
+                0.00    0.00      22/4048        void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+                0.00    0.00      22/4048        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::difference_type __gnu_cxx::operator-<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&) [86]
+                0.00    0.00    4004/4048        bool __gnu_cxx::operator!=<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&) [33]
+[24]     0.0    0.00    0.00    4048         __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::base() const [24]
+-----------------------------------------------
+                0.00    0.00      11/4034        void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+                0.00    0.00    1000/4034        team22::Math::Number& std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::emplace_back<team22::Math::Number>(team22::Math::Number&&) [57]
+                0.00    0.00    1000/4034        void std::allocator_traits<std::allocator<team22::Math::Number> >::construct<team22::Math::Number, team22::Math::Number>(std::allocator<team22::Math::Number>&, team22::Math::Number*, team22::Math::Number&&) [56]
+                0.00    0.00    1000/4034        void __gnu_cxx::new_allocator<team22::Math::Number>::construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&) [52]
+                0.00    0.00    1023/4034        void std::_Construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&) [42]
+[25]     0.0    0.00    0.00    4034         team22::Math::Number&& std::forward<team22::Math::Number>(std::remove_reference<team22::Math::Number>::type&) [25]
+-----------------------------------------------
+                0.00    0.00       2/4003        team22::Math::Number::div(team22::Math::Number) const [9]
+                0.00    0.00    1000/4003        team22::Math::Number::sub(team22::Math::Number) const [7]
+                0.00    0.00    1001/4003        team22::Math::Number::pow(team22::Math::Number) const [5]
+                0.00    0.00    2000/4003        team22::Math::Number::add(team22::Math::Number) const [3]
+[26]     0.0    0.00    0.00    4003         team22::Math::Number::anyParamNan(double, double, double, double) const [26]
+                0.00    0.00   16012/16012       std::isnan(double) [19]
+-----------------------------------------------
+                0.00    0.00       2/4003        team22::Math::Number::div(team22::Math::Number) const [9]
+                0.00    0.00    1000/4003        team22::Math::Number::sub(team22::Math::Number) const [7]
+                0.00    0.00    1001/4003        team22::Math::Number::pow(team22::Math::Number) const [5]
+                0.00    0.00    2000/4003        team22::Math::Number::add(team22::Math::Number) const [3]
+[27]     0.0    0.00    0.00    4003         team22::Math::Number::operator std::complex<double>() const [27]
+-----------------------------------------------
+                0.00    0.00       2/3002        team22::Math::Number::div(team22::Math::Number) const [9]
+                0.00    0.00    1000/3002        team22::Math::Number::sub(team22::Math::Number) const [7]
+                0.00    0.00    2000/3002        team22::Math::Number::add(team22::Math::Number) const [3]
+[28]     0.0    0.00    0.00    3002         team22::Math::Number::allParamsInf(double, double, double, double) const [28]
+                0.00    0.00    3002/7006        std::isinf(double) [22]
+-----------------------------------------------
+                0.00    0.00    1000/3000        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::back() [58]
+                0.00    0.00    2000/3000        main [1]
+[29]     0.0    0.00    0.00    3000         __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator*() const [29]
+-----------------------------------------------
+                0.00    0.00    2090/2090        bool std::operator==<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&) [38]
+[30]     0.0    0.00    0.00    2090         std::move_iterator<team22::Math::Number*>::base() const [30]
+-----------------------------------------------
+                0.00    0.00      13/2026        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::begin() [79]
+                0.00    0.00    1000/2026        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator-(long) const [54]
+                0.00    0.00    1013/2026        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::end() [44]
+[31]     0.0    0.00    0.00    2026         __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::__normal_iterator(team22::Math::Number* const&) [31]
+-----------------------------------------------
+                0.00    0.00    1000/2023        void __gnu_cxx::new_allocator<team22::Math::Number>::construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&) [52]
+                0.00    0.00    1023/2023        void std::_Construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&) [42]
+[32]     0.0    0.00    0.00    2023         operator new(unsigned long, void*) [32]
+-----------------------------------------------
+                0.00    0.00    2002/2002        main [1]
+[33]     0.0    0.00    0.00    2002         bool __gnu_cxx::operator!=<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&) [33]
+                0.00    0.00    4004/4048        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::base() const [24]
+-----------------------------------------------
+                0.00    0.00    2002/2002        std::complex<double> std::pow<double>(std::complex<double> const&, std::complex<double> const&) [50]
+[34]     0.0    0.00    0.00    2002         std::complex<double>::__rep() const [34]
+-----------------------------------------------
+                0.00    0.00    2000/2000        main [1]
+[35]     0.0    0.00    0.00    2000         __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator++() [35]
+-----------------------------------------------
+                0.00    0.00    2000/2000        std::complex<double> std::operator+<double>(std::complex<double> const&, std::complex<double> const&) [37]
+[36]     0.0    0.00    0.00    2000         std::complex<double>& std::complex<double>::operator+=<double>(std::complex<double> const&) [36]
+                0.00    0.00    2000/20019       std::complex<double>::real[abi:cxx11]() const [17]
+                0.00    0.00    2000/19015       std::complex<double>::imag[abi:cxx11]() const [18]
+-----------------------------------------------
+                0.00    0.00    2000/2000        team22::Math::Number::add(team22::Math::Number) const [3]
+[37]     0.0    0.00    0.00    2000         std::complex<double> std::operator+<double>(std::complex<double> const&, std::complex<double> const&) [37]
+                0.00    0.00    2000/2000        std::complex<double>& std::complex<double>::operator+=<double>(std::complex<double> const&) [36]
+-----------------------------------------------
+                0.00    0.00    1045/1045        bool std::operator!=<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&) [39]
+[38]     0.0    0.00    0.00    1045         bool std::operator==<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&) [38]
+                0.00    0.00    2090/2090        std::move_iterator<team22::Math::Number*>::base() const [30]
+-----------------------------------------------
+                0.00    0.00    1045/1045        team22::Math::Number* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [75]
+[39]     0.0    0.00    0.00    1045         bool std::operator!=<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&) [39]
+                0.00    0.00    1045/1045        bool std::operator==<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&) [38]
+-----------------------------------------------
+                0.00    0.00    1023/1023        team22::Math::Number* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [75]
+[40]     0.0    0.00    0.00    1023         std::move_iterator<team22::Math::Number*>::operator*() const [40]
+-----------------------------------------------
+                0.00    0.00    1023/1023        team22::Math::Number* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [75]
+[41]     0.0    0.00    0.00    1023         std::move_iterator<team22::Math::Number*>::operator++() [41]
+-----------------------------------------------
+                0.00    0.00    1023/1023        team22::Math::Number* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [75]
+[42]     0.0    0.00    0.00    1023         void std::_Construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&) [42]
+                0.00    0.00    1023/4034        team22::Math::Number&& std::forward<team22::Math::Number>(std::remove_reference<team22::Math::Number>::type&) [25]
+                0.00    0.00    1023/2023        operator new(unsigned long, void*) [32]
+-----------------------------------------------
+                0.00    0.00    1023/1023        team22::Math::Number* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [75]
+[43]     0.0    0.00    0.00    1023         team22::Math::Number* std::__addressof<team22::Math::Number>(team22::Math::Number&) [43]
+-----------------------------------------------
+                0.00    0.00       2/1013        main [1]
+                0.00    0.00      11/1013        team22::Math::Number& std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::emplace_back<team22::Math::Number>(team22::Math::Number&&) [57]
+                0.00    0.00    1000/1013        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::back() [58]
+[44]     0.0    0.00    0.00    1013         std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::end() [44]
+                0.00    0.00    1013/2026        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::__normal_iterator(team22::Math::Number* const&) [31]
+-----------------------------------------------
+                0.00    0.00    1008/1008        main [1]
+[45]     0.0    0.00    0.00    1008         team22::Math::Number::Number(double, double) [45]
+                0.00    0.00    2016/6019        std::complex<double>::complex(double, double) [23]
+-----------------------------------------------
+                0.00    0.00       1/1002        std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [119]
+                0.00    0.00       1/1002        std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [102]
+                0.00    0.00    1000/1002        std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const [55]
+[46]     0.0    0.00    0.00    1002         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [46]
+-----------------------------------------------
+                0.00    0.00    1001/1001        team22::Math::Number::pow(team22::Math::Number) const [5]
+[47]     0.0    0.00    0.00    1001         team22::Math::Number::anyParamInf(double, double, double, double) const [47]
+                0.00    0.00    4004/7006        std::isinf(double) [22]
+-----------------------------------------------
+                0.00    0.00    1001/1001        std::complex<double> std::pow<double>(std::complex<double> const&, std::complex<double> const&) [50]
+[48]     0.0    0.00    0.00    1001         std::complex<double>::complex(doublecomplex ) [48]
+-----------------------------------------------
+                0.00    0.00    1001/1001        std::complex<double> std::pow<double>(std::complex<double> const&, std::complex<double> const&) [50]
+[49]     0.0    0.00    0.00    1001         std::__complex_pow(doublecomplex , doublecomplex ) [49]
+-----------------------------------------------
+                0.00    0.00    1001/1001        team22::Math::Number::pow(team22::Math::Number) const [5]
+[50]     0.0    0.00    0.00    1001         std::complex<double> std::pow<double>(std::complex<double> const&, std::complex<double> const&) [50]
+                0.00    0.00    2002/2002        std::complex<double>::__rep() const [34]
+                0.00    0.00    1001/1001        std::__complex_pow(doublecomplex , doublecomplex ) [49]
+                0.00    0.00    1001/1001        std::complex<double>::complex(doublecomplex ) [48]
+-----------------------------------------------
+                0.00    0.00    1001/1001        main [1]
+[51]     0.0    0.00    0.00    1001         std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) [51]
+-----------------------------------------------
+                0.00    0.00    1000/1000        void std::allocator_traits<std::allocator<team22::Math::Number> >::construct<team22::Math::Number, team22::Math::Number>(std::allocator<team22::Math::Number>&, team22::Math::Number*, team22::Math::Number&&) [56]
+[52]     0.0    0.00    0.00    1000         void __gnu_cxx::new_allocator<team22::Math::Number>::construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&) [52]
+                0.00    0.00    1000/4034        team22::Math::Number&& std::forward<team22::Math::Number>(std::remove_reference<team22::Math::Number>::type&) [25]
+                0.00    0.00    1000/2023        operator new(unsigned long, void*) [32]
+-----------------------------------------------
+                0.00    0.00    1000/1000        std::__cxx11::stod(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [60]
+[53]     0.0    0.00    0.00    1000         double __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*) [53]
+                0.00    0.00    1000/1000        __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Save_errno::_Save_errno() [65]
+                0.00    0.00    1000/1000        __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Range_chk::_S_chk(double, std::integral_constant<bool, false>) [64]
+                0.00    0.00    1000/1000        __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Save_errno::~_Save_errno() [66]
+-----------------------------------------------
+                0.00    0.00    1000/1000        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::back() [58]
+[54]     0.0    0.00    0.00    1000         __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator-(long) const [54]
+                0.00    0.00    1000/2026        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::__normal_iterator(team22::Math::Number* const&) [31]
+-----------------------------------------------
+                0.00    0.00    1000/1000        std::__cxx11::stod(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [60]
+[55]     0.0    0.00    0.00    1000         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const [55]
+                0.00    0.00    1000/1002        std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [46]
+-----------------------------------------------
+                0.00    0.00      11/1000        void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+                0.00    0.00     989/1000        team22::Math::Number& std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::emplace_back<team22::Math::Number>(team22::Math::Number&&) [57]
+[56]     0.0    0.00    0.00    1000         void std::allocator_traits<std::allocator<team22::Math::Number> >::construct<team22::Math::Number, team22::Math::Number>(std::allocator<team22::Math::Number>&, team22::Math::Number*, team22::Math::Number&&) [56]
+                0.00    0.00    1000/4034        team22::Math::Number&& std::forward<team22::Math::Number>(std::remove_reference<team22::Math::Number>::type&) [25]
+                0.00    0.00    1000/1000        void __gnu_cxx::new_allocator<team22::Math::Number>::construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&) [52]
+-----------------------------------------------
+                0.00    0.00    1000/1000        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::push_back(team22::Math::Number&&) [59]
+[57]     0.0    0.00    0.00    1000         team22::Math::Number& std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::emplace_back<team22::Math::Number>(team22::Math::Number&&) [57]
+                0.00    0.00    1000/4034        team22::Math::Number&& std::forward<team22::Math::Number>(std::remove_reference<team22::Math::Number>::type&) [25]
+                0.00    0.00    1000/1000        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::back() [58]
+                0.00    0.00     989/1000        void std::allocator_traits<std::allocator<team22::Math::Number> >::construct<team22::Math::Number, team22::Math::Number>(std::allocator<team22::Math::Number>&, team22::Math::Number*, team22::Math::Number&&) [56]
+                0.00    0.00      11/1013        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::end() [44]
+                0.00    0.00      11/11          void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+-----------------------------------------------
+                0.00    0.00    1000/1000        team22::Math::Number& std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::emplace_back<team22::Math::Number>(team22::Math::Number&&) [57]
+[58]     0.0    0.00    0.00    1000         std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::back() [58]
+                0.00    0.00    1000/1013        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::end() [44]
+                0.00    0.00    1000/1000        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator-(long) const [54]
+                0.00    0.00    1000/3000        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator*() const [29]
+-----------------------------------------------
+                0.00    0.00    1000/1000        main [1]
+[59]     0.0    0.00    0.00    1000         std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::push_back(team22::Math::Number&&) [59]
+                0.00    0.00    1000/1000        std::remove_reference<team22::Math::Number&>::type&& std::move<team22::Math::Number&>(team22::Math::Number&) [62]
+                0.00    0.00    1000/1000        team22::Math::Number& std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::emplace_back<team22::Math::Number>(team22::Math::Number&&) [57]
+-----------------------------------------------
+                0.00    0.00    1000/1000        main [1]
+[60]     0.0    0.00    0.00    1000         std::__cxx11::stod(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [60]
+                0.00    0.00    1000/1000        std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const [55]
+                0.00    0.00    1000/1000        double __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*) [53]
+-----------------------------------------------
+                0.00    0.00    1000/1000        std::complex<double> std::operator-<double>(std::complex<double> const&, std::complex<double> const&) [63]
+[61]     0.0    0.00    0.00    1000         std::complex<double>& std::complex<double>::operator-=<double>(std::complex<double> const&) [61]
+                0.00    0.00    1000/20019       std::complex<double>::real[abi:cxx11]() const [17]
+                0.00    0.00    1000/19015       std::complex<double>::imag[abi:cxx11]() const [18]
+-----------------------------------------------
+                0.00    0.00    1000/1000        std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::push_back(team22::Math::Number&&) [59]
+[62]     0.0    0.00    0.00    1000         std::remove_reference<team22::Math::Number&>::type&& std::move<team22::Math::Number&>(team22::Math::Number&) [62]
+-----------------------------------------------
+                0.00    0.00    1000/1000        team22::Math::Number::sub(team22::Math::Number) const [7]
+[63]     0.0    0.00    0.00    1000         std::complex<double> std::operator-<double>(std::complex<double> const&, std::complex<double> const&) [63]
+                0.00    0.00    1000/1000        std::complex<double>& std::complex<double>::operator-=<double>(std::complex<double> const&) [61]
+-----------------------------------------------
+                0.00    0.00    1000/1000        double __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*) [53]
+[64]     0.0    0.00    0.00    1000         __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Range_chk::_S_chk(double, std::integral_constant<bool, false>) [64]
+-----------------------------------------------
+                0.00    0.00    1000/1000        double __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*) [53]
+[65]     0.0    0.00    0.00    1000         __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Save_errno::_Save_errno() [65]
+-----------------------------------------------
+                0.00    0.00    1000/1000        double __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*) [53]
+[66]     0.0    0.00    0.00    1000         __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Save_errno::~_Save_errno() [66]
+-----------------------------------------------
+                0.00    0.00       2/46          main [1]
+                0.00    0.00      44/46          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_check_len(unsigned long, char const*) const [87]
+[67]     0.0    0.00    0.00      46         std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::size() const [67]
+-----------------------------------------------
+                0.00    0.00      44/44          std::move_iterator<team22::Math::Number*> std::__make_move_if_noexcept_iterator<team22::Math::Number, std::move_iterator<team22::Math::Number*> >(team22::Math::Number*) [69]
+[68]     0.0    0.00    0.00      44         std::move_iterator<team22::Math::Number*>::move_iterator(team22::Math::Number*) [68]
+-----------------------------------------------
+                0.00    0.00      44/44          team22::Math::Number* std::__uninitialized_move_if_noexcept_a<team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number> >(team22::Math::Number*, team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&) [78]
+[69]     0.0    0.00    0.00      44         std::move_iterator<team22::Math::Number*> std::__make_move_if_noexcept_iterator<team22::Math::Number, std::move_iterator<team22::Math::Number*> >(team22::Math::Number*) [69]
+                0.00    0.00      44/44          std::move_iterator<team22::Math::Number*>::move_iterator(team22::Math::Number*) [68]
+-----------------------------------------------
+                0.00    0.00       1/34          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::~vector() [114]
+                0.00    0.00      33/34          void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+[70]     0.0    0.00    0.00      34         std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_get_Tp_allocator() [70]
+-----------------------------------------------
+                0.00    0.00      11/33          __gnu_cxx::new_allocator<team22::Math::Number>::allocate(unsigned long, void const*) [85]
+                0.00    0.00      22/33          std::allocator_traits<std::allocator<team22::Math::Number> >::max_size(std::allocator<team22::Math::Number> const&) [74]
+[71]     0.0    0.00    0.00      33         __gnu_cxx::new_allocator<team22::Math::Number>::max_size() const [71]
+-----------------------------------------------
+                0.00    0.00      22/22          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::max_size() const [73]
+[72]     0.0    0.00    0.00      22         std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_get_Tp_allocator() const [72]
+-----------------------------------------------
+                0.00    0.00      22/22          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_check_len(unsigned long, char const*) const [87]
+[73]     0.0    0.00    0.00      22         std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::max_size() const [73]
+                0.00    0.00      22/22          std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_get_Tp_allocator() const [72]
+                0.00    0.00      22/22          std::allocator_traits<std::allocator<team22::Math::Number> >::max_size(std::allocator<team22::Math::Number> const&) [74]
+-----------------------------------------------
+                0.00    0.00      22/22          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::max_size() const [73]
+[74]     0.0    0.00    0.00      22         std::allocator_traits<std::allocator<team22::Math::Number> >::max_size(std::allocator<team22::Math::Number> const&) [74]
+                0.00    0.00      22/33          __gnu_cxx::new_allocator<team22::Math::Number>::max_size() const [71]
+-----------------------------------------------
+                0.00    0.00      22/22          team22::Math::Number* std::uninitialized_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [76]
+[75]     0.0    0.00    0.00      22         team22::Math::Number* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [75]
+                0.00    0.00    1045/1045        bool std::operator!=<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&) [39]
+                0.00    0.00    1023/1023        std::move_iterator<team22::Math::Number*>::operator*() const [40]
+                0.00    0.00    1023/1023        team22::Math::Number* std::__addressof<team22::Math::Number>(team22::Math::Number&) [43]
+                0.00    0.00    1023/1023        void std::_Construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&) [42]
+                0.00    0.00    1023/1023        std::move_iterator<team22::Math::Number*>::operator++() [41]
+-----------------------------------------------
+                0.00    0.00      22/22          team22::Math::Number* std::__uninitialized_copy_a<std::move_iterator<team22::Math::Number*>, team22::Math::Number*, team22::Math::Number>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*, std::allocator<team22::Math::Number>&) [77]
+[76]     0.0    0.00    0.00      22         team22::Math::Number* std::uninitialized_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [76]
+                0.00    0.00      22/22          team22::Math::Number* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [75]
+-----------------------------------------------
+                0.00    0.00      22/22          team22::Math::Number* std::__uninitialized_move_if_noexcept_a<team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number> >(team22::Math::Number*, team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&) [78]
+[77]     0.0    0.00    0.00      22         team22::Math::Number* std::__uninitialized_copy_a<std::move_iterator<team22::Math::Number*>, team22::Math::Number*, team22::Math::Number>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*, std::allocator<team22::Math::Number>&) [77]
+                0.00    0.00      22/22          team22::Math::Number* std::uninitialized_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [76]
+-----------------------------------------------
+                0.00    0.00      22/22          void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+[78]     0.0    0.00    0.00      22         team22::Math::Number* std::__uninitialized_move_if_noexcept_a<team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number> >(team22::Math::Number*, team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&) [78]
+                0.00    0.00      44/44          std::move_iterator<team22::Math::Number*> std::__make_move_if_noexcept_iterator<team22::Math::Number, std::move_iterator<team22::Math::Number*> >(team22::Math::Number*) [69]
+                0.00    0.00      22/22          team22::Math::Number* std::__uninitialized_copy_a<std::move_iterator<team22::Math::Number*>, team22::Math::Number*, team22::Math::Number>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*, std::allocator<team22::Math::Number>&) [77]
+-----------------------------------------------
+                0.00    0.00       2/13          main [1]
+                0.00    0.00      11/13          void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+[79]     0.0    0.00    0.00      13         std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::begin() [79]
+                0.00    0.00      13/2026        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::__normal_iterator(team22::Math::Number* const&) [31]
+-----------------------------------------------
+                0.00    0.00      12/12          void std::_Destroy<team22::Math::Number*>(team22::Math::Number*, team22::Math::Number*) [82]
+[80]     0.0    0.00    0.00      12         void std::_Destroy_aux<true>::__destroy<team22::Math::Number*>(team22::Math::Number*, team22::Math::Number*) [80]
+-----------------------------------------------
+                0.00    0.00       1/12          std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::~_Vector_base() [110]
+                0.00    0.00      11/12          void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+[81]     0.0    0.00    0.00      12         std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_deallocate(team22::Math::Number*, unsigned long) [81]
+                0.00    0.00      11/11          std::allocator_traits<std::allocator<team22::Math::Number> >::deallocate(std::allocator<team22::Math::Number>&, team22::Math::Number*, unsigned long) [89]
+-----------------------------------------------
+                0.00    0.00      12/12          void std::_Destroy<team22::Math::Number*, team22::Math::Number>(team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&) [83]
+[82]     0.0    0.00    0.00      12         void std::_Destroy<team22::Math::Number*>(team22::Math::Number*, team22::Math::Number*) [82]
+                0.00    0.00      12/12          void std::_Destroy_aux<true>::__destroy<team22::Math::Number*>(team22::Math::Number*, team22::Math::Number*) [80]
+-----------------------------------------------
+                0.00    0.00       1/12          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::~vector() [114]
+                0.00    0.00      11/12          void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+[83]     0.0    0.00    0.00      12         void std::_Destroy<team22::Math::Number*, team22::Math::Number>(team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&) [83]
+                0.00    0.00      12/12          void std::_Destroy<team22::Math::Number*>(team22::Math::Number*, team22::Math::Number*) [82]
+-----------------------------------------------
+                0.00    0.00      11/11          std::allocator_traits<std::allocator<team22::Math::Number> >::deallocate(std::allocator<team22::Math::Number>&, team22::Math::Number*, unsigned long) [89]
+[84]     0.0    0.00    0.00      11         __gnu_cxx::new_allocator<team22::Math::Number>::deallocate(team22::Math::Number*, unsigned long) [84]
+-----------------------------------------------
+                0.00    0.00      11/11          std::allocator_traits<std::allocator<team22::Math::Number> >::allocate(std::allocator<team22::Math::Number>&, unsigned long) [90]
+[85]     0.0    0.00    0.00      11         __gnu_cxx::new_allocator<team22::Math::Number>::allocate(unsigned long, void const*) [85]
+                0.00    0.00      11/33          __gnu_cxx::new_allocator<team22::Math::Number>::max_size() const [71]
+-----------------------------------------------
+                0.00    0.00      11/11          void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+[86]     0.0    0.00    0.00      11         __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::difference_type __gnu_cxx::operator-<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&) [86]
+                0.00    0.00      22/4048        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::base() const [24]
+-----------------------------------------------
+                0.00    0.00      11/11          void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+[87]     0.0    0.00    0.00      11         std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_check_len(unsigned long, char const*) const [87]
+                0.00    0.00      44/46          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::size() const [67]
+                0.00    0.00      22/22          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::max_size() const [73]
+                0.00    0.00      11/11          unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [92]
+-----------------------------------------------
+                0.00    0.00      11/11          void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+[88]     0.0    0.00    0.00      11         std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_allocate(unsigned long) [88]
+                0.00    0.00      11/11          std::allocator_traits<std::allocator<team22::Math::Number> >::allocate(std::allocator<team22::Math::Number>&, unsigned long) [90]
+-----------------------------------------------
+                0.00    0.00      11/11          std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_deallocate(team22::Math::Number*, unsigned long) [81]
+[89]     0.0    0.00    0.00      11         std::allocator_traits<std::allocator<team22::Math::Number> >::deallocate(std::allocator<team22::Math::Number>&, team22::Math::Number*, unsigned long) [89]
+                0.00    0.00      11/11          __gnu_cxx::new_allocator<team22::Math::Number>::deallocate(team22::Math::Number*, unsigned long) [84]
+-----------------------------------------------
+                0.00    0.00      11/11          std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_allocate(unsigned long) [88]
+[90]     0.0    0.00    0.00      11         std::allocator_traits<std::allocator<team22::Math::Number> >::allocate(std::allocator<team22::Math::Number>&, unsigned long) [90]
+                0.00    0.00      11/11          __gnu_cxx::new_allocator<team22::Math::Number>::allocate(unsigned long, void const*) [85]
+-----------------------------------------------
+                0.00    0.00      11/11          team22::Math::Number& std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::emplace_back<team22::Math::Number>(team22::Math::Number&&) [57]
+[91]     0.0    0.00    0.00      11         void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [91]
+                0.00    0.00      33/34          std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_get_Tp_allocator() [70]
+                0.00    0.00      22/4048        __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::base() const [24]
+                0.00    0.00      22/22          team22::Math::Number* std::__uninitialized_move_if_noexcept_a<team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number> >(team22::Math::Number*, team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&) [78]
+                0.00    0.00      11/11          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_check_len(unsigned long, char const*) const [87]
+                0.00    0.00      11/13          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::begin() [79]
+                0.00    0.00      11/11          __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::difference_type __gnu_cxx::operator-<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&) [86]
+                0.00    0.00      11/11          std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_allocate(unsigned long) [88]
+                0.00    0.00      11/4034        team22::Math::Number&& std::forward<team22::Math::Number>(std::remove_reference<team22::Math::Number>::type&) [25]
+                0.00    0.00      11/1000        void std::allocator_traits<std::allocator<team22::Math::Number> >::construct<team22::Math::Number, team22::Math::Number>(std::allocator<team22::Math::Number>&, team22::Math::Number*, team22::Math::Number&&) [56]
+                0.00    0.00      11/12          void std::_Destroy<team22::Math::Number*, team22::Math::Number>(team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&) [83]
+                0.00    0.00      11/12          std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_deallocate(team22::Math::Number*, unsigned long) [81]
+-----------------------------------------------
+                0.00    0.00      11/11          std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_check_len(unsigned long, char const*) const [87]
+[92]     0.0    0.00    0.00      11         unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [92]
+-----------------------------------------------
+                0.00    0.00       2/2           std::complex<double> std::operator/<double>(std::complex<double> const&, std::complex<double> const&) [94]
+[93]     0.0    0.00    0.00       2         std::complex<double>& std::complex<double>::operator/=<double>(std::complex<double> const&) [93]
+                0.00    0.00       2/20019       std::complex<double>::real[abi:cxx11]() const [17]
+                0.00    0.00       2/19015       std::complex<double>::imag[abi:cxx11]() const [18]
+-----------------------------------------------
+                0.00    0.00       2/2           team22::Math::Number::div(team22::Math::Number) const [9]
+[94]     0.0    0.00    0.00       2         std::complex<double> std::operator/<double>(std::complex<double> const&, std::complex<double> const&) [94]
+                0.00    0.00       2/2           std::complex<double>& std::complex<double>::operator/=<double>(std::complex<double> const&) [93]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [170]
+[95]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZNK6team224Math6Number11anyParamNanEdddd [95]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [97]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [170]
+[96]     0.0    0.00    0.00       1         _GLOBAL__sub_I_main [96]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [98]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZNK6team224Math6Number11anyParamNanEdddd [95]
+[97]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [97]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_main [96]
+[98]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [98]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[99]     0.0    0.00    0.00       1         team22::Math::operator<<(std::ostream&, team22::Math::Number const&) [99]
+                0.00    0.00       2/8010        team22::Math::Number::getReal() const [20]
+                0.00    0.00       1/8007        team22::Math::Number::getImaginary() const [21]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<team22::Math::Number>::allocator() [104]
+[100]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<team22::Math::Number>::new_allocator() [100]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<team22::Math::Number>::~allocator() [105]
+[101]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<team22::Math::Number>::~new_allocator() [101]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [115]
+[102]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [102]
+                0.00    0.00       1/1002        std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [46]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [103]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [102]
+[103]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [103]
+                0.00    0.00       1/1           std::pointer_traits<char const*>::pointer_to(char const&) [111]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::_Vector_impl() [107]
+[104]    0.0    0.00    0.00       1         std::allocator<team22::Math::Number>::allocator() [104]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<team22::Math::Number>::new_allocator() [100]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::~_Vector_impl() [108]
+[105]    0.0    0.00    0.00       1         std::allocator<team22::Math::Number>::~allocator() [105]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<team22::Math::Number>::~new_allocator() [101]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [119]
+[106]    0.0    0.00    0.00       1         std::char_traits<char>::assign(char&, char const&) [106]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_base() [109]
+[107]    0.0    0.00    0.00       1         std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::_Vector_impl() [107]
+                0.00    0.00       1/1           std::allocator<team22::Math::Number>::allocator() [104]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::~_Vector_base() [110]
+[108]    0.0    0.00    0.00       1         std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::~_Vector_impl() [108]
+                0.00    0.00       1/1           std::allocator<team22::Math::Number>::~allocator() [105]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::vector() [113]
+[109]    0.0    0.00    0.00       1         std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_base() [109]
+                0.00    0.00       1/1           std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::_Vector_impl() [107]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::~vector() [114]
+[110]    0.0    0.00    0.00       1         std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::~_Vector_base() [110]
+                0.00    0.00       1/12          std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_deallocate(team22::Math::Number*, unsigned long) [81]
+                0.00    0.00       1/1           std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::~_Vector_impl() [108]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [103]
+[111]    0.0    0.00    0.00       1         std::pointer_traits<char const*>::pointer_to(char const&) [111]
+                0.00    0.00       1/1           char const* std::addressof<char const>(char const&) [126]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [118]
+[112]    0.0    0.00    0.00       1         std::pointer_traits<char*>::pointer_to(char&) [112]
+                0.00    0.00       1/1           char* std::addressof<char>(char&) [127]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[113]    0.0    0.00    0.00       1         std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::vector() [113]
+                0.00    0.00       1/1           std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_base() [109]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[114]    0.0    0.00    0.00       1         std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::~vector() [114]
+                0.00    0.00       1/34          std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_get_Tp_allocator() [70]
+                0.00    0.00       1/12          void std::_Destroy<team22::Math::Number*, team22::Math::Number>(team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&) [83]
+                0.00    0.00       1/1           std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::~_Vector_base() [110]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [122]
+[115]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [115]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [102]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string() [121]
+[116]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&) [116]
+                0.00    0.00       1/1           std::remove_reference<std::allocator<char>&>::type&& std::move<std::allocator<char>&>(std::allocator<char>&) [125]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [122]
+[117]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider() [117]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string() [121]
+[118]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [118]
+                0.00    0.00       1/1           std::pointer_traits<char*>::pointer_to(char&) [112]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string() [121]
+[119]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [119]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long) [120]
+                0.00    0.00       1/1002        std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [46]
+                0.00    0.00       1/1           std::char_traits<char>::assign(char&, char const&) [106]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [119]
+[120]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long) [120]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[121]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string() [121]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [118]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&) [116]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [119]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[122]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [122]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider() [117]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [115]
+-----------------------------------------------
+                0.00    0.00       1/1           char const* std::addressof<char const>(char const&) [126]
+[123]    0.0    0.00    0.00       1         char const* std::__addressof<char const>(char const&) [123]
+-----------------------------------------------
+                0.00    0.00       1/1           char* std::addressof<char>(char&) [127]
+[124]    0.0    0.00    0.00       1         char* std::__addressof<char>(char&) [124]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&) [116]
+[125]    0.0    0.00    0.00       1         std::remove_reference<std::allocator<char>&>::type&& std::move<std::allocator<char>&>(std::allocator<char>&) [125]
+-----------------------------------------------
+                0.00    0.00       1/1           std::pointer_traits<char const*>::pointer_to(char const&) [111]
+[126]    0.0    0.00    0.00       1         char const* std::addressof<char const>(char const&) [126]
+                0.00    0.00       1/1           char const* std::__addressof<char const>(char const&) [123]
+-----------------------------------------------
+                0.00    0.00       1/1           std::pointer_traits<char*>::pointer_to(char&) [112]
+[127]    0.0    0.00    0.00       1         char* std::addressof<char>(char&) [127]
+                0.00    0.00       1/1           char* std::__addressof<char>(char&) [124]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [95] _GLOBAL__sub_I__ZNK6team224Math6Number11anyParamNanEdddd (Number.cpp) [73] std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::max_size() const [119] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long)
+  [96] _GLOBAL__sub_I_main (profiling.cpp) [102] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [120] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long)
+  [97] __static_initialization_and_destruction_0(int, int) (Number.cpp) [103] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [121] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()
+  [98] __static_initialization_and_destruction_0(int, int) (profiling.cpp) [55] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const [122] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+   [2] team22::Math::Number::Number(std::complex<double> const&) [46] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [60] std::__cxx11::stod(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*)
+  [45] team22::Math::Number::Number(double, double) [18] std::complex<double>::imag[abi:cxx11]() const [23] std::complex<double>::complex(double, double)
+  [99] team22::Math::operator<<(std::ostream&, team22::Math::Number const&) [17] std::complex<double>::real[abi:cxx11]() const [48] std::complex<double>::complex(doublecomplex )
+  [84] __gnu_cxx::new_allocator<team22::Math::Number>::deallocate(team22::Math::Number*, unsigned long) [34] std::complex<double>::__rep() const [93] std::complex<double>& std::complex<double>::operator/=<double>(std::complex<double> const&)
+  [85] __gnu_cxx::new_allocator<team22::Math::Number>::allocate(unsigned long, void const*) [104] std::allocator<team22::Math::Number>::allocator() [61] std::complex<double>& std::complex<double>::operator-=<double>(std::complex<double> const&)
+  [52] void __gnu_cxx::new_allocator<team22::Math::Number>::construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&) [105] std::allocator<team22::Math::Number>::~allocator() [36] std::complex<double>& std::complex<double>::operator+=<double>(std::complex<double> const&)
+ [100] __gnu_cxx::new_allocator<team22::Math::Number>::new_allocator() [106] std::char_traits<char>::assign(char&, char const&) [42] void std::_Construct<team22::Math::Number, team22::Math::Number>(team22::Math::Number*, team22::Math::Number&&)
+ [101] __gnu_cxx::new_allocator<team22::Math::Number>::~new_allocator() [80] void std::_Destroy_aux<true>::__destroy<team22::Math::Number*>(team22::Math::Number*, team22::Math::Number*) [123] char const* std::__addressof<char const>(char const&)
+  [31] __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::__normal_iterator(team22::Math::Number* const&) [88] std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_allocate(unsigned long) [43] team22::Math::Number* std::__addressof<team22::Math::Number>(team22::Math::Number&)
+  [35] __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator++() [107] std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::_Vector_impl() [124] char* std::__addressof<char>(char&)
+  [53] double __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*) [108] std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_impl::~_Vector_impl() [49] std::__complex_pow(doublecomplex , doublecomplex )
+  [86] __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::difference_type __gnu_cxx::operator-<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&) [81] std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_deallocate(team22::Math::Number*, unsigned long) [76] team22::Math::Number* std::uninitialized_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*)
+  [33] bool __gnu_cxx::operator!=<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&, __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > > const&) [70] std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_get_Tp_allocator() [77] team22::Math::Number* std::__uninitialized_copy_a<std::move_iterator<team22::Math::Number*>, team22::Math::Number*, team22::Math::Number>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*, std::allocator<team22::Math::Number>&)
+  [47] team22::Math::Number::anyParamInf(double, double, double, double) const [109] std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_Vector_base() [69] std::move_iterator<team22::Math::Number*> std::__make_move_if_noexcept_iterator<team22::Math::Number, std::move_iterator<team22::Math::Number*> >(team22::Math::Number*)
+  [26] team22::Math::Number::anyParamNan(double, double, double, double) const [110] std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::~_Vector_base() [78] team22::Math::Number* std::__uninitialized_move_if_noexcept_a<team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number> >(team22::Math::Number*, team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&)
+  [28] team22::Math::Number::allParamsInf(double, double, double, double) const [68] std::move_iterator<team22::Math::Number*>::move_iterator(team22::Math::Number*) [92] unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  [21] team22::Math::Number::getImaginary() const [41] std::move_iterator<team22::Math::Number*>::operator++() [50] std::complex<double> std::pow<double>(std::complex<double> const&, std::complex<double> const&)
+   [3] team22::Math::Number::add(team22::Math::Number) const [111] std::pointer_traits<char const*>::pointer_to(char const&) [62] std::remove_reference<team22::Math::Number&>::type&& std::move<team22::Math::Number&>(team22::Math::Number&)
+   [9] team22::Math::Number::div(team22::Math::Number) const [112] std::pointer_traits<char*>::pointer_to(char&) [125] std::remove_reference<std::allocator<char>&>::type&& std::move<std::allocator<char>&>(std::allocator<char>&)
+   [5] team22::Math::Number::pow(team22::Math::Number) const [89] std::allocator_traits<std::allocator<team22::Math::Number> >::deallocate(std::allocator<team22::Math::Number>&, team22::Math::Number*, unsigned long) [22] std::isinf(double)
+   [7] team22::Math::Number::sub(team22::Math::Number) const [90] std::allocator_traits<std::allocator<team22::Math::Number> >::allocate(std::allocator<team22::Math::Number>&, unsigned long) [19] std::isnan(double)
+  [20] team22::Math::Number::getReal() const [74] std::allocator_traits<std::allocator<team22::Math::Number> >::max_size(std::allocator<team22::Math::Number> const&) [25] team22::Math::Number&& std::forward<team22::Math::Number>(std::remove_reference<team22::Math::Number>::type&)
+  [27] team22::Math::Number::operator std::complex<double>() const [56] void std::allocator_traits<std::allocator<team22::Math::Number> >::construct<team22::Math::Number, team22::Math::Number>(std::allocator<team22::Math::Number>&, team22::Math::Number*, team22::Math::Number&&) [51] std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)
+  [10] team22::Math::Number::operator/(team22::Math::Number const&) const [75] team22::Math::Number* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<team22::Math::Number*>, team22::Math::Number*>(std::move_iterator<team22::Math::Number*>, std::move_iterator<team22::Math::Number*>, team22::Math::Number*) [82] void std::_Destroy<team22::Math::Number*>(team22::Math::Number*, team22::Math::Number*)
+   [6] team22::Math::Number::operator^(team22::Math::Number const&) const [57] team22::Math::Number& std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::emplace_back<team22::Math::Number>(team22::Math::Number&&) [83] void std::_Destroy<team22::Math::Number*, team22::Math::Number>(team22::Math::Number*, team22::Math::Number*, std::allocator<team22::Math::Number>&)
+   [8] team22::Math::Number::operator-(team22::Math::Number const&) const [91] void std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_realloc_insert<team22::Math::Number>(__gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >, team22::Math::Number&&) [126] char const* std::addressof<char const>(char const&)
+   [4] team22::Math::Number::operator+(team22::Math::Number const&) const [44] std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::end() [127] char* std::addressof<char>(char&)
+  [71] __gnu_cxx::new_allocator<team22::Math::Number>::max_size() const [58] std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::back() [94] std::complex<double> std::operator/<double>(std::complex<double> const&, std::complex<double> const&)
+  [24] __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::base() const [79] std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::begin() [38] bool std::operator==<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&)
+  [29] __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator*() const [59] std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::push_back(team22::Math::Number&&) [63] std::complex<double> std::operator-<double>(std::complex<double> const&, std::complex<double> const&)
+  [54] __gnu_cxx::__normal_iterator<team22::Math::Number*, std::vector<team22::Math::Number, std::allocator<team22::Math::Number> > >::operator-(long) const [113] std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::vector() [39] bool std::operator!=<team22::Math::Number*>(std::move_iterator<team22::Math::Number*> const&, std::move_iterator<team22::Math::Number*> const&)
+  [72] std::_Vector_base<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_get_Tp_allocator() const [114] std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::~vector() [37] std::complex<double> std::operator+<double>(std::complex<double> const&, std::complex<double> const&)
+  [30] std::move_iterator<team22::Math::Number*>::base() const [115] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [64] __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Range_chk::_S_chk(double, std::integral_constant<bool, false>)
+  [40] std::move_iterator<team22::Math::Number*>::operator*() const [116] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&) [65] __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Save_errno::_Save_errno()
+  [87] std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::_M_check_len(unsigned long, char const*) const [117] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider() [66] __gnu_cxx::__stoa<double, double, char>(double (*)(char const*, char**), char const*, char const*, unsigned long*)::_Save_errno::~_Save_errno()
+  [67] std::vector<team22::Math::Number, std::allocator<team22::Math::Number> >::size() const [118] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [32] operator new(unsigned long, void*)
