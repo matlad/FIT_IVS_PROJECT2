@@ -79,10 +79,10 @@ public:
     void sendIdentifiedLex(Lex lex) override;
 
 private:
-    Math::Number result = Math::Number(0);			//Stores result
-    Lex::Operator oper;					//Stores operation
-    bool unprocessedOperator = false;	//True if binary operator waits for second operand (if another math operand received -> error)
-    bool unprocessedNumber = false;		//True if number waits for operator (if another number received -> error)
+    Math::Number result = Math::Number(0);		//Uchovává výsledek
+    Lex::Operator oper;							//Uchovává operaci
+    bool unprocessedOperator = false;			//True pokud binární operátor čeká na druhý operand 
+    bool unprocessedNumber = false;				//True pokud číslo čeká na operátor
 };
 }
 
