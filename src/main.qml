@@ -1,3 +1,10 @@
+/**
+ * @file     main.qml
+ * @encoding UTF-8
+ * @date     18.4.18
+ * @author   Jiří Čechák <xcecha04@stud.fit.vutbr.cz>
+ */
+
 import QtQuick 2.0
 import QtQuick.Window 2.2
 
@@ -19,55 +26,55 @@ Window {
     minimumHeight: 420
     title: "Kalkulačka"
 
-   ListModel {
-       id: buttonsRowList1;
+    ListModel {
+        id: buttonsRowList1;
 
-       ListElement { label: ""; buttonType: "normal"; iconSource: "help1.png"; iconSourceHover: "help2.png"; }
-       ListElement { label: ""; buttonType: "normal"; iconSource: "backspace1.png"; iconSourceHover: "backspace2.png"; }
-       ListElement { label: "C"; buttonType: "normal"; iconSource: ""; iconSourceHover: ""; }
-       ListElement { label: "i"; buttonType: "operation"; iconSource: ""; iconSourceHover: ""; }
-       ListElement { label: "÷"; buttonType: "operation"; iconSource: ""; iconSourceHover: ""; }
-   }
+        ListElement { value: ""; label: ""; buttonType: "normal"; iconSource: "help1.png"; iconSourceHover: "help2.png"; }
+        ListElement { value: "BS"; label: ""; buttonType: "normal"; iconSource: "backspace1.png"; iconSourceHover: "backspace2.png"; }
+        ListElement { value: "C"; label: "C"; buttonType: "normal"; iconSource: ""; iconSourceHover: ""; }
+        ListElement { value: "i"; label: "i"; buttonType: "operation"; iconSource: ""; iconSourceHover: ""; }
+        ListElement { value: "/"; label: "÷"; buttonType: "operation"; iconSource: ""; iconSourceHover: ""; }
+    }
 
-   ListModel {
-       id: buttonsRowList2;
+    ListModel {
+        id: buttonsRowList2;
 
-       ListElement { label: "%"; buttonType: "operation"; }
-       ListElement { label: "7"; buttonType: "number"; }
-       ListElement { label: "8"; buttonType: "number"; }
-       ListElement { label: "9"; buttonType: "number"; }
-       ListElement { label: "*"; buttonType: "operation"; }
-   }
+        ListElement { value: "%"; label: "%"; buttonType: "operation"; }
+        ListElement { value: "7"; label: "7"; buttonType: "number"; }
+        ListElement { value: "8"; label: "8"; buttonType: "number"; }
+        ListElement { value: "9"; label: "9"; buttonType: "number"; }
+        ListElement { value: "*"; label: "*"; buttonType: "operation"; }
+    }
 
-   ListModel {
-       id: buttonsRowList3;
+    ListModel {
+        id: buttonsRowList3;
 
-       ListElement { label: "!"; buttonType: "operation"; }
-       ListElement { label: "4"; buttonType: "number"; }
-       ListElement { label: "5"; buttonType: "number"; }
-       ListElement { label: "6"; buttonType: "number"; }
-       ListElement { label: "-"; buttonType: "operation"; }
-   }
+        ListElement { value: "!"; label: "!"; buttonType: "operation"; }
+        ListElement { value: "4"; label: "4"; buttonType: "number"; }
+        ListElement { value: "5"; label: "5"; buttonType: "number"; }
+        ListElement { value: "6"; label: "6"; buttonType: "number"; }
+        ListElement { value: "-"; label: "-"; buttonType: "operation"; }
+    }
 
-   ListModel {
-       id: buttonsRowList4;
+    ListModel {
+        id: buttonsRowList4;
 
-       ListElement { label: "√"; buttonType: "operation"; }
-       ListElement { label: "1"; buttonType: "number"; }
-       ListElement { label: "2"; buttonType: "number"; }
-       ListElement { label: "3"; buttonType: "number"; }
-       ListElement { label: "+"; buttonType: "operation"; }
-   }
+        ListElement { value: "ROOT"; label: "√"; buttonType: "operation"; }
+        ListElement { value: "1"; label: "1"; buttonType: "number"; }
+        ListElement { value: "2"; label: "2"; buttonType: "number"; }
+        ListElement { value: "3"; label: "3"; buttonType: "number"; }
+        ListElement { value: "+"; label: "+"; buttonType: "operation"; }
+    }
 
-   ListModel {
-       id: buttonsRowList5;
+    ListModel {
+        id: buttonsRowList5;
 
-       ListElement { label: "xʸ"; buttonType: "operation"; }
-       ListElement { label: "±"; buttonType: "operation"; }
-       ListElement { label: "0"; buttonType: "number"; }
-       ListElement { label: ","; buttonType: "operation"; }
-       ListElement { label: "="; buttonType: "operation";}
-   }
+        ListElement { value: "^"; label: "xʸ"; buttonType: "operation"; }
+        ListElement { value: "NEG"; label: "±"; buttonType: "operation"; }
+        ListElement { value: "0"; label: "0"; buttonType: "number"; }
+        ListElement { value: "."; label: "."; buttonType: "operation"; }
+        ListElement { value: "="; label: "="; buttonType: "operation";}
+    }
 
     Rectangle {
         anchors.fill: parent;
@@ -146,6 +153,7 @@ Window {
                             model: buttonsRowList1;
 
                             delegate: Button {
+                                value: model.value;
                                 text: model.label;
                                 buttonWidth: buttonsRow1.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow1.height;
@@ -170,6 +178,7 @@ Window {
                             model: buttonsRowList2;
 
                             delegate: Button {
+                                value: model.value;
                                 text: model.label;
                                 buttonWidth: buttonsRow2.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow2.height;
@@ -192,6 +201,7 @@ Window {
                             model: buttonsRowList3;
 
                             delegate: Button {
+                                value: model.value;
                                 text: model.label;
                                 buttonWidth: buttonsRow3.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow3.height;
@@ -214,6 +224,7 @@ Window {
                             model: buttonsRowList4;
 
                             delegate: Button {
+                                value: model.value;
                                 text: model.label;
                                 buttonWidth: buttonsRow4.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow4.height;
@@ -236,6 +247,7 @@ Window {
                             model: buttonsRowList5;
 
                             delegate: Button {
+                                value: model.value;
                                 text: model.label;
                                 buttonWidth: buttonsRow5.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow5.height;
