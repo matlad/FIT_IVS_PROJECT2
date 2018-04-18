@@ -1,3 +1,10 @@
+/**
+ * @file     Button.qml
+ * @encoding UTF-8
+ * @date     18.4.18
+ * @author   Jiří Čechák <xcecha04@stud.fit.vutbr.cz>
+ */
+
 import QtQuick 2.0
 
 import "constants.js" as C
@@ -13,12 +20,14 @@ Rectangle {
     property alias text: buttonText.text;
     property string iconSource: "";
     property string iconSourceHover: "";
+    property string value: "";
 
     width: buttonWidth;
     height: buttonHeight;
     color: buttonMouseArea.containsMouse ? buttonHoverColor : buttonColor;
 
-    signal clicked();
+    signal clicked(string value);
+
 
     MouseArea {
         id: buttonMouseArea;
@@ -27,7 +36,7 @@ Rectangle {
         cursorShape: Qt.PointingHandCursor;
 
         onClicked: {
-            button.clicked();
+            button.clicked(value);
         }
     }
 
