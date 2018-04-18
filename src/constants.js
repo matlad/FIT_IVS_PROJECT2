@@ -1,3 +1,10 @@
+/**
+ * @file     constants.js
+ * @encoding UTF-8
+ * @date     18.4.18
+ * @author   Jiří Čechák <xcecha04@stud.fit.vutbr.cz>
+ */
+
 .pragma library
 
 var color_background = "#efefef";

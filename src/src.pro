@@ -8,10 +8,11 @@ QT_VERSION = 5
 
 QT       += core gui
 QT       += qml
+QT       += quick
 
 CONFIG += c++17
 
-#QMAKE_CXXFLAGS += -std=c++17
+QMAKE_CXXFLAGS += -std=c++17
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -31,9 +32,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp
+        main.cpp \
+    LexicalAnalyzer.cpp \
+    Lex.cpp \
+    Equation.cpp \
+    Interpret.cpp \
+    math/Number.cpp \
+    BackendManager.cpp \
+    SignalManager.cpp
 
-HEADERS +=
+HEADERS += \
+    ResultObserver.h \
+    LexIdentificationObserver.h \
+    LexicalAnalyzerException.h \
+    LexicalAnalyzer.h \
+    LexException.h \
+    Lex.h \
+    InterpretException.h \
+    Interpret.h \
+    EquationObserver.h \
+    Equation.h \
+    math/Number.h \
+    math/UndefinedException.h \
+    SignalManager.h
 
 FORMS +=
 
