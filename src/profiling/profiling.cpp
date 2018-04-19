@@ -1,3 +1,12 @@
+/**
+ * @file     profiling.cpp
+ * @encoding UTF-8
+ * @date     17.4.2018
+ * @author   Jacek Mitura <xmitur01@stud.fit.vutbr.cz>
+ *
+ * @brief    Implementace vyběrové směrodatné odchylky za účelem profilingu funkcí z matematické knihovny. Vypočte vyběrovou směrodatnou odchylku.
+ */
+
 #include <iostream>
 #include <fstream>
 #include <string>

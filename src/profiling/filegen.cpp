@@ -1,3 +1,12 @@
+/**
+ * @file     filegen.cpp
+ * @encoding UTF-8
+ * @date     14.4.2018
+ * @author   Jacek Mitura <xmitur01@stud.fit.vutbr.cz>
+ *
+ * @brief    Generator vstupního souboru pro profiling.cpp  
+ */
+
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
