@@ -1,0 +1,353 @@
+\hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer}{}\section{team22\+:\+:Calc\+:\+:Lexical\+Analyzer Class Reference}
+\label{classteam22_1_1_calc_1_1_lexical_analyzer}\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+
+
+{\ttfamily \#include $<$Lexical\+Analyzer.\+h$>$}
+
+
+
+Collaboration diagram for team22\+:\+:Calc\+:\+:Lexical\+Analyzer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classteam22_1_1_calc_1_1_lexical_analyzer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_af56c536f78c680bd635ac1173e65b492}{push\+Symbol} (char symbol)
+\item 
+void \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_ae7fb3f4ce9e6020215352c0c9e2b8245}{registr\+Lex\+Callback} (\hyperlink{classteam22_1_1_calc_1_1_lex_identification_observer}{Lex\+Identification\+Observer} $\ast$lex\+Callback\+Object)
+\item 
+void \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_a18ba04d046da0b11eec66fb2689ddfef}{process\+Number\+Symbol} (char symbol)
+\item 
+bool \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_a922bf14131d064fce52bf126e8d29839}{is\+Number\+Symbol} (char symbol) const
+\item 
+void \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_adf38772b29f998549aa532e8f380b4b2}{clear} ()
+\item 
+void \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_ab84b6b8f52056452cd52b8abdb9a3faa}{process\+Operator} (char symbol)
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3}{State} \{ \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3a862f179df5de529676972b3b95c52f86}{Number}, 
+\hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3ae2510b92e28892c94126aa4273470f78}{Operator}, 
+\hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3a11976214c837f23fd71b2af8b0de3d5b}{Init}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_afd6bb48e5de7f8490addc9b326bfeb49}{send\+Lex} (\hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} lex)
+\item 
+\hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_a451aa3e3ed6f150d5b24fae76cc93cb4}{get\+Char\+Lex} (char \hyperlink{_number_8cpp_a3a6c194a55c239306d07bbf83f5972e9}{c})
+\item 
+\hyperlink{classteam22_1_1_math_1_1_number}{Math\+::\+Number} \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_a689b52c49cd7c9e87dd468987472af83}{saved\+To\+Number} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3}{State} \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_ad0f4710b09bf91a00d11846a7ef036ab}{state} = \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3a11976214c837f23fd71b2af8b0de3d5b}{Init}
+\item 
+std\+::set$<$ \hyperlink{classteam22_1_1_calc_1_1_lex_identification_observer}{Lex\+Identification\+Observer} $\ast$ $>$ \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_ab8018dc24a6f4e188a901c83bbd9fdb1}{lex\+Callback\+Objects}
+\item 
+std\+::string \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_afd063de2c3d792b5688c863eb5135968}{saved} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Třída sloužící k lexikální analyze vstupů přebírá znaky pomocí fce \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_af56c536f78c680bd635ac1173e65b492}{push\+Symbol()} a ve chvíli identifikace lexému předá tento interpretu a pokud byl registrovaný volá callback kterému tento lexém předá. 
+
+Definition at line 26 of file Lexical\+Analyzer.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3}\label{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!State@{State}}
+\index{State@{State}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3}{team22\+::\+Calc\+::\+Lexical\+Analyzer\+::\+State}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Number@{Number}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!Number@{Number}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3a862f179df5de529676972b3b95c52f86}\label{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3a862f179df5de529676972b3b95c52f86}} 
+Number&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Operator@{Operator}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!Operator@{Operator}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3ae2510b92e28892c94126aa4273470f78}\label{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3ae2510b92e28892c94126aa4273470f78}} 
+Operator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Init@{Init}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!Init@{Init}}}\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3a11976214c837f23fd71b2af8b0de3d5b}\label{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3a11976214c837f23fd71b2af8b0de3d5b}} 
+Init&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 28 of file Lexical\+Analyzer.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_adf38772b29f998549aa532e8f380b4b2}\label{classteam22_1_1_calc_1_1_lexical_analyzer_adf38772b29f998549aa532e8f380b4b2}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!clear@{clear}}
+\index{clear@{clear}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void team22\+::\+Calc\+::\+Lexical\+Analyzer\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Vyresetuje lexikální analyzátor 
+
+Definition at line 167 of file Lexical\+Analyzer.\+cpp.
+
+
+
+References Init, saved, and state.
+
+
+
+Referenced by process\+Number\+Symbol(), process\+Operator(), and push\+Symbol().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_a451aa3e3ed6f150d5b24fae76cc93cb4}\label{classteam22_1_1_calc_1_1_lexical_analyzer_a451aa3e3ed6f150d5b24fae76cc93cb4}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!get\+Char\+Lex@{get\+Char\+Lex}}
+\index{get\+Char\+Lex@{get\+Char\+Lex}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{get\+Char\+Lex()}{getCharLex()}}
+{\footnotesize\ttfamily \hyperlink{classteam22_1_1_calc_1_1_lex}{Lex} team22\+::\+Calc\+::\+Lexical\+Analyzer\+::get\+Char\+Lex (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Vrací lexém daného znaku 
+\begin{DoxyParams}{Parameters}
+{\em c} & znak nebo číslice k převodu na lexém \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Lexical\+Analyzer.\+cpp.
+
+
+
+References team22\+::\+Calc\+::\+Lex\+::\+A\+DD, team22\+::\+Calc\+::\+Lex\+::\+C\+L\+E\+AR, team22\+::\+Calc\+::\+Lex\+::\+D\+IV, team22\+::\+Calc\+::\+Lex\+::\+E\+V\+AL, team22\+::\+Calc\+::\+Lex\+::\+E\+XP, team22\+::\+Calc\+::\+Lex\+::\+F\+A\+C\+T\+O\+R\+I\+AL, team22\+::\+Calc\+::\+Lex\+::\+M\+OD, team22\+::\+Calc\+::\+Lex\+::\+M\+UL, and team22\+::\+Calc\+::\+Lex\+::\+S\+UB.
+
+
+
+Referenced by push\+Symbol().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_a922bf14131d064fce52bf126e8d29839}\label{classteam22_1_1_calc_1_1_lexical_analyzer_a922bf14131d064fce52bf126e8d29839}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!is\+Number\+Symbol@{is\+Number\+Symbol}}
+\index{is\+Number\+Symbol@{is\+Number\+Symbol}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{is\+Number\+Symbol()}{isNumberSymbol()}}
+{\footnotesize\ttfamily bool team22\+::\+Calc\+::\+Lexical\+Analyzer\+::is\+Number\+Symbol (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption}) const}
+
+Jedná se o symbol tvořící číslo tedy číslice, . nebo i 
+\begin{DoxyParams}{Parameters}
+{\em symbol} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 138 of file Lexical\+Analyzer.\+cpp.
+
+
+
+Referenced by push\+Symbol().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_a18ba04d046da0b11eec66fb2689ddfef}\label{classteam22_1_1_calc_1_1_lexical_analyzer_a18ba04d046da0b11eec66fb2689ddfef}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!process\+Number\+Symbol@{process\+Number\+Symbol}}
+\index{process\+Number\+Symbol@{process\+Number\+Symbol}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{process\+Number\+Symbol()}{processNumberSymbol()}}
+{\footnotesize\ttfamily void team22\+::\+Calc\+::\+Lexical\+Analyzer\+::process\+Number\+Symbol (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption})}
+
+Zpracuje uložený řetězec saved a vrátí jej jako číslo 
+\begin{DoxyParams}{Parameters}
+{\em symbol} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 148 of file Lexical\+Analyzer.\+cpp.
+
+
+
+References clear(), Init, Number, saved, saved\+To\+Number(), send\+Lex(), and state.
+
+
+
+Referenced by push\+Symbol().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_ab84b6b8f52056452cd52b8abdb9a3faa}\label{classteam22_1_1_calc_1_1_lexical_analyzer_ab84b6b8f52056452cd52b8abdb9a3faa}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!process\+Operator@{process\+Operator}}
+\index{process\+Operator@{process\+Operator}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{process\+Operator()}{processOperator()}}
+{\footnotesize\ttfamily void team22\+::\+Calc\+::\+Lexical\+Analyzer\+::process\+Operator (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption})}
+
+Zpracuje výceznakový operátor 
+\begin{DoxyParams}{Parameters}
+{\em symbol} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 80 of file Lexical\+Analyzer.\+cpp.
+
+
+
+References team22\+::\+Calc\+::\+Lex\+::\+BS, clear(), team22\+::\+Calc\+::\+Lex\+::\+N\+EG, Operator, team22\+::\+Calc\+::\+Lex\+::\+R\+O\+OT, saved, send\+Lex(), and state.
+
+
+
+Referenced by push\+Symbol().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_af56c536f78c680bd635ac1173e65b492}\label{classteam22_1_1_calc_1_1_lexical_analyzer_af56c536f78c680bd635ac1173e65b492}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!push\+Symbol@{push\+Symbol}}
+\index{push\+Symbol@{push\+Symbol}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{push\+Symbol()}{pushSymbol()}}
+{\footnotesize\ttfamily void team22\+::\+Calc\+::\+Lexical\+Analyzer\+::push\+Symbol (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption})}
+
+Předá znak k analýze 
+\begin{DoxyParams}{Parameters}
+{\em symbol} & symbol abecedy přijímané lexikálním analyzátorem \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Lexical\+Analyser\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 61 of file Lexical\+Analyzer.\+cpp.
+
+
+
+References clear(), get\+Char\+Lex(), is\+Number\+Symbol(), Number, process\+Number\+Symbol(), process\+Operator(), saved\+To\+Number(), send\+Lex(), and state.
+
+
+
+Referenced by team22\+::\+Calc\+::\+Equation\+::back\+Space(), and team22\+::\+Calc\+::\+Equation\+::push\+Symbol().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_ae7fb3f4ce9e6020215352c0c9e2b8245}\label{classteam22_1_1_calc_1_1_lexical_analyzer_ae7fb3f4ce9e6020215352c0c9e2b8245}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!registr\+Lex\+Callback@{registr\+Lex\+Callback}}
+\index{registr\+Lex\+Callback@{registr\+Lex\+Callback}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{registr\+Lex\+Callback()}{registrLexCallback()}}
+{\footnotesize\ttfamily void team22\+::\+Calc\+::\+Lexical\+Analyzer\+::registr\+Lex\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{classteam22_1_1_calc_1_1_lex_identification_observer}{Lex\+Identification\+Observer} $\ast$}]{lex\+Callback\+Object }\end{DoxyParamCaption})}
+
+Registruje objekt k odběru rozeznaných lexémů vícenásobná registrace stejné instance odběratele neprovede nic
+
+
+\begin{DoxyParams}{Parameters}
+{\em lex\+Callback\+Object} & objekt na němž \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 143 of file Lexical\+Analyzer.\+cpp.
+
+
+
+References lex\+Callback\+Objects.
+
+
+
+Referenced by Backend\+Tester\+::\+Backend\+Tester(), team22\+::\+Calc\+::\+Equation\+::\+Equation(), and Lexical\+Analyzer\+Test\+Base\+::\+Lexical\+Analyzer\+Test\+Base().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_a689b52c49cd7c9e87dd468987472af83}\label{classteam22_1_1_calc_1_1_lexical_analyzer_a689b52c49cd7c9e87dd468987472af83}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!saved\+To\+Number@{saved\+To\+Number}}
+\index{saved\+To\+Number@{saved\+To\+Number}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{saved\+To\+Number()}{savedToNumber()}}
+{\footnotesize\ttfamily \hyperlink{classteam22_1_1_math_1_1_number}{Math\+::\+Number} team22\+::\+Calc\+::\+Lexical\+Analyzer\+::saved\+To\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Vrací číslo typu double převedené z textového řetězce 
+\begin{DoxyParams}{Parameters}
+{\em s} & textový řetězec pro převod \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file Lexical\+Analyzer.\+cpp.
+
+
+
+References saved.
+
+
+
+Referenced by process\+Number\+Symbol(), and push\+Symbol().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_afd6bb48e5de7f8490addc9b326bfeb49}\label{classteam22_1_1_calc_1_1_lexical_analyzer_afd6bb48e5de7f8490addc9b326bfeb49}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!send\+Lex@{send\+Lex}}
+\index{send\+Lex@{send\+Lex}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{send\+Lex()}{sendLex()}}
+{\footnotesize\ttfamily void team22\+::\+Calc\+::\+Lexical\+Analyzer\+::send\+Lex (\begin{DoxyParamCaption}\item[{\hyperlink{classteam22_1_1_calc_1_1_lex}{Lex}}]{lex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Předá lexém všem registrovaným objektům 
+\begin{DoxyParams}{Parameters}
+{\em lex} & lexém k předání \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Lexical\+Analyzer.\+cpp.
+
+
+
+References lex\+Callback\+Objects.
+
+
+
+Referenced by process\+Number\+Symbol(), process\+Operator(), and push\+Symbol().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_ab8018dc24a6f4e188a901c83bbd9fdb1}\label{classteam22_1_1_calc_1_1_lexical_analyzer_ab8018dc24a6f4e188a901c83bbd9fdb1}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!lex\+Callback\+Objects@{lex\+Callback\+Objects}}
+\index{lex\+Callback\+Objects@{lex\+Callback\+Objects}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{lex\+Callback\+Objects}{lexCallbackObjects}}
+{\footnotesize\ttfamily std\+::set$<$\hyperlink{classteam22_1_1_calc_1_1_lex_identification_observer}{Lex\+Identification\+Observer} $\ast$$>$ team22\+::\+Calc\+::\+Lexical\+Analyzer\+::lex\+Callback\+Objects\hspace{0.3cm}{\ttfamily [private]}}
+
+Množina Objektů na nichž bude volán callback při rozeznání lexemů 
+
+Definition at line 39 of file Lexical\+Analyzer.\+h.
+
+
+
+Referenced by registr\+Lex\+Callback(), and send\+Lex().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_afd063de2c3d792b5688c863eb5135968}\label{classteam22_1_1_calc_1_1_lexical_analyzer_afd063de2c3d792b5688c863eb5135968}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!saved@{saved}}
+\index{saved@{saved}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{saved}{saved}}
+{\footnotesize\ttfamily std\+::string team22\+::\+Calc\+::\+Lexical\+Analyzer\+::saved = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+Řetězec, který obsahuje znaky, které ještě nebyly rozeznány jako lexém 
+
+Definition at line 44 of file Lexical\+Analyzer.\+h.
+
+
+
+Referenced by clear(), process\+Number\+Symbol(), process\+Operator(), and saved\+To\+Number().
+
+\mbox{\Hypertarget{classteam22_1_1_calc_1_1_lexical_analyzer_ad0f4710b09bf91a00d11846a7ef036ab}\label{classteam22_1_1_calc_1_1_lexical_analyzer_ad0f4710b09bf91a00d11846a7ef036ab}} 
+\index{team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}!state@{state}}
+\index{state@{state}!team22\+::\+Calc\+::\+Lexical\+Analyzer@{team22\+::\+Calc\+::\+Lexical\+Analyzer}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3}{State} team22\+::\+Calc\+::\+Lexical\+Analyzer\+::state = \hyperlink{classteam22_1_1_calc_1_1_lexical_analyzer_aef11ba66454715a80d5964c07f6d8cc3a11976214c837f23fd71b2af8b0de3d5b}{Init}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file Lexical\+Analyzer.\+h.
+
+
+
+Referenced by clear(), process\+Number\+Symbol(), process\+Operator(), and push\+Symbol().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_lexical_analyzer_8h}{Lexical\+Analyzer.\+h}\item 
+src/\hyperlink{_lexical_analyzer_8cpp}{Lexical\+Analyzer.\+cpp}\end{DoxyCompactItemize}
