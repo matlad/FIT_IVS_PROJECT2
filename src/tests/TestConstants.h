@@ -1,5 +1,5 @@
 /**
- * @file     TestConstants.h
+ * @file     TestContants.h
  * @encoding UTF-8
  * @date     15.4.18
  * @author   Adam Mátl <xmatla00@stud.fit.vutbr.cz> <matla@matla.cz>

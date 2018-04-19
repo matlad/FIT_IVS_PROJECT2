@@ -55,7 +55,7 @@ class Interpret: public LexIdentificationObserver
     /**
      * Předá informaci o změně výsledků pozorovatelům
      */
-    void notifyAboutError(InterpretException exception);
+    void notifyAboutError();
 
 public:
     /**
@@ -77,6 +77,12 @@ public:
      * @param lex
      */
     void sendIdentifiedLex(Lex lex) override;
+
+private:
+    Math::Number result = Math::Number(0);		//Uchovává výsledek
+    Lex::Operator oper;							//Uchovává operaci
+    bool unprocessedOperator = false;			//True pokud binární operátor čeká na druhý operand 
+    bool unprocessedNumber = false;				//True pokud číslo čeká na operátor
 };
 }
 

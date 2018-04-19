@@ -8,7 +8,7 @@
 
 #include "../Equation.h"
 #include "../math/Number.h"
-#include "TestContants.h"
+#include "TestConstants.h"
 #include <gtest/gtest.h>
 #include <string>
 

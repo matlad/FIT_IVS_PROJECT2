@@ -10,7 +10,8 @@
 #include "../math/Number.h"
 #include "../Lex.h"
 #include "../Interpret.h"
-#include "TestContants.h"
+#include "TestConstants.h"
+
 
 using std::vector;
 using std::string;
@@ -94,7 +95,7 @@ TEST_P(InterpretTest, def)
         EXPECT_EQ(nullptr,error);
     }
 
-    T22_NUMBER_EXPECT_NEAR(GetParam().result, result, DELTA);
+    T22_NUMBER_EXPECT_NEAR(GetParam().result, result, DELTA_CF);
 }
 
 TEST_F(InterpretTest, clear_1)
@@ -178,7 +179,7 @@ TEST_F(InterpretTest, bs_2)
     interpret.sendIdentifiedLex(Number(5));
     T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
-    T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
+    T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
@@ -223,7 +224,7 @@ TEST_F(InterpretTest, AddStartWithNumber)
     interpret.sendIdentifiedLex(Lex::ADD);
     T22_NUMBER_EXPECT_NEAR(Number(9), result, DELTA);
     interpret.sendIdentifiedLex(Number(3));
-    T22_NUMBER_EXPECT_NEAR(Number(13), result, DELTA);
+    T22_NUMBER_EXPECT_NEAR(Number(12), result, DELTA);
     EXPECT_EQ(nullptr,error);
 }
 
