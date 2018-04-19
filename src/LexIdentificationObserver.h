@@ -9,7 +9,7 @@
 
 #include "Lex.h"
 
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 
 class LexIdentificationObserver
@@ -17,6 +17,6 @@ class LexIdentificationObserver
 public:
     virtual void sendIdentifiedLex(Lex lex) = 0;
 };
-}
+}}
 
 #endif //FIT_IVS_PROJECT2_LEXCALLBACKINTERFACE_H

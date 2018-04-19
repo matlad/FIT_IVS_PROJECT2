@@ -15,7 +15,7 @@
 #include <complex>
 #include <iostream>
 
-namespace team22::Math
+namespace team22 { namespace Math
 {
 
 /**
@@ -197,6 +197,6 @@ public:
 
 };
 
-};
+};};
 
 #endif //FIT_IVS_PROJECT2_NUMBER_H

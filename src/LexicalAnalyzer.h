@@ -16,7 +16,7 @@
 #include "LexIdentificationObserver.h"
 #include "LexicalAnalyzerException.h"
 
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 /**
  *  Třída sloužící k lexikální analyze vstupů
@@ -102,6 +102,6 @@ public:
      */
     void processOperator(char symbol);
 };
-}
+}}
 
 #endif //FIT_IVS_PROJECT2_LEXICALANALYZER_H

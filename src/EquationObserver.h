@@ -7,13 +7,13 @@
 #ifndef FIT_IVS_PROJECT2_EQUATIONOBSERVER_H
 #define FIT_IVS_PROJECT2_EQUATIONOBSERVER_H
 
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 class EquationObserver
 {
 public:
     virtual void onEquationChange() = 0;
 };
-}
+}}
 
 #endif //FIT_IVS_PROJECT2_EQUATIONOBSERVER_H

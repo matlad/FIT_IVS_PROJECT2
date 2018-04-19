@@ -9,7 +9,7 @@
 #include <ostream>
 #include "math/Number.h"
 
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 
 /**
@@ -128,6 +128,6 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const Lex &lex);
     friend std::stringstream &operator<<(std::stringstream &os, const Lex &lex);
 };
-}
+}}
 
 #endif //FIT_IVS_PROJECT2_LEX_H

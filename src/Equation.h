@@ -15,7 +15,7 @@
 #include <sstream>
 #include <ostream>
 
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
     /**
      * @brief Třída reprezentující rovnici
@@ -137,6 +137,6 @@ namespace team22::Calc
     };
 
 
-}
+}}
 
 #endif //FIT_IVS_PROJECT2_EQUATION_H

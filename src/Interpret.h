@@ -12,7 +12,7 @@
 #include "Lex.h"
 #include "ResultObserver.h"
 #include "math/Number.h"
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 /**
  * Po přijetí min počtu lexemů pro interpretaci je interpretace provedena
@@ -78,7 +78,7 @@ public:
      */
     void sendIdentifiedLex(Lex lex) override;
 };
-}
+}}
 
 
 #endif //FIT_IVS_PROJECT2_INTERPRET_H
