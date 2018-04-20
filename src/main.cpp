@@ -8,8 +8,6 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QtQml>
-#include <QQuickView>
-#include <QObject>
 
 #include "SignalManager.h"
 

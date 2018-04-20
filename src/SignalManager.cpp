@@ -46,9 +46,20 @@ void SignalManager::onButtonClick(const QString &value)
 {
     string convertedValue = value.toUtf8().constData();
 
-    for (unsigned int i = 0; i < convertedValue.length(); i++)
+    if (convertedValue == "H")
     {
-        equation.pushSymbol(convertedValue[i]);
+        /*
+        QWidget window;
+        window.resize(300, 300);
+        window.show();
+        window.setWindowTitle(
+                    QApplication::translate("toplevel", "Nápověda"));
+*/
+} else {
+        for (unsigned int i = 0; i < convertedValue.length(); i++)
+        {
+            equation.pushSymbol(convertedValue[i]);
+        }
     }
 }
 
