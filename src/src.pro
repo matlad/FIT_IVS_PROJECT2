@@ -10,6 +10,7 @@ QT       += core gui
 QT       += qml
 QT       += quick
 
+CONFIG += console
 CONFIG += c++17
 
 QMAKE_CXXFLAGS += -std=c++17

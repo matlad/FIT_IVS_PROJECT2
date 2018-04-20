@@ -20,24 +20,19 @@ Rectangle {
     property alias text: buttonText.text;
     property string iconSource: "";
     property string iconSourceHover: "";
-    property string value: "";
 
     width: buttonWidth;
     height: buttonHeight;
     color: buttonMouseArea.containsMouse ? buttonHoverColor : buttonColor;
 
-    signal clicked(string value);
-
+    signal clicked();
 
     MouseArea {
         id: buttonMouseArea;
         anchors.fill: parent;
         hoverEnabled: true;
         cursorShape: Qt.PointingHandCursor;
-
-        onClicked: {
-            button.clicked(value);
-        }
+        onClicked: button.clicked();
     }
 
     Image {

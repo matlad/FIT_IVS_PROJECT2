@@ -17,13 +17,9 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    qmlRegisterType<SignalManager>("cz.vutbr.fit.team22", 1, 0, "SignalManager");
+
     QQmlApplicationEngine engine(QUrl("qrc:///main.qml"));
-
-    QQuickView view(QUrl::fromLocalFile("Button.qml"));
-    QObject *button = (QObject *)view.rootObject();
-
-    SignalManager signalManager;
-    QObject::connect(button, SIGNAL(clicked(QString)), &signalManager, SLOT(onButtonClick(QString)));
 
     return a.exec();
 }

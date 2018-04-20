@@ -7,6 +7,7 @@
 
 import QtQuick 2.0
 import QtQuick.Window 2.2
+import cz.vutbr.fit.team22 1.0
 
 import "constants.js" as C
 
@@ -29,7 +30,7 @@ Window {
     ListModel {
         id: buttonsRowList1;
 
-        ListElement { value: ""; label: ""; buttonType: "normal"; iconSource: "help1.png"; iconSourceHover: "help2.png"; }
+        ListElement { value: "H"; label: ""; buttonType: "normal"; iconSource: "help1.png"; iconSourceHover: "help2.png"; }
         ListElement { value: "BS"; label: ""; buttonType: "normal"; iconSource: "backspace1.png"; iconSourceHover: "backspace2.png"; }
         ListElement { value: "C"; label: "C"; buttonType: "normal"; iconSource: ""; iconSourceHover: ""; }
         ListElement { value: "i"; label: "i"; buttonType: "operation"; iconSource: ""; iconSourceHover: ""; }
@@ -153,17 +154,13 @@ Window {
                             model: buttonsRowList1;
 
                             delegate: Button {
-                                value: model.value;
+                                onClicked: signalManager.onButtonClick(model.value);
                                 text: model.label;
                                 buttonWidth: buttonsRow1.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow1.height;
                                 iconSource: model.iconSource;
                                 iconSourceHover: model.iconSourceHover;
                                 buttonColor: model.buttonType === "number" ? window.colorNumberButton : model.buttonType === "operation" ? window.colorOperationButton : window.colorButton;
-
-                                onClicked: {
-
-                                }
                             }
                         }
                     }
@@ -178,15 +175,11 @@ Window {
                             model: buttonsRowList2;
 
                             delegate: Button {
-                                value: model.value;
+                                onClicked: signalManager.onButtonClick(model.value);
                                 text: model.label;
                                 buttonWidth: buttonsRow2.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow2.height;
                                 buttonColor: model.buttonType === "number" ? window.colorNumberButton : model.buttonType === "operation" ? window.colorOperationButton : window.colorButton;
-
-                                onClicked: {
-
-                                }
                             }
                         }
                     }
@@ -201,15 +194,11 @@ Window {
                             model: buttonsRowList3;
 
                             delegate: Button {
-                                value: model.value;
+                                onClicked: signalManager.onButtonClick(model.value);
                                 text: model.label;
                                 buttonWidth: buttonsRow3.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow3.height;
                                 buttonColor: model.buttonType === "number" ? window.colorNumberButton : model.buttonType === "operation" ? window.colorOperationButton : window.colorButton;
-
-                                onClicked: {
-
-                                }
                             }
                         }
                     }
@@ -224,15 +213,11 @@ Window {
                             model: buttonsRowList4;
 
                             delegate: Button {
-                                value: model.value;
+                                onClicked: signalManager.onButtonClick(model.value);
                                 text: model.label;
                                 buttonWidth: buttonsRow4.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow4.height;
                                 buttonColor: model.buttonType === "number" ? window.colorNumberButton : model.buttonType === "operation" ? window.colorOperationButton : window.colorButton;
-
-                                onClicked: {
-
-                                }
                             }
                         }
                     }
@@ -247,20 +232,20 @@ Window {
                             model: buttonsRowList5;
 
                             delegate: Button {
-                                value: model.value;
+                                onClicked: signalManager.onButtonClick(model.value);
                                 text: model.label;
                                 buttonWidth: buttonsRow5.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow5.height;
                                 buttonColor: model.buttonType === "number" ? window.colorNumberButton : model.buttonType === "operation" ? window.colorOperationButton : window.colorButton;
-
-                                onClicked: {
-
-                                }
                             }
                         }
                     }
                 }
             }
         }
+    }
+
+    SignalManager {
+        id: signalManager;
     }
 }

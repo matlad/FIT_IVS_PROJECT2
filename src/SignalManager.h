@@ -19,10 +19,9 @@ class SignalManager : public QObject
 public:
     BackendManager backendManager;
 
-    SignalManager();
+    explicit SignalManager(QObject *parent = 0);
 
-public slots:
-    void onButtonClick(const QString &value);
+    Q_INVOKABLE void onButtonClick(const QString &value);
 };
 
 #endif // SIGNALMANAGER_H
