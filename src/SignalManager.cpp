@@ -8,18 +8,59 @@
 #include <iostream>
 #include "SignalManager.h"
 
-SignalManager::SignalManager(QObject *parent) : QObject(parent)
+SignalManager::SignalManager(QObject *parent) : QObject(parent), equation(lexicalAnalyzer, interpret)
 {
+    lexicalAnalyzer.registrLexCallback(&interpret);
+    interpret.registrResultCallback(this);
+    equation.registrEquationObserver(this);
+    strEquation.str("0");
+}
+
+void SignalManager::onEquationChange()
+{
+    strEquation.str("");
+    strEquation << equation;
+
+    if (strEquation.str().empty())
+    {
+        strEquation.str("0");
+    }
+}
+
+void SignalManager::onError(InterpretException exception)
+{
+    error = new InterpretException(exception);
+}
+
+void SignalManager::onResultChange(team22::Math::Number result)
+{
+    this->result = result;
+}
+
+SignalManager::~SignalManager()
+{
+    delete error;
 }
 
 void SignalManager::onButtonClick(const QString &value)
 {
     string convertedValue = value.toUtf8().constData();
 
-    //std::cout << convertedValue << std::endl;
-
     for (unsigned int i = 0; i < convertedValue.length(); i++)
     {
-        backendManager.equation.pushSymbol(convertedValue[i]);
+        equation.pushSymbol(convertedValue[i]);
     }
+}
+
+QString SignalManager::getEquation()
+{
+    return QString::fromStdString(strEquation.str());
+}
+
+QString SignalManager::getResult()
+{
+    std::ostringstream stream;
+    stream << result.getReal();
+
+    return QString::fromStdString(stream.str());
 }

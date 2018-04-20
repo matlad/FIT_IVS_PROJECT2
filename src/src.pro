@@ -39,7 +39,6 @@ SOURCES += \
     Equation.cpp \
     Interpret.cpp \
     math/Number.cpp \
-    BackendManager.cpp \
     SignalManager.cpp
 
 HEADERS += \

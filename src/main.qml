@@ -109,6 +109,7 @@ Window {
                             color: display.color;
 
                             Text {
+                                id: resultText;
                                 anchors.fill: parent;
                                 horizontalAlignment: TextInput.AlignRight;
                                 verticalAlignment: TextInput.AlignVCenter;
@@ -117,7 +118,7 @@ Window {
                                 color: window.colorDisplayText;
                                 fontSizeMode: Text.Fit;
                                 clip: true;
-                                text: "0";
+                                text: signalManager.getResult();
                             }
                         }
 
@@ -127,13 +128,14 @@ Window {
                             color: display.color;
 
                             Text {
+                                id: equationText;
                                 anchors.fill: parent;
                                 horizontalAlignment: TextInput.AlignRight;
                                 verticalAlignment: TextInput.AlignVCenter;
                                 font.pointSize: parent.height * 0.7;
                                 color: window.colorDisplayText;
                                 clip: true;
-                                text: "0";
+                                text: signalManager.getEquation();
                             }
                         }
                     }
@@ -154,7 +156,11 @@ Window {
                             model: buttonsRowList1;
 
                             delegate: Button {
-                                onClicked: signalManager.onButtonClick(model.value);
+                                onClicked: {
+                                    signalManager.onButtonClick(model.value);
+                                    equationText.text = signalManager.getEquation();
+                                    resultText.text = signalManager.getResult();
+                                }
                                 text: model.label;
                                 buttonWidth: buttonsRow1.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow1.height;
@@ -175,7 +181,11 @@ Window {
                             model: buttonsRowList2;
 
                             delegate: Button {
-                                onClicked: signalManager.onButtonClick(model.value);
+                                onClicked: {
+                                    signalManager.onButtonClick(model.value);
+                                    equationText.text = signalManager.getEquation();
+                                    resultText.text = signalManager.getResult();
+                                }
                                 text: model.label;
                                 buttonWidth: buttonsRow2.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow2.height;
@@ -194,7 +204,11 @@ Window {
                             model: buttonsRowList3;
 
                             delegate: Button {
-                                onClicked: signalManager.onButtonClick(model.value);
+                                onClicked: {
+                                    signalManager.onButtonClick(model.value);
+                                    equationText.text = signalManager.getEquation();
+                                    resultText.text = signalManager.getResult();
+                                }
                                 text: model.label;
                                 buttonWidth: buttonsRow3.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow3.height;
@@ -213,7 +227,11 @@ Window {
                             model: buttonsRowList4;
 
                             delegate: Button {
-                                onClicked: signalManager.onButtonClick(model.value);
+                                onClicked: {
+                                    signalManager.onButtonClick(model.value);
+                                    equationText.text = signalManager.getEquation();
+                                    resultText.text = signalManager.getResult();
+                                }
                                 text: model.label;
                                 buttonWidth: buttonsRow4.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow4.height;
@@ -232,7 +250,11 @@ Window {
                             model: buttonsRowList5;
 
                             delegate: Button {
-                                onClicked: signalManager.onButtonClick(model.value);
+                                onClicked: {
+                                    signalManager.onButtonClick(model.value);
+                                    equationText.text = signalManager.getEquation();
+                                    resultText.text = signalManager.getResult();
+                                }
                                 text: model.label;
                                 buttonWidth: buttonsRow5.width / 5 - 4 * window.spacingSize / 5;
                                 buttonHeight: buttonsRow5.height;

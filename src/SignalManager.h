@@ -11,17 +11,35 @@
 #include <QObject>
 #include <string>
 
-#include "BackendManager.cpp"
+#include "Equation.h"
+#include "math/Number.h"
 
-class SignalManager : public QObject
+using std::stringstream;
+using std::string;
+
+using namespace team22::Calc;
+using team22::Math::Number;
+
+class SignalManager : public QObject, ResultObserver, EquationObserver
 {
     Q_OBJECT
 public:
-    BackendManager backendManager;
+    Interpret interpret;
+    LexicalAnalyzer lexicalAnalyzer;
+    Equation equation;
+    stringstream strEquation;
+    InterpretException *error = nullptr;
+    Number result = {0};
 
     explicit SignalManager(QObject *parent = 0);
+    ~SignalManager();
 
     Q_INVOKABLE void onButtonClick(const QString &value);
+    void onEquationChange();
+    void onError(InterpretException exception);
+    void onResultChange(team22::Math::Number result);
+    Q_INVOKABLE QString getEquation();
+    Q_INVOKABLE QString getResult();
 };
 
 #endif // SIGNALMANAGER_H
