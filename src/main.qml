@@ -283,5 +283,13 @@ Item {
         minimumWidth: 420
         minimumHeight: 420
         title: "Nápověda"
+
+        Image {
+            anchors.fill: parent;
+            fillMode: Image.PreserveAspectFit;
+            horizontalAlignment: Image.AlignHCenter;
+            verticalAlignment: Image.AlignVCenter;
+            source: "Napoveda.png";
+        }
     }
 }

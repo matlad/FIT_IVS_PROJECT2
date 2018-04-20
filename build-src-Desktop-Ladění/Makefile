@@ -365,6 +365,7 @@ compiler_rcc_clean:
 qrc_qml.cpp: ../src/qml.qrc \
 		../src/Button.qml \
 		../src/help1.png \
+		../src/Napoveda.png \
 		../src/constants.js \
 		../src/backspace2.png \
 		../src/help2.png \
