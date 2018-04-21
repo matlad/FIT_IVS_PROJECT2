@@ -17,6 +17,9 @@ Item {
         property string colorDisplay: C.color_display;
         property string colorDisplayBorder: C.color_display_border;
         property string colorDisplayText: C.color_display_text;
+        property string colorDisplayError: C.color_display_error;
+        property string colorDisplayErrorBorder: C.color_display_error_border;
+        property string colorDisplayErrorText: C.color_display_error_text;
         property string colorButton: C.color_button;
         property string colorNumberButton: C.color_number_button;
         property string colorOperationButton: C.color_operation_button;
@@ -158,12 +161,32 @@ Item {
 
                                 delegate: Button {
                                     onClicked: {
-                                        if (model.value === "H") {
+                                        signalManager.clearError();
+
+                                        if (model.value === "H")
+                                        {
                                             helpWindow.visible = true;
-                                        } else {
+                                        }
+                                        else
+                                        {
                                             signalManager.onButtonClick(model.value);
                                             equationText.text = signalManager.getEquation();
                                             resultText.text = signalManager.getResult();
+
+                                            if (signalManager.getError())
+                                            {
+                                                display.color = window.colorDisplayError;
+                                                display.border.color = window.colorDisplayErrorBorder;
+                                                resultText.color = window.colorDisplayErrorText;
+                                                equationText.color = window.colorDisplayErrorText;
+                                            }
+                                            else
+                                            {
+                                                display.color = window.colorDisplay;
+                                                display.border.color = window.colorDisplayBorder;
+                                                resultText.color = window.colorDisplayText;
+                                                equationText.color = window.colorDisplayText;
+                                            }
                                         }
                                     }
                                     text: model.label;
@@ -187,9 +210,26 @@ Item {
 
                                 delegate: Button {
                                     onClicked: {
+                                        signalManager.clearError();
+
                                         signalManager.onButtonClick(model.value);
                                         equationText.text = signalManager.getEquation();
                                         resultText.text = signalManager.getResult();
+
+                                        if (signalManager.getError())
+                                        {
+                                            display.color = window.colorDisplayError;
+                                            display.border.color = window.colorDisplayErrorBorder;
+                                            resultText.color = window.colorDisplayErrorText;
+                                            equationText.color = window.colorDisplayErrorText;
+                                        }
+                                        else
+                                        {
+                                            display.color = window.colorDisplay;
+                                            display.border.color = window.colorDisplayBorder;
+                                            resultText.color = window.colorDisplayText;
+                                            equationText.color = window.colorDisplayText;
+                                        }
                                     }
                                     text: model.label;
                                     buttonWidth: buttonsRow2.width / 5 - 4 * window.spacingSize / 5;
@@ -210,9 +250,26 @@ Item {
 
                                 delegate: Button {
                                     onClicked: {
+                                        signalManager.clearError();
+
                                         signalManager.onButtonClick(model.value);
                                         equationText.text = signalManager.getEquation();
                                         resultText.text = signalManager.getResult();
+
+                                        if (signalManager.getError())
+                                        {
+                                            display.color = window.colorDisplayError;
+                                            display.border.color = window.colorDisplayErrorBorder;
+                                            resultText.color = window.colorDisplayErrorText;
+                                            equationText.color = window.colorDisplayErrorText;
+                                        }
+                                        else
+                                        {
+                                            display.color = window.colorDisplay;
+                                            display.border.color = window.colorDisplayBorder;
+                                            resultText.color = window.colorDisplayText;
+                                            equationText.color = window.colorDisplayText;
+                                        }
                                     }
                                     text: model.label;
                                     buttonWidth: buttonsRow3.width / 5 - 4 * window.spacingSize / 5;
@@ -233,9 +290,26 @@ Item {
 
                                 delegate: Button {
                                     onClicked: {
+                                        signalManager.clearError();
+
                                         signalManager.onButtonClick(model.value);
                                         equationText.text = signalManager.getEquation();
                                         resultText.text = signalManager.getResult();
+
+                                        if (signalManager.getError())
+                                        {
+                                            display.color = window.colorDisplayError;
+                                            display.border.color = window.colorDisplayErrorBorder;
+                                            resultText.color = window.colorDisplayErrorText;
+                                            equationText.color = window.colorDisplayErrorText;
+                                        }
+                                        else
+                                        {
+                                            display.color = window.colorDisplay;
+                                            display.border.color = window.colorDisplayBorder;
+                                            resultText.color = window.colorDisplayText;
+                                            equationText.color = window.colorDisplayText;
+                                        }
                                     }
                                     text: model.label;
                                     buttonWidth: buttonsRow4.width / 5 - 4 * window.spacingSize / 5;
@@ -256,9 +330,26 @@ Item {
 
                                 delegate: Button {
                                     onClicked: {
+                                        signalManager.clearError();
+
                                         signalManager.onButtonClick(model.value);
                                         equationText.text = signalManager.getEquation();
                                         resultText.text = signalManager.getResult();
+
+                                        if (signalManager.getError())
+                                        {
+                                            display.color = window.colorDisplayError;
+                                            display.border.color = window.colorDisplayErrorBorder;
+                                            resultText.color = window.colorDisplayErrorText;
+                                            equationText.color = window.colorDisplayErrorText;
+                                        }
+                                        else
+                                        {
+                                            display.color = window.colorDisplay;
+                                            display.border.color = window.colorDisplayBorder;
+                                            resultText.color = window.colorDisplayText;
+                                            equationText.color = window.colorDisplayText;
+                                        }
                                     }
                                     text: model.label;
                                     buttonWidth: buttonsRow5.width / 5 - 4 * window.spacingSize / 5;
