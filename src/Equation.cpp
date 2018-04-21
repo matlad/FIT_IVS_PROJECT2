@@ -58,11 +58,22 @@ void Equation::backSpace()
     // Vycházíme s toho, že aby mohl bý identifikovaný lexem BS
     // veškerá rozpracovaná čísla už jsou identifikována a tudíž nas nemusí zajímat numberBuffer.
 
-    if(data.empty())
+    if(data.empty() && lastResult == Math::Number(0))
         return;
 
-    auto last = data.back();
-    data.pop_back();
+    Lex * last;
+
+    if(data.empty())
+    {
+        last = new Lex(lastResult);
+    }
+    else
+    {
+        last = data.back();
+        data.pop_back();
+    }
+
+	interpret->clear();
 
     // Pokud je poslední lexém číslo Nechceme odstranit cele číslo ale jen číslici
     // To provedeme tak že lexem odebraný z konce rovnice převedeme na řetězec a
@@ -117,7 +128,7 @@ void Equation::pushLex(Lex *lex)
 
 void Equation::onResultChange(Math::Number result)
 {
-    lastResult = result;
+    lastResult = Math::Number(result.getReal(),result.getImaginary());
 }
 
 void Equation::onError(InterpretException exception)

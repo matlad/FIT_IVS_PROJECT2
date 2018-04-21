@@ -13,7 +13,7 @@ SignalManager::SignalManager(QObject *parent) : QObject(parent), equation(lexica
     lexicalAnalyzer.registrLexCallback(&interpret);
     interpret.registrResultCallback(this);
     equation.registrEquationObserver(this);
-    strEquation.str("0");
+    strEquation.str("");
 }
 
 void SignalManager::onEquationChange()
@@ -44,14 +44,12 @@ void SignalManager::onButtonClick(const QString &value)
     try
     {
         for (unsigned int i = 0; i < convertedValue.length(); i++)
-        {
             equation.pushSymbol(convertedValue[i]);
-        }
 
         delete error2;
         error2 = nullptr;
     }
-    catch (LexicalAnalyzerException e)
+    catch (LexicalAnalyzerException& e)
     {
         delete error2;
         error2 = new LexicalAnalyzerException(e);

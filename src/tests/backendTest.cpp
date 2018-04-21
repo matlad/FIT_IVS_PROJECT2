@@ -92,7 +92,7 @@ TEST(test, test1)
 
     testr.equation.pushSymbol('B');
     EXPECT_EQ(testr.strEquation.str(),"12+34");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
+    T22_NUMBER_EXPECT_NEAR(testr.result, Number(46), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
     testr.equation.pushSymbol('S');
@@ -111,43 +111,43 @@ TEST(test, test1)
     EXPECT_EQ(testr.error, nullptr);
 
     testr.equation.pushSymbol('S');
-    EXPECT_EQ(testr.strEquation.str(),"");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
+    EXPECT_EQ(testr.strEquation.str(),"1");
+    T22_NUMBER_EXPECT_NEAR(testr.result, Number(0), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
     testr.equation.pushSymbol('5');
-    EXPECT_EQ(testr.strEquation.str(),"5");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
+    EXPECT_EQ(testr.strEquation.str(),"15");
+    T22_NUMBER_EXPECT_NEAR(testr.result, Number(0), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
     testr.equation.pushSymbol('-');
-    EXPECT_EQ(testr.strEquation.str(),"5-");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(17), DELTA);
+    EXPECT_EQ(testr.strEquation.str(),"15-");
+    T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
     testr.equation.pushSymbol('B');
-    EXPECT_EQ(testr.strEquation.str(),"5-");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(17), DELTA);
+    EXPECT_EQ(testr.strEquation.str(),"15-");
+    T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
     testr.equation.pushSymbol('S');
-    EXPECT_EQ(testr.strEquation.str(),"5");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
+    EXPECT_EQ(testr.strEquation.str(),"15");
+    T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
     testr.equation.pushSymbol('*');
-    EXPECT_EQ(testr.strEquation.str(),"5*");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(17), DELTA);
+    EXPECT_EQ(testr.strEquation.str(),"15*");
+    T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
     testr.equation.pushSymbol('6');
-    EXPECT_EQ(testr.strEquation.str(),"5*6");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(17), DELTA);
+    EXPECT_EQ(testr.strEquation.str(),"15*6");
+    T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
     testr.equation.pushSymbol('=');
     EXPECT_EQ(testr.strEquation.str(),"");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(102), DELTA);
+    T22_NUMBER_EXPECT_NEAR(testr.result, Number(90), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
 

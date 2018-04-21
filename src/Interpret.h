@@ -78,6 +78,8 @@ public:
      */
     void sendIdentifiedLex(Lex lex) override;
 
+    void clear();
+
 private:
     Math::Number result = Math::Number(0);		//Uchovává výsledek
     Lex::Operator oper;							//Uchovává operaci

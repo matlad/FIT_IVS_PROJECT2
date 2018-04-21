@@ -87,11 +87,10 @@ void Interpret::sendIdentifiedLex(Lex lex)
 		}
 	}
 	else {
-		if ((lex.getAsOperator() == Lex::Operator::BS) || (lex.getAsOperator() == Lex::Operator::CLEAR)) {
-			this->result = 0;
-			this->unprocessedOperator = false;
-			this->unprocessedNumber = false;
-			notifyResultChanged();
+		if ((lex.getAsOperator() == Lex::Operator::BS)){
+			//pass
+		} else if(lex.getAsOperator() == Lex::Operator::CLEAR) {
+			clear();
 		}
 		else if (lex.getAsOperator() == Lex::Operator::EVAL) {
 			this->unprocessedOperator = false;
@@ -119,6 +118,14 @@ void Interpret::sendIdentifiedLex(Lex lex)
 			this->unprocessedOperator = true;
 		}
 	}
+}
+
+void Interpret::clear()
+{
+	this->result              = 0;
+	this->unprocessedOperator = false;
+	this->unprocessedNumber   = false;
+	this->notifyResultChanged();
 }
 
 void Interpret::registrResultCallback(ResultObserver *resultCallbackObject)

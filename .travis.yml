@@ -17,6 +17,6 @@ script:
   - make -f MakeTests.mk GTEST_DIR=../googletest/googletest
   - ./NumberTest
   - ./LexicalAnalyzerTest
-
+  - ./InterpretTest
 
 
