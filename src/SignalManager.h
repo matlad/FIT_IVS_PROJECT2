@@ -35,13 +35,47 @@ public:
     explicit SignalManager(QObject *parent = 0);
     ~SignalManager();
 
+    /**
+     * Voláno při stisku tlačítka v GUI. Předá znaky, tvořící hodnotu tlačítka, equation ke zpracování.
+     * @param value řetězec tvořící hodnotu tlačítka
+     */
     Q_INVOKABLE void onButtonClick(const QString &value);
+
+    /**
+     * Voláno při změně mezivýpočtu.
+     */
     void onEquationChange();
+
+    /**
+     * Voláno při výskytu chyby ve výpočtu.
+     * @param exception InterpretException
+     */
     void onError(InterpretException exception);
+
+    /**
+     * Voláno při změně výsledku.
+     * @param exception InterpretException
+     */
     void onResultChange(team22::Math::Number result);
+
+    /**
+     * Vrátí současný mezivýsledek.
+     */
     Q_INVOKABLE QString getEquation();
+
+    /**
+     * Vrátí současný výsledek.
+     */
     Q_INVOKABLE QString getResult();
+
+    /**
+     * Odstraní uložený error.
+     */
     Q_INVOKABLE void clearError();
+
+    /**
+     * Vrátí současný error.
+     */
     Q_INVOKABLE bool getError();
 };
 
