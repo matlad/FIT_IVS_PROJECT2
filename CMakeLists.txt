@@ -13,9 +13,6 @@ add_library(math STATIC src/math/Number.cpp src/math/Number.h src/math/Undefined
 find_package(Qt5 COMPONENTS Widgets Qml Quick REQUIRED)
 include_directories(${Qt5Widgets_INCLUDE_DIRS} ${QtQml_INCLUDE_DIRS})
 
-# Find includes in corresponding build directories
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-# Instruct CMake to run moc automatically when needed.
 set(CMAKE_AUTOMOC ON)
 qt5_add_resources(QT_RESOURCES src/qml.qrc)
 
@@ -49,9 +46,9 @@ file(COPY src/resources DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 target_link_libraries(${PROJECT_NAME} math)
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Qml Qt5::Quick)
 
-################################################################################
-# Testy
-################################################################################
+#################################################################################
+## Testy
+#################################################################################
 
 # Testy lexikálního analyzátoru
 ###############################
@@ -155,33 +152,25 @@ add_subdirectory(${CMAKE_BINARY_DIR}/googletest-src
 # Instalace / balíček
 ################################################################################
 
-include(CPack)
 set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
 set(CPACK_PACKAGE_VENDOR "team22")
 set(CPACK_PACKAGE_CONTACT "xmatla00@stud.fit.vutbr.cz")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Jednoduchá kalkulačka")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Jednoduchá kalkulacka")
 set(CPACK_PACKAGE_VERSION "1.0.0")
 
-# Windows
-###################
-IF (WIN32)
+if(WIN32)
     set(CPACK_GENERATOR NSIS)
     install(DIRECTORY deployment/ DESTINATION .)
-# DEB based systems
-####################
+    set(CPACK_PACKAGE_INSTALL_DIRECTORY "${PROJECT_NAME}")
+    set(CPACK_NSIS_EXTRA_INSTALL_COMMANDS "Execwait 'vcredist_x64.exe /q'")
+    set(CPACK_NSIS_CREATE_ICONS_EXTRA "CreateShortCut '$DESKTOP\\\\${PROJECT_NAME}.lnk' '$INSTDIR\\\\${PROJECT_NAME}.exe'")
+    set(CPACK_NSIS_DELETE_ICONS_EXTRA "Delete '$DESKTOP\\\\${PROJECT_NAME}.lnk'")
 else()
     set(CPACK_GENERATOR DEB)
-
-    # chceme instalovat všechy soubory
-    # z "deployment", tentokrát do "/opt/InstallerTest"
-    # cı́lového systému (absolutnı́ cesta)
-    install(DIRECTORY deployment/ DESTINATION /opt/${PROJECT_NAME})
-
-    # Navı́c je třeba nainstalovat předem vytvořeného
-    # zástupce do "/usr/share/applications"
-    install(FILES linux/${PROJECT_NAME}.desktop DESTINATION share/applications)
-
-#    # a přı́padně spustit skript po dokončenı́ instalace
-#    # pro nastavenı́ práv souborů atd.
-#    set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "${CMAKE_CURRENT_SOURCE_DIR}/linux/postinst;")
+    install(TARGETS ${PROJECT_NAME} DESTINATION /opt/${PROJECT_NAME})
+    install(DIRECTORY src/resources DESTINATION /opt/${PROJECT_NAME})
+    install(FILES src/install/${PROJECT_NAME}.desktop DESTINATION share/applications)
+    set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "${CMAKE_CURRENT_SOURCE_DIR}/linux/postinst;")
 endif()
+
+include(CPack)

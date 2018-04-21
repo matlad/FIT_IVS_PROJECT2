@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Calc
+Comment=Jednoduchá kalkulačka
+Exec=/opt/Calc/Calc
+Path=/opt/Calc
+Icon=/opt/Calc/resources/ico.svg
+Terminal=false
+Type=Application
+Categories=Utility;Development;

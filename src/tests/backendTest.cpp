@@ -30,7 +30,7 @@ public:
     Number result = {0};
 
     BackendTester()
-        : equation(lexicalAnalyzer, interpret)
+        : equation(lexicalAnalyzer, &interpret)
     {
         lexicalAnalyzer.registrLexCallback(&interpret);
         interpret.registrResultCallback(this);
