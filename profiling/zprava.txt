@@ -1,0 +1,5 @@
+Profiling prokázál, že nejčastěji volanou matematickou funkci( a zároveň spotřebovává nejvíc času) z knihovny Number.h je add(Number adden) const.
+Proto by ji byla obětováná největší pozornost při optimalizaci.
+Jelikož se ale jedná o sumu X prvků, kde velikos X závísí od vstupu, tak by vysoce efektivní optimalizace nepatřila úplně k triviální záležitosti.
+Dále by bylo teoreticky možné propojit cykly pro vypočet průměru a výběrové směrodatné odchylky, jenže není jisté zda-li by to proces nějak citelně urychlilo.
+Případně ještě předávat prvky přímo funkcím.
