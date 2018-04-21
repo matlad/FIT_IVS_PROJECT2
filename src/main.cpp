@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<SignalManager>("cz.vutbr.fit.team22", 1, 0, "SignalManager");
 
-    QQmlApplicationEngine engine(QUrl("qrc:///main.qml"));
+    QQmlApplicationEngine engine(QUrl::fromLocalFile(("resources/main.qml")));
 
     return a.exec();
 }

@@ -94,7 +94,7 @@ void Equation::notifyEquationObserver()
 
 bool Equation::isNumberSymbol(char &symbol)
 {
-    return symbol == 'i' || isdigit(symbol);
+    return symbol == 'i' || isdigit(symbol) || symbol == '.';
 }
 
 void Equation::reComputeResult()
