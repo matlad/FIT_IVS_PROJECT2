@@ -1,3 +1,10 @@
+/**
+ * @file     Button.qml
+ * @encoding UTF-8
+ * @date     18.4.18
+ * @author   Jiří Čechák <xcecha04@stud.fit.vutbr.cz>
+ */
+
 import QtQuick 2.0
 
 import "constants.js" as C
@@ -25,10 +32,7 @@ Rectangle {
         anchors.fill: parent;
         hoverEnabled: true;
         cursorShape: Qt.PointingHandCursor;
-
-        onClicked: {
-            button.clicked();
-        }
+        onClicked: button.clicked();
     }
 
     Image {

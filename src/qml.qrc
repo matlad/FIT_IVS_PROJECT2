@@ -1,11 +1,12 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>constants.js</file>
-        <file>Button.qml</file>
-        <file>backspace1.png</file>
-        <file>backspace2.png</file>
-        <file>help1.png</file>
-        <file>help2.png</file>
+        <file alias="main.qml">resource/main.qml</file>
+        <file alias="constants.js">resource/constants.js</file>
+        <file alias="Button.qml">resource/Button.qml</file>
+        <file alias="backspace1.png">resource/backspace1.png</file>
+        <file alias="backspace2.png">resource/backspace2.png</file>
+        <file alias="help1.png">resource/help1.png</file>
+        <file alias="help2.png">resource/help2.png</file>
+        <file alias="Napoveda.png">resource/Napoveda.png</file>
     </qresource>
 </RCC>

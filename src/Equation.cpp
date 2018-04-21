@@ -39,7 +39,7 @@ void Equation::sendIdentifiedLex(Lex lex)
         pushLex(new Lex(lex));
     }
     notifyEquationObserver();
-    interpret.sendIdentifiedLex(lex);
+    interpret->sendIdentifiedLex(lex);
 }
 
 void Equation::pushSymbol(char symbol)
@@ -58,11 +58,22 @@ void Equation::backSpace()
     // Vycházíme s toho, že aby mohl bý identifikovaný lexem BS
     // veškerá rozpracovaná čísla už jsou identifikována a tudíž nas nemusí zajímat numberBuffer.
 
-    if(data.empty())
+    if(data.empty() && lastResult == Math::Number(0))
         return;
 
-    auto last = data.back();
-    data.pop_back();
+    Lex * last;
+
+    if(data.empty())
+    {
+        last = new Lex(lastResult);
+    }
+    else
+    {
+        last = data.back();
+        data.pop_back();
+    }
+
+	interpret->clear();
 
     // Pokud je poslední lexém číslo Nechceme odstranit cele číslo ale jen číslici
     // To provedeme tak že lexem odebraný z konce rovnice převedeme na řetězec a
@@ -94,19 +105,20 @@ void Equation::notifyEquationObserver()
 
 bool Equation::isNumberSymbol(char &symbol)
 {
-    return symbol == 'i' || isdigit(symbol);
+    return isdigit(symbol) || symbol == '.';
 }
 
 void Equation::reComputeResult()
 {
     for (auto lex : data)
-        interpret.sendIdentifiedLex(*lex);
+        interpret->sendIdentifiedLex(*lex);
 }
 
-Equation::Equation(LexicalAnalyzer &lexicalAnalyzer, Interpret &interpret):
+Equation::Equation(LexicalAnalyzer &lexicalAnalyzer, Interpret * interpret):
   interpret(interpret),lexicalAnalyzer(lexicalAnalyzer)
 {
     this->lexicalAnalyzer.registrLexCallback(this);
+    this->interpret->registrResultCallback(this);
 }
 
 void Equation::pushLex(Lex *lex)
@@ -116,7 +128,7 @@ void Equation::pushLex(Lex *lex)
 
 void Equation::onResultChange(Math::Number result)
 {
-    lastResult = result;
+    lastResult = Math::Number(result.getReal(),result.getImaginary());
 }
 
 void Equation::onError(InterpretException exception)
@@ -142,6 +154,7 @@ std::stringstream &team22::Calc::operator<<(std::stringstream &stringStream, con
 
     for (auto symbol : equation.numberBuffer)
         stringStream << symbol;
+
 
     return stringStream;
 }

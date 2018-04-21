@@ -9,13 +9,13 @@
 
 
 #include <exception>
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 
 class LexicalAnalyzerException: std::exception
 {
 
 };
-}
+}}
 
 #endif //FIT_IVS_PROJECT2_LEXICALANALYZEREXCEPTION_H

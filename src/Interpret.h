@@ -12,7 +12,7 @@
 #include "Lex.h"
 #include "ResultObserver.h"
 #include "math/Number.h"
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 /**
  * Po přijetí min počtu lexemů pro interpretaci je interpretace provedena
@@ -78,13 +78,15 @@ public:
      */
     void sendIdentifiedLex(Lex lex) override;
 
+    void clear();
+
 private:
     Math::Number result = Math::Number(0);		//Uchovává výsledek
     Lex::Operator oper;							//Uchovává operaci
     bool unprocessedOperator = false;			//True pokud binární operátor čeká na druhý operand 
     bool unprocessedNumber = false;				//True pokud číslo čeká na operátor
 };
-}
+}}
 
 
 #endif //FIT_IVS_PROJECT2_INTERPRET_H

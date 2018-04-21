@@ -10,7 +10,7 @@
 #include "math/Number.h"
 #include "InterpretException.h"
 
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 class ResultObserver
 {
@@ -28,6 +28,6 @@ public:
      */
     virtual void onResultChange(Math::Number result) = 0;
 };
-}
+}}
 
 #endif //FIT_IVS_PROJECT2_RESULTOBSERVER_H
