@@ -75,7 +75,7 @@ QString SignalManager::getEquation()
 QString SignalManager::getResult()
 {
     std::ostringstream stream;
-    stream << result.getReal();
+    stream << result;
 
     return QString::fromStdString(stream.str());
 }

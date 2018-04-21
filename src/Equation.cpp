@@ -94,7 +94,7 @@ void Equation::notifyEquationObserver()
 
 bool Equation::isNumberSymbol(char &symbol)
 {
-    return symbol == 'i' || isdigit(symbol) || symbol == '.';
+    return isdigit(symbol) || symbol == '.';
 }
 
 void Equation::reComputeResult()
@@ -144,8 +144,6 @@ std::stringstream &team22::Calc::operator<<(std::stringstream &stringStream, con
     for (auto symbol : equation.numberBuffer)
         stringStream << symbol;
 
-    if(stringStream.str().empty())
-    	stringStream << 0;
 
     return stringStream;
 }

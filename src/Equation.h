@@ -125,7 +125,7 @@ namespace team22{ namespace Calc
         void notifyEquationObserver();
 
         /**
-         * Jedná se o znak čísla tedy číslici nebo i
+         * Jedná se o znak čísla tedy číslici
          */
         bool isNumberSymbol(char &symbol);
 
