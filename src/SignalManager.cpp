@@ -8,7 +8,7 @@
 #include <iostream>
 #include "SignalManager.h"
 
-SignalManager::SignalManager(QObject *parent) : QObject(parent), equation(lexicalAnalyzer, interpret)
+SignalManager::SignalManager(QObject *parent) : QObject(parent), equation(lexicalAnalyzer, &interpret)
 {
     lexicalAnalyzer.registrLexCallback(&interpret);
     interpret.registrResultCallback(this);
@@ -20,11 +20,6 @@ void SignalManager::onEquationChange()
 {
     strEquation.str("");
     strEquation << equation;
-
-    if (strEquation.str().empty())
-    {
-        strEquation.str("0");
-    }
 }
 
 void SignalManager::onError(InterpretException exception)
@@ -44,23 +39,32 @@ SignalManager::~SignalManager()
 
 void SignalManager::onButtonClick(const QString &value)
 {
-    string convertedValue = value.toUtf8().constData();
+	string convertedValue = value.toUtf8().constData();
 
-    if (convertedValue == "H")
-    {
-        /*
-        QWidget window;
-        window.resize(300, 300);
-        window.show();
-        window.setWindowTitle(
-                    QApplication::translate("toplevel", "Nápověda"));
+	if (convertedValue == "H")
+	{
+		/*
+		QWidget window;
+		window.resize(300, 300);
+		window.show();
+		window.setWindowTitle(
+					QApplication::translate("toplevel", "Nápověda"));
 */
-} else {
-        for (unsigned int i = 0; i < convertedValue.length(); i++)
-        {
-            equation.pushSymbol(convertedValue[i]);
-        }
-    }
+	}
+	else
+	{
+		try
+		{
+			for (unsigned int i = 0; i < convertedValue.length(); i++)
+			{
+				equation.pushSymbol(convertedValue[i]);
+			}
+		}
+		catch (LexicalAnalyzerException e)
+		{
+             //TODO zobrazit chybu
+		}
+	}
 }
 
 QString SignalManager::getEquation()

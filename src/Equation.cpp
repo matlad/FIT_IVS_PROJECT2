@@ -39,7 +39,7 @@ void Equation::sendIdentifiedLex(Lex lex)
         pushLex(new Lex(lex));
     }
     notifyEquationObserver();
-    interpret.sendIdentifiedLex(lex);
+    interpret->sendIdentifiedLex(lex);
 }
 
 void Equation::pushSymbol(char symbol)
@@ -100,13 +100,14 @@ bool Equation::isNumberSymbol(char &symbol)
 void Equation::reComputeResult()
 {
     for (auto lex : data)
-        interpret.sendIdentifiedLex(*lex);
+        interpret->sendIdentifiedLex(*lex);
 }
 
-Equation::Equation(LexicalAnalyzer &lexicalAnalyzer, Interpret &interpret):
+Equation::Equation(LexicalAnalyzer &lexicalAnalyzer, Interpret * interpret):
   interpret(interpret),lexicalAnalyzer(lexicalAnalyzer)
 {
     this->lexicalAnalyzer.registrLexCallback(this);
+    this->interpret->registrResultCallback(this);
 }
 
 void Equation::pushLex(Lex *lex)
@@ -142,6 +143,9 @@ std::stringstream &team22::Calc::operator<<(std::stringstream &stringStream, con
 
     for (auto symbol : equation.numberBuffer)
         stringStream << symbol;
+
+    if(stringStream.str().empty())
+    	stringStream << 0;
 
     return stringStream;
 }

@@ -51,7 +51,7 @@ namespace team22{ namespace Calc
         /**
          * Interpret
          */
-        Interpret interpret;
+        Interpret * interpret;
 
         /**
          * Pozorovatele
@@ -69,7 +69,7 @@ namespace team22{ namespace Calc
          * @param lexicalAnalyzer
          * @param interpret
          */
-        Equation(LexicalAnalyzer &lexicalAnalyzer, Interpret &interpret);
+        Equation(LexicalAnalyzer &lexicalAnalyzer, Interpret *interpret);
 
         /**
          * Předání symbolu rovnici
