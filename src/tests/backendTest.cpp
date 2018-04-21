@@ -150,5 +150,4 @@ TEST(test, test1)
     T22_NUMBER_EXPECT_NEAR(testr.result, Number(90), DELTA);
     EXPECT_EQ(testr.error, nullptr);
 
-
 }
