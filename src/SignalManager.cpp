@@ -39,32 +39,23 @@ SignalManager::~SignalManager()
 
 void SignalManager::onButtonClick(const QString &value)
 {
-	string convertedValue = value.toUtf8().constData();
+    string convertedValue = value.toUtf8().constData();
 
-	if (convertedValue == "H")
-	{
-		/*
-		QWidget window;
-		window.resize(300, 300);
-		window.show();
-		window.setWindowTitle(
-					QApplication::translate("toplevel", "Nápověda"));
-*/
-	}
-	else
-	{
-		try
-		{
-			for (unsigned int i = 0; i < convertedValue.length(); i++)
-			{
-				equation.pushSymbol(convertedValue[i]);
-			}
-		}
-		catch (LexicalAnalyzerException e)
-		{
-             //TODO zobrazit chybu
-		}
-	}
+    try
+    {
+        for (unsigned int i = 0; i < convertedValue.length(); i++)
+        {
+            equation.pushSymbol(convertedValue[i]);
+        }
+
+        delete error2;
+        error2 = nullptr;
+    }
+    catch (LexicalAnalyzerException e)
+    {
+        delete error2;
+        error2 = new LexicalAnalyzerException(e);
+    }
 }
 
 QString SignalManager::getEquation()
@@ -78,4 +69,17 @@ QString SignalManager::getResult()
     stream << result.getReal();
 
     return QString::fromStdString(stream.str());
+}
+
+void SignalManager::clearError()
+{
+    delete error;
+    error = nullptr;
+    delete error2;
+    error2 = nullptr;
+}
+
+bool SignalManager::getError()
+{
+    return error != nullptr || error2 != nullptr;
 }

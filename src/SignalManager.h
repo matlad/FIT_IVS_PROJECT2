@@ -29,6 +29,7 @@ public:
     Equation equation;
     stringstream strEquation;
     InterpretException *error = nullptr;
+    LexicalAnalyzerException *error2 = nullptr;
     Number result = {0};
 
     explicit SignalManager(QObject *parent = 0);
@@ -40,6 +41,8 @@ public:
     void onResultChange(team22::Math::Number result);
     Q_INVOKABLE QString getEquation();
     Q_INVOKABLE QString getResult();
+    Q_INVOKABLE void clearError();
+    Q_INVOKABLE bool getError();
 };
 
 #endif // SIGNALMANAGER_H
