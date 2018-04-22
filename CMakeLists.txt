@@ -47,6 +47,14 @@ target_link_libraries(${PROJECT_NAME} math)
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Qml Qt5::Quick)
 
 #################################################################################
+## Profiling
+#################################################################################
+add_executable(Profiling
+        src/profiling/profiling.cpp
+        )
+target_link_libraries(Profiling math)
+
+#################################################################################
 ## Testy
 #################################################################################
 
