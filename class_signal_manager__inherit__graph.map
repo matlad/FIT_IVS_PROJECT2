@@ -1,0 +1,4 @@
+<map id="SignalManager" name="SignalManager">
+<area shape="rect" id="node3" href="$classteam22_1_1_calc_1_1_result_observer.html" title="{team22::Calc::ResultObserver\n||+ onError()\l+ onResultChange()\l}" alt="" coords="100,5,299,97"/>
+<area shape="rect" id="node4" href="$classteam22_1_1_calc_1_1_equation_observer.html" title="{team22::Calc::EquationObserver\n||+ onEquationChange()\l}" alt="" coords="323,13,535,90"/>
+</map>

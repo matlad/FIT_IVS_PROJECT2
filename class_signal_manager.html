@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Kalkulacka: Dokumentace třídy SignalManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Calc.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kalkulacka
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">Jednoduchýkalkulátor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generováno programem Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="pages.html"><span>Ostatní&#160;stránky</span></a></li>
+      <li><a href="namespaces.html"><span>Prostory&#160;jmen</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Třídy</span></a></li>
+      <li><a href="files.html"><span>Soubory</span></a></li>
+      <li><a href="examples.html"><span>Příklady</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Seznam&#160;tříd</span></a></li>
+      <li><a href="classes.html"><span>Rejstřík&#160;tříd</span></a></li>
+      <li><a href="inherits.html"><span>Hierarchie&#160;tříd</span></a></li>
+      <li><a href="functions.html"><span>Seznam&#160;členů&#160;tříd</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_signal_manager.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Veřejné metody</a> &#124;
+<a href="#pub-attribs">Veřejné atributy</a> &#124;
+<a href="class_signal_manager-members.html">Seznam všech členů</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentace třídy SignalManager</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dědičnosti pro třídu SignalManager</div>
+<div class="dyncontent">
+<div class="center"><img src="class_signal_manager__inherit__graph.png" border="0" usemap="#_signal_manager_inherit__map" alt="Inheritance graph"/></div>
+<map name="_signal_manager_inherit__map" id="_signal_manager_inherit__map">
+<area shape="rect" id="node3" href="classteam22_1_1_calc_1_1_result_observer.html" title="{team22::Calc::ResultObserver\n||+ onError()\l+ onResultChange()\l}" alt="" coords="100,5,299,97"/>
+<area shape="rect" id="node4" href="classteam22_1_1_calc_1_1_equation_observer.html" title="{team22::Calc::EquationObserver\n||+ onEquationChange()\l}" alt="" coords="323,13,535,90"/>
+</map>
+</div>
+<div class="dynheader">
+Diagram tříd pro SignalManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_signal_manager__coll__graph.png" border="0" usemap="#_signal_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="_signal_manager_coll__map" id="_signal_manager_coll__map">
+<area shape="rect" id="node3" href="classteam22_1_1_calc_1_1_result_observer.html" title="{team22::Calc::ResultObserver\n||+ onError()\l+ onResultChange()\l}" alt="" coords="151,507,349,599"/>
+<area shape="rect" id="node25" href="classteam22_1_1_calc_1_1_equation.html" title="Třída reprezentující rovnici. " alt="" coords="1017,1220,1200,1444"/>
+<area shape="rect" id="node4" href="classteam22_1_1_calc_1_1_equation_observer.html" title="{team22::Calc::EquationObserver\n||+ onEquationChange()\l}" alt="" coords="701,749,913,827"/>
+<area shape="rect" id="node5" href="classteam22_1_1_math_1_1_number.html" title="{team22::Math::Number\n|&#45; value\l|+ getReal()\l+ getImaginary()\l+ Number()\l+ Number()\l+ add()\l+ operator+()\l+ sub()\l+ operator&#45;()\l+ mul()\l+ operator*()\la 11 další(ch)...\l&#45; operator std::complex\l\&lt; double \&gt;()\l&#45; gamma()\l&#45; anyParamNan()\l&#45; anyParamInf()\l&#45; allParamsInf()\l}" alt="" coords="509,132,665,444"/>
+<area shape="rect" id="node15" href="classteam22_1_1_calc_1_1_interpret.html" title="{team22::Calc::Interpret\n|&#45; oper\l&#45; unprocessedOperator\l&#45; unprocessedNumber\l|+ registrResultCallback()\l+ sendIdentifiedLex()\l+ clear()\l&#45; notifyResultChanged()\l&#45; notifyAboutError()\l}" alt="" coords="645,977,812,1143"/>
+<area shape="rect" id="node28" href="unionteam22_1_1_calc_1_1_lex_1_1_value.html" title="reprezentace hodnoty lexému " alt="" coords="827,507,964,599"/>
+<area shape="rect" id="node6" href="classteam22_1_1_calc_1_1_lexical_analyzer.html" title="{team22::Calc::LexicalAnalyzer\n|&#45; state\l|+ pushSymbol()\l+ registrLexCallback()\l+ processNumberSymbol()\l+ isNumberSymbol()\l+ clear()\l+ processOperator()\l&#45; sendLex()\l&#45; getCharLex()\l&#45; savedToNumber()\l}" alt="" coords="1393,963,1593,1157"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="1671,749,1751,827"/>
+<area shape="rect" id="node8" title="STL class. " alt="" coords="1648,507,1775,599"/>
+<area shape="rect" id="node10" href="classteam22_1_1_calc_1_1_lex_identification_observer.html" title="{team22::Calc::LexIdentification\lObserver\n||+ sendIdentifiedLex()\l}" alt="" coords="1314,507,1517,599"/>
+<area shape="rect" id="node11" title="STL class. " alt="" coords="641,514,739,591"/>
+<area shape="rect" id="node13" href="classteam22_1_1_calc_1_1_lexical_analyzer_exception.html" title="{team22::Calc::LexicalAnalyzer\lException\n||}" alt="" coords="1675,1286,1875,1378"/>
+<area shape="rect" id="node14" title="STL class. " alt="" coords="1751,1021,1855,1099"/>
+<area shape="rect" id="node17" href="class_interpret_exception.html" title="{InterpretException\n||}" alt="" coords="1899,1293,2027,1371"/>
+<area shape="rect" id="node18" title="STL class. " alt="" coords="2051,1293,2171,1371"/>
+<area shape="rect" id="node19" title="STL class. " alt="" coords="2032,1014,2191,1106"/>
+<area shape="rect" id="node20" title="STL class. " alt="" coords="2043,742,2179,834"/>
+<area shape="rect" id="node21" title="STL class. " alt="" coords="1961,507,2091,599"/>
+<area shape="rect" id="node22" title="STL class. " alt="" coords="2026,249,2181,327"/>
+<area shape="rect" id="node24" title="STL class. " alt="" coords="2115,507,2249,599"/>
+<area shape="rect" id="node23" title="STL class. " alt="" coords="2053,5,2153,83"/>
+<area shape="rect" id="node27" href="classteam22_1_1_calc_1_1_lex.html" title="Reprezentace lexému kalkulačky tedy čísla nebo operace. " alt="" coords="937,676,1067,900"/>
+<area shape="rect" id="node29" title="STL class. " alt="" coords="1091,749,1207,827"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Veřejné metody</h2></td></tr>
+<tr class="memitem:ac08621bd0a1545f68b8809a60278707f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#ac08621bd0a1545f68b8809a60278707f">SignalManager</a> (QObject *parent=0)</td></tr>
+<tr class="separator:ac08621bd0a1545f68b8809a60278707f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a8de4a60ae0a98191c8c4d629651f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#ac2a8de4a60ae0a98191c8c4d629651f0">~SignalManager</a> ()</td></tr>
+<tr class="separator:ac2a8de4a60ae0a98191c8c4d629651f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f44b5920877267aa18b0b49b1ca135"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#ad5f44b5920877267aa18b0b49b1ca135">onButtonClick</a> (const QString &amp;value)</td></tr>
+<tr class="separator:ad5f44b5920877267aa18b0b49b1ca135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad01d3fc2d8480d3d92c1a0c82cb38ffc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#ad01d3fc2d8480d3d92c1a0c82cb38ffc">onEquationChange</a> ()</td></tr>
+<tr class="separator:ad01d3fc2d8480d3d92c1a0c82cb38ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a908786a64b23f233fcdd7cfbe0828285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#a908786a64b23f233fcdd7cfbe0828285">onError</a> (<a class="el" href="class_interpret_exception.html">InterpretException</a> exception)</td></tr>
+<tr class="separator:a908786a64b23f233fcdd7cfbe0828285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bdcac1ed2628420e9660b26e769eb4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#a8bdcac1ed2628420e9660b26e769eb4e">onResultChange</a> (<a class="el" href="classteam22_1_1_math_1_1_number.html">team22::Math::Number</a> <a class="el" href="class_signal_manager.html#af2b8bc973130bc305854ba2eade66dcd">result</a>)</td></tr>
+<tr class="separator:a8bdcac1ed2628420e9660b26e769eb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a4e952a4c2018662f487b04f667295"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#ac7a4e952a4c2018662f487b04f667295">getEquation</a> ()</td></tr>
+<tr class="separator:ac7a4e952a4c2018662f487b04f667295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370910df08de03a149517be639f39096"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#a370910df08de03a149517be639f39096">getResult</a> ()</td></tr>
+<tr class="separator:a370910df08de03a149517be639f39096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b30c101cdbb9cafa35a56377f9d6cbc"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#a3b30c101cdbb9cafa35a56377f9d6cbc">clearError</a> ()</td></tr>
+<tr class="separator:a3b30c101cdbb9cafa35a56377f9d6cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0819363724355fecb520603b105d29"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#a6f0819363724355fecb520603b105d29">getError</a> ()</td></tr>
+<tr class="separator:a6f0819363724355fecb520603b105d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Veřejné atributy</h2></td></tr>
+<tr class="memitem:adfcc3db36e72b67efa6d002ca107fda6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteam22_1_1_calc_1_1_interpret.html">Interpret</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#adfcc3db36e72b67efa6d002ca107fda6">interpret</a></td></tr>
+<tr class="separator:adfcc3db36e72b67efa6d002ca107fda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae52bbcb789657260b6608e185e19a0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteam22_1_1_calc_1_1_lexical_analyzer.html">LexicalAnalyzer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#aae52bbcb789657260b6608e185e19a0f">lexicalAnalyzer</a></td></tr>
+<tr class="separator:aae52bbcb789657260b6608e185e19a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32c8f6be501a8dfacdb17762d1ac381"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteam22_1_1_calc_1_1_equation.html">Equation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#ae32c8f6be501a8dfacdb17762d1ac381">equation</a></td></tr>
+<tr class="separator:ae32c8f6be501a8dfacdb17762d1ac381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6134204a63763d301beeafc104730b00"><td class="memItemLeft" align="right" valign="top">stringstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#a6134204a63763d301beeafc104730b00">strEquation</a></td></tr>
+<tr class="separator:a6134204a63763d301beeafc104730b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80043ddce6c43a986b0ab2404cbf94c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_interpret_exception.html">InterpretException</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#a80043ddce6c43a986b0ab2404cbf94c0">error</a> = nullptr</td></tr>
+<tr class="separator:a80043ddce6c43a986b0ab2404cbf94c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af198485b77c6d73cba8cfb0e7c03dabf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteam22_1_1_calc_1_1_lexical_analyzer_exception.html">LexicalAnalyzerException</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#af198485b77c6d73cba8cfb0e7c03dabf">error2</a> = nullptr</td></tr>
+<tr class="separator:af198485b77c6d73cba8cfb0e7c03dabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b8bc973130bc305854ba2eade66dcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteam22_1_1_math_1_1_number.html">Number</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_manager.html#af2b8bc973130bc305854ba2eade66dcd">result</a> = {0}</td></tr>
+<tr class="separator:af2b8bc973130bc305854ba2eade66dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Další zděděné členy</h2></td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailní popis</h2>
+<div class="textblock">
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8h_source.html#l00023">23</a> v souboru <a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a>.</p>
+</div><h2 class="groupheader">Dokumentace konstruktoru a destruktoru</h2>
+<a class="anchor" id="ac08621bd0a1545f68b8809a60278707f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SignalManager::SignalManager </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00011">11</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00029">equation</a>, <a class="el" href="_signal_manager_8h_source.html#l00027">interpret</a>, <a class="el" href="_signal_manager_8h_source.html#l00028">lexicalAnalyzer</a>, <a class="el" href="_equation_8cpp_source.html#l00095">team22::Calc::Equation::registrEquationObserver()</a>, <a class="el" href="_lexical_analyzer_8cpp_source.html#l00143">team22::Calc::LexicalAnalyzer::registrLexCallback()</a>, <a class="el" href="_interpret_8cpp_source.html#l00131">team22::Calc::Interpret::registrResultCallback()</a> a <a class="el" href="_signal_manager_8h_source.html#l00030">strEquation</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac2a8de4a60ae0a98191c8c4d629651f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SignalManager::~SignalManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00035">35</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00031">error</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentace k metodám</h2>
+<a class="anchor" id="a3b30c101cdbb9cafa35a56377f9d6cbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SignalManager::clearError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Odstraní uložený error. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00072">72</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00031">error</a> a <a class="el" href="_signal_manager_8h_source.html#l00032">error2</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7a4e952a4c2018662f487b04f667295"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString SignalManager::getEquation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vrátí současný mezivýsledek. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00059">59</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00030">strEquation</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f0819363724355fecb520603b105d29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SignalManager::getError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vrátí současný error. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00080">80</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00031">error</a> a <a class="el" href="_signal_manager_8h_source.html#l00032">error2</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a370910df08de03a149517be639f39096"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString SignalManager::getResult </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vrátí současný výsledek. </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00064">64</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00033">result</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5f44b5920877267aa18b0b49b1ca135"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SignalManager::onButtonClick </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Voláno při stisku tlačítka v GUI. Předá znaky, tvořící hodnotu tlačítka, equation ke zpracování. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>řetězec tvořící hodnotu tlačítka </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00040">40</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00029">equation</a>, <a class="el" href="_signal_manager_8h_source.html#l00032">error2</a> a <a class="el" href="_equation_8cpp_source.html#l00045">team22::Calc::Equation::pushSymbol()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad01d3fc2d8480d3d92c1a0c82cb38ffc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SignalManager::onEquationChange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Voláno při změně mezivýpočtu. </p>
+
+<p>Implementuje <a class="el" href="classteam22_1_1_calc_1_1_equation_observer.html#a2fc2a1f8583f27b0087ff6053895ef25">team22::Calc::EquationObserver</a>.</p>
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00019">19</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00029">equation</a> a <a class="el" href="_signal_manager_8h_source.html#l00030">strEquation</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a908786a64b23f233fcdd7cfbe0828285"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SignalManager::onError </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_interpret_exception.html">InterpretException</a>&#160;</td>
+          <td class="paramname"><em>exception</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Voláno při výskytu chyby ve výpočtu. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exception</td><td><a class="el" href="class_interpret_exception.html">InterpretException</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementuje <a class="el" href="classteam22_1_1_calc_1_1_result_observer.html#ad36cf8df89853d60f91094800c01d329">team22::Calc::ResultObserver</a>.</p>
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00025">25</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00031">error</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8bdcac1ed2628420e9660b26e769eb4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SignalManager::onResultChange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classteam22_1_1_math_1_1_number.html">team22::Math::Number</a>&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Voláno při změně výsledku. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exception</td><td><a class="el" href="class_interpret_exception.html">InterpretException</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementuje <a class="el" href="classteam22_1_1_calc_1_1_result_observer.html#aa04007df3aa8a499c3a511f549238285">team22::Calc::ResultObserver</a>.</p>
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8cpp_source.html#l00030">30</a> v souboru <a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a>.</p>
+
+<p>Odkazuje se na <a class="el" href="_signal_manager_8h_source.html#l00033">result</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentace k datovým členům</h2>
+<a class="anchor" id="ae32c8f6be501a8dfacdb17762d1ac381"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteam22_1_1_calc_1_1_equation.html">Equation</a> SignalManager::equation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8h_source.html#l00029">29</a> v souboru <a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_signal_manager_8cpp_source.html#l00040">onButtonClick()</a>, <a class="el" href="_signal_manager_8cpp_source.html#l00019">onEquationChange()</a> a <a class="el" href="_signal_manager_8cpp_source.html#l00011">SignalManager()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80043ddce6c43a986b0ab2404cbf94c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_interpret_exception.html">InterpretException</a>* SignalManager::error = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8h_source.html#l00031">31</a> v souboru <a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_signal_manager_8cpp_source.html#l00072">clearError()</a>, <a class="el" href="_signal_manager_8cpp_source.html#l00080">getError()</a>, <a class="el" href="_signal_manager_8cpp_source.html#l00025">onError()</a> a <a class="el" href="_signal_manager_8cpp_source.html#l00035">~SignalManager()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af198485b77c6d73cba8cfb0e7c03dabf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteam22_1_1_calc_1_1_lexical_analyzer_exception.html">LexicalAnalyzerException</a>* SignalManager::error2 = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8h_source.html#l00032">32</a> v souboru <a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_signal_manager_8cpp_source.html#l00072">clearError()</a>, <a class="el" href="_signal_manager_8cpp_source.html#l00080">getError()</a> a <a class="el" href="_signal_manager_8cpp_source.html#l00040">onButtonClick()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adfcc3db36e72b67efa6d002ca107fda6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteam22_1_1_calc_1_1_interpret.html">Interpret</a> SignalManager::interpret</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8h_source.html#l00027">27</a> v souboru <a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_signal_manager_8cpp_source.html#l00011">SignalManager()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aae52bbcb789657260b6608e185e19a0f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteam22_1_1_calc_1_1_lexical_analyzer.html">LexicalAnalyzer</a> SignalManager::lexicalAnalyzer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8h_source.html#l00028">28</a> v souboru <a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_signal_manager_8cpp_source.html#l00011">SignalManager()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af2b8bc973130bc305854ba2eade66dcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteam22_1_1_math_1_1_number.html">Number</a> SignalManager::result = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8h_source.html#l00033">33</a> v souboru <a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_signal_manager_8cpp_source.html#l00064">getResult()</a> a <a class="el" href="_signal_manager_8cpp_source.html#l00030">onResultChange()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6134204a63763d301beeafc104730b00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">stringstream SignalManager::strEquation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_signal_manager_8h_source.html#l00030">30</a> v souboru <a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_signal_manager_8cpp_source.html#l00059">getEquation()</a>, <a class="el" href="_signal_manager_8cpp_source.html#l00019">onEquationChange()</a> a <a class="el" href="_signal_manager_8cpp_source.html#l00011">SignalManager()</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla generována z následujících souborů:<ul>
+<li><a class="el" href="_signal_manager_8h_source.html">SignalManager.h</a></li>
+<li><a class="el" href="_signal_manager_8cpp_source.html">SignalManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_signal_manager.html">SignalManager</a></li>
+    <li class="footer">Generováno programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

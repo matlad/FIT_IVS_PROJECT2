@@ -1,0 +1,12 @@
+<map id="SignalManager.h" name="SignalManager.h">
+<area shape="rect" id="node4" href="$_equation_8h.html" title="Equation.h" alt="" coords="503,80,587,107"/>
+<area shape="rect" id="node8" href="$_number_8h.html" title="Hlavičkový soubor pro Number z matematické knihovny. " alt="" coords="367,453,479,480"/>
+<area shape="rect" id="node5" href="$_lex_identification_observer_8h.html" title="LexIdentificationObserver.h" alt="" coords="771,304,953,331"/>
+<area shape="rect" id="node12" href="$_lexical_analyzer_8h.html" title="LexicalAnalyzer.h" alt="" coords="403,155,529,181"/>
+<area shape="rect" id="node21" href="$_equation_observer_8h.html" title="EquationObserver.h" alt="" coords="553,155,691,181"/>
+<area shape="rect" id="node6" href="$_lex_8h.html" title="Lex.h" alt="" coords="707,379,761,405"/>
+<area shape="rect" id="node16" href="$_interpret_8h.html" title="Interpret.h" alt="" coords="296,229,377,256"/>
+<area shape="rect" id="node19" href="$_lexical_analyzer_exception_8h.html" title="LexicalAnalyzerException.h" alt="" coords="539,229,721,256"/>
+<area shape="rect" id="node17" href="$_result_observer_8h.html" title="ResultObserver.h" alt="" coords="275,304,399,331"/>
+<area shape="rect" id="node18" href="$_interpret_exception_8h.html" title="InterpretException.h" alt="" coords="247,379,386,405"/>
+</map>

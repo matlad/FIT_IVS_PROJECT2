@@ -1,0 +1,7 @@
+<map id="team22::Calc::LexIdentificationObserver" name="team22::Calc::LexIdentificationObserver">
+<area shape="rect" id="node2" href="$struct_lexical_analyzer_test_base.html" title="{LexicalAnalyzerTestBase\n|+ analyzer\l+ expectedLexemsIter\l|+ LexicalAnalyzerTestBase()\l}" alt="" coords="107,248,298,340"/>
+<area shape="rect" id="node5" href="$classteam22_1_1_calc_1_1_equation.html" title="Třída reprezentující rovnici. " alt="" coords="322,145,505,443"/>
+<area shape="rect" id="node6" href="$classteam22_1_1_calc_1_1_interpret.html" title="{team22::Calc::Interpret\n|+ resultCallbackObjects\l&#45; result\l&#45; oper\l&#45; unprocessedOperator\l&#45; unprocessedNumber\l|+ registrResultCallback()\l+ sendIdentifiedLex()\l+ clear()\l&#45; notifyResultChanged()\l&#45; notifyAboutError()\l}" alt="" coords="529,197,695,391"/>
+<area shape="rect" id="node3" href="$struct_lexical_analyzer_errors_test.html" title="{LexicalAnalyzerErrorsTest\n|+ param\l|+ sendIdentifiedLex()\l+ LexicalAnalyzerErrorsTest()\l}" alt="" coords="5,491,200,583"/>
+<area shape="rect" id="node4" href="$struct_lexical_analyzer_test.html" title="{LexicalAnalyzerTest\n|+ param\l|+ sendIdentifiedLex()\l+ LexicalAnalyzerTest()\l}" alt="" coords="224,491,384,583"/>
+</map>
