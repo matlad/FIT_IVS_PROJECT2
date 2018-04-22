@@ -63,7 +63,6 @@ target_link_libraries(Profiling math)
 
 add_executable(LexicalATest
         src/tests/LexicalAnalyzerTest.cpp
-        src/tests/TestContants.h
         src/Lex.cpp
         src/Lex.h
         src/LexException.h
@@ -80,7 +79,6 @@ target_link_libraries(LexicalATest math)
 
 add_executable(InterpretTest
         src/tests/InterpretTests.cpp
-        src/tests/TestContants.h
         src/Interpret.cpp
         src/Interpret.h
         src/InterpretException.h
@@ -97,7 +95,6 @@ target_link_libraries(InterpretTest math)
 
 add_executable(BackendTest
         src/tests/backendTest.cpp
-        src/tests/TestContants.h
         src/Equation.cpp
         src/Equation.h
         src/EquationObserver.h
@@ -120,8 +117,7 @@ target_link_libraries(BackendTest math)
 ###############################
 add_executable(NumberTest
         src/tests/NumberTest.cpp
-        src/tests/TestContants.h
-      )
+        )
 
 target_link_libraries(NumberTest gtest_main)
 target_link_libraries(NumberTest math)

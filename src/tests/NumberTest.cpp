@@ -15,7 +15,7 @@
 #include <ostream>
 #include "TestConstants.h"
 
-
+namespace team22{ namespace Test {namespace number {
 using team22::Math::Number;
 using team22::Math::UndefinedException;
 
@@ -881,3 +881,4 @@ TEST_P(UndefFactorial, fce)
 {
     EXPECT_THROW(p.number.fact(), UndefinedException);
 }
+}}}
