@@ -9,8 +9,8 @@
 ## Adresáře (předpokládá se že adresář vždy končí /)
 ###############
 SRC_DIR := $(dir $(abspath $(firstword $(MAKEFILE_LIST))))
-BUILD_DIR := $(SRC_DIR)build/
-DOC_DIR := $(SRC_DIR)dokumentace/
+BUILD_DIR := $(SRC_DIR)../build/
+DOC_DIR := $(SRC_DIR)../dokumentace/
 CMAKE_FILE_DIR := $(SRC_DIR)../../FIT_IVS_PROJECT2/
 RUN_DIR := $(PWD)
 

@@ -4,6 +4,6 @@
 *.o
 *.a
 *Test
-src/build/**
-src/dokumentace/**
+/build/**
+/dokumentace/**
 !/**/.gitkeep
