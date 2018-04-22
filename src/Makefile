@@ -53,3 +53,6 @@ pre_build:
 #Calc přeloží projekt
 Calc: pre_build
 	cd $(BUILD_DIR); make Calc;
+
+install: pre_build
+	cd $(BUILD_DIR); make install;
