@@ -37,7 +37,7 @@ clean:
 	rm -rf $(DOC_DIR)*;   echo "">> $(DOC_DIR).gitkeep;
 #doc (spustí generování dokumentace)
 doc:
-	cd $(DOC_DIR); doxygen $(SRC_DIR)Doxyfile
+	cd $(SRC_DIR); doxygen $(SRC_DIR)Doxyfile
 
 #run (spustí program)
 .PHONY: run
