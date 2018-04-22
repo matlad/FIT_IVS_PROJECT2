@@ -28,9 +28,18 @@ private:
     std::complex<double> value;
 
 	explicit operator std::complex<double>() const {return value;}
+
+	/**
+	 * @brief Funkce zaokrouhluje na danou přesnost
+	 * 
+	 * @param value Vstupní hodnota
+	 * @param precision Hodnota reprezentující přesnost, na kterou se zaokrouhluje
+	 * @return Zaokrouhlená výstupní hodnota
+	 */
+	std::complex<double> round(std::complex<double> value, double precision) const;
     
     /**
-     * @details Gamma funkce implementovaná pomocí Lanczosovy aproximace
+     * @brief Gamma funkce implementovaná pomocí Lanczosovy aproximace
      * 
      * @param z vstupní operand
      * @return gamma čísla z
