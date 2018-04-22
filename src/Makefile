@@ -14,8 +14,8 @@ DOC_DIR := $(SRC_DIR)dokumentace/
 CMAKE_FILE_DIR := $(SRC_DIR)../../FIT_IVS_PROJECT2/
 RUN_DIR := $(PWD)
 
-## Příkazy
-############
+## Příkazy závislosti
+#####################
 CMAKE := cmake
 
 #all (přeloží projekt - včetně programu pro profiling)

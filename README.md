@@ -37,6 +37,7 @@ C++ std-17
 Qt 5.10.1
 gTest
 Doxigen
+Cmake 3.10
 
 
 
