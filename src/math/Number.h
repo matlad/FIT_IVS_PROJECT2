@@ -15,6 +15,11 @@
 #include <complex>
 #include <iostream>
 
+// uvažujeme přesnost na 10 des míst
+#define DELTA 0.00000000005
+// pro faktoriál komplexních čísel přesnost na 7 des míst
+#define DELTA_CF 0.00000005
+
 namespace team22 { namespace Math
 {
 
@@ -28,7 +33,15 @@ private:
     std::complex<double> value;
 
 	explicit operator std::complex<double>() const {return value;}
-    
+
+    /**
+     * @brief Funkce zaokrouhluje na danou přesnost
+     * 
+     * @param value Vstupní hodnota
+     * @param precision Hodnota reprezentující přesnost, na kterou se zaokrouhluje
+     * @return Zaokrouhlená výstupní hodnota
+     */
+    std::complex<double> round(std::complex<double> value, double precision) const;    
     /**
      * @details Gamma funkce implementovaná pomocí Lanczosovy aproximace
      * 
