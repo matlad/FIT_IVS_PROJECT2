@@ -15,7 +15,12 @@
 #include <complex>
 #include <iostream>
 
-namespace team22::Math
+// uvažujeme přesnost na 10 des míst
+#define DELTA 0.00000000005
+// pro faktoriál komplexních čísel přesnost na 7 des míst
+#define DELTA_CF 0.00000005
+
+namespace team22 { namespace Math
 {
 
 /**
@@ -29,17 +34,16 @@ private:
 
 	explicit operator std::complex<double>() const {return value;}
 
-	/**
-	 * @brief Funkce zaokrouhluje na danou přesnost
-	 * 
-	 * @param value Vstupní hodnota
-	 * @param precision Hodnota reprezentující přesnost, na kterou se zaokrouhluje
-	 * @return Zaokrouhlená výstupní hodnota
-	 */
-	std::complex<double> round(std::complex<double> value, double precision) const;
-    
     /**
-     * @brief Gamma funkce implementovaná pomocí Lanczosovy aproximace
+     * @brief Funkce zaokrouhluje na danou přesnost
+     * 
+     * @param value Vstupní hodnota
+     * @param precision Hodnota reprezentující přesnost, na kterou se zaokrouhluje
+     * @return Zaokrouhlená výstupní hodnota
+     */
+    std::complex<double> round(std::complex<double> value, double precision) const;    
+    /**
+     * @details Gamma funkce implementovaná pomocí Lanczosovy aproximace
      * 
      * @param z vstupní operand
      * @return gamma čísla z
@@ -100,7 +104,7 @@ public:
     Number add(Number addend) const;
 
     /**
-	 * @see ::add
+	 * @see Number::add
 	 */
     Number operator+(const Number &number) const;
 
@@ -114,7 +118,7 @@ public:
     Number sub(Number subtrahend) const;
 
     /**
-	 * @see ::sub
+	 * @see Number::sub
 	 */
     Number operator-(const Number &number) const;
 
@@ -128,7 +132,7 @@ public:
     Number mul(Number multiplier) const;
 
     /**
-	 * @see ::mul
+	 * @see Number::mul
 	 */
     Number operator*(const Number &number) const;
 
@@ -142,7 +146,7 @@ public:
     Number div(Number divisor) const;
 
     /**
-	 * @see ::div
+	 * @see Number::div
 	 */
     Number operator/(const Number &number) const;
 
@@ -156,7 +160,7 @@ public:
     Number pow(Number exponent) const;
 
     /**
-	 * @see ::pow
+	 * @see Number::pow
 	 */
     Number operator^(const Number &number) const;
 
@@ -179,7 +183,7 @@ public:
     Number mod(Number divisor) const;
 
     /**
-	 * @see ::mod
+	 * @see Number::mod
 	 */
     Number operator%(const Number &number) const;
 
@@ -192,7 +196,7 @@ public:
     Number fact();
 
     /**
-     * @see ::fact
+     * @see Number::fact
      */
     Number operator!();
 
@@ -206,6 +210,6 @@ public:
 
 };
 
-};
+};};
 
 #endif //FIT_IVS_PROJECT2_NUMBER_H

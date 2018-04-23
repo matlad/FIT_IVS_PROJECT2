@@ -12,143 +12,149 @@
 #include <gtest/gtest.h>
 #include <string>
 
-using namespace team22::Calc;
-using std::stringstream;
-using team22::Math::Number;
-using std::cout;
-using std::endl;
-using std::string;
+namespace team22{ namespace Test {namespace Backend {
+	using std::stringstream;
+	using namespace Calc;
+	using team22::Math::Number;
+	using std::cout;
+	using std::endl;
+	using std::string;
 
-class BackendTester: ResultObserver, EquationObserver
-{
-public:
-    Interpret interpret;
-    LexicalAnalyzer lexicalAnalyzer;
-    Equation equation;
-    stringstream strEquation;
-    InterpretException *error = nullptr;
-    Number result = {0};
+	class BackendTester : ResultObserver, EquationObserver
+	{
+	public:
+		Interpret          interpret;
 
-    BackendTester()
-        : equation(lexicalAnalyzer, interpret)
-    {
-        lexicalAnalyzer.registrLexCallback(&interpret);
-        interpret.registrResultCallback(this);
-        equation.registrEquationObserver(this);
-    }
+		LexicalAnalyzer    lexicalAnalyzer;
 
-    void onEquationChange() override
-    {
-        strEquation.str("");
-        strEquation << equation;
-    }
+		Equation           equation;
 
-    void onError(InterpretException exception) override
-    {
-        error = new InterpretException(exception);
-    }
+		stringstream       strEquation;
 
-    void onResultChange(team22::Math::Number result) override
-    {
-        this->result = result;
-    }
+		InterpretException *error = nullptr;
 
-    virtual ~BackendTester()
-    {
-        delete error;
-    }
+		Number             result = {0};
 
-};
+		BackendTester()
+				: equation(lexicalAnalyzer, &interpret)
+		{
+			lexicalAnalyzer.registrLexCallback(&interpret);
+			interpret.registrResultCallback(this);
+			equation.registrEquationObserver(this);
+		}
 
-TEST(test, test1)
-{
-    //12+34BS=BS5-BS*6=
-    BackendTester testr;
+		void onEquationChange() override
+		{
+			strEquation.str("");
+			strEquation << equation;
+		}
 
-    testr.equation.pushSymbol('1');
-    EXPECT_EQ(testr.strEquation.str(),"1");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(0), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		void onError(InterpretException exception) override
+		{
+			error = new InterpretException(exception);
+		}
 
-    testr.equation.pushSymbol('2');
-    EXPECT_EQ(testr.strEquation.str(),"12");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(0), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		void onResultChange(team22::Math::Number result) override
+		{
+			this->result = result;
+		}
 
-    testr.equation.pushSymbol('+');
-    EXPECT_EQ(testr.strEquation.str(),"12+");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		virtual ~BackendTester()
+		{
+			delete error;
+		}
 
-    testr.equation.pushSymbol('3');
-    EXPECT_EQ(testr.strEquation.str(),"12+3");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+	};
 
-    testr.equation.pushSymbol('4');
-    EXPECT_EQ(testr.strEquation.str(),"12+34");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+	TEST(test, test1)
+	{
+		//12+34BS=BS5-BS*6=
+		BackendTester testr;
 
-    testr.equation.pushSymbol('B');
-    EXPECT_EQ(testr.strEquation.str(),"12+34");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('1');
+		EXPECT_EQ(testr.strEquation.str(), "1");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(0), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('S');
-    EXPECT_EQ(testr.strEquation.str(),"12+3");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('2');
+		EXPECT_EQ(testr.strEquation.str(), "12");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(0), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('=');
-    EXPECT_EQ(testr.strEquation.str(),"");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('+');
+		EXPECT_EQ(testr.strEquation.str(), "12+");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('B');
-    EXPECT_EQ(testr.strEquation.str(),"");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('3');
+		EXPECT_EQ(testr.strEquation.str(), "12+3");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('S');
-    EXPECT_EQ(testr.strEquation.str(),"");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('4');
+		EXPECT_EQ(testr.strEquation.str(), "12+34");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('5');
-    EXPECT_EQ(testr.strEquation.str(),"5");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('B');
+		EXPECT_EQ(testr.strEquation.str(), "12+34");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(46), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('-');
-    EXPECT_EQ(testr.strEquation.str(),"5-");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(17), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('S');
+		EXPECT_EQ(testr.strEquation.str(), "12+3");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('B');
-    EXPECT_EQ(testr.strEquation.str(),"5-");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(17), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('=');
+		EXPECT_EQ(testr.strEquation.str(), "");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('S');
-    EXPECT_EQ(testr.strEquation.str(),"5");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(12), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('B');
+		EXPECT_EQ(testr.strEquation.str(), "");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('*');
-    EXPECT_EQ(testr.strEquation.str(),"5*");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(17), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('S');
+		EXPECT_EQ(testr.strEquation.str(), "1");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(0), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('6');
-    EXPECT_EQ(testr.strEquation.str(),"5*6");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(17), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('5');
+		EXPECT_EQ(testr.strEquation.str(), "15");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(0), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-    testr.equation.pushSymbol('=');
-    EXPECT_EQ(testr.strEquation.str(),"");
-    T22_NUMBER_EXPECT_NEAR(testr.result, Number(102), DELTA);
-    EXPECT_EQ(testr.error, nullptr);
+		testr.equation.pushSymbol('-');
+		EXPECT_EQ(testr.strEquation.str(), "15-");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
+		testr.equation.pushSymbol('B');
+		EXPECT_EQ(testr.strEquation.str(), "15-");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
 
-}
+		testr.equation.pushSymbol('S');
+		EXPECT_EQ(testr.strEquation.str(), "15");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
+
+		testr.equation.pushSymbol('*');
+		EXPECT_EQ(testr.strEquation.str(), "15*");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
+
+		testr.equation.pushSymbol('6');
+		EXPECT_EQ(testr.strEquation.str(), "15*6");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(15), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
+
+		testr.equation.pushSymbol('=');
+		EXPECT_EQ(testr.strEquation.str(), "");
+		T22_NUMBER_EXPECT_NEAR(testr.result, Number(90), DELTA);
+		EXPECT_EQ(testr.error, nullptr);
+
+	}
+}}}

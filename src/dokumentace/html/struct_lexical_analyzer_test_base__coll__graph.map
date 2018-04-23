@@ -1,8 +1,0 @@
-<map id="LexicalAnalyzerTestBase" name="LexicalAnalyzerTestBase">
-<area shape="rect" id="node2" href="$classteam22_1_1_calc_1_1_lex_identification_observer.html" title="{team22::Calc::LexIdentification\lObserver\n||+ sendIdentifiedLex()\l}" alt="" coords="5,145,208,237"/>
-<area shape="rect" id="node4" href="$classteam22_1_1_calc_1_1_lexical_analyzer.html" title="{team22::Calc::LexicalAnalyzer\n|&#45; state\l|+ pushSymbol()\l+ registrLexCallback()\l+ processNumberSymbol()\l+ isNumberSymbol()\l+ clear()\l+ processOperator()\l&#45; sendLex()\l&#45; getCharLex()\l&#45; savedToNumber()\l}" alt="" coords="155,469,355,664"/>
-<area shape="rect" id="node6" title="STL class. " alt="" coords="232,153,331,230"/>
-<area shape="rect" id="node8" title="STL class. " alt="" coords="373,322,453,399"/>
-<area shape="rect" id="node9" title="STL class. " alt="" coords="381,145,507,237"/>
-<area shape="rect" id="node11" title="STL class. " alt="" coords="490,322,606,399"/>
-</map>

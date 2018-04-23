@@ -9,22 +9,20 @@
 
 #include "Number.h"
 #include "UndefinedException.h"
-#include "../tests/TestConstants.h"
 
 using namespace team22::Math;
 using namespace std;
 
 complex<double> Number::round(complex<double> value, double precision) const
 {
-	if (abs(value.real()) < precision) {
-		value = complex(0.0, value.imag());
-	}
-	if (abs(value.imag()) < precision) {
-		value = complex(value.real(), 0.0);
-	}
-	return value;
+    if (abs(value.real()) < precision) {
+        value = complex(0.0, value.imag());
+    }
+    if (abs(value.imag()) < precision) {
+        value = complex(value.real(), 0.0);
+    }
+    return value;
 }
-
 bool Number::anyParamNan(double param1, double param2, double param3, double param4) const
 {
     if (isnan(param1) || isnan(param2) || isnan(param3) || isnan(param4))

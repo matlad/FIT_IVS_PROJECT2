@@ -1,17 +1,29 @@
-# FIT_IVS_PROJECT2
+# Kalkulacka
+
+Jednoduchý nastroj umožnující jednoduché matematické operace jako
+* sčítání
+* odčítání
+* dělení
+* násobení
+* obesnou mocninu
+* obecnou odmocnimnu
+* faktorial
+* modulo (zbytek po dělění)
+
+na množině complexních čísel.
 
 Prostředí
 ---------
 
-Ubuntu 64bit
-Windows 64bit
+* Ubuntu 64bit - primární
+* Windows 64bit
 
 Autoři
 ------
 
 tým 22
 - xcecha04 Čechák Jiří @jirkacechak - GUI  
--	xmatla00 Mátl Adam @matlad - Testy
+- xmatla00 Mátl Adam @matlad - Testy
 - xmitur01 Mitura Jacek	@Jb535 - Dokumentace 
 - xslade21 Sládek Matyáš @sladekm - Knihovna
 
@@ -33,10 +45,11 @@ https://wiki.qt.io/Qt_Coding_Style
 
 Nástroje frameworky atd.
 -------------------------
-C++ std-17
-Qt 5.10.1
-gTest
-Doxigen
+* C++ std-17
+* Qt 5.10.1
+* gTest
+* Doxigen
+* Cmake 3.10
 
 
 

@@ -12,7 +12,7 @@
 #include "../Interpret.h"
 #include "TestConstants.h"
 
-
+namespace team22{ namespace Test {namespace interpret {
 using std::vector;
 using std::string;
 using team22::Math::Number;
@@ -79,7 +79,7 @@ INSTANTIATE_TEST_CASE_P(def_p, InterpretTest, testing::Values(
     InterpretTestParams{{Number(5), Lex::FACTORIAL}, Number(120)},
     InterpretTestParams{{Number(5), Lex::MOD, Number(4)}, Number(1)},
     InterpretTestParams{{Number(5), Lex::CLEAR}, Number(0)},
-    InterpretTestParams{{Number(5), Lex::BS}, Number(0)},
+    InterpretTestParams{{Number(5), Lex::BS}, Number(5)},
     InterpretTestParams{{Number(5), Lex::ADD, Number(4), Lex::ADD, Number(-3)}, Number(6)},
     InterpretTestParams{{Number(5), Lex::ADD, Number(4), Lex::ADD, Number(-3), Lex::EVAL}, Number(6)},
     InterpretTestParams{{Number(5), Lex::ADD, Number(4), Lex::FACTORIAL, Lex::DIV, Number(-3)}, Number(-120960)},
@@ -163,6 +163,7 @@ TEST_F(InterpretTest, bs_1)
     interpret.sendIdentifiedLex(Lex::ADD);
     T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
+    interpret.clear();
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
     T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
@@ -181,10 +182,13 @@ TEST_F(InterpretTest, bs_2)
     interpret.sendIdentifiedLex(Lex::ADD);
     T22_NUMBER_EXPECT_NEAR(Number(5), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
+    interpret.clear();
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
+    interpret.clear();
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
+    interpret.clear();
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
     T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
@@ -198,10 +202,13 @@ TEST_F(InterpretTest, bs_2)
 TEST_F(InterpretTest, bs_3)
 {
     interpret.sendIdentifiedLex(Lex::BS);
+    interpret.clear();
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
+    interpret.clear();
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::BS);
+    interpret.clear();
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Number(4));
     T22_NUMBER_EXPECT_NEAR(Number(4), result, DELTA);
@@ -258,6 +265,7 @@ TEST_F(InterpretTest, Mix)
     EXPECT_NE(nullptr,error);
     error = nullptr;
     interpret.sendIdentifiedLex(Lex::BS);
+    interpret.clear();
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
     interpret.sendIdentifiedLex(Lex::ADD);
     T22_NUMBER_EXPECT_NEAR(Number(0), result, DELTA);
@@ -302,3 +310,4 @@ TEST_F(InterpretTest, UnexpectedLexem_2xOperator)
     interpret.sendIdentifiedLex(Lex::DIV);
     EXPECT_NE(nullptr, error);
 }
+}}}

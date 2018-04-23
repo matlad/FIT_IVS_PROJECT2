@@ -6,7 +6,7 @@
  */
 #include "LexicalAnalyzer.h"
 
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 
 
@@ -170,6 +170,6 @@ void LexicalAnalyzer::clear()
     state = Init;
 }
 
-}
+}}
 
 

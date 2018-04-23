@@ -15,7 +15,7 @@
 #include <sstream>
 #include <ostream>
 
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
     /**
      * @brief Třída reprezentující rovnici
@@ -51,7 +51,7 @@ namespace team22::Calc
         /**
          * Interpret
          */
-        Interpret interpret;
+        Interpret * interpret;
 
         /**
          * Pozorovatele
@@ -69,7 +69,7 @@ namespace team22::Calc
          * @param lexicalAnalyzer
          * @param interpret
          */
-        Equation(LexicalAnalyzer &lexicalAnalyzer, Interpret &interpret);
+        Equation(LexicalAnalyzer &lexicalAnalyzer, Interpret *interpret);
 
         /**
          * Předání symbolu rovnici
@@ -125,7 +125,7 @@ namespace team22::Calc
         void notifyEquationObserver();
 
         /**
-         * Jedná se o znak čísla tedy číslici nebo i
+         * Jedná se o znak čísla tedy číslici
          */
         bool isNumberSymbol(char &symbol);
 
@@ -137,6 +137,6 @@ namespace team22::Calc
     };
 
 
-}
+}}
 
 #endif //FIT_IVS_PROJECT2_EQUATION_H

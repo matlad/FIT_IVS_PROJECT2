@@ -1,5 +1,0 @@
-<map id="team22::Calc::Interpret" name="team22::Calc::Interpret">
-<area shape="rect" id="node2" href="$classteam22_1_1_calc_1_1_lex_identification_observer.html" title="{team22::Calc::LexIdentification\lObserver\n||+ sendIdentifiedLex()\l}" alt="" coords="5,300,208,392"/>
-<area shape="rect" id="node4" href="$classteam22_1_1_calc_1_1_result_observer.html" title="{team22::Calc::ResultObserver\n||+ onError()\l+ onResultChange()\l}" alt="" coords="150,145,349,237"/>
-<area shape="rect" id="node5" title="STL class. " alt="" coords="373,153,472,230"/>
-</map>

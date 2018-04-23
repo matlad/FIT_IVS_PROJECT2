@@ -9,7 +9,7 @@
 
 #include <exception>
 
-namespace team22::Calc
+namespace team22{ namespace Calc
 {
 
 /**
@@ -25,6 +25,6 @@ private:
         return "Lexem je jiného typu";
     }
 };
-}
+}}
 
 #endif //FIT_IVS_PROJECT2_LEXEXCEPTION_H
