@@ -42,7 +42,7 @@ doc:
 #run (spustí program)
 .PHONY: run
 run: Calc
-	./build/Calc
+	$(BUILD_DIR)Calc;
 
 #pre_build zavolá Cmake a vygeneruje makefile
 .PHONY: pre_build
