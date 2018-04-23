@@ -13,6 +13,16 @@
 using namespace team22::Math;
 using namespace std;
 
+complex<double> Number::round(complex<double> value, double precision) const
+{
+    if (abs(value.real()) < precision) {
+        value = complex(0.0, value.imag());
+    }
+    if (abs(value.imag()) < precision) {
+        value = complex(value.real(), 0.0);
+    }
+    return value;
+}
 bool Number::anyParamNan(double param1, double param2, double param3, double param4) const
 {
     if (isnan(param1) || isnan(param2) || isnan(param3) || isnan(param4))
@@ -57,7 +67,7 @@ Number Number::add(Number addend) const
             throw UndefinedException();
         }
     }
-    return (value + static_cast<complex<double>>(addend));
+    return (round((value + static_cast<complex<double>>(addend)), DELTA));
 }
 Number Number::operator+(const Number &number) const
 {
@@ -73,7 +83,7 @@ Number Number::sub(Number subtrahend) const
             throw UndefinedException();
         }
     }
-    return (value - static_cast<complex<double>>(subtrahend));
+    return (round((value - static_cast<complex<double>>(subtrahend)), DELTA));
 }
 Number Number::operator-(const Number &number) const
 {
@@ -87,7 +97,7 @@ Number Number::mul(Number multiplier) const
     if (anyParamInf(value.real(), value.imag(), multiplier.getReal(), multiplier.getImaginary())) {
         throw UndefinedException();
     }
-    return (value * static_cast<complex<double>>(multiplier));
+    return (round((value * static_cast<complex<double>>(multiplier)), DELTA));
 }
 Number Number::operator*(const Number &number) const
 {
@@ -108,7 +118,7 @@ Number Number::div(Number divisor) const
             throw UndefinedException();
         }
     }
-    return (value / static_cast<complex<double>>(divisor));
+    return (round((value / static_cast<complex<double>>(divisor)), DELTA));
 }
 Number Number::operator/(const Number &number) const
 {
@@ -132,7 +142,7 @@ Number Number::pow(Number exponent) const
     if ((value.real() == 0) && (value.imag() == 0) && (exponent.getReal() == 0) && (exponent.getImaginary() == 0)) {
         throw UndefinedException();
     }
-    return std::pow(value, static_cast<complex<double>>(exponent));
+    return (round(std::pow(value, static_cast<complex<double>>(exponent)), DELTA));
 }
 Number Number::operator^(const Number &number) const
 {
@@ -155,7 +165,7 @@ Number Number::root(Number degree) const
     complex<double> temporary;
     temporary = complex(degree.getReal(), (degree.getImaginary() * (-1)));
     temporary /= (static_cast<complex<double>>(degree) * temporary);
-    return std::pow(value, temporary);
+    return (round(std::pow(value, temporary), DELTA));
 }
 Number Number::mod(Number divisor) const
 {
@@ -172,7 +182,7 @@ Number Number::mod(Number divisor) const
     temporary = value / static_cast<complex<double>>(divisor);
     temporary = complex(trunc(temporary.real()), trunc(temporary.imag()));
     temporary *= static_cast<complex<double>>(divisor);
-    return (value - temporary);
+    return (round((value - temporary), DELTA));
 }
 Number Number::operator%(const Number &number) const
 {
@@ -199,7 +209,7 @@ Number Number::fact()
 		}
 		return (-res);
 	}
-    return Number(gamma(value + 1.0));
+    return Number(round(gamma(value + 1.0), DELTA_CF));
 }
 Number Number::operator!()
 {
