@@ -4,3 +4,6 @@
 *.o
 *.a
 *Test
+/build/**
+/dokumentace/**
+!/**/.gitkeep

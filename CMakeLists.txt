@@ -47,6 +47,14 @@ target_link_libraries(${PROJECT_NAME} math)
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Qml Qt5::Quick)
 
 #################################################################################
+## Profiling
+#################################################################################
+add_executable(Profiling
+        src/profiling/profiling.cpp
+        )
+target_link_libraries(Profiling math)
+
+#################################################################################
 ## Testy
 #################################################################################
 
@@ -55,7 +63,6 @@ target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Qml Qt5::Quick)
 
 add_executable(LexicalATest
         src/tests/LexicalAnalyzerTest.cpp
-        src/tests/TestContants.h
         src/Lex.cpp
         src/Lex.h
         src/LexException.h
@@ -72,7 +79,6 @@ target_link_libraries(LexicalATest math)
 
 add_executable(InterpretTest
         src/tests/InterpretTests.cpp
-        src/tests/TestContants.h
         src/Interpret.cpp
         src/Interpret.h
         src/InterpretException.h
@@ -89,7 +95,6 @@ target_link_libraries(InterpretTest math)
 
 add_executable(BackendTest
         src/tests/backendTest.cpp
-        src/tests/TestContants.h
         src/Equation.cpp
         src/Equation.h
         src/EquationObserver.h
@@ -112,8 +117,7 @@ target_link_libraries(BackendTest math)
 ###############################
 add_executable(NumberTest
         src/tests/NumberTest.cpp
-        src/tests/TestContants.h
-      )
+        )
 
 target_link_libraries(NumberTest gtest_main)
 target_link_libraries(NumberTest math)
@@ -156,7 +160,8 @@ set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
 set(CPACK_PACKAGE_VENDOR "team22")
 set(CPACK_PACKAGE_CONTACT "xmatla00@stud.fit.vutbr.cz")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Jednoduchá kalkulacka")
-set(CPACK_PACKAGE_VERSION "1.0.0")
+set(CPACK_DEBIAN_PACKAGE_HOMEPAGE "https://matlad.github.io/FIT_IVS_PROJECT2")
+set(CPACK_PACKAGE_VERSION "1.0.0-Alfa")
 
 if(WIN32)
     set(CPACK_GENERATOR NSIS)
@@ -170,7 +175,7 @@ else()
     install(TARGETS ${PROJECT_NAME} DESTINATION /opt/${PROJECT_NAME})
     install(DIRECTORY src/resources DESTINATION /opt/${PROJECT_NAME})
     install(FILES src/install/${PROJECT_NAME}.desktop DESTINATION share/applications)
-    set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "${CMAKE_CURRENT_SOURCE_DIR}/linux/postinst;")
+    install(FILES src/install/uinstall.sh DESTINATION /opt/${PROJECT_NAME})
 endif()
 
 include(CPack)

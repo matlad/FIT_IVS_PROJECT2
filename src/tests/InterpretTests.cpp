@@ -12,7 +12,7 @@
 #include "../Interpret.h"
 #include "TestConstants.h"
 
-
+namespace team22{ namespace Test {namespace interpret {
 using std::vector;
 using std::string;
 using team22::Math::Number;
@@ -310,3 +310,4 @@ TEST_F(InterpretTest, UnexpectedLexem_2xOperator)
     interpret.sendIdentifiedLex(Lex::DIV);
     EXPECT_NE(nullptr, error);
 }
+}}}

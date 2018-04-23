@@ -31,7 +31,8 @@ namespace team22{ namespace Calc
  *
  * Pokud je předaná chybná sekvence lexému je oznámena chyba callback `ResultObserver::onError`.
  *
- * @example
+ * příkad:
+ * @code
  *  Auto i = Interpret;
  *  i.sendIdentifiedLex(Number(5));
  *  // Informování o změně výsledků na 5 pomocí callbacků
@@ -43,6 +44,7 @@ namespace team22{ namespace Calc
  *  i.sendIdentifiedLex(Number(4));
  *  // Provedení operace => (předchozí výsledek)9+4 výsledek 13
  *  // Informování o změně výsledků na 13 pomocí callbacků
+ * @endcode
  *
  */
 class Interpret: public LexIdentificationObserver

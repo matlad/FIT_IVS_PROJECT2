@@ -19,7 +19,7 @@ using std::string;
 using team22::Math::Number;
 using namespace team22::Calc;
 
-
+namespace team22{ namespace Test {namespace lexicalAnalyzer {
 struct LexicalAnalyzerTestParam
 {
     string input;
@@ -170,3 +170,4 @@ TEST_P(LexicalAnalyzerErrorsTest, symbol)
     EXPECT_THROW(analyzer.pushSymbol(param.error), LexicalAnalyzerException);
 
 }
+}}}
