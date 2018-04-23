@@ -16,10 +16,10 @@ using namespace std;
 complex<double> Number::round(complex<double> value, double precision) const
 {
     if (abs(value.real()) < precision) {
-        value = complex(0.0, value.imag());
+        value = complex<double>(0.0, value.imag());
     }
     if (abs(value.imag()) < precision) {
-        value = complex(value.real(), 0.0);
+        value = complex<double>(value.real(), 0.0);
     }
     return value;
 }
@@ -51,7 +51,7 @@ double Number::getImaginary() const
 }
 Number::Number(double real, double imaginary)
 {
-    value = complex(real, imaginary);
+    value = complex<double>(real, imaginary);
 }
 Number::Number(const complex<double> &other)
 {
@@ -163,7 +163,7 @@ Number Number::root(Number degree) const
         return Number(0, 0);
     }
     complex<double> temporary;
-    temporary = complex(degree.getReal(), (degree.getImaginary() * (-1)));
+    temporary = complex<double>(degree.getReal(), (degree.getImaginary() * (-1)));
     temporary /= (static_cast<complex<double>>(degree) * temporary);
     return (round(std::pow(value, temporary), DELTA));
 }
@@ -180,7 +180,7 @@ Number Number::mod(Number divisor) const
     }
     complex<double> temporary;
     temporary = value / static_cast<complex<double>>(divisor);
-    temporary = complex(trunc(temporary.real()), trunc(temporary.imag()));
+    temporary = complex<double>(trunc(temporary.real()), trunc(temporary.imag()));
     temporary *= static_cast<complex<double>>(divisor);
     return (round((value - temporary), DELTA));
 }

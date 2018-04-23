@@ -14,6 +14,7 @@
 #include <cmath>
 #include <complex>
 #include <iostream>
+#include <limits>
 
 // uvažujeme přesnost na 10 des míst
 #define DELTA 0.00000000005
