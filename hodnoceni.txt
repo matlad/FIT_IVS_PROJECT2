@@ -1,4 +1,4 @@
-xcecha04 90 (Gui, napojení Gui na backend, lexikální analyzátor, mockupy další verze kalkulačky)
-xmatla00 130 (Vedení týmu, Návrh, Equation, Testy, instalater(ubuntu), mockupy další verze kalkulačky)
+xcecha04 90 (Gui, napojení Gui na backend, lexikální analyzátor, mockup další verze kalkulačky)
+xmatla00 130 (Vedení týmu, Návrh, Equation, Testy, instalater(ubuntu), mockup další verze kalkulačky)
 xmitur01 90 (Dokumentace, profiling, nápověda)
 xslade21 90 (Matematická knihovna, interpret)
