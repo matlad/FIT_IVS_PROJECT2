@@ -34,6 +34,11 @@ Licence
 -------
 Tento program je poskytován pod licencí GNU GPLv3 vizte soubor [LICENSE.md](/LICENSE.md)
 
+Stažení binárky
+---------------
+[Binárky ke stažení](https://github.com/matlad/FIT_IVS_PROJECT2/releases)
+
+
 Překlad a instalace
 -------------------
 pro překlad a instalaci na ubuntu vizte [Preklad_na_Ubuntu.markdown](/src/dokumentace/Preklad_na_Ubuntu.markdown)
