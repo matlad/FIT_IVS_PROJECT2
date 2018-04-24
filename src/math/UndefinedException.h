@@ -8,7 +8,7 @@
 #define FIT_IVS_PROJECT2_UNDEFINEDEXCEPTION_H
 
 #include <exception>
-namespace team22::Math
+namespace team22 { namespace Math
 {
 
 /**
@@ -23,6 +23,7 @@ public:
 	}
 };
 
+}
 }
 
 
