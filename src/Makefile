@@ -15,7 +15,7 @@ CMAKE_FILE_DIR := $(SRC_DIR)../../FIT_IVS_PROJECT2/
 PROJECT_DIR:= $(SRC_DIR)../
 RUN_DIR := $(PWD)
 
-## Příkazy závislosti
+## Příkazy, závislosti
 #####################
 CMAKE := cmake
 
@@ -26,7 +26,7 @@ all: pre_build
 #pack (zabalí projekt tak, aby mohl být odevzdán)
 pack: doc package
 	rm -rf  $(PROJECT_DIR)archive
-	rm $(PROJECT_DIR)/xcecha04_xmatla00_xmitur01_xslade21_plan.zip
+	rm $(PROJECT_DIR)/xcecha04_xmatla00_xmitur01_xslade21.zip
 	mkdir $(PROJECT_DIR)archive
 	mkdir $(PROJECT_DIR)archive/doc
 	cp -r $(DOC_DIR)* $(PROJECT_DIR)archive/doc
@@ -34,7 +34,7 @@ pack: doc package
 	cp $(BUILD_DIR)*.deb $(PROJECT_DIR)archive/install
 	mkdir $(PROJECT_DIR)archive/repo
 	git clone git@github.com:matlad/FIT_IVS_PROJECT2.git $(PROJECT_DIR)archive/repo
-	cd $(PROJECT_DIR)/archive; zip -r ../xcecha04_xmatla00_xmitur01_xslade21_plan.zip .
+	cd $(PROJECT_DIR)/archive; zip -r ../xcecha04_xmatla00_xmitur01_xslade21.zip .
 	rm -rf  $(PROJECT_DIR)archive
 
 #Vytvoří deb balíček
