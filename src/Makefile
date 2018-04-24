@@ -26,7 +26,7 @@ all: pre_build
 #pack (zabalí projekt tak, aby mohl být odevzdán)
 pack: doc package
 	rm -rf  $(PROJECT_DIR)archive
-	rm $(PROJECT_DIR)/xcecha04_xmatla00_xmitur01_xslade21.zip
+	rm -f $(PROJECT_DIR)/xcecha04_xmatla00_xmitur01_xslade21.zip
 	mkdir $(PROJECT_DIR)archive
 	mkdir $(PROJECT_DIR)archive/doc
 	cp -r $(DOC_DIR)* $(PROJECT_DIR)archive/doc
