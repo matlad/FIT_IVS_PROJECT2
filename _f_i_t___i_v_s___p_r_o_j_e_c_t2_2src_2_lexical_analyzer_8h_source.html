@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Kalkulacka: Zdrojový soubor FIT_IVS_PROJECT2/src/LexicalAnalyzer.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Calc.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kalkulacka
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">Jednoduchýkalkulátor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generováno programem Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="pages.html"><span>Ostatní&#160;stránky</span></a></li>
+      <li><a href="namespaces.html"><span>Prostory&#160;jmen</span></a></li>
+      <li><a href="annotated.html"><span>Třídy</span></a></li>
+      <li class="current"><a href="files.html"><span>Soubory</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Seznam&#160;souborů</span></a></li>
+      <li><a href="globals.html"><span>Symboly&#160;v&#160;souborech</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">LexicalAnalyzer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h.html">Zobrazit dokumentaci tohoto souboru.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef FIT_IVS_PROJECT2_LEXICALANALYZER_H</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define FIT_IVS_PROJECT2_LEXICALANALYZER_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cctype&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h.html">Lex.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;math/Number.h&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h.html">Interpret.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_identification_observer_8h.html">LexIdentificationObserver.h</a>&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_exception_8h.html">LexicalAnalyzerException.h</a>&quot;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceteam22.html">team22</a>{ <span class="keyword">namespace </span>Calc</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_lexical_analyzer.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html">LexicalAnalyzer</a></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3">   28</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3">State</a> {</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3a2c16608a5bd0898290de098615639253">   29</a></span>&#160;        <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3a2c16608a5bd0898290de098615639253">Number</a>,</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3afd4e1858aaac7daefbeb927dd8bb839c">   30</a></span>&#160;        <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3afd4e1858aaac7daefbeb927dd8bb839c">Operator</a>,</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3a553b5a50a45becdeea9395338021eed9">   31</a></span>&#160;        <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3a553b5a50a45becdeea9395338021eed9">Init</a></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#ad0f4710b09bf91a00d11846a7ef036ab">   34</a></span>&#160;    <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3">State</a> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#ad0f4710b09bf91a00d11846a7ef036ab">state</a> = <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3a553b5a50a45becdeea9395338021eed9">Init</a>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a28150358c16a50eb6ecfb4124b5e41cd">   39</a></span>&#160;    std::set&lt;LexIdentificationObserver *&gt; <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a28150358c16a50eb6ecfb4124b5e41cd">lexCallbackObjects</a>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#afd063de2c3d792b5688c863eb5135968">   44</a></span>&#160;    std::string <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#afd063de2c3d792b5688c863eb5135968">saved</a> = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#afd6bb48e5de7f8490addc9b326bfeb49">sendLex</a>(<a class="code" href="classteam22_1_1_calc_1_1_lex.html">Lex</a> lex);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classteam22_1_1_calc_1_1_lex.html">Lex</a> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a451aa3e3ed6f150d5b24fae76cc93cb4">getCharLex</a>(<span class="keywordtype">char</span> <a class="code" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp.html#a3a6c194a55c239306d07bbf83f5972e9">c</a>);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classteam22_1_1_math_1_1_number.html">Math::Number</a> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a689b52c49cd7c9e87dd468987472af83">savedToNumber</a>();</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#af56c536f78c680bd635ac1173e65b492">pushSymbol</a>(<span class="keywordtype">char</span> symbol);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#ae7fb3f4ce9e6020215352c0c9e2b8245">registrLexCallback</a>(<a class="code" href="classteam22_1_1_calc_1_1_lex_identification_observer.html">LexIdentificationObserver</a> *lexCallbackObject);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a18ba04d046da0b11eec66fb2689ddfef">processNumberSymbol</a>(<span class="keywordtype">char</span> symbol);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a291a8069b7d568aacd1a17cc83ebcd93">isNumberSymbol</a>(<span class="keywordtype">char</span> symbol) <span class="keyword">const</span>;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#adf38772b29f998549aa532e8f380b4b2">clear</a>();</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_lexical_analyzer.html#ab84b6b8f52056452cd52b8abdb9a3faa">processOperator</a>(<span class="keywordtype">char</span> symbol);</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}}</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif //FIT_IVS_PROJECT2_LEXICALANALYZER_H</span></div><div class="ttc" id="classteam22_1_1_calc_1_1_lex_html"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lex.html">team22::Calc::Lex</a></div><div class="ttdoc">Reprezentace lexému kalkulačky tedy čísla nebo operace. </div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h_source.html#l00018">Lex.h:18</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_a451aa3e3ed6f150d5b24fae76cc93cb4"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a451aa3e3ed6f150d5b24fae76cc93cb4">team22::Calc::LexicalAnalyzer::getCharLex</a></div><div class="ttdeci">Lex getCharLex(char c)</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp_source.html#l00019">LexicalAnalyzer.cpp:19</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_aef11ba66454715a80d5964c07f6d8cc3afd4e1858aaac7daefbeb927dd8bb839c"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3afd4e1858aaac7daefbeb927dd8bb839c">team22::Calc::LexicalAnalyzer::Operator</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h_source.html#l00030">LexicalAnalyzer.h:30</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_ae7fb3f4ce9e6020215352c0c9e2b8245"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#ae7fb3f4ce9e6020215352c0c9e2b8245">team22::Calc::LexicalAnalyzer::registrLexCallback</a></div><div class="ttdeci">void registrLexCallback(LexIdentificationObserver *lexCallbackObject)</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp_source.html#l00143">LexicalAnalyzer.cpp:143</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html">team22::Calc::LexicalAnalyzer</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h_source.html#l00026">LexicalAnalyzer.h:26</a></div></div>
+<div class="ttc" id="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_html_a3a6c194a55c239306d07bbf83f5972e9"><div class="ttname"><a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp.html#a3a6c194a55c239306d07bbf83f5972e9">c</a></div><div class="ttdeci">const double c[]</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_source.html#l00220">Number.cpp:220</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_a291a8069b7d568aacd1a17cc83ebcd93"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a291a8069b7d568aacd1a17cc83ebcd93">team22::Calc::LexicalAnalyzer::isNumberSymbol</a></div><div class="ttdeci">bool isNumberSymbol(char symbol) const </div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp_source.html#l00138">LexicalAnalyzer.cpp:138</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_adf38772b29f998549aa532e8f380b4b2"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#adf38772b29f998549aa532e8f380b4b2">team22::Calc::LexicalAnalyzer::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp_source.html#l00167">LexicalAnalyzer.cpp:167</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_ab84b6b8f52056452cd52b8abdb9a3faa"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#ab84b6b8f52056452cd52b8abdb9a3faa">team22::Calc::LexicalAnalyzer::processOperator</a></div><div class="ttdeci">void processOperator(char symbol)</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp_source.html#l00080">LexicalAnalyzer.cpp:80</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_afd6bb48e5de7f8490addc9b326bfeb49"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#afd6bb48e5de7f8490addc9b326bfeb49">team22::Calc::LexicalAnalyzer::sendLex</a></div><div class="ttdeci">void sendLex(Lex lex)</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp_source.html#l00013">LexicalAnalyzer.cpp:13</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_aef11ba66454715a80d5964c07f6d8cc3"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3">team22::Calc::LexicalAnalyzer::State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h_source.html#l00028">LexicalAnalyzer.h:28</a></div></div>
+<div class="ttc" id="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_exception_8h_html"><div class="ttname"><a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_exception_8h.html">LexicalAnalyzerException.h</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_afd063de2c3d792b5688c863eb5135968"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#afd063de2c3d792b5688c863eb5135968">team22::Calc::LexicalAnalyzer::saved</a></div><div class="ttdeci">std::string saved</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h_source.html#l00044">LexicalAnalyzer.h:44</a></div></div>
+<div class="ttc" id="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h_html"><div class="ttname"><a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h.html">Interpret.h</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_aef11ba66454715a80d5964c07f6d8cc3a553b5a50a45becdeea9395338021eed9"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3a553b5a50a45becdeea9395338021eed9">team22::Calc::LexicalAnalyzer::Init</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h_source.html#l00031">LexicalAnalyzer.h:31</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_af56c536f78c680bd635ac1173e65b492"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#af56c536f78c680bd635ac1173e65b492">team22::Calc::LexicalAnalyzer::pushSymbol</a></div><div class="ttdeci">void pushSymbol(char symbol)</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp_source.html#l00061">LexicalAnalyzer.cpp:61</a></div></div>
+<div class="ttc" id="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_identification_observer_8h_html"><div class="ttname"><a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_identification_observer_8h.html">LexIdentificationObserver.h</a></div></div>
+<div class="ttc" id="classteam22_1_1_math_1_1_number_html"><div class="ttname"><a href="classteam22_1_1_math_1_1_number.html">team22::Math::Number</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h_source.html#l00030">Number.h:30</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lex_identification_observer_html"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lex_identification_observer.html">team22::Calc::LexIdentificationObserver</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_identification_observer_8h_source.html#l00015">LexIdentificationObserver.h:15</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_a18ba04d046da0b11eec66fb2689ddfef"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a18ba04d046da0b11eec66fb2689ddfef">team22::Calc::LexicalAnalyzer::processNumberSymbol</a></div><div class="ttdeci">void processNumberSymbol(char symbol)</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp_source.html#l00148">LexicalAnalyzer.cpp:148</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_a689b52c49cd7c9e87dd468987472af83"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a689b52c49cd7c9e87dd468987472af83">team22::Calc::LexicalAnalyzer::savedToNumber</a></div><div class="ttdeci">Math::Number savedToNumber()</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp_source.html#l00045">LexicalAnalyzer.cpp:45</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_aef11ba66454715a80d5964c07f6d8cc3a2c16608a5bd0898290de098615639253"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#aef11ba66454715a80d5964c07f6d8cc3a2c16608a5bd0898290de098615639253">team22::Calc::LexicalAnalyzer::Number</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h_source.html#l00029">LexicalAnalyzer.h:29</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_ad0f4710b09bf91a00d11846a7ef036ab"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#ad0f4710b09bf91a00d11846a7ef036ab">team22::Calc::LexicalAnalyzer::state</a></div><div class="ttdeci">State state</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h_source.html#l00034">LexicalAnalyzer.h:34</a></div></div>
+<div class="ttc" id="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h_html"><div class="ttname"><a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h.html">Lex.h</a></div></div>
+<div class="ttc" id="namespaceteam22_html"><div class="ttname"><a href="namespaceteam22.html">team22</a></div><div class="ttdef"><b>Definition:</b> <a href="_equation_8h_source.html#l00018">Equation.h:18</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lexical_analyzer_html_a28150358c16a50eb6ecfb4124b5e41cd"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lexical_analyzer.html#a28150358c16a50eb6ecfb4124b5e41cd">team22::Calc::LexicalAnalyzer::lexCallbackObjects</a></div><div class="ttdeci">std::set&lt; LexIdentificationObserver * &gt; lexCallbackObjects</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h_source.html#l00039">LexicalAnalyzer.h:39</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c0a19590cb051cc5c28df6835cdad0b0.html">FIT_IVS_PROJECT2</a></li><li class="navelem"><a class="el" href="dir_80ec55c75cbe532b7c5b86767bf826a7.html">src</a></li><li class="navelem"><a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h.html">LexicalAnalyzer.h</a></li>
+    <li class="footer">Generováno programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

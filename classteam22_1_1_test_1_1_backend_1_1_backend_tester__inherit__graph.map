@@ -1,0 +1,4 @@
+<map id="team22::Test::Backend::BackendTester" name="team22::Test::Backend::BackendTester">
+<area shape="rect" id="node2" href="$classteam22_1_1_calc_1_1_result_observer.html" title="{team22::Calc::ResultObserver\n||+ onError()\l+ onResultChange()\l}" alt="" coords="5,5,204,97"/>
+<area shape="rect" id="node3" href="$classteam22_1_1_calc_1_1_equation_observer.html" title="{team22::Calc::EquationObserver\n||+ onEquationChange()\l}" alt="" coords="228,13,440,90"/>
+</map>

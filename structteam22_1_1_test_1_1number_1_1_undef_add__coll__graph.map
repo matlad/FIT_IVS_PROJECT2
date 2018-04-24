@@ -1,0 +1,5 @@
+<map id="team22::Test::number::UndefAdd" name="team22::Test::number::UndefAdd">
+<area shape="rect" id="node2" href="$structteam22_1_1_test_1_1number_1_1_param_test.html" title="{team22::Test::number\l::ParamTest\n||+ ParamTest()\l}" alt="" coords="95,579,246,671"/>
+<area shape="rect" id="node5" href="$structteam22_1_1_test_1_1number_1_1_params.html" title="{team22::Test::number\l::Params\n||}" alt="" coords="287,424,438,516"/>
+<area shape="rect" id="node6" href="$classteam22_1_1_math_1_1_number.html" title="{team22::Math::Number\n|&#45; value\l|+ getReal()\l+ getImaginary()\l+ Number()\l+ Number()\l+ add()\l+ operator+()\l+ sub()\l+ operator&#45;()\l+ mul()\l+ operator*()\la 11 další(ch)...\l&#45; operator std::complex\l\&lt; double \&gt;()\l&#45; round()\l&#45; gamma()\l&#45; anyParamNan()\l&#45; anyParamInf()\l&#45; allParamsInf()\l}" alt="" coords="285,5,441,332"/>
+</map>

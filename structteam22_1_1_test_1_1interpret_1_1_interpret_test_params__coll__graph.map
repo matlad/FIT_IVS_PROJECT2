@@ -1,0 +1,6 @@
+<map id="team22::Test::interpret::InterpretTestParams" name="team22::Test::interpret::InterpretTestParams">
+<area shape="rect" id="node2" href="$classteam22_1_1_math_1_1_number.html" title="{team22::Math::Number\n|&#45; value\l|+ getReal()\l+ getImaginary()\l+ Number()\l+ Number()\l+ add()\l+ operator+()\l+ sub()\l+ operator&#45;()\l+ mul()\l+ operator*()\la 11 další(ch)...\l&#45; operator std::complex\l\&lt; double \&gt;()\l&#45; round()\l&#45; gamma()\l&#45; anyParamNan()\l&#45; anyParamInf()\l&#45; allParamsInf()\l}" alt="" coords="5,5,161,332"/>
+<area shape="rect" id="node5" href="$unionteam22_1_1_calc_1_1_lex_1_1_value.html" title="reprezentace hodnoty lexému " alt="" coords="88,395,225,487"/>
+<area shape="rect" id="node4" href="$classteam22_1_1_calc_1_1_lex.html" title="Reprezentace lexému kalkulačky tedy čísla nebo operace. " alt="" coords="112,549,241,773"/>
+<area shape="rect" id="node6" title="STL class. " alt="" coords="265,623,381,700"/>
+</map>

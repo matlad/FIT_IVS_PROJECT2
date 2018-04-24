@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Kalkulacka: Dokumentace souboru FIT_IVS_PROJECT2/src/math/Number.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Calc.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kalkulacka
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">Jednoduchýkalkulátor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generováno programem Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="pages.html"><span>Ostatní&#160;stránky</span></a></li>
+      <li><a href="namespaces.html"><span>Prostory&#160;jmen</span></a></li>
+      <li><a href="annotated.html"><span>Třídy</span></a></li>
+      <li class="current"><a href="files.html"><span>Soubory</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Seznam&#160;souborů</span></a></li>
+      <li><a href="globals.html"><span>Symboly&#160;v&#160;souborech</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Třídy</a> &#124;
+<a href="#namespaces">Prostory jmen</a> &#124;
+<a href="#define-members">Definice maker</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentace souboru Number.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;complex&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graf závislostí na vkládaných souborech pro Number.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h__incl.png" border="0" usemap="#_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Následující graf ukazuje, které soubory přímo nebo nepřímo vkládají tento soubor:</div>
+<div class="dyncontent">
+<div class="center"><img src="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h__dep__incl.png" border="0" usemap="#_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8hdep" alt=""/></div>
+<map name="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8hdep" id="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8hdep">
+<area shape="rect" id="node2" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h.html" title="FIT_IVS_PROJECT2/src\l/Lex.h" alt="" coords="452,95,623,136"/>
+<area shape="rect" id="node6" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_signal_manager_8h.html" title="FIT_IVS_PROJECT2/src\l/SignalManager.h" alt="" coords="103,541,273,583"/>
+<area shape="rect" id="node9" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2tests_2backend_test_8cpp.html" title="FIT_IVS_PROJECT2/src\l/tests/backendTest.cpp" alt="" coords="824,541,995,583"/>
+<area shape="rect" id="node10" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h.html" title="FIT_IVS_PROJECT2/src\l/Interpret.h" alt="" coords="608,273,779,315"/>
+<area shape="rect" id="node11" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8h.html" title="FIT_IVS_PROJECT2/src\l/LexicalAnalyzer.h" alt="" coords="321,363,492,404"/>
+<area shape="rect" id="node13" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2tests_2_lexical_analyzer_test_8cpp.html" title="FIT_IVS_PROJECT2/src\l/tests/LexicalAnalyzerTest.cpp" alt="" coords="53,452,256,493"/>
+<area shape="rect" id="node15" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2tests_2_interpret_tests_8cpp.html" title="FIT_IVS_PROJECT2/src\l/tests/InterpretTests.cpp" alt="" coords="828,363,999,404"/>
+<area shape="rect" id="node17" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_result_observer_8h.html" title="FIT_IVS_PROJECT2/src\l/ResultObserver.h" alt="" coords="705,184,876,225"/>
+<area shape="rect" id="node18" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp.html" title="FIT_IVS_PROJECT2/src\l/math/Number.cpp" alt="" coords="1103,95,1273,136"/>
+<area shape="rect" id="node19" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2profiling_2profiling_8cpp.html" title="FIT_IVS_PROJECT2/src\l/profiling/profiling.cpp" alt="" coords="1297,95,1468,136"/>
+<area shape="rect" id="node20" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2tests_2_number_test_8cpp.html" title="FIT_IVS_PROJECT2/src\l/tests/NumberTest.cpp" alt="" coords="1492,95,1663,136"/>
+<area shape="rect" id="node3" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_identification_observer_8h.html" title="FIT_IVS_PROJECT2/src\l/LexIdentificationObserver.h" alt="" coords="445,184,630,225"/>
+<area shape="rect" id="node16" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8cpp.html" title="FIT_IVS_PROJECT2/src\l/Lex.cpp" alt="" coords="199,184,369,225"/>
+<area shape="rect" id="node4" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_equation_8h.html" title="FIT_IVS_PROJECT2/src\l/Equation.h" alt="" coords="475,452,645,493"/>
+<area shape="rect" id="node5" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_equation_8cpp.html" title="FIT_IVS_PROJECT2/src\l/Equation.cpp" alt="" coords="475,541,645,583"/>
+<area shape="rect" id="node7" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2main_8cpp.html" title="FIT_IVS_PROJECT2/src\l/main.cpp" alt="" coords="5,631,176,672"/>
+<area shape="rect" id="node8" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_signal_manager_8cpp.html" title="FIT_IVS_PROJECT2/src\l/SignalManager.cpp" alt="" coords="200,631,371,672"/>
+<area shape="rect" id="node14" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8cpp.html" title="FIT_IVS_PROJECT2/src\l/Interpret.cpp" alt="" coords="608,363,779,404"/>
+<area shape="rect" id="node12" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lexical_analyzer_8cpp.html" title="FIT_IVS_PROJECT2/src\l/LexicalAnalyzer.cpp" alt="" coords="280,452,451,493"/>
+</map>
+</div>
+</div>
+<p><a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h_source.html">Zobrazit zdrojový text tohoto souboru.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Třídy</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteam22_1_1_math_1_1_number.html">team22::Math::Number</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Prostory jmen</h2></td></tr>
+<tr class="memitem:namespaceteam22"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceteam22.html">team22</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceteam22_1_1_math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceteam22_1_1_math.html">team22::Math</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definice maker</h2></td></tr>
+<tr class="memitem:a3fd2b1bcd7ddcf506237987ad780f495"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h.html#a3fd2b1bcd7ddcf506237987ad780f495">DELTA</a>&#160;&#160;&#160;0.00000000005</td></tr>
+<tr class="separator:a3fd2b1bcd7ddcf506237987ad780f495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c022ca05ace68535405264e2677e07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h.html#ac4c022ca05ace68535405264e2677e07">DELTA_CF</a>&#160;&#160;&#160;0.00000005</td></tr>
+<tr class="separator:ac4c022ca05ace68535405264e2677e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentace k definicím maker</h2>
+<a class="anchor" id="a3fd2b1bcd7ddcf506237987ad780f495"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELTA&#160;&#160;&#160;0.00000000005</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h_source.html#l00020">20</a> v souboru <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h_source.html">Number.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_source.html#l00060">team22::Math::Number::add()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_source.html#l00106">team22::Math::Number::div()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_source.html#l00170">team22::Math::Number::mod()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_source.html#l00092">team22::Math::Number::mul()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_source.html#l00127">team22::Math::Number::pow()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_source.html#l00151">team22::Math::Number::root()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_source.html#l00076">team22::Math::Number::sub()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2tests_2backend_test_8cpp_source.html#l00069">team22::Test::Backend::TEST()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2tests_2_interpret_tests_8cpp_source.html#l00101">team22::Test::interpret::TEST_F()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2tests_2_number_test_8cpp_source.html#l00348">team22::Test::number::TEST_P()</a>, <a class="el" href="tests_2_number_test_8cpp_source.html#l00051">team22::Test::number::UParamTest::UParamTest()</a>, <a class="el" href="tests_2backend_test_8cpp_source.html#l00062">team22::Test::Backend::BackendTester::~BackendTester()</a> a <a class="el" href="tests_2_interpret_tests_8cpp_source.html#l00064">team22::Test::interpret::InterpretTest::~InterpretTest()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4c022ca05ace68535405264e2677e07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELTA_CF&#160;&#160;&#160;0.00000005</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h_source.html#l00022">22</a> v souboru <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h_source.html">Number.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8cpp_source.html#l00191">team22::Math::Number::fact()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2tests_2_interpret_tests_8cpp_source.html#l00090">team22::Test::interpret::TEST_P()</a>, <a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2tests_2_number_test_8cpp_source.html#l00380">team22::Test::number::TEST_P()</a>, <a class="el" href="tests_2_number_test_8cpp_source.html#l00051">team22::Test::number::UParamTest::UParamTest()</a> a <a class="el" href="tests_2_interpret_tests_8cpp_source.html#l00064">team22::Test::interpret::InterpretTest::~InterpretTest()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c0a19590cb051cc5c28df6835cdad0b0.html">FIT_IVS_PROJECT2</a></li><li class="navelem"><a class="el" href="dir_80ec55c75cbe532b7c5b86767bf826a7.html">src</a></li><li class="navelem"><a class="el" href="dir_baab37a9a7d0809524240e8d8426c9d1.html">math</a></li><li class="navelem"><a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h.html">Number.h</a></li>
+    <li class="footer">Generováno programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

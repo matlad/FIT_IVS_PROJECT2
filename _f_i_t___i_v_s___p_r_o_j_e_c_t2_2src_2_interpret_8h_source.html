@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Kalkulacka: Zdrojový soubor FIT_IVS_PROJECT2/src/Interpret.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Calc.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kalkulacka
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">Jednoduchýkalkulátor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generováno programem Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="pages.html"><span>Ostatní&#160;stránky</span></a></li>
+      <li><a href="namespaces.html"><span>Prostory&#160;jmen</span></a></li>
+      <li><a href="annotated.html"><span>Třídy</span></a></li>
+      <li class="current"><a href="files.html"><span>Soubory</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Seznam&#160;souborů</span></a></li>
+      <li><a href="globals.html"><span>Symboly&#160;v&#160;souborech</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Interpret.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h.html">Zobrazit dokumentaci tohoto souboru.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef FIT_IVS_PROJECT2_INTERPRET_H</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define FIT_IVS_PROJECT2_INTERPRET_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_identification_observer_8h.html">LexIdentificationObserver.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h.html">Lex.h</a>&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_result_observer_8h.html">ResultObserver.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;math/Number.h&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceteam22.html">team22</a>{ <span class="keyword">namespace </span>Calc</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_interpret.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteam22_1_1_calc_1_1_interpret.html">Interpret</a>: <span class="keyword">public</span> <a class="code" href="classteam22_1_1_calc_1_1_lex_identification_observer.html">LexIdentificationObserver</a></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#af38e3b867c32f50c921027249fc1185a">notifyResultChanged</a>();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#a13cb7b42e5cee2c9efa9ea86bc90cfa1">notifyAboutError</a>();</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_interpret.html#a0e46e3b5fd0bacc421408ac5e6c5514a">   66</a></span>&#160;    std::set&lt;ResultObserver *&gt; <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#a0e46e3b5fd0bacc421408ac5e6c5514a">resultCallbackObjects</a>;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#a23e1e307b4f7ffd42f8eb31d33314c41">registrResultCallback</a>(<a class="code" href="classteam22_1_1_calc_1_1_result_observer.html">ResultObserver</a> *resultCallbackObject);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#a479c65c010f4ef1060049b684e5f7eb6">sendIdentifiedLex</a>(<a class="code" href="classteam22_1_1_calc_1_1_lex.html">Lex</a> lex) <span class="keyword">override</span>;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#adc85c7a135df423487357a254c7158c8">clear</a>();</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_interpret.html#a61361decdc8c7625ac53138bf6074376">   86</a></span>&#160;    <a class="code" href="classteam22_1_1_math_1_1_number.html">Math::Number</a> <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#a61361decdc8c7625ac53138bf6074376">result</a> = <a class="code" href="classteam22_1_1_math_1_1_number.html">Math::Number</a>(0);      <span class="comment">//Uchovává výsledek</span></div><div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_interpret.html#a23b2d48d28cb0bac27ae28a6370f1c2d">   87</a></span>&#160;    <a class="code" href="classteam22_1_1_calc_1_1_lex.html#a61d29fc4878a3b36d2de2f13c56ed932">Lex::Operator</a> <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#a23b2d48d28cb0bac27ae28a6370f1c2d">oper</a>;                         <span class="comment">//Uchovává operaci</span></div><div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_interpret.html#a48e5166c07db1c61f3f356e3f743aadc">   88</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#a48e5166c07db1c61f3f356e3f743aadc">unprocessedOperator</a> = <span class="keyword">false</span>;           <span class="comment">//True pokud binární operátor čeká na druhý operand </span></div><div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classteam22_1_1_calc_1_1_interpret.html#a69ffa6951a02299de6c738bc33ae5e5d">   89</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classteam22_1_1_calc_1_1_interpret.html#a69ffa6951a02299de6c738bc33ae5e5d">unprocessedNumber</a> = <span class="keyword">false</span>;             <span class="comment">//True pokud číslo čeká na operátor</span></div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}}</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif //FIT_IVS_PROJECT2_INTERPRET_H</span></div><div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_a23e1e307b4f7ffd42f8eb31d33314c41"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#a23e1e307b4f7ffd42f8eb31d33314c41">team22::Calc::Interpret::registrResultCallback</a></div><div class="ttdeci">void registrResultCallback(ResultObserver *resultCallbackObject)</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8cpp_source.html#l00131">Interpret.cpp:131</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_adc85c7a135df423487357a254c7158c8"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#adc85c7a135df423487357a254c7158c8">team22::Calc::Interpret::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8cpp_source.html#l00123">Interpret.cpp:123</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lex_html"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lex.html">team22::Calc::Lex</a></div><div class="ttdoc">Reprezentace lexému kalkulačky tedy čísla nebo operace. </div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h_source.html#l00018">Lex.h:18</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html">team22::Calc::Interpret</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h_source.html#l00050">Interpret.h:50</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_a69ffa6951a02299de6c738bc33ae5e5d"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#a69ffa6951a02299de6c738bc33ae5e5d">team22::Calc::Interpret::unprocessedNumber</a></div><div class="ttdeci">bool unprocessedNumber</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h_source.html#l00089">Interpret.h:89</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_a48e5166c07db1c61f3f356e3f743aadc"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#a48e5166c07db1c61f3f356e3f743aadc">team22::Calc::Interpret::unprocessedOperator</a></div><div class="ttdeci">bool unprocessedOperator</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h_source.html#l00088">Interpret.h:88</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_a61361decdc8c7625ac53138bf6074376"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#a61361decdc8c7625ac53138bf6074376">team22::Calc::Interpret::result</a></div><div class="ttdeci">Math::Number result</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h_source.html#l00086">Interpret.h:86</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_a479c65c010f4ef1060049b684e5f7eb6"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#a479c65c010f4ef1060049b684e5f7eb6">team22::Calc::Interpret::sendIdentifiedLex</a></div><div class="ttdeci">void sendIdentifiedLex(Lex lex) override</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8cpp_source.html#l00012">Interpret.cpp:12</a></div></div>
+<div class="ttc" id="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_result_observer_8h_html"><div class="ttname"><a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_result_observer_8h.html">ResultObserver.h</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_result_observer_html"><div class="ttname"><a href="classteam22_1_1_calc_1_1_result_observer.html">team22::Calc::ResultObserver</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_result_observer_8h_source.html#l00015">ResultObserver.h:15</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_af38e3b867c32f50c921027249fc1185a"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#af38e3b867c32f50c921027249fc1185a">team22::Calc::Interpret::notifyResultChanged</a></div><div class="ttdeci">void notifyResultChanged()</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8cpp_source.html#l00136">Interpret.cpp:136</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lex_html_a61d29fc4878a3b36d2de2f13c56ed932"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lex.html#a61d29fc4878a3b36d2de2f13c56ed932">team22::Calc::Lex::Operator</a></div><div class="ttdeci">Operator</div><div class="ttdoc">Jednotlivé operace. </div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h_source.html#l00033">Lex.h:33</a></div></div>
+<div class="ttc" id="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_identification_observer_8h_html"><div class="ttname"><a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_identification_observer_8h.html">LexIdentificationObserver.h</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_a13cb7b42e5cee2c9efa9ea86bc90cfa1"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#a13cb7b42e5cee2c9efa9ea86bc90cfa1">team22::Calc::Interpret::notifyAboutError</a></div><div class="ttdeci">void notifyAboutError()</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8cpp_source.html#l00142">Interpret.cpp:142</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_a23b2d48d28cb0bac27ae28a6370f1c2d"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#a23b2d48d28cb0bac27ae28a6370f1c2d">team22::Calc::Interpret::oper</a></div><div class="ttdeci">Lex::Operator oper</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h_source.html#l00087">Interpret.h:87</a></div></div>
+<div class="ttc" id="classteam22_1_1_math_1_1_number_html"><div class="ttname"><a href="classteam22_1_1_math_1_1_number.html">team22::Math::Number</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2math_2_number_8h_source.html#l00030">Number.h:30</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_interpret_html_a0e46e3b5fd0bacc421408ac5e6c5514a"><div class="ttname"><a href="classteam22_1_1_calc_1_1_interpret.html#a0e46e3b5fd0bacc421408ac5e6c5514a">team22::Calc::Interpret::resultCallbackObjects</a></div><div class="ttdeci">std::set&lt; ResultObserver * &gt; resultCallbackObjects</div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h_source.html#l00066">Interpret.h:66</a></div></div>
+<div class="ttc" id="classteam22_1_1_calc_1_1_lex_identification_observer_html"><div class="ttname"><a href="classteam22_1_1_calc_1_1_lex_identification_observer.html">team22::Calc::LexIdentificationObserver</a></div><div class="ttdef"><b>Definition:</b> <a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_identification_observer_8h_source.html#l00015">LexIdentificationObserver.h:15</a></div></div>
+<div class="ttc" id="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h_html"><div class="ttname"><a href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_lex_8h.html">Lex.h</a></div></div>
+<div class="ttc" id="namespaceteam22_html"><div class="ttname"><a href="namespaceteam22.html">team22</a></div><div class="ttdef"><b>Definition:</b> <a href="_equation_8h_source.html#l00018">Equation.h:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c0a19590cb051cc5c28df6835cdad0b0.html">FIT_IVS_PROJECT2</a></li><li class="navelem"><a class="el" href="dir_80ec55c75cbe532b7c5b86767bf826a7.html">src</a></li><li class="navelem"><a class="el" href="_f_i_t___i_v_s___p_r_o_j_e_c_t2_2src_2_interpret_8h.html">Interpret.h</a></li>
+    <li class="footer">Generováno programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>
