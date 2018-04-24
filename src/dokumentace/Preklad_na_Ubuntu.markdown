@@ -16,7 +16,7 @@ sudo apt install -y qtdeclarative5-dev
 ## g++-7
 
 ```bash
-sudo add-apt-repository ppa:jonathonf/gcc-7.1
+sudo add-apt-repository -y ppa:jonathonf/gcc-7.1
 sudo apt-get update
 sudo apt-get install -y gcc-7 g++-7
 ```
@@ -34,7 +34,7 @@ sudo apt install -y  graphviz
 cd <adresář instalace Cmake>
 wget https://cmake.org/files/v3.10/cmake-3.10.3-Linux-x86_64.sh
 chmod +x cmake-3.10.3-Linux-x86_64.sh
-./cmake-3.10.3-Linux-x86_64.sh
+./cmake-3.10.3-Linux-x86_64.sh --skip-licence --include-subdir
 ```
 
 ## Stažení projektu
