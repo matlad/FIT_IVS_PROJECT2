@@ -18,7 +18,7 @@ sudo apt install -y git
 sudo apt install -y qtdeclarative5-dev
 
 # g++-7
-sudo add-apt-repository ppa:jonathonf/gcc-7.1
+sudo add-apt-repository -y ppa:jonathonf/gcc-7.1
 sudo apt-get update
 sudo apt-get install -y gcc-7 g++-7
 sudo ln -f /usr/bin/g++-7 /usr/bin/g++
