@@ -12,11 +12,12 @@ Jednoduchý nastroj umožnující jednoduché matematické operace jako
 
 na množině complexních čísel.
 
+![Náhled](/screenshot.PNG "Náhled")
+
 Prostředí
 ---------
 
-* Ubuntu 64bit - primární
-* Windows 64bit
+* Ubuntu 64bit
 
 Autoři
 ------
@@ -30,7 +31,18 @@ tým 22
 
 Licence
 -------
-Tento program je poskytován pod licencí GNU GPLv3 vizte soubor LICENCE
+Tento program je poskytován pod licencí GNU GPLv3 vizte soubor [LICENSE.md](/LICENSE.md)
+
+Odkazy
+---------------
+[Binárky ke stažení](https://github.com/matlad/FIT_IVS_PROJECT2/releases)
+[Uřivatelská příručka](https://github.com/matlad/FIT_IVS_PROJECT2/blob/master/dokumentace.pdf)
+[Programová dokumentace](https://matlad.github.io/FIT_IVS_PROJECT2/)
+
+
+Překlad a instalace
+-------------------
+pro překlad a instalaci na ubuntu vizte [Preklad_na_Ubuntu.markdown](/src/dokumentace/Preklad_na_Ubuntu.markdown)
 
 
 Komunikace
