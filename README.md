@@ -17,7 +17,7 @@ na množině complexních čísel.
 Prostředí
 ---------
 
-* Ubuntu 64bit 
+* Ubuntu 64bit
 
 Autoři
 ------
@@ -33,9 +33,11 @@ Licence
 -------
 Tento program je poskytován pod licencí GNU GPLv3 vizte soubor [LICENSE.md](/LICENSE.md)
 
-Stažení binárky
+Odkazy
 ---------------
 [Binárky ke stažení](https://github.com/matlad/FIT_IVS_PROJECT2/releases)
+[Uřivatelská příručka](https://github.com/matlad/FIT_IVS_PROJECT2/blob/master/dokumentace.pdf)
+[Programová dokumentace](https://matlad.github.io/FIT_IVS_PROJECT2/)
 
 
 Překlad a instalace
