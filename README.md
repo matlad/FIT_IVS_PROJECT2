@@ -1,6 +1,4 @@
 # Kalkulacka
-![Náhled](/printScreen1.PNG?raw=true "Náhled")
-
 
 Jednoduchý nastroj umožnující jednoduché matematické operace jako
 * sčítání
@@ -13,6 +11,8 @@ Jednoduchý nastroj umožnující jednoduché matematické operace jako
 * modulo (zbytek po dělění)
 
 na množině complexních čísel.
+
+![Náhled](/screenshot.PNG "Náhled")
 
 Prostředí
 ---------
@@ -32,7 +32,11 @@ tým 22
 
 Licence
 -------
-Tento program je poskytován pod licencí GNU GPLv3 vizte soubor LICENCE
+Tento program je poskytován pod licencí GNU GPLv3 vizte soubor [LICENCE.md](/LICENCE.md)
+
+Překlad a instalace
+-------------------
+pro překlad a instalaci na ubuntu vizte [Preklad_na_Ubuntu.markdown](/src/dokumentace/Preklad_na_Ubuntu.markdown)
 
 
 Komunikace
