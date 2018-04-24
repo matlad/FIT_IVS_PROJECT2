@@ -1,0 +1,37 @@
+V podstatě jsme plán dodrželi jen se vše posunulo o týden (dle tajného neoficialního plánu)
+
+* 26 - 31.3
+  - xmatla00
+     + Plán,  
+     + Testy matematické knihovny
+  - xcecha04
+     + Náčrt GUI
+     + Návrh GUI v Qt
+  - xslade21
+     + Implementace funkcí matematické knihovny (vše kromě faktorialu)
+  - xmitur01
+     + Seznámení se s Profiling – Naplánování, začátek implementace 
+
+* 1 - 8.4
+  - xmatla00
+    + Testy pro lexikální analýzu a interpret
+  - xcecha04
+    + Lexikální analyzátor – napojení na GUI
+  - xslade21
+    + matematická knihovna faktoriál
+    + interpret 
+
+* 9 - 15.4
+   - xmitur01
+     + Dokumentace, nápověda
+   - xmatla00
+     + rozchození na Ubuntu (.deb, repozitory?)
+   - xmitur01
+     + Profiling
+
+* 15 - 24.4
+  - kolaps, panika, dodělává všeho co se po** atd.
+  - Integrační testování (Integration testing) 
+  - Systémové testování (System testing) 
+
+

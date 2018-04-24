@@ -17,8 +17,7 @@ na množině complexních čísel.
 Prostředí
 ---------
 
-* Ubuntu 64bit - primární
-* Windows 64bit
+* Ubuntu 64bit 
 
 Autoři
 ------
