@@ -1,4 +1,4 @@
-xcecha04 100 (Gui, napojení Gui na backend, lexikální analyzátor)
-xmatla00 100 (Vedení týmu, Návr, Equation, Testy, instalater(ubuntu))
-xmitur01 100 (Dokumentace, profiling, nápověda)
-xslade21 100 (Matematická knihovna, interpret)
+xcecha04 90 (Gui, napojení Gui na backend, lexikální analyzátor)
+xmatla00 130 (Vedení týmu, Návr, Equation, Testy, instalater(ubuntu))
+xmitur01 90 (Dokumentace, profiling, nápověda)
+xslade21 90 (Matematická knihovna, interpret)

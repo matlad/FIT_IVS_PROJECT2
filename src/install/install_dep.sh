@@ -20,7 +20,8 @@ sudo apt install -y qtdeclarative5-dev
 # g++-7
 sudo add-apt-repository ppa:jonathonf/gcc-7.1
 sudo apt-get update
-sudo apt-get install gcc-7 g++-7
+sudo apt-get install -y gcc-7 g++-7
+sudo ln -f /usr/bin/g++-7 /usr/bin/g++
 
 # doxygen
 sudo apt install -y  doxygen
@@ -29,8 +30,7 @@ sudo apt install -y  graphviz
 # Cmake
 wget https://cmake.org/files/v3.10/cmake-3.10.3-Linux-x86_64.sh
 chmod +x cmake-3.10.3-Linux-x86_64.sh
-./cmake-3.10.3-Linux-x86_64.sh
-
+./cmake-3.10.3-Linux-x86_64.sh --skip-licence --include-subdir
 
 # stazení projektu
 git clone https://github.com/matlad/FIT_IVS_PROJECT2.git
