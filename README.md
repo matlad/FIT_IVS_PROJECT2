@@ -32,7 +32,7 @@ tým 22
 
 Licence
 -------
-Tento program je poskytován pod licencí GNU GPLv3 vizte soubor [LICENCE.md](/LICENCE.md)
+Tento program je poskytován pod licencí GNU GPLv3 vizte soubor [LICENSE.md](/LICENSE.md)
 
 Překlad a instalace
 -------------------
