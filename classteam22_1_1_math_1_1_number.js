@@ -25,6 +25,7 @@ var classteam22_1_1_math_1_1_number =
     [ "operator^", "classteam22_1_1_math_1_1_number.html#a16ff591545601232210d5e245bf33709", null ],
     [ "pow", "classteam22_1_1_math_1_1_number.html#ab149fed06cfa3cf46a66ff10b8f16619", null ],
     [ "root", "classteam22_1_1_math_1_1_number.html#a3468d8eb0c13fb07b3c8c052475abce6", null ],
+    [ "round", "classteam22_1_1_math_1_1_number.html#a33c28546b9bb950df4dc6cb987c39734", null ],
     [ "sub", "classteam22_1_1_math_1_1_number.html#a18665bf78019d8602258fb061b7cb370", null ],
     [ "operator<<", "classteam22_1_1_math_1_1_number.html#a658f07a59742bbb5ce6432e2fd244e8b", null ],
     [ "value", "classteam22_1_1_math_1_1_number.html#a596bb514d860fbbcec3f114c3f73a59b", null ]

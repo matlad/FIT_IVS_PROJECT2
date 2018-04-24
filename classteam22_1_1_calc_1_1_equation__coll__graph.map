@@ -1,14 +1,14 @@
 <map id="team22::Calc::Equation" name="team22::Calc::Equation">
-<area shape="rect" id="node2" href="$classteam22_1_1_calc_1_1_lex_identification_observer.html" title="{team22::Calc::LexIdentification\lObserver\n||+ sendIdentifiedLex()\l}" alt="" coords="1018,380,1221,472"/>
-<area shape="rect" id="node11" href="$classteam22_1_1_calc_1_1_interpret.html" title="{team22::Calc::Interpret\n|&#45; oper\l&#45; unprocessedOperator\l&#45; unprocessedNumber\l|+ registrResultCallback()\l+ sendIdentifiedLex()\l+ clear()\l&#45; notifyResultChanged()\l&#45; notifyAboutError()\l}" alt="" coords="815,851,981,1016"/>
-<area shape="rect" id="node3" href="$classteam22_1_1_calc_1_1_result_observer.html" title="{team22::Calc::ResultObserver\n||+ onError()\l+ onResultChange()\l}" alt="" coords="5,380,204,472"/>
-<area shape="rect" id="node4" href="$classteam22_1_1_math_1_1_number.html" title="{team22::Math::Number\n|&#45; value\l|+ getReal()\l+ getImaginary()\l+ Number()\l+ Number()\l+ add()\l+ operator+()\l+ sub()\l+ operator&#45;()\l+ mul()\l+ operator*()\la 11 další(ch)...\l&#45; operator std::complex\l\&lt; double \&gt;()\l&#45; gamma()\l&#45; anyParamNan()\l&#45; anyParamInf()\l&#45; allParamsInf()\l}" alt="" coords="1324,5,1480,317"/>
-<area shape="rect" id="node15" href="$unionteam22_1_1_calc_1_1_lex_1_1_value.html" title="reprezentace hodnoty lexému " alt="" coords="1593,380,1731,472"/>
-<area shape="rect" id="node5" href="$classteam22_1_1_calc_1_1_lexical_analyzer.html" title="{team22::Calc::LexicalAnalyzer\n|&#45; state\l|+ pushSymbol()\l+ registrLexCallback()\l+ processNumberSymbol()\l+ isNumberSymbol()\l+ clear()\l+ processOperator()\l&#45; sendLex()\l&#45; getCharLex()\l&#45; savedToNumber()\l}" alt="" coords="1157,836,1357,1031"/>
-<area shape="rect" id="node6" title="STL class. " alt="" coords="1494,623,1574,700"/>
-<area shape="rect" id="node7" title="STL class. " alt="" coords="1443,380,1569,472"/>
-<area shape="rect" id="node9" title="STL class. " alt="" coords="502,387,601,465"/>
-<area shape="rect" id="node14" href="$classteam22_1_1_calc_1_1_lex.html" title="Reprezentace lexému kalkulačky tedy čísla nebo operace. " alt="" coords="1597,549,1727,773"/>
-<area shape="rect" id="node16" title="STL class. " alt="" coords="1751,623,1867,700"/>
-<area shape="rect" id="node19" href="$classteam22_1_1_calc_1_1_equation_observer.html" title="{team22::Calc::EquationObserver\n||+ onEquationChange()\l}" alt="" coords="228,387,440,465"/>
+<area shape="rect" id="node2" href="$classteam22_1_1_calc_1_1_lex_identification_observer.html" title="{team22::Calc::LexIdentification\lObserver\n||+ sendIdentifiedLex()\l}" alt="" coords="1018,395,1221,487"/>
+<area shape="rect" id="node11" href="$classteam22_1_1_calc_1_1_interpret.html" title="{team22::Calc::Interpret\n|&#45; oper\l&#45; unprocessedOperator\l&#45; unprocessedNumber\l|+ registrResultCallback()\l+ sendIdentifiedLex()\l+ clear()\l&#45; notifyResultChanged()\l&#45; notifyAboutError()\l}" alt="" coords="815,865,981,1031"/>
+<area shape="rect" id="node3" href="$classteam22_1_1_calc_1_1_result_observer.html" title="{team22::Calc::ResultObserver\n||+ onError()\l+ onResultChange()\l}" alt="" coords="5,395,204,487"/>
+<area shape="rect" id="node4" href="$classteam22_1_1_math_1_1_number.html" title="{team22::Math::Number\n|&#45; value\l|+ getReal()\l+ getImaginary()\l+ Number()\l+ Number()\l+ add()\l+ operator+()\l+ sub()\l+ operator&#45;()\l+ mul()\l+ operator*()\la 11 další(ch)...\l&#45; operator std::complex\l\&lt; double \&gt;()\l&#45; round()\l&#45; gamma()\l&#45; anyParamNan()\l&#45; anyParamInf()\l&#45; allParamsInf()\l}" alt="" coords="1324,5,1480,332"/>
+<area shape="rect" id="node15" href="$unionteam22_1_1_calc_1_1_lex_1_1_value.html" title="reprezentace hodnoty lexému " alt="" coords="1593,395,1731,487"/>
+<area shape="rect" id="node5" href="$classteam22_1_1_calc_1_1_lexical_analyzer.html" title="{team22::Calc::LexicalAnalyzer\n|&#45; state\l|+ pushSymbol()\l+ registrLexCallback()\l+ processNumberSymbol()\l+ isNumberSymbol()\l+ clear()\l+ processOperator()\l&#45; sendLex()\l&#45; getCharLex()\l&#45; savedToNumber()\l}" alt="" coords="1157,851,1357,1045"/>
+<area shape="rect" id="node6" title="STL class. " alt="" coords="1494,637,1574,715"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="1443,395,1569,487"/>
+<area shape="rect" id="node9" title="STL class. " alt="" coords="502,402,601,479"/>
+<area shape="rect" id="node14" href="$classteam22_1_1_calc_1_1_lex.html" title="Reprezentace lexému kalkulačky tedy čísla nebo operace. " alt="" coords="1597,564,1727,788"/>
+<area shape="rect" id="node16" title="STL class. " alt="" coords="1751,637,1867,715"/>
+<area shape="rect" id="node19" href="$classteam22_1_1_calc_1_1_equation_observer.html" title="{team22::Calc::EquationObserver\n||+ onEquationChange()\l}" alt="" coords="228,402,440,479"/>
 </map>

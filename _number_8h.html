@@ -53,7 +53,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
       <li><a href="namespaces.html"><span>Prostory&#160;jmen</span></a></li>
       <li><a href="annotated.html"><span>Třídy</span></a></li>
       <li class="current"><a href="files.html"><span>Soubory</span></a></li>
-      <li><a href="examples.html"><span>Příklady</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -110,7 +109,8 @@ $(document).ready(function(){initNavTree('_number_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Třídy</a> &#124;
-<a href="#namespaces">Prostory jmen</a>  </div>
+<a href="#namespaces">Prostory jmen</a> &#124;
+<a href="#define-members">Definice maker</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentace souboru Number.h</div>  </div>
 </div><!--header-->
@@ -121,6 +121,7 @@ $(document).ready(function(){initNavTree('_number_8h.html','');});
 <div class="textblock"><code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;complex&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graf závislostí na vkládaných souborech pro Number.h:</div>
 <div class="dyncontent">
@@ -166,6 +167,13 @@ Prostory jmen</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceteam22_1_1_math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceteam22_1_1_math.html">team22::Math</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definice maker</h2></td></tr>
+<tr class="memitem:a3fd2b1bcd7ddcf506237987ad780f495"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_number_8h.html#a3fd2b1bcd7ddcf506237987ad780f495">DELTA</a>&#160;&#160;&#160;0.00000000005</td></tr>
+<tr class="separator:a3fd2b1bcd7ddcf506237987ad780f495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c022ca05ace68535405264e2677e07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_number_8h.html#ac4c022ca05ace68535405264e2677e07">DELTA_CF</a>&#160;&#160;&#160;0.00000005</td></tr>
+<tr class="separator:ac4c022ca05ace68535405264e2677e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailní popis</h2>
 <div class="textblock"><p>Hlavičkový soubor pro Number z matematické knihovny. </p>
@@ -175,7 +183,40 @@ Prostory jmen</h2></td></tr>
 Matyáš Sládek <a href="#" onclick="location.href='mai'+'lto:'+'xsl'+'ad'+'e21'+'@s'+'tud'+'.f'+'it.'+'vu'+'tbr'+'.c'+'z'; return false;">xslad<span style="display: none;">.nosp@m.</span>e21@<span style="display: none;">.nosp@m.</span>stud.<span style="display: none;">.nosp@m.</span>fit.<span style="display: none;">.nosp@m.</span>vutbr<span style="display: none;">.nosp@m.</span>.cz</a> </dd></dl>
 
 <p>Definice v souboru <a class="el" href="_number_8h_source.html">Number.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Dokumentace k definicím maker</h2>
+<a class="anchor" id="a3fd2b1bcd7ddcf506237987ad780f495"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELTA&#160;&#160;&#160;0.00000000005</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_number_8h_source.html#l00020">20</a> v souboru <a class="el" href="_number_8h_source.html">Number.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_number_8cpp_source.html#l00060">team22::Math::Number::add()</a>, <a class="el" href="_number_8cpp_source.html#l00106">team22::Math::Number::div()</a>, <a class="el" href="_number_8cpp_source.html#l00170">team22::Math::Number::mod()</a>, <a class="el" href="_number_8cpp_source.html#l00092">team22::Math::Number::mul()</a>, <a class="el" href="_number_8cpp_source.html#l00127">team22::Math::Number::pow()</a>, <a class="el" href="_number_8cpp_source.html#l00151">team22::Math::Number::root()</a>, <a class="el" href="_number_8cpp_source.html#l00076">team22::Math::Number::sub()</a>, <a class="el" href="backend_test_8cpp_source.html#l00069">team22::Test::Backend::TEST()</a>, <a class="el" href="_interpret_tests_8cpp_source.html#l00101">team22::Test::interpret::TEST_F()</a> a <a class="el" href="_number_test_8cpp_source.html#l00348">team22::Test::number::TEST_P()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4c022ca05ace68535405264e2677e07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELTA_CF&#160;&#160;&#160;0.00000005</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="_number_8h_source.html#l00022">22</a> v souboru <a class="el" href="_number_8h_source.html">Number.h</a>.</p>
+
+<p>Používá se v <a class="el" href="_number_8cpp_source.html#l00191">team22::Math::Number::fact()</a>, <a class="el" href="_interpret_tests_8cpp_source.html#l00090">team22::Test::interpret::TEST_P()</a> a <a class="el" href="_number_test_8cpp_source.html#l00380">team22::Test::number::TEST_P()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

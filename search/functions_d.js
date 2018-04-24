@@ -4,5 +4,6 @@ var searchData=
   ['registrequationobserver',['registrEquationObserver',['../classteam22_1_1_calc_1_1_equation.html#a705c26d64f67f673e4919494d7e22d4a',1,'team22::Calc::Equation']]],
   ['registrlexcallback',['registrLexCallback',['../classteam22_1_1_calc_1_1_lexical_analyzer.html#ae7fb3f4ce9e6020215352c0c9e2b8245',1,'team22::Calc::LexicalAnalyzer']]],
   ['registrresultcallback',['registrResultCallback',['../classteam22_1_1_calc_1_1_interpret.html#a23e1e307b4f7ffd42f8eb31d33314c41',1,'team22::Calc::Interpret']]],
-  ['root',['root',['../classteam22_1_1_math_1_1_number.html#a3468d8eb0c13fb07b3c8c052475abce6',1,'team22::Math::Number']]]
+  ['root',['root',['../classteam22_1_1_math_1_1_number.html#a3468d8eb0c13fb07b3c8c052475abce6',1,'team22::Math::Number']]],
+  ['round',['round',['../classteam22_1_1_math_1_1_number.html#a33c28546b9bb950df4dc6cb987c39734',1,'team22::Math::Number']]]
 ];

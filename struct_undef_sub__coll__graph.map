@@ -1,5 +1,0 @@
-<map id="UndefSub" name="UndefSub">
-<area shape="rect" id="node2" href="$struct_param_test.html" title="{ParamTest\n||+ ParamTest()\l}" alt="" coords="117,564,224,641"/>
-<area shape="rect" id="node5" href="$struct_params.html" title="{Params\n||}" alt="" coords="288,417,355,494"/>
-<area shape="rect" id="node6" href="$classteam22_1_1_math_1_1_number.html" title="{team22::Math::Number\n|&#45; value\l|+ getReal()\l+ getImaginary()\l+ Number()\l+ Number()\l+ add()\l+ operator+()\l+ sub()\l+ operator&#45;()\l+ mul()\l+ operator*()\la 11 další(ch)...\l&#45; operator std::complex\l\&lt; double \&gt;()\l&#45; gamma()\l&#45; anyParamNan()\l&#45; anyParamInf()\l&#45; allParamsInf()\l}" alt="" coords="243,5,399,317"/>
-</map>
