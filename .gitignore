@@ -1,9 +1,10 @@
 /.idea
-/.idea/*
 /cmake-build-debug
 *.o
 *.a
 *Test
 /build/**
 /dokumentace/**
+/archive/**
 !/**/.gitkeep
+archive/
