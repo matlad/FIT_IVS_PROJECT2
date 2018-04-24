@@ -1,4 +1,6 @@
 # Kalkulacka
+![Náhled](/printScreen1.PNG?raw=true "Náhled")
+
 
 Jednoduchý nastroj umožnující jednoduché matematické operace jako
 * sčítání
